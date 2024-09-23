@@ -3,8 +3,8 @@ subtitle: "MY_COURSE_CODE -- MY_COURSE_NAME"
 title: "<font style='font-size:1em;'>🗓️ Week 01<br/> Introduction</font>"
 author: Prof. [Octopian](#)
 institute: '[University of Octopus Studies](#)'
-date: 14 March 2023
-date-meta: 14 March 2023
+date: 14 March 2024
+date-meta: 14 March 2024
 date-format: "DD MMM YYYY"
 toc: true
 toc-depth: 1

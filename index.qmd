@@ -1,31 +1,51 @@
 ---
-title: "MY COURSE CODE - MY COURSE NAME"
-format:
-  html:
-    include-before-body: helpers/remove-nav.html
-    include-after-body: helpers/remove-title.html
+title: "LLMs in Linguistic Research"
+subtitle: "Academic Year: 2024/25"
+format: html
 ---
+<!--
+::: {.callout-important collapse=false}
+## 📢 Important
+
+(12/03/2024)
+
+ - [🗓️ Week 01 lecture material](/2024/weeks/week01/page.qmd) is now available! 
+
+:::
+-->
+
 
 # 📑 Course Brief
 
-**Focus:** the focus of this course is to learn stuff
+**Focus:** Understanding LLMs and their usage in various linguistics tasks
 
-**How:** hands-on learning
+**How:** Hands-on learning and paper discussions
 
 # 🎯 Learning Objectives
 
-- You will discover how to do X
-- Distinguish X from **X**
-- Practice how to put things _in italic_
-- Discover how to highlight `code` inline
-- Proceed to learn stuff
+- Gaining an intuition of how LLMs work
+- Getting to know the field of LLM research and development
+- Familiarizing yourself with different LLM architectures
+- Learning how to use them for different linguistics tasks (e.g., text analysis, language generation, and language understanding)
+- Practing using tools like Hugginface for LLM inference and fine-tuning
 
+::: {.panel-tabset}
+## Instructor
 
------------------
+![](/figures/people/small_akhilesh.jpg){fig-align="left" fig-alt="Photo of the lecturer Akhilesh" style="object-fit: cover;width:5em;height:5em;border-radius: 50%;"}  
+**Akhilesh Kakolu Ramarao** <br/>
+📧 [kakolura@hhu.de](mailto:kakolura@hhu.de)
 
-**Select Academic Year/Term:**
+## Teaching Staff
 
-<a href="2023/index.qmd">
-    <button class="button-61">2022/23</button>
-</a>
+![](/figures/people/anna.jpg){fig-align="left" fig-alt="Photo of the TA Anna Stein" style="object-fit: cover;width:5em;height:5em;border-radius: 50%;"}  
+**Anna Stein** <br/>
+📧 [anna.stein@hhu.de](mailto:anna.stein@hhu.de)
 
+:::
+
+# 📍 Location
+
+Wednesday, 2:30pm-4pm
+
+Building 23.21 Floor 2, Room 22
