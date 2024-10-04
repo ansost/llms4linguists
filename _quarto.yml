@@ -4,8 +4,8 @@ project:
   output-dir: _output
   render:
     - "index.qmd"
-    #- "2024/*.qmd"
-    #- "2024/weeks/week01/*.qmd"
+    - "2024/*.qmd"
+    - "2024/weeks/week01/*.qmd"
 
 website:
   title: "LLMs in Lingustic Research 2024/25"
@@ -24,26 +24,26 @@ website:
     contents:
       - href: index.qmd
         text: "🏠 Home"
-      # - href: 2024/syllabus.qmd
-      #   text: "📓 Syllabus"
+      - href: 2024/syllabus.qmd
+        text: "📓 Syllabus"
       # - href: 2024/communication.qmd
       #   text: "📟 Communication"
-      # - href: 2024/assignments.qmd
-      #   text: "✍️ Assignments"
-      #   contents:
-      #     - href: 2024/assignments/assignment01.qmd
-      #       text: "📝 Assignment 01"
+      - href: 2024/assignments.qmd
+        text: "✍️ Assignments"
+        contents:
+          - href: 2024/assignments/assignment01.qmd
+            text: "📝 Assignment 01"
       #     - href: 2024/assignments/assignment02.qmd
       #       text: "📝 Assignment 02"
       #     - href: 2024/assignments/group_project.qmd
       #       text: "👥 Group Project"
-      #- section: "🗓️ Weeks"
-        #contents:
-         #- href: 2024/weeks/week01/page.qmd
-           #text: Week 01
-           #contents:
-             #- href: 2024/weeks/week01/page.qmd
-               #text: 👨‍🏫 Lecture Material
+      - section: "🗓️ Weeks"
+        contents:
+         - href: 2024/weeks/week01/page.qmd
+           text: Week 01
+           contents:
+             - href: 2024/weeks/week01/page.qmd
+               text: 👨‍🏫 Lecture Material
             #  - href: 2024/weeks/week01/lab.qmd
             #    text: 💻 Lab Roadmap
             #  - href: 2024/weeks/week01/appendix.qmd
@@ -55,8 +55,6 @@ website:
     background: light
     left: "License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/)" 
 
-
-
 bibliography: references/references.bib
 csl: references/chicago-author-date.csl
 
@@ -64,7 +62,7 @@ csl: references/chicago-author-date.csl
 format:
   html:
     author: Akhilesh Kakolu Ramarao, Anna Sophia Stein
-    author-meta: Dr. MY NAME
+    author-meta: Ramarao
     date-format: "DD MMMM YYYY"
 
     email-obfuscation: javascript
@@ -83,4 +81,3 @@ format:
 
 #margin-header: |
 # ![](/figures/logos/MY_INSTITUTION.png)
-

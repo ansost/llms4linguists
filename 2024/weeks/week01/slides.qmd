@@ -1,10 +1,10 @@
 ---
-subtitle: "MY_COURSE_CODE -- MY_COURSE_NAME"
+subtitle: "MLLMs in Lingustic Research 2024/2025"
 title: "<font style='font-size:1em;'>🗓️ Week 01<br/> Introduction</font>"
-author: Prof. [Octopian](#)
-institute: '[University of Octopus Studies](#)'
-date: 14 March 2024
-date-meta: 14 March 2024
+author: Akhilesh Kakolu Ramarao(#)
+institute: '[HHU](#)'
+date: 09 October 2024
+date-meta: 09 October 2024
 date-format: "DD MMM YYYY"
 toc: true
 toc-depth: 1
@@ -18,73 +18,80 @@ format:
     slide-number: true
     mouse-wheel: false
     preview-links: auto
-    logo: /figures/icons/course_favicon.png
+    logo: /figures/icons/course_logo.png
     css: /css/styles_slides.css
-    footer: 'MY_COURSE_CODE -- MY_COURSE_NAME'
+    footer: 'LLMs in Lingustic Research 2024/2025'
 ---
 
 # Who are we
 
-## Your lecturer {.smaller}
+## WhoamI {.smaller}
 
 ::: columns
 
 ::: {.column style="display:inline-block;width:40%;height:60%;border-radius:1em;margin:1%;padding:1.5%;background-color:#f5f5f5"}
 <figure>
-    <img src="/figures/people/professor_octopus.png" alt="Photo of Professor Octopian" role="presentation" style="object-fit: cover;width:5em;height:5em;border-radius: 50%;font-size:1em;" class="img-responsive atto_image_button_text-bottom">
+    <img src="/figures/people/small_akhilesh.jpg" alt="Photo of Akhilesh" role="presentation" style="object-fit: cover;width:5em;height:5em;border-radius: 50%;font-size:1em;" class="img-responsive atto_image_button_text-bottom">
     <figcaption>
-        <strong>Prof.&nbsp;<span><a href="#" target="_blank" class="external">Octopian</a></span></strong> 
-        <br/>Professor of Octopus Issues
-        <br/>Head of the Python vs R Debate Society
+        <strong>Akhilesh Kakolu Ramarao</strong> 
+        <br/>PhD researcher at the English Language and Linguistics department
     </figcaption>
 </figure>
 :::
 
 ::: {.column style="width:50%;font-size:0.85em;margin-left:3%;"}
-- PhD in Octopi Engineering
-- **Background**: Engineering of Deep Ocean constructions
-- Former **Lead Data Scientist**
+- Researching **computational Morphology** supervised by [Prof. Dr. Kevin Tang](https://www.kevintang.org/) and [Dr. Dinah Baer-Henney](https://blogs.phil.hhu.de/dbh13/)
+- Started at HHU in 2021
+- **Industry Background**: NLP Researcher, Software Engineer, Building multilingual chatbots, voice assistants
+- Involved in several **language revitalization** efforts for indigenous communities in [Arunachal Pradesh](https://en.wikipedia.org/wiki/Arunachal_Pradesh), India, with a focus on [Idu Mishmi](https://en.wikipedia.org/wiki/Idu_Mishmi_language) and K’man Mishmi languages
+:::
 
-<span class="tag" style="background-color:var(--quarto-hl-st-color)">deep ocean</span>
+<!-- <span class="tag" style="background-color:var(--quarto-hl-st-color)">deep ocean</span>
 <br/>
 <span class="tag" style="background-color:var(--quarto-hl-fu-color)">engineering</span>
 <br/>
-<span class="tag" style="background-color:var(--quarto-hl-dv-color)">octopus</span>
+<span class="tag" style="background-color:var(--quarto-hl-dv-color)">octopus</span> -->
+
+
 
 :::
 
-:::
-
-## Teaching Assistants {.smaller}
+<!-- ## Teaching Assistants {.smaller}
 
 ::: columns
 
 ::: {.column style="display:inline-block;width:40%;height:60%;border-radius:1em;margin:1%;padding:1.5%;background-color:#f5f5f5"}
 <figure>
-    <img src="/figures/people/ta_octopunian.png" alt="Image Created with DALL·E. Prompt: 'octopus-like alien futuristic non-binary happy teaching assistant, phd student Octopunian, award-winning professional high-quality studio headshot'" role="presentation" style="object-fit: cover;width:5em;height:5em;border-radius: 50%;font-size:1em;" class="img-responsive atto_image_button_text-bottom">
+    <img src="/figures/people/anna.jpg" alt="Picture of the TA Anna" role="presentation" style="object-fit: cover;width:5em;height:5em;border-radius: 50%;font-size:1em;" class="img-responsive atto_image_button_text-bottom">
     <figcaption>
-        <strong><span><a href="#" target="_blank" class="external">Octopnuian Arveda</a></span></strong>
+        <strong></strong>
         <br/> 
-        PhD Candidate at [OctopusLab, OUN](#) <br>
-        MSc in Octopus Transportation<br/>
-        📧 
+        MSc Linguistics student<br>
+        Focus on Copmutational Linguistics<br/>
+        [📧 anna.stein@hhu.de](mailto:anna.stein@hhu.de)
         <br/>
     </figcaption>
 </figure>
-:::
+::: -->
 
-::: {.column style="display:inline-block;width:40%;height:60%;border-radius:1em;margin:1%;padding:1.5%;background-color:#f5f5f5"}
-<figure>
-    <img src="/figures/people/ta_octopunian2.png" alt="Image Created with DALL·E. Prompt: 'octopus-like alien futuristic non-binary happy teaching assistant, phd student Octopunian, award-winning professional high-quality studio headshot'" role="presentation" style="object-fit: cover;width:5em;height:5em;border-radius: 50%;font-size:1em;" class="img-responsive atto_image_button_text-bottom">
-    <figcaption>
-        <strong><span><a href="#" target="_blank" class="external">Octopnuian Arveda</a></span></strong>
-        <br/> 
-        PhD Candidate at [OctopusLab, UOS](#) <br>
-        MSc in Octopus Transportation<br/>
-        📧 
-        <br/>
-    </figcaption>
-</figure>
-:::
 
-:::
+# What to expect
+
+- You will see code and math 
+- Math will be annotated and explained in natural language. 
+- You will not be asked to do calculations
+- You’ll learn how to work with code snippets but not how to build something from scratch (unless you already know how to code)
+
+## Syllabus Overview {.smaller}
+| Date | General Topic | Homework | Assignments |
+| --- | --- | --- | --- |
+| 09.10 | **Admin**, **Architectures**: Statistical and Probabilistic Language Models | Familiarization with Google Colab |     |
+| 16.10 | **Architectures**: Perceptrons and Neural Networks |     |     |
+| 23.10 | **Architectures**: Recurrent Neural Networks |     | Assignment 1 |
+
+Download Link: <a href="/2024/downloads/syllabus.pdf" download>syllabus.pdf</a>
+
+# BN Requirements
+- something
+
+

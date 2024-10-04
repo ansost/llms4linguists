@@ -1,4 +1,4 @@
-# Course website for `LLMs in Linguistic Research`
+# Course website for the class "LLMs in Linguistic Research"
 
 This website is forked from the [quarto-template-for-university-courses](https://github.com/jonjoncardoso/quarto-template-for-university-courses) repo. Their README contains information about the setup for this template.
 

@@ -3,16 +3,16 @@ title: "LLMs in Linguistic Research"
 subtitle: "Academic Year: 2024/25"
 format: html
 ---
-<!--
+
 ::: {.callout-important collapse=false}
 ## 📢 Important
 
 (12/03/2024)
 
- - [🗓️ Week 01 lecture material](/2024/weeks/week01/page.qmd) is now available! 
+ - [The syllabus](/2024/syllabus.qmd) is now available! 
 
 :::
--->
+
 
 
 # 📑 Course Brief
