@@ -1,12 +1,90 @@
 [
   {
+    "objectID": "2024/weeks/week01/slides.html#whoami",
+    "href": "2024/weeks/week01/slides.html#whoami",
+    "title": "🗓️ Week 01 Introduction",
+    "section": "WhoamI",
+    "text": "WhoamI\n\n\n\n\n\nAkhilesh Kakolu Ramarao PhD researcher at the English Language and Linguistics department\n\n\n\n\nResearching computational Morphology supervised by Prof. Dr. Kevin Tang and Dr. Dinah Baer-Henney\nStarted at HHU in 2021\nIndustry Background: NLP Researcher, Software Engineer, Building multilingual chatbots, voice assistants\nInvolved in several language revitalization efforts for indigenous communities in Arunachal Pradesh, India, with a focus on Idu Mishmi and K’man Mishmi languages"
+  },
+  {
+    "objectID": "2024/weeks/week01/slides.html#syllabus-overview",
+    "href": "2024/weeks/week01/slides.html#syllabus-overview",
+    "title": "🗓️ Week 01 Introduction",
+    "section": "Syllabus Overview",
+    "text": "Syllabus Overview\n\n\n\n\n\n\n\n\n\nDate\nGeneral Topic\nHomework\nAssignments\n\n\n\n\n09.10\nAdmin, Architectures: Statistical and Probabilistic Language Models\nFamiliarization with Google Colab\n\n\n\n16.10\nArchitectures: Perceptrons and Neural Networks\n\n\n\n\n23.10\nArchitectures: Recurrent Neural Networks\n\nAssignment 1\n\n\n\nDownload Link: syllabus.pdf"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "LLMs in Linguistic Research",
     "section": "",
-    "text": "📑 Course Brief\nFocus: Understanding LLMs and their usage in various linguistics tasks\nHow: Hands-on learning and paper discussions\n\n\n🎯 Learning Objectives\n\nGaining an intuition of how LLMs work\nGetting to know the field of LLM research and development\nFamiliarizing yourself with different LLM architectures\nLearning how to use them for different linguistics tasks (e.g., text analysis, language generation, and language understanding)\nPracting using tools like Hugginface for LLM inference and fine-tuning\n\n\nInstructorTeaching Staff\n\n\n\nAkhilesh Kakolu Ramarao  📧 kakolura at hhu dot de\n\n\n\nAnna Stein  📧 anna.stein at hhu dot de\n\n\n\n\n\n📍 Location\nWednesday, 2:30pm-4pm\nBuilding 23.21 Floor 2, Room 22",
+    "text": "📢 Important\n\n\n\n\n\n(12/03/2024)\n\nThe syllabus is now available!\n\n\n\n\n\n📑 Course Brief\nFocus: Understanding LLMs and their usage in various linguistics tasks\nHow: Hands-on learning and paper discussions\n\n\n🎯 Learning Objectives\n\nGaining an intuition of how LLMs work\nGetting to know the field of LLM research and development\nFamiliarizing yourself with different LLM architectures\nLearning how to use them for different linguistics tasks (e.g., text analysis, language generation, and language understanding)\nPracting using tools like Hugginface for LLM inference and fine-tuning\n\n\nInstructorTeaching Staff\n\n\n\nAkhilesh Kakolu Ramarao  📧 kakolura at hhu dot de\n\n\n\nAnna Stein  📧 anna.stein at hhu dot de\n\n\n\n\n\n📍 Location\nWednesday, 2:30pm-4pm\nBuilding 23.21 Floor 2, Room 22",
     "crumbs": [
       "🏠 Home"
+    ]
+  },
+  {
+    "objectID": "2024/assignments.html",
+    "href": "2024/assignments.html",
+    "title": "LLMs in Lingustic Research 2024/25",
+    "section": "",
+    "text": "Assignments will be available here.",
+    "crumbs": [
+      "✍️ Assignments"
+    ]
+  },
+  {
+    "objectID": "2024/syllabus.html",
+    "href": "2024/syllabus.html",
+    "title": "LLMs in Lingustic Research 2024/25",
+    "section": "",
+    "text": "This will be a syllabus.",
+    "crumbs": [
+      "📓 Syllabus"
+    ]
+  },
+  {
+    "objectID": "2024/weeks/week01/page.html",
+    "href": "2024/weeks/week01/page.html",
+    "title": "🗓️ Week 01 - Admin, Architectures: Statistical and Probabilistic Language Models",
+    "section": "",
+    "text": "In this first week, we will cover what you can expect to learn from this course and the course logistics: all you need to know about the structure of the lectures, classes, assessments, and how we will interact throughout this course.",
+    "crumbs": [
+      "🗓️ Weeks",
+      "Week 01"
+    ]
+  },
+  {
+    "objectID": "2024/weeks/week01/page.html#lecture-slides",
+    "href": "2024/weeks/week01/page.html#lecture-slides",
+    "title": "🗓️ Week 01 - Admin, Architectures: Statistical and Probabilistic Language Models",
+    "section": "👨‍🏫 Lecture Slides",
+    "text": "👨‍🏫 Lecture Slides\nEither click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides.",
+    "crumbs": [
+      "🗓️ Weeks",
+      "Week 01"
+    ]
+  },
+  {
+    "objectID": "2024/weeks/week01/page.html#coursework",
+    "href": "2024/weeks/week01/page.html#coursework",
+    "title": "🗓️ Week 01 - Admin, Architectures: Statistical and Probabilistic Language Models",
+    "section": "✍️ Coursework",
+    "text": "✍️ Coursework\n🚧 Come back after the lecture to read the coursework instructions for the week 🚧",
+    "crumbs": [
+      "🗓️ Weeks",
+      "Week 01"
+    ]
+  },
+  {
+    "objectID": "2024/weeks/week01/page.html#recommended-reading",
+    "href": "2024/weeks/week01/page.html#recommended-reading",
+    "title": "🗓️ Week 01 - Admin, Architectures: Statistical and Probabilistic Language Models",
+    "section": "📚 Recommended Reading",
+    "text": "📚 Recommended Reading\n\nCheck the end of slides for the list of references cited in the lecture.",
+    "crumbs": [
+      "🗓️ Weeks",
+      "Week 01"
     ]
   }
 ]
