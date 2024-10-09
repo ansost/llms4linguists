@@ -125,8 +125,6 @@ format:
 | 22.01 | Probing LLMs |     | Assignment 5 |
 | 29.01 | TBD |     |     |
 
-Download Link: <a href="/2024/downloads/syllabus.pdf" download>syllabus.pdf</a>
-
 # BN Requirements
 - Completion of the homeworks
 - Active participation in the class
