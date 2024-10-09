@@ -9,20 +9,20 @@ format: html
 
 (12/03/2024)
 
-- The **syllabus** is now available! View it online [here](2024/syllabus.qmd) or <a href="/2024/downloads/syllabus.pdf" download>download</a> it here. 
+- The **syllabus** is now available! View it online [here](2024/syllabus.qmd).
 
 ::: -->
 
 ::: {.panel-tabset}
 ## Instructor
 
-![](/figures/people/small_akhilesh.jpg){fig-align="left" fig-alt="Photo of the lecturer Akhilesh" style="object-fit: cover;width:5em;height:5em;border-radius: 50%;"}  
+![](/figures/people/small_akhilesh.jpg){fig-align="left" fig-alt="Photo of the lecturer Akhilesh" style="object-fit: cover;width:5em;height:5em;border-radius: 50%;"}
 **Akhilesh Kakolu Ramarao** <br/>
 📧 [kakolura@hhu.de](mailto:kakolura@hhu.de)
 
 ## Teaching Staff
 
-![](/figures/people/anna.jpg){fig-align="left" fig-alt="Photo of the TA Anna Stein" style="object-fit: cover;width:5em;height:5em;border-radius: 50%;"}  
+![](/figures/people/anna.jpg){fig-align="left" fig-alt="Photo of the TA Anna Stein" style="object-fit: cover;width:5em;height:5em;border-radius: 50%;"}
 **Anna Stein** <br/>
 📧 [anna.stein@hhu.de](mailto:anna.stein@hhu.de)
 
@@ -31,8 +31,6 @@ format: html
 # Syllabus
 
 View it online [here](2024/syllabus.qmd).
-
-Download link:  <a href="/2024/downloads/syllabus.pdf" download>Click!</a>
 
 # 📍 Location
 
@@ -50,4 +48,4 @@ Building 23.21 Floor 2, Room 22
 - Getting to know the field of LLM research and development
 - Familiarizing yourself with different LLM architectures
 - Learning how to use them for different linguistics tasks (e.g., text analysis, language generation, and language understanding)
-- Practing using tools like Hugginface for LLM inference and fine-tuning
+- Practing using tools like Huggingface for LLM inference and fine-tuning
