@@ -1,1 +1,1 @@
-Sitemap: https://ansost.github.io/llms4linguists/sitemap.xml
+Sitemap: https://llm4linguists.xyz/sitemap.xml
