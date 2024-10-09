@@ -1,7 +1,7 @@
 ---
-subtitle: "MLLMs in Lingustic Research 2024/2025"
-title: "<font style='font-size:1em;'>🗓️ Week 01<br/> Introduction</font>"
-author: Akhilesh Kakolu Ramarao(#)
+subtitle: "LLMs in Lingustic Research WiSe 2024/25"
+title: "<font style='font-size:1em;'>Week 01<br/> Introduction</font>"
+author: Akhilesh Kakolu Ramarao
 institute: '[HHU](#)'
 date: 09 October 2024
 date-meta: 09 October 2024
@@ -12,7 +12,7 @@ toc-title: "What we will cover today:"
 center-title-slide: false
 from: markdown+emoji
 format:
-  revealjs: 
+  revealjs:
     fig-responsive: true
     theme: simple
     slide-number: true
@@ -20,7 +20,7 @@ format:
     preview-links: auto
     logo: /figures/icons/course_logo.png
     css: /css/styles_slides.css
-    footer: 'LLMs in Lingustic Research 2024/2025'
+    footer: 'LLMs in Lingustic Research WiSe 2024/25'
 ---
 
 # Who are we
@@ -33,17 +33,19 @@ format:
 <figure>
     <img src="/figures/people/small_akhilesh.jpg" alt="Photo of Akhilesh" role="presentation" style="object-fit: cover;width:5em;height:5em;border-radius: 50%;font-size:1em;" class="img-responsive atto_image_button_text-bottom">
     <figcaption>
-        <strong>Akhilesh Kakolu Ramarao</strong> 
+        <strong>Akhilesh Kakolu Ramarao</strong>
         <br/>PhD researcher at the English Language and Linguistics department
     </figcaption>
 </figure>
 :::
 
 ::: {.column style="width:50%;font-size:0.85em;margin-left:3%;"}
-- Researching **computational Morphology** supervised by [Prof. Dr. Kevin Tang](https://www.kevintang.org/) and [Dr. Dinah Baer-Henney](https://blogs.phil.hhu.de/dbh13/)
+- Researching **Computational Morphology** supervised by [Prof. Dr. Kevin Tang](https://www.kevintang.org/) and [Dr. Dinah Baer-Henney](https://blogs.phil.hhu.de/dbh13/)
 - Started at HHU in 2021
 - **Industry Background**: NLP Researcher, Software Engineer, Building multilingual chatbots, voice assistants
 - Involved in several **language revitalization** efforts for indigenous communities in [Arunachal Pradesh](https://en.wikipedia.org/wiki/Arunachal_Pradesh), India, with a focus on [Idu Mishmi](https://en.wikipedia.org/wiki/Idu_Mishmi_language) and K’man Mishmi languages
+- More: <a href="https://akkikek.xyz/about.html">https://akkikek.xyz/about.html</a>
+- Part of Slamlab: <a href="https://slam.phil.hhu.de/">https://slam.phil.hhu.de/</a>
 :::
 
 <!-- <span class="tag" style="background-color:var(--quarto-hl-st-color)">deep ocean</span>
@@ -56,30 +58,36 @@ format:
 
 :::
 
-<!-- ## Teaching Assistants {.smaller}
+## Teaching Assistants {.smaller}
 
-::: columns
 
 ::: {.column style="display:inline-block;width:40%;height:60%;border-radius:1em;margin:1%;padding:1.5%;background-color:#f5f5f5"}
 <figure>
     <img src="/figures/people/anna.jpg" alt="Picture of the TA Anna" role="presentation" style="object-fit: cover;width:5em;height:5em;border-radius: 50%;font-size:1em;" class="img-responsive atto_image_button_text-bottom">
     <figcaption>
         <strong></strong>
-        <br/> 
+        <br/>
         MSc Linguistics student<br>
         Focus on Copmutational Linguistics<br/>
         [📧 anna.stein@hhu.de](mailto:anna.stein@hhu.de)
         <br/>
     </figcaption>
 </figure>
-::: -->
+:::
 
+## Contact {.smaller}
+
+- **📧**: [kakolura@hhu.de](mailto: kakolura@hhu.de)
+- **🏢🕰️**: By appointment
+- **🌐👥**: <a href="https://slam.phil.hhu.de/">https://slam.phil.hhu.de</a>
+- **🐦**: <a href="https://x.com/SLaMLab_HHU">SLaMLab_HHU</a>
+- **🐙🐱**: <a href="https://github.com/hhuslamlab/">https://github.com/hhuslamlab/</a>
 
 # What to expect
 
-- You will see code and math 
-- Math will be annotated and explained in natural language. 
-- You will not be asked to do calculations
+- You will see code and math
+- Math will be annotated and explained in natural language
+- You will **not** be asked to do calculations or derive equations
 - You’ll learn how to work with code snippets but not how to build something from scratch (unless you already know how to code)
 
 ## Syllabus Overview {.smaller}
@@ -89,9 +97,78 @@ format:
 | 16.10 | **Architectures**: Perceptrons and Neural Networks |     |     |
 | 23.10 | **Architectures**: Recurrent Neural Networks |     | Assignment 1 |
 
+## Syllabus Overview {.smaller}
+
+| Date | General Topic | Homework | Assignments |
+| --- | --- | --- | --- |
+| 30.10 | **Transformer**: General architecture |     |     |
+| 06.11 | **Transformer**: The Attention mechanism |     |     |
+| 13.11 | **Transformer**: Transformer models: Decoder/Encode only models |     | Assignment 2 |
+| 20.11 | Using pre-trained models	|     |     |
+
+## Syllabus Overview {.smaller}
+
+| Date | General Topic | Homework | Assignments |
+| --- | --- | --- | --- |
+| 27.11 | **Study week**	|     |     |
+| 04.12 | **Transfer learning**: fine-tuning |     |     |
+| 11.12 | Adapting models for specific tasks	 |     | Assignment 3 |
+| 18.12 | Adapting models for specific tasks	|     |     |
+| 08.01 | Adapting models for specific tasks	|     | Assignment 4    |
+| 15.01 | Probing LLMs |     |     |
+| 22.01 | Probing LLMs |     | Assignment 5 |
+| 29.01 | TBD |     |     |
+
 Download Link: <a href="/2024/downloads/syllabus.pdf" download>syllabus.pdf</a>
 
 # BN Requirements
-- something
+- Completion of the homeworks
+- Active participation in the class
+- Pass 4/5 assignments
+
+# Who are you
+
+- Who are you? What name do you prefer?
+- What are you studying?
+- Do you have any prior programming experience? If so, with what
+language?
+- Have you worked with LLMs before?
+- What are you hoping to get out of this course?
+
+# Basics of Language Model
+
+- A model trained to predict the probability distribution over words or sequences of words in a language
+- Probability distribution is a mathematical description of the probabilities of word sequences
+
+## Statistical Language Models {.smaller}
+
+- These models use statistical patterns in the data to make predictions about the likelihood of specific sequences of words
+- **N-gram models** are the most common type of statistical language model that predicts the probability of a word given the previous n-1 words
+- They are simple and computationally efficient but have limitations in capturing long-range dependencies
+- They are widely used in speech recognition, machine translation, and other NLP tasks
+- They are used as a baseline for more complex language models
 
 
+## Probabilistic Language Models {.smaller}
+
+- These models assign a probability to sequences of words based on the training data
+- They are based on the principles of probability theory and use probabilistic methods to model the language
+- They can capture complex patterns in the data and are more flexible than statistical models
+- They are used in a wide range of NLP tasks, such as machine translation, text generation, and speech recognition
+
+## Neural Language Models {.smaller}
+
+- These models use neural networks to predict the likelihood of a sequence of words
+- They are trained on a large corpus of text data and can learn complex patterns and dependencies
+- They are more powerful than traditional statistical and probabilistic models
+- They are used in a wide range of NLP tasks, such as, machine translation, text generation, and sentiment analysis
+
+## Large Language Models {.smaller}
+
+- They are advanced language models that handle billions of training data parameters and generate text output
+- They are trained on large-scale datasets and can generate human-like text
+- They are used in a wide range of NLP tasks, such as machine translation, text generation, and question answering
+- They are the focus of the course
+
+
+## Thank you!
