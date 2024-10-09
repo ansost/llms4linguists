@@ -144,7 +144,7 @@
     "href": "2024/weeks/week01/page.html#recommended-reading",
     "title": "🗓️ Week 01 - Admin, Architectures: Statistical and Probabilistic Language Models",
     "section": "📚 Recommended Reading",
-    "text": "📚 Recommended Reading\n\nCheck the end of slides for the list of references cited in the lecture.",
+    "text": "📚 Recommended Reading\n\nSpeech and Language Processing, Chapter 3: N-gram language models PDF. Authors: Dan Jurafsky and James H. Martin.",
     "crumbs": [
       "🗓️ Weeks",
       "Week 01"
