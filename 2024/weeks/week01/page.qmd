@@ -13,10 +13,9 @@ Use your keypad to navigate the slides.
 <iframe src="slides.html" style="position=absolute;top: 0;left: 0;bottom: 0;right: 0;width: 100%;min-height:600px;"></iframe>
 </div>
 
-## ✍️ Coursework
+## ✍️ Homework
 
-🚧 Come back after the lecture to read the coursework instructions for the week 🚧
-
+<a href="https://llm4linguists.xyz/2024/homework/homework01.html">Week 01 - Homework</a>
 
 ## 📚 Recommended Reading
 
