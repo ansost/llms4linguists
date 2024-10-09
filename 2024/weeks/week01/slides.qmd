@@ -25,7 +25,7 @@ format:
 
 # Who are we
 
-## WhoamI {.smaller}
+## WhoamI: Akhilesh {.smaller}
 
 ::: columns
 
@@ -33,7 +33,7 @@ format:
 <figure>
     <img src="/figures/people/small_akhilesh.jpg" alt="Photo of Akhilesh" role="presentation" style="object-fit: cover;width:5em;height:5em;border-radius: 50%;font-size:1em;" class="img-responsive atto_image_button_text-bottom">
     <figcaption>
-        <strong>Akhilesh Kakolu Ramarao</strong>
+        <strong>Akhilesh Kakolu Ramarao</strong> (he/him)
         <br/>PhD researcher at the English Language and Linguistics department
     </figcaption>
 </figure>
@@ -45,7 +45,7 @@ format:
 - **Industry Background**: NLP Researcher, Software Engineer, Building multilingual chatbots, voice assistants
 - Involved in several **language revitalization** efforts for indigenous communities in [Arunachal Pradesh](https://en.wikipedia.org/wiki/Arunachal_Pradesh), India, with a focus on [Idu Mishmi](https://en.wikipedia.org/wiki/Idu_Mishmi_language) and K’man Mishmi languages
 - More: <a href="https://akkikek.xyz/about.html">https://akkikek.xyz/about.html</a>
-- Part of Slamlab: <a href="https://slam.phil.hhu.de/">https://slam.phil.hhu.de/</a>
+- Part of the Slamlab: <a href="https://slam.phil.hhu.de/">https://slam.phil.hhu.de/</a>
 :::
 
 <!-- <span class="tag" style="background-color:var(--quarto-hl-st-color)">deep ocean</span>
@@ -53,32 +53,38 @@ format:
 <span class="tag" style="background-color:var(--quarto-hl-fu-color)">engineering</span>
 <br/>
 <span class="tag" style="background-color:var(--quarto-hl-dv-color)">octopus</span> -->
-
-
-
 :::
 
-## Teaching Assistants {.smaller}
+## WhoamI: Anna {.smaller}
 
+::: columns
 
 ::: {.column style="display:inline-block;width:40%;height:60%;border-radius:1em;margin:1%;padding:1.5%;background-color:#f5f5f5"}
 <figure>
     <img src="/figures/people/anna.jpg" alt="Picture of the TA Anna" role="presentation" style="object-fit: cover;width:5em;height:5em;border-radius: 50%;font-size:1em;" class="img-responsive atto_image_button_text-bottom">
     <figcaption>
-        <strong></strong>
+        <strong>Anna Sophia Stein</strong> (she/her)
         <br/>
         MSc Linguistics student<br>
-        Focus on Copmutational Linguistics<br/>
+        Focus on Computational Linguistics<br/>
         [📧 anna.stein@hhu.de](mailto:anna.stein@hhu.de)
         <br/>
     </figcaption>
 </figure>
 :::
 
+::: {.column style="width:50%;font-size:0.85em;margin-left:3%;"}
+- **Main interests**: anything Natural Language Processing, open source, ...
+- Part of research at the Anglistics, Linguistics and Computer Science department
+- Currently writing my MA thesis on making LLMs better at pragmatics    
+- Part of the Slamlab: <a href="https://slam.phil.hhu.de/">https://slam.phil.hhu.de/</a>
+:::
+:::             
+
 ## Contact {.smaller}
 
-- **📧**: [kakolura@hhu.de](mailto: kakolura@hhu.de)
-- **🏢🕰️**: By appointment
+- **📧**: [kakolura@hhu.de](mailto:kakolura@hhu.de)
+- **🏢🕰️**: <a href="mailto:kakolura@hhu.de?subject llms4linguists office hour request">By appointment</a>
 - **🌐👥**: <a href="https://slam.phil.hhu.de/">https://slam.phil.hhu.de</a>
 - **🐦**: <a href="https://x.com/SLaMLab_HHU">SLaMLab_HHU</a>
 - **🐙🐱**: <a href="https://github.com/hhuslamlab/">https://github.com/hhuslamlab/</a>
