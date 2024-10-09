@@ -2,9 +2,9 @@
 title: "🗓️ Week 01 - Admin, Architectures: Statistical and Probabilistic Language Models"
 ---
 
-In this first week, we will cover what you can expect to learn from this course and the course logistics: all you need to know about the structure of the lectures, classes, assessments, and how we will interact throughout this course. 
+In this first week, we will cover what you can expect to learn from this course and the course logistics: all you need to know about the structure of the lectures, classes, assessments, and how we will interact throughout this course.
 
-## 👨‍🏫 Lecture Slides 
+## 👨‍🏫 Lecture Slides
 
 Either click on the slide area below or click [here](slides.qmd) to view it in fullscreen.
 Use your keypad to navigate the slides.
@@ -20,4 +20,4 @@ Use your keypad to navigate the slides.
 
 ## 📚 Recommended Reading
 
-- Check the end of slides for the list of references cited in the lecture.
+- Speech and Language Processing, Chapter 3: N-gram language models [PDF](https://web.stanford.edu/~jurafsky/slp3/3.pdf). Authors: Dan Jurafsky and James H. Martin.
