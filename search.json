@@ -2,7 +2,7 @@
   {
     "objectID": "2024/homework/homework01.html",
     "href": "2024/homework/homework01.html",
-    "title": "Assignment 1: Using Google Colab",
+    "title": "Homework 1: Using Google Colab",
     "section": "",
     "text": "The instructions below assume that you have a Google account or are willing to make one. If you do not want to make a Google account,  contact Anna for instructions to run notebooks without Colab.",
     "crumbs": [
@@ -13,7 +13,7 @@
   {
     "objectID": "2024/homework/homework01.html#google-colab",
     "href": "2024/homework/homework01.html#google-colab",
-    "title": "Assignment 1: Using Google Colab",
+    "title": "Homework 1: Using Google Colab",
     "section": "Google Colab",
     "text": "Google Colab\n\nGo to the notebooks folder. Click on the three dots for the hw1.ipynb file, select “Open with” and then “Open in Colab”.\nRun both cells in the notebook by clicking on the play icon on the left of the cell or clicking into the cell and pressing CTRL + ENTER on Windows or CMD + ENTER on Mac.",
     "crumbs": [
