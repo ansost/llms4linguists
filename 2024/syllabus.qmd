@@ -1,1 +1,9 @@
-This will be a syllabus.
+---
+title: "Syllabus"
+---
+*Last changed: 09.10.24*
+
+<object width="700" height="500" type="application/pdf" data="downloads/syllabus.pdf?#zoom=90&scrollbar=0&toolbar=0&navpanes=0">
+    <p>Ups, something went wrong!</p>
+</object>
+

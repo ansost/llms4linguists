@@ -4,30 +4,14 @@ subtitle: "Academic Year: 2024/25"
 format: html
 ---
 
-::: {.callout-important collapse=false}
+<!-- ::: {.callout-important collapse=false}
 ## 📢 Important
 
 (12/03/2024)
 
- - [The syllabus](/2024/syllabus.qmd) is now available! 
+- The **syllabus** is now available! View it online [here](2024/syllabus.qmd) or <a href="/2024/downloads/syllabus.pdf" download>download</a> it here. 
 
-:::
-
-
-
-# 📑 Course Brief
-
-**Focus:** Understanding LLMs and their usage in various linguistics tasks
-
-**How:** Hands-on learning and paper discussions
-
-# 🎯 Learning Objectives
-
-- Gaining an intuition of how LLMs work
-- Getting to know the field of LLM research and development
-- Familiarizing yourself with different LLM architectures
-- Learning how to use them for different linguistics tasks (e.g., text analysis, language generation, and language understanding)
-- Practing using tools like Hugginface for LLM inference and fine-tuning
+::: -->
 
 ::: {.panel-tabset}
 ## Instructor
@@ -44,8 +28,26 @@ format: html
 
 :::
 
+# Syllabus
+
+View it online [here](2024/syllabus.qmd).
+
+Download link:  <a href="/2024/downloads/syllabus.pdf" download>Click!</a>
+
 # 📍 Location
 
 Wednesday, 2:30pm-4pm
 
 Building 23.21 Floor 2, Room 22
+
+# 🎯 Learning Objectives
+
+**Focus:** Understanding LLMs and their usage in various linguistics tasks
+
+**How:** Hands-on learning and paper discussions
+
+- Gaining an intuition of how LLMs work
+- Getting to know the field of LLM research and development
+- Familiarizing yourself with different LLM architectures
+- Learning how to use them for different linguistics tasks (e.g., text analysis, language generation, and language understanding)
+- Practing using tools like Hugginface for LLM inference and fine-tuning
