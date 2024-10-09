@@ -2,16 +2,79 @@
   {
     "objectID": "2024/weeks/week01/slides.html#whoami",
     "href": "2024/weeks/week01/slides.html#whoami",
-    "title": "🗓️ Week 01 Introduction",
+    "title": "Week 01 Introduction",
     "section": "WhoamI",
-    "text": "WhoamI\n\n\n\n\n\nAkhilesh Kakolu Ramarao PhD researcher at the English Language and Linguistics department\n\n\n\n\nResearching computational Morphology supervised by Prof. Dr. Kevin Tang and Dr. Dinah Baer-Henney\nStarted at HHU in 2021\nIndustry Background: NLP Researcher, Software Engineer, Building multilingual chatbots, voice assistants\nInvolved in several language revitalization efforts for indigenous communities in Arunachal Pradesh, India, with a focus on Idu Mishmi and K’man Mishmi languages"
+    "text": "WhoamI\n\n\n\n\n\nAkhilesh Kakolu Ramarao PhD researcher at the English Language and Linguistics department\n\n\n\n\nResearching Computational Morphology supervised by Prof. Dr. Kevin Tang and Dr. Dinah Baer-Henney\nStarted at HHU in 2021\nIndustry Background: NLP Researcher, Software Engineer, Building multilingual chatbots, voice assistants\nInvolved in several language revitalization efforts for indigenous communities in Arunachal Pradesh, India, with a focus on Idu Mishmi and K’man Mishmi languages\nMore: https://akkikek.xyz/about.html\nPart of Slamlab: https://slam.phil.hhu.de/"
+  },
+  {
+    "objectID": "2024/weeks/week01/slides.html#teaching-assistants",
+    "href": "2024/weeks/week01/slides.html#teaching-assistants",
+    "title": "Week 01 Introduction",
+    "section": "Teaching Assistants",
+    "text": "Teaching Assistants\n\n\n\n\n  MSc Linguistics student Focus on Copmutational Linguistics 📧 anna.stein@hhu.de"
+  },
+  {
+    "objectID": "2024/weeks/week01/slides.html#contact",
+    "href": "2024/weeks/week01/slides.html#contact",
+    "title": "Week 01 Introduction",
+    "section": "Contact",
+    "text": "Contact\n\n📧: kakolura@hhu.de\n🏢🕰️: By appointment\n🌐👥: https://slam.phil.hhu.de\n🐦: SLaMLab_HHU\n🐙🐱: https://github.com/hhuslamlab/"
   },
   {
     "objectID": "2024/weeks/week01/slides.html#syllabus-overview",
     "href": "2024/weeks/week01/slides.html#syllabus-overview",
-    "title": "🗓️ Week 01 Introduction",
+    "title": "Week 01 Introduction",
     "section": "Syllabus Overview",
-    "text": "Syllabus Overview\n\n\n\n\n\n\n\n\n\nDate\nGeneral Topic\nHomework\nAssignments\n\n\n\n\n09.10\nAdmin, Architectures: Statistical and Probabilistic Language Models\nFamiliarization with Google Colab\n\n\n\n16.10\nArchitectures: Perceptrons and Neural Networks\n\n\n\n\n23.10\nArchitectures: Recurrent Neural Networks\n\nAssignment 1\n\n\n\nDownload Link: syllabus.pdf"
+    "text": "Syllabus Overview\n\n\n\n\n\n\n\n\n\nDate\nGeneral Topic\nHomework\nAssignments\n\n\n\n\n09.10\nAdmin, Architectures: Statistical and Probabilistic Language Models\nFamiliarization with Google Colab\n\n\n\n16.10\nArchitectures: Perceptrons and Neural Networks\n\n\n\n\n23.10\nArchitectures: Recurrent Neural Networks\n\nAssignment 1"
+  },
+  {
+    "objectID": "2024/weeks/week01/slides.html#syllabus-overview-1",
+    "href": "2024/weeks/week01/slides.html#syllabus-overview-1",
+    "title": "Week 01 Introduction",
+    "section": "Syllabus Overview",
+    "text": "Syllabus Overview\n\n\n\n\n\n\n\n\n\nDate\nGeneral Topic\nHomework\nAssignments\n\n\n\n\n30.10\nTransformer: General architecture\n\n\n\n\n06.11\nTransformer: The Attention mechanism\n\n\n\n\n13.11\nTransformer: Transformer models: Decoder/Encode only models\n\nAssignment 2\n\n\n20.11\nUsing pre-trained models"
+  },
+  {
+    "objectID": "2024/weeks/week01/slides.html#syllabus-overview-2",
+    "href": "2024/weeks/week01/slides.html#syllabus-overview-2",
+    "title": "Week 01 Introduction",
+    "section": "Syllabus Overview",
+    "text": "Syllabus Overview\n\n\n\n\n\n\n\n\n\nDate\nGeneral Topic\nHomework\nAssignments\n\n\n\n\n27.11\nStudy week\n\n\n\n\n04.12\nTransfer learning: fine-tuning\n\n\n\n\n11.12\nAdapting models for specific tasks\n\nAssignment 3\n\n\n18.12\nAdapting models for specific tasks\n\n\n\n\n08.01\nAdapting models for specific tasks\n\nAssignment 4\n\n\n15.01\nProbing LLMs\n\n\n\n\n22.01\nProbing LLMs\n\nAssignment 5\n\n\n29.01\nTBD\n\n\n\n\n\nDownload Link: syllabus.pdf"
+  },
+  {
+    "objectID": "2024/weeks/week01/slides.html#statistical-language-models",
+    "href": "2024/weeks/week01/slides.html#statistical-language-models",
+    "title": "Week 01 Introduction",
+    "section": "Statistical Language Models",
+    "text": "Statistical Language Models\n\nThese models use statistical patterns in the data to make predictions about the likelihood of specific sequences of words\nN-gram models are the most common type of statistical language model that predicts the probability of a word given the previous n-1 words\nThey are simple and computationally efficient but have limitations in capturing long-range dependencies\nThey are widely used in speech recognition, machine translation, and other NLP tasks\nThey are used as a baseline for more complex language models"
+  },
+  {
+    "objectID": "2024/weeks/week01/slides.html#probabilistic-language-models",
+    "href": "2024/weeks/week01/slides.html#probabilistic-language-models",
+    "title": "Week 01 Introduction",
+    "section": "Probabilistic Language Models",
+    "text": "Probabilistic Language Models\n\nThese models assign a probability to sequences of words based on the training data\nThey are based on the principles of probability theory and use probabilistic methods to model the language\nThey can capture complex patterns in the data and are more flexible than statistical models\nThey are used in a wide range of NLP tasks, such as machine translation, text generation, and speech recognition"
+  },
+  {
+    "objectID": "2024/weeks/week01/slides.html#neural-language-models",
+    "href": "2024/weeks/week01/slides.html#neural-language-models",
+    "title": "Week 01 Introduction",
+    "section": "Neural Language Models",
+    "text": "Neural Language Models\n\nThese models use neural networks to predict the likelihood of a sequence of words\nThey are trained on a large corpus of text data and can learn complex patterns and dependencies\nThey are more powerful than traditional statistical and probabilistic models\nThey are used in a wide range of NLP tasks, such as, machine translation, text generation, and sentiment analysis"
+  },
+  {
+    "objectID": "2024/weeks/week01/slides.html#large-language-models",
+    "href": "2024/weeks/week01/slides.html#large-language-models",
+    "title": "Week 01 Introduction",
+    "section": "Large Language Models",
+    "text": "Large Language Models\n\nThey are advanced language models that handle billions of training data parameters and generate text output\nThey are trained on large-scale datasets and can generate human-like text\nThey are used in a wide range of NLP tasks, such as machine translation, text generation, and question answering\nThey are the focus of the course"
+  },
+  {
+    "objectID": "2024/weeks/week01/slides.html#thank-you",
+    "href": "2024/weeks/week01/slides.html#thank-you",
+    "title": "Week 01 Introduction",
+    "section": "Thank you!",
+    "text": "Thank you!\n\n\n\n\nLLMs in Lingustic Research WiSe 2024/25"
   },
   {
     "objectID": "index.html",
