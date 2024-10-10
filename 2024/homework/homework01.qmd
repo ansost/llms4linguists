@@ -1,14 +1,14 @@
 ---
-title: "Assignment 1: Using Google Colab"
+title: "Homework 1: Using Google Colab"
 format: html
 ---
 
 The instructions below assume that you have a Google account or are willing to make one. If you do not want to make a Google account, <a href="mailto:anna.stein@hhu.de??subject=Hw1 llms4linguists class"> contact Anna</a> for instructions to run notebooks without Colab.
 
 # Setup
-1. Go to your Google Drive and make a new folder called "*llms4linguists*". 
+1. Go to your Google Drive and make a new folder called "*llms4linguists*".
 2. In that folder, make two other folders called "*notebooks*" and "*data*".
-3. Upload <a href="../downloads/hw1.ipynb" download>this notebook</a> into the notebook folder and <a href="../downloads/hello_world.txt" download>this file</a> into the data folder.
+3. Upload <a href="hw1.ipynb" download>this notebook</a> into the notebook folder and <a href="hello_world.txt" download>this file</a> into the data folder.
 
 ## Google Colab
 1. Go to the *notebooks* folder. Click on the three dots for the *hw1.ipynb* file, select "*Open with*" and then "*Open in Colab*".
