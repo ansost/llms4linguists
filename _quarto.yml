@@ -6,6 +6,7 @@ project:
     - "index.qmd"
     - "2024/*.qmd"
     - "2024/weeks/week01/*.qmd"
+    - "2024/weeks/week02/*.qmd"
     - "2024/homework/*.qmd"
 
 website:
@@ -13,7 +14,7 @@ website:
   page-navigation: true
   reader-mode: true
   open-graph: true
-  twitter-card: 
+  twitter-card:
     creator: "@<twitter-handle>"
     site: "\\@<twitter-handle>"
   favicon: "figures/icons/course_logo.png"
@@ -41,7 +42,7 @@ website:
       #     - href: 2024/assignments/assignment02.qmd
       #       text: "📝 Assignment 02"
       #     - href: 2024/assignments/group_project.qmd
-      #       text: "👥 Group Project"      
+      #       text: "👥 Group Project"
       - section: "🗓️ Class material"
         contents:
          - href: 2024/weeks/week01/page.qmd
@@ -49,10 +50,13 @@ website:
            contents:
              - href: 2024/weeks/week01/page.qmd
                text: 👨‍🏫 Lecture Material
-            #  - href: 2024/weeks/week01/lab.qmd
-            #    text: 💻 Lab Roadmap
-            #  - href: 2024/weeks/week01/appendix.qmd
-            #    text: 🔖 Appendix
+         # - href: 2024/weeks/week02/page.qmd
+         #   text: Week 02 - NN basics
+         #   contents:
+         #     - href: 2024/weeks/week02/page.qmd
+         #       text: 👨‍🏫 Lecture Material
+
+
       - section: "🧩 Homework"
         contents:
           - href: 2024/homework/homework01.qmd
@@ -65,7 +69,7 @@ website:
     background: primary
   page-footer:
     background: light
-    left: "License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/)" 
+    left: "License: [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/)"
 
 bibliography: references/references.bib
 csl: references/chicago-author-date.csl
@@ -83,10 +87,10 @@ format:
     link-external-filter: ^(?:http:|https:)\/\/(?:lse-dsi\.github\.io\/|localhost)
 
     theme:
-      light: 
+      light:
         - journal
         - css/custom.scss # I use this just to change the default colour
-    css: 
+    css:
       - css/custom_style.css
       - css/syllabus.css
     toc: true

@@ -1,0 +1,26 @@
+"The cat sat on the mat. The cat is happy. The mat is clean."
+
+Words:
+(<s>, The): 0.1
+(The, cat): 0.2
+(cat, sat)
+(on, the)
+(the, mat)
+(mat, .)
+(<s>, The)
+(the, cat)
+(cat, is)
+(is, happy)
+(happy, .)
+
+(<s>, The, cat)
+(The, cat, sat)
+.....
+...
+
+Characters:
+(<s>, T)
+(H, e)
+...
+..
+The  ______.

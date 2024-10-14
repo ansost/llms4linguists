@@ -1,0 +1,307 @@
+---
+subtitle: "LLMs in Lingustic Research WiSe 2024/25"
+title: "<font style='font-size:1em;'>Week 02<br/> Basics of Neural Networks</font>"
+author: Akhilesh Kakolu Ramarao
+institute: '[HHU](#)'
+date: 16 October 2024
+date-meta: 16 October 2024
+date-format: "DD MMM YYYY"
+toc: true
+toc-depth: 1
+toc-title: "What we will cover today:"
+center-title-slide: false
+from: markdown+emoji
+filters:
+  - diagram
+format:
+  revealjs:
+    fig-responsive: true
+    theme: simple
+    slide-number: true
+    mouse-wheel: false
+    preview-links: auto
+    logo: /figures/icons/course_logo.png
+    css: /css/styles_slides.css
+    footer: 'LLMs in Lingustic Research WiSe 2024/25'
+---
+
+
+# Mathematical concepts {.smaller}
+
+## {.smaller}
+
+**Scalars**: single number
+
+$$
+x = 1
+$$
+
+**Vectors**: sequence of numbers
+
+$$
+v = \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}
+$$
+
+**Matrix**: 2D array of numbers
+
+$$
+M = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \end{bmatrix}
+$$
+
+## {.smaller}
+
+**Matrix multiplication**
+
+
+$$
+\begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \end{bmatrix} \times \begin{bmatrix} 1 & 2 \\ 3 & 4 \\ 5 & 6 \end{bmatrix}
+$$
+
+$$
+= \begin{bmatrix} 22 & 28 \\ 49 & 64 \end{bmatrix}
+$$
+
+- The first matrix has 2 rows and 3 columns, and the second matrix has 3 rows and 2 columns.
+- The number of columns in the first matrix should be equal to the number of rows in the second matrix.
+- The resulting matrix will have the same number of rows as the first matrix and the same number of columns as the second matrix.
+
+## {.smaller}
+
+**Element-wise multiplication**
+
+$$
+\begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \end{bmatrix} \odot \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \end{bmatrix}
+$$
+
+$$
+= \begin{bmatrix} 1 & 4 & 9 \\ 16 & 25 & 36 \end{bmatrix}
+$$
+
+- The matrices should have the same dimensions.
+- The resulting matrix will have the same dimensions as the input matrices.
+- You multiply the corresponding elements of the matrices.
+
+## {.smaller}
+
+**Matrix addition**
+
+$$
+\begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \end{bmatrix} + \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \end{bmatrix}
+$$
+
+$$
+= \begin{bmatrix} 2 & 4 & 6 \\ 8 & 10 & 12 \end{bmatrix}
+$$
+
+- You add the corresponding elements of the matrices.
+
+## {.smaller}
+
+**Dot product**
+
+$$
+\begin{bmatrix} 1 & 2 & 3 \end{bmatrix} \cdot \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}
+$$
+
+$$
+= 1 \times 1 + 2 \times 2 + 3 \times 3 = 14
+$$
+
+- The number of columns in the first matrix should be equal to the number of rows in the second matrix.
+- The resulting matrix will have the same number of rows as the first matrix and the same number of columns as the second matrix.
+- You multiply the corresponding elements of the matrices and sum them up.
+
+# Neural Networks
+
+- Neural networks are a class of machine learning models inspired by the human brain.
+
+**How do neural networks work?**
+
+- **Input**: The network receives data (like an image or text).
+- **Processing**: The data is processed through a series of layers.
+- **Output**: The network produces an output (like a prediction or classification).
+
+## {.smaller}
+
+**Learning**
+
+- Neural networks learn by looking at many examples.
+- They adjust their internal settings to improve their accuracy.
+- This process is called training.
+
+**Components of a neural network**
+
+- **Neurons**: Basic building blocks of a neural network.
+- **Layers**: Neurons are organized into layers.
+- **Weights and biases**: Parameters that the network learns during training.
+
+**Advantages of neural networks**
+
+- Can learn complex patterns.
+- Can generalize to new data.
+- Can be used for a wide range of tasks (like image recognition, speech recognition, and natural language processing).
+
+## {.smaller}
+
+**Perceptron**
+
+
+```{mermaid}
+%%| fig-align: center
+graph LR
+    subgraph Inputs
+        x1((x1))
+        x2((x2))
+        x3((x3))
+    end
+
+    sum((Σ))
+    act[Activation]
+    out((Output))
+    b[Bias]
+
+    x1 -->|w1| sum
+    x2 -->|w2| sum
+    x3 -->|w3| sum
+    b --> sum
+    sum --> act
+    act --> out
+
+	style Inputs fill:#87CEFA,stroke:#333,stroke-width:2px, fill-opacity: 0.5
+	style x1 fill:#87CEFA,stroke:#333,stroke-width:2px
+    style x2 fill:#87CEFA,stroke:#333,stroke-width:2px
+    style x3 fill:#87CEFA,stroke:#333,stroke-width:2px
+    style sum fill:#FFA07A,stroke:#333,stroke-width:2px
+    style act fill:#98FB98,stroke:#333,stroke-width:2px
+    style b fill:#FFFF00,stroke:#333,stroke-width:2px
+```
+- Input Nodes (x1, x2, x3): Each input is a number.
+- Weights (w1, w2, w3): Each weight is a number that determines the importance of the corresponding input.
+- Bias (b): A constant value that shifts the output of the perceptron.
+- Sum Node (Σ): Calculates the weighted sum of the inputs and the bias.
+- Activation Function: Introduces non-linearity to the output of the perceptron.
+- Output Node: The final output of the perceptron.
+
+## Activation functions {.smaller}
+
+- Activation functions are used to introduce non-linearity to the output of a neuron.
+
+**Sigmoid function**
+
+$$
+f(x) = \frac{1}{1 + e^{-x}}
+$$
+
+Example: $f(0) = 0.5$
+
+	- f(x): This represents the output of the sigmoid function for a given input x.
+	- e: This is the euler's number (approximately 2.71828).
+	- x: This is the input to the sigmoid function.
+	- 1: This is added to the denominator to avoid division by zero.
+
+- The sigmoid function takes any real number as input and outputs a value between 0 and 1.
+- It is used in the output layer of a binary classification problem.
+
+## {.smaller}
+
+**ReLU function**
+
+$$
+f(x) = \max(0, x)
+$$
+
+Example: $f(2) = 2$
+
+where:
+
+	- f(x): This represents the output of the ReLU function for a given input x.
+	- x: This is the input to the ReLU function.
+	- max: This function returns the maximum of the two values.
+	- 0: This is the threshold value.
+
+- The Rectified Linear Unit (ReLU) function is that outputs the input directly if it is positive, otherwise, it outputs zero.
+- The output of the ReLU function is between 0 and infinity.
+- It is a popular activation function used in deep learning models.
+
+## {.smaller}
+
+**Feedforward Neural Network**
+
+```{mermaid}
+%%| fig-width: 5
+%%| fig-height: 3
+%%| fig-align: center
+flowchart LR
+    %% Input Layer
+    I1((I1)):::inputStyle
+    I2((I2)):::inputStyle
+    I3((I3)):::inputStyle
+    B1((Bias)):::biasStyle
+    %% Hidden Layer
+    H1((H1)):::hiddenStyle
+    H2((H2)):::hiddenStyle
+    H3((H3)):::hiddenStyle
+    B2((Bias)):::biasStyle
+    %% Output Layer
+    O1((O1)):::outputStyle
+    O2((O2)):::outputStyle
+
+    %% Connections
+    I1 -->|w11| H1
+    I1 -->|w12| H2
+    I1 -->|w13| H3
+    I2 -->|w21| H1
+    I2 -->|w22| H2
+    I2 -->|w23| H3
+    I3 -->|w31| H1
+    I3 -->|w32| H2
+    I3 -->|w33| H3
+    B1 -->|b1| H1
+    B1 -->|b2| H2
+    B1 -->|b3| H3
+    H1 -->|v11| O1
+    H1 -->|v12| O2
+    H2 -->|v21| O1
+    H2 -->|v22| O2
+    H3 -->|v31| O1
+    H3 -->|v32| O2
+    B2 -->|b4| O1
+    B2 -->|b5| O2
+
+    %% Styles
+    classDef inputStyle fill:#3498db,stroke:#333,stroke-width:2px;
+    classDef hiddenStyle fill:#e74c3c,stroke:#333,stroke-width:2px;
+    classDef outputStyle fill:#2ecc71,stroke:#333,stroke-width:2px;
+    classDef biasStyle fill:#f39c12,stroke:#333,stroke-width:2px;
+
+    %% Layer Labels
+    I2 -.- InputLabel[Input Layer]
+    H2 -.- HiddenLabel[Hidden Layer]
+    O1 -.- OutputLabel[Output Layer]
+
+    style InputLabel fill:none,stroke:none
+    style HiddenLabel fill:none,stroke:none
+    style OutputLabel fill:none,stroke:none
+```
+
+## Feedforward Neural Network {.smaller}
+
+- Feedforward neural network with three layers: input, hidden, and output.
+- The input layer has three nodes (I1, I2, I3).
+- The hidden layer has three nodes (H1, H2, H3).
+- The output layer has two nodes (O1, O2).
+- Each connection between the nodes has a weight (w) and a bias (b).
+- The weights and biases are learned during the training process.
+
+## {.smaller}
+
+**Loss function**
+
+- During forward propagation, the neural network makes predictions based on input data.
+- The loss function compares these predictions to the true values and calculates a loss score.
+- The loss score is a measure of how well the network is performing.
+- The goal of training is to minimize the loss function.
+
+- For regression problems, use MSE or MAE.
+- For classification problems, use cross-entropy loss.
+- For multi-class classification problems, use categorical cross-entropy loss.

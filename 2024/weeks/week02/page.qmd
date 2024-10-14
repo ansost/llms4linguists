@@ -1,0 +1,18 @@
+---
+title: "🗓️ Week 02 - Basics of Neural Networks"
+---
+
+
+## 👨‍🏫 Lecture Slides
+
+Either click on the slide area below or click [here](slides.qmd) to view it in fullscreen.
+Use your keypad to navigate the slides.
+
+<div class="container" style="position: relative;overflow: hidden;width: 100%;min-height:600px;">
+<iframe src="slides.html" style="position=absolute;top: 0;left: 0;bottom: 0;right: 0;width: 100%;min-height:600px;"></iframe>
+</div>
+
+## ✍️ Homework
+
+
+## 📚 Recommended Reading
