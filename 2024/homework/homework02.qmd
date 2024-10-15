@@ -1,0 +1,13 @@
+---
+title: "Homework 02: Neural Network" 
+format: html
+---
+
+Concepts to understand: backpropagation
+
+The goal is to be able to define these in your own words 
+
+1) Watch [this video](https://www.youtube.com/watch?v=aircAruvnKk&list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi) on youtube.
+
+[](https://www.3blue1brown.com/lessons/neural-networks) 
+

@@ -25,7 +25,7 @@ format:
     footer: 'LLMs in Lingustic Research WiSe 2024/25'
 ---
 
-
+<!-- 
 # Mathematical concepts {.smaller}
 
 ## {.smaller}
@@ -109,43 +109,67 @@ $$
 
 - The number of columns in the first matrix should be equal to the number of rows in the second matrix.
 - The resulting matrix will have the same number of rows as the first matrix and the same number of columns as the second matrix.
-- You multiply the corresponding elements of the matrices and sum them up.
+- You multiply the corresponding elements of the matrices and sum them up. -->
 
-# Neural Networks
+# Machine learning
+- Using **learning algorithms** to learn from existing data and predict for new data.
+- We have seen two types of Machine Learning models: 
+  - **Statistical language models** 
+  - **Probabilistic language models**
+- Today: Neural Networks
 
-- Neural networks are a class of machine learning models inspired by the human brain.
+<!-- ->who remembers what a statistical/probabilistic language model is? What is their "learning algorithm"?-->
 
-**How do neural networks work?**
+# Neural Networks {.smaller}
 
-- **Input**: The network receives data (like an image or text).
-- **Processing**: The data is processed through a series of layers.
-- **Output**: The network produces an output (like a prediction or classification).
+Neural networks are a class of machine learning models inspired by the human brain.
 
-## {.smaller}
+<br>
 
-**Learning**
+**Learning Alorithm**
 
 - Neural networks learn by looking at many examples.
-- They adjust their internal settings to improve their accuracy.
-- This process is called training.
-
-**Components of a neural network**
-
-- **Neurons**: Basic building blocks of a neural network.
-- **Layers**: Neurons are organized into layers.
-- **Weights and biases**: Parameters that the network learns during training.
+- They adjust their internal settings (= **parameters**) to improve their accuracy.
+- This is process is called **training**.
 
 **Advantages of neural networks**
 
 - Can learn complex patterns.
 - Can generalize to new data.
-- Can be used for a wide range of tasks (like image recognition, speech recognition, and natural language processing).
+- Can be used for a wide range of tasks (speech recognition, and natural language processing).
 
-## {.smaller}
+## Architecture
+<br>
+<img src="nn.png"></img>
+<br>
+The input can be a vector, and the output some classification, like a corresponding animal.
 
-**Perceptron**
+## 
+
+<br>
+<img src="nn_layers.png"></img>
+Every Neural Network has **Layers**. They are responsible for a specific action, like addition, and pass information to eachother.
+<br>
+
+## 
+
+<br>
+<img src="nn_neurons.png"></img>
+Layers consist of **neurons** which each modify the input in some way.
+<br>
+
+##
+
+<br>
+<img src="nn_perceptron.png"></img>
+The simplest Neural network only has one layer with one neuron. This single neuron is called a **perceptron**. 
+<br>
+
+## Perceptron
 
 
+
+<!-- 
 ```{mermaid}
 %%| fig-align: center
 graph LR
@@ -174,13 +198,17 @@ graph LR
     style sum fill:#FFA07A,stroke:#333,stroke-width:2px
     style act fill:#98FB98,stroke:#333,stroke-width:2px
     style b fill:#FFFF00,stroke:#333,stroke-width:2px
-```
+``` 
+
+
+
 - Input Nodes (x1, x2, x3): Each input is a number.
 - Weights (w1, w2, w3): Each weight is a number that determines the importance of the corresponding input.
 - Bias (b): A constant value that shifts the output of the perceptron.
 - Sum Node (Σ): Calculates the weighted sum of the inputs and the bias.
 - Activation Function: Introduces non-linearity to the output of the perceptron.
 - Output Node: The final output of the perceptron.
+-->
 
 ## Activation functions {.smaller}
 

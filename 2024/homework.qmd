@@ -4,6 +4,6 @@ title: "Homework Overview"
 
 Here is an overview of all Homework up to date: 
 
-**Hw 1**: [here](homework/homework01.qmd)
+**Hw 1: Google Colab**: [here](homework/homework01.qmd)
 
-TBD
+**Hw 2: Neural Networks**: [here](homework/homework02.qmd)
