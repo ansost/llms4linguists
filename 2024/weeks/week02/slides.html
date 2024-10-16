@@ -359,99 +359,90 @@ Akhilesh Kakolu Ramarao
 <nav role="doc-toc"> 
 <h2 id="toc-title">What we will cover today:</h2>
 <ul>
+<li><a href="#/mathematical-concepts" id="/toc-mathematical-concepts">Mathematical concepts</a></li>
 <li><a href="#/machine-learning" id="/toc-machine-learning">Machine learning</a></li>
 <li><a href="#/neural-networks" id="/toc-neural-networks">Neural Networks</a></li>
 </ul>
 </nav>
 </section>
-<section class="slide level2">
+<section>
+<section id="mathematical-concepts" class="title-slide slide level1 smaller">
+<h1>Mathematical concepts</h1>
 
-<!--
-# Mathematical concepts {.smaller}
-
-## {.smaller}
-
-**Scalars**: single number
-
-$$
-x = 1
-$$
-
-**Vectors**: sequence of numbers
-
-$$
-v = \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}
-$$
-
-**Matrix**: 2D array of numbers
-
-$$
-M = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \end{bmatrix}
-$$
-
-## {.smaller}
-
-**Matrix multiplication**
-
-
-$$
-\begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \end{bmatrix} \times \begin{bmatrix} 1 & 2 \\ 3 & 4 \\ 5 & 6 \end{bmatrix}
-$$
-
-$$
-= \begin{bmatrix} 22 & 28 \\ 49 & 64 \end{bmatrix}
-$$
-
-- The first matrix has 2 rows and 3 columns, and the second matrix has 3 rows and 2 columns.
-- The number of columns in the first matrix should be equal to the number of rows in the second matrix.
-- The resulting matrix will have the same number of rows as the first matrix and the same number of columns as the second matrix.
-
-## {.smaller}
-
-**Element-wise multiplication**
-
-$$
-\begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \end{bmatrix} \odot \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \end{bmatrix}
-$$
-
-$$
-= \begin{bmatrix} 1 & 4 & 9 \\ 16 & 25 & 36 \end{bmatrix}
-$$
-
-- The matrices should have the same dimensions.
-- The resulting matrix will have the same dimensions as the input matrices.
-- You multiply the corresponding elements of the matrices.
-
-## {.smaller}
-
-**Matrix addition**
-
-$$
-\begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \end{bmatrix} + \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \end{bmatrix}
-$$
-
-$$
-= \begin{bmatrix} 2 & 4 & 6 \\ 8 & 10 & 12 \end{bmatrix}
-$$
-
-- You add the corresponding elements of the matrices.
-
-## {.smaller}
-
-**Dot product**
-
-$$
-\begin{bmatrix} 1 & 2 & 3 \end{bmatrix} \cdot \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}
-$$
-
-$$
-= 1 \times 1 + 2 \times 2 + 3 \times 3 = 14
-$$
-
-- The number of columns in the first matrix should be equal to the number of rows in the second matrix.
-- The resulting matrix will have the same number of rows as the first matrix and the same number of columns as the second matrix.
-- You multiply the corresponding elements of the matrices and sum them up. -->
 </section>
+<section id="section" class="slide level2 smaller">
+<h2></h2>
+<p><strong>Scalars</strong>: single number</p>
+<p><span class="math display">\[
+x = 1
+\]</span></p>
+<p><strong>Vectors</strong>: sequence of numbers</p>
+<p><span class="math display">\[
+v = \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}
+\]</span></p>
+<p><strong>Matrix</strong>: 2D array of numbers</p>
+<p><span class="math display">\[
+M = \begin{bmatrix} 1 &amp; 2 &amp; 3 \\ 4 &amp; 5 &amp; 6 \end{bmatrix}
+\]</span></p>
+</section>
+<section id="section-1" class="slide level2 smaller">
+<h2></h2>
+<p><strong>Matrix multiplication</strong></p>
+<p><span class="math display">\[
+\begin{bmatrix} 1 &amp; 2 &amp; 3 \\ 4 &amp; 5 &amp; 6 \end{bmatrix} \times \begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 4 \\ 5 &amp; 6 \end{bmatrix}
+\]</span></p>
+<p><span class="math display">\[
+= \begin{bmatrix} 22 &amp; 28 \\ 49 &amp; 64 \end{bmatrix}
+\]</span></p>
+<ul>
+<li>The first matrix has 2 rows and 3 columns, and the second matrix has 3 rows and 2 columns.</li>
+<li>The number of columns in the first matrix should be equal to the number of rows in the second matrix.</li>
+<li>The resulting matrix will have the same number of rows as the first matrix and the same number of columns as the second matrix.</li>
+</ul>
+</section>
+<section id="section-2" class="slide level2 smaller">
+<h2></h2>
+<p><strong>Element-wise multiplication</strong></p>
+<p><span class="math display">\[
+\begin{bmatrix} 1 &amp; 2 &amp; 3 \\ 4 &amp; 5 &amp; 6 \end{bmatrix} \odot \begin{bmatrix} 1 &amp; 2 &amp; 3 \\ 4 &amp; 5 &amp; 6 \end{bmatrix}
+\]</span></p>
+<p><span class="math display">\[
+= \begin{bmatrix} 1 &amp; 4 &amp; 9 \\ 16 &amp; 25 &amp; 36 \end{bmatrix}
+\]</span></p>
+<ul>
+<li>The matrices should have the same dimensions.</li>
+<li>The resulting matrix will have the same dimensions as the input matrices.</li>
+<li>You multiply the corresponding elements of the matrices.</li>
+</ul>
+</section>
+<section id="section-3" class="slide level2 smaller">
+<h2></h2>
+<p><strong>Matrix addition</strong></p>
+<p><span class="math display">\[
+\begin{bmatrix} 1 &amp; 2 &amp; 3 \\ 4 &amp; 5 &amp; 6 \end{bmatrix} + \begin{bmatrix} 1 &amp; 2 &amp; 3 \\ 4 &amp; 5 &amp; 6 \end{bmatrix}
+\]</span></p>
+<p><span class="math display">\[
+= \begin{bmatrix} 2 &amp; 4 &amp; 6 \\ 8 &amp; 10 &amp; 12 \end{bmatrix}
+\]</span></p>
+<ul>
+<li>You add the corresponding elements of the matrices.</li>
+</ul>
+</section>
+<section id="section-4" class="slide level2 smaller">
+<h2></h2>
+<p><strong>Dot product</strong></p>
+<p><span class="math display">\[
+\begin{bmatrix} 1 &amp; 2 &amp; 3 \end{bmatrix} \cdot \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}
+\]</span></p>
+<p><span class="math display">\[
+= 1 \times 1 + 2 \times 2 + 3 \times 3 = 14
+\]</span></p>
+<ul>
+<li>The number of columns in the first matrix should be equal to the number of rows in the second matrix.</li>
+<li>The resulting matrix will have the same number of rows as the first matrix and the same number of columns as the second matrix.</li>
+<li>You multiply the corresponding elements of the matrices and sum them up. –&gt;</li>
+</ul>
+</section></section>
 <section id="machine-learning" class="title-slide slide level1">
 <h1>Machine learning</h1>
 <ul>
@@ -488,15 +479,15 @@ $$
 <h2>Architecture</h2>
 <p><br> <img src="nn.png"> <br> The input can be a vector, and the output some classification, like a corresponding animal.</p>
 </section>
-<section id="section" class="slide level2">
+<section id="section-5" class="slide level2">
 <h2></h2>
 <p><br> <img src="nn_layers.png"> Every Neural Network has <strong>Layers</strong>. They are responsible for a specific action, like addition, and pass information to eachother. <br></p>
 </section>
-<section id="section-1" class="slide level2">
+<section id="section-6" class="slide level2">
 <h2></h2>
 <p><br> <img src="nn_neurons.png"> Layers consist of <strong>neurons</strong> which each modify the input in some way. <br></p>
 </section>
-<section id="section-2" class="slide level2">
+<section id="section-7" class="slide level2">
 <h2></h2>
 <p><br> <img src="nn_perceptron.png"> The simplest Neural network only has one layer with one neuron. This single neuron is called a <strong>perceptron</strong>. <br></p>
 </section>
@@ -545,7 +536,7 @@ $$
 <li>Bias (b): A constant value that shifts the output of the perceptron.</li>
 </ul>
 </section>
-<section id="section-3" class="slide level2 smaller">
+<section id="section-8" class="slide level2 smaller">
 <h2></h2>
 <ul>
 <li>Sum Node (Σ): Calculates the weighted sum of the inputs and the bias.</li>
@@ -584,7 +575,7 @@ f(x) = \frac{1}{1 + e^{-x}}
 <li>It is used in the output layer of a binary classification problem.</li>
 </ul>
 </section>
-<section id="section-4" class="slide level2 smaller">
+<section id="section-9" class="slide level2 smaller">
 <h2></h2>
 <p><strong>ReLU function</strong></p>
 <p><span class="math display">\[
@@ -602,7 +593,7 @@ f(x) = \max(0, x)
 <li>It is a popular activation function used in deep learning models.</li>
 </ul>
 </section>
-<section id="section-5" class="slide level2 smaller">
+<section id="section-10" class="slide level2 smaller">
 <h2></h2>
 <p><strong>Feedforward Neural Network</strong></p>
 <div class="cell" data-reveal="true" data-fig-width="5" data-fig-height="3" data-layout-align="center">
@@ -679,7 +670,7 @@ f(x) = \max(0, x)
 <li>The weights and biases are learned during the training process.</li>
 </ul>
 </section>
-<section id="section-6" class="slide level2 smaller">
+<section id="section-11" class="slide level2 smaller">
 <h2></h2>
 <p><strong>Loss function</strong></p>
 <ul>
