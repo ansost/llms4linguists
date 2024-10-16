@@ -25,7 +25,7 @@ format:
     footer: 'LLMs in Lingustic Research WiSe 2024/25'
 ---
 
-<!-- 
+<!--
 # Mathematical concepts {.smaller}
 
 ## {.smaller}
@@ -113,8 +113,8 @@ $$
 
 # Machine learning
 - Using **learning algorithms** to learn from existing data and predict for new data.
-- We have seen two types of Machine Learning models: 
-  - **Statistical language models** 
+- We have seen two types of Machine Learning models:
+  - **Statistical language models**
   - **Probabilistic language models**
 - Today: Neural Networks
 
@@ -144,14 +144,14 @@ Neural networks are a class of machine learning models inspired by the human bra
 <br>
 The input can be a vector, and the output some classification, like a corresponding animal.
 
-## 
+##
 
 <br>
 <img src="nn_layers.png"></img>
 Every Neural Network has **Layers**. They are responsible for a specific action, like addition, and pass information to eachother.
 <br>
 
-## 
+##
 
 <br>
 <img src="nn_neurons.png"></img>
@@ -162,14 +162,12 @@ Layers consist of **neurons** which each modify the input in some way.
 
 <br>
 <img src="nn_perceptron.png"></img>
-The simplest Neural network only has one layer with one neuron. This single neuron is called a **perceptron**. 
+The simplest Neural network only has one layer with one neuron. This single neuron is called a **perceptron**.
 <br>
 
-## Perceptron
+## Perceptron {.smaller}
 
 
-
-<!-- 
 ```{mermaid}
 %%| fig-align: center
 graph LR
@@ -198,17 +196,29 @@ graph LR
     style sum fill:#FFA07A,stroke:#333,stroke-width:2px
     style act fill:#98FB98,stroke:#333,stroke-width:2px
     style b fill:#FFFF00,stroke:#333,stroke-width:2px
-``` 
-
-
+```
 
 - Input Nodes (x1, x2, x3): Each input is a number.
 - Weights (w1, w2, w3): Each weight is a number that determines the importance of the corresponding input.
 - Bias (b): A constant value that shifts the output of the perceptron.
+
+## {.smaller}
+
 - Sum Node (Σ): Calculates the weighted sum of the inputs and the bias.
-- Activation Function: Introduces non-linearity to the output of the perceptron.
+- Activation Function ($f$): Introduces non-linearity to the output of the perceptron.
 - Output Node: The final output of the perceptron.
--->
+
+$$
+\text{Output} = f(w_1 \times x_1 + w_2 \times x_2 + w_3 \times x_3 + b)
+$$
+
+- The output of the perceptron is a weighted sum of the inputs and the bias passed through an activation function.
+
+**Why do we need non-linearity?**
+
+- Non-linearity allows the perceptron to learn complex patterns in the data.
+- Without non-linearity, the perceptron would be limited to learning linear patterns.
+- Activation functions introduce non-linearity to the output of the perceptron.
 
 ## Activation functions {.smaller}
 
@@ -325,11 +335,14 @@ flowchart LR
 
 **Loss function**
 
-- During forward propagation, the neural network makes predictions based on input data.
+- During forward pass, the neural network makes predictions based on input data.
 - The loss function compares these predictions to the true values and calculates a loss score.
 - The loss score is a measure of how well the network is performing.
 - The goal of training is to minimize the loss function.
 
-- For regression problems, use MSE or MAE.
-- For classification problems, use cross-entropy loss.
-- For multi-class classification problems, use categorical cross-entropy loss.
+
+## Additional resources {.smaller}
+
+- What is a neural network? [Video](https://www.youtube.com/watch?v=aircAruvnKk)
+- Gradient descent, how neural networks learn [Video](https://www.youtube.com/watch?v=IHZwWFHWa-w)
+- Backpropagation, how neural networks learn [Video](https://www.youtube.com/watch?v=Ilg3gGewQ5U)
