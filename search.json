@@ -1,52 +1,38 @@
 [
   {
+    "objectID": "2024/weeks/week02/slides.html#architecture",
+    "href": "2024/weeks/week02/slides.html#architecture",
+    "title": "Week 02 Basics of Neural Networks",
+    "section": "Architecture",
+    "text": "Architecture\n   The input can be a vector, and the output some classification, like a corresponding animal."
+  },
+  {
     "objectID": "2024/weeks/week02/slides.html#section",
     "href": "2024/weeks/week02/slides.html#section",
     "title": "Week 02 Basics of Neural Networks",
     "section": "",
-    "text": "Scalars: single number\n\\[\nx = 1\n\\]\nVectors: sequence of numbers\n\\[\nv = \\begin{bmatrix} 1 \\\\ 2 \\\\ 3 \\end{bmatrix}\n\\]\nMatrix: 2D array of numbers\n\\[\nM = \\begin{bmatrix} 1 & 2 & 3 \\\\ 4 & 5 & 6 \\end{bmatrix}\n\\]"
+    "text": "Every Neural Network has Layers. They are responsible for a specific action, like addition, and pass information to eachother."
   },
   {
     "objectID": "2024/weeks/week02/slides.html#section-1",
     "href": "2024/weeks/week02/slides.html#section-1",
     "title": "Week 02 Basics of Neural Networks",
     "section": "",
-    "text": "Matrix multiplication\n\\[\n\\begin{bmatrix} 1 & 2 & 3 \\\\ 4 & 5 & 6 \\end{bmatrix} \\times \\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\\\ 5 & 6 \\end{bmatrix}\n\\]\n\\[\n= \\begin{bmatrix} 22 & 28 \\\\ 49 & 64 \\end{bmatrix}\n\\]\n\nThe first matrix has 2 rows and 3 columns, and the second matrix has 3 rows and 2 columns.\nThe number of columns in the first matrix should be equal to the number of rows in the second matrix.\nThe resulting matrix will have the same number of rows as the first matrix and the same number of columns as the second matrix."
+    "text": "Layers consist of neurons which each modify the input in some way."
   },
   {
     "objectID": "2024/weeks/week02/slides.html#section-2",
     "href": "2024/weeks/week02/slides.html#section-2",
     "title": "Week 02 Basics of Neural Networks",
     "section": "",
-    "text": "Element-wise multiplication\n\\[\n\\begin{bmatrix} 1 & 2 & 3 \\\\ 4 & 5 & 6 \\end{bmatrix} \\odot \\begin{bmatrix} 1 & 2 & 3 \\\\ 4 & 5 & 6 \\end{bmatrix}\n\\]\n\\[\n= \\begin{bmatrix} 1 & 4 & 9 \\\\ 16 & 25 & 36 \\end{bmatrix}\n\\]\n\nThe matrices should have the same dimensions.\nThe resulting matrix will have the same dimensions as the input matrices.\nYou multiply the corresponding elements of the matrices."
+    "text": "The simplest Neural network only has one layer with one neuron. This single neuron is called a perceptron."
   },
   {
-    "objectID": "2024/weeks/week02/slides.html#section-3",
-    "href": "2024/weeks/week02/slides.html#section-3",
+    "objectID": "2024/weeks/week02/slides.html#perceptron",
+    "href": "2024/weeks/week02/slides.html#perceptron",
     "title": "Week 02 Basics of Neural Networks",
-    "section": "",
-    "text": "Matrix addition\n\\[\n\\begin{bmatrix} 1 & 2 & 3 \\\\ 4 & 5 & 6 \\end{bmatrix} + \\begin{bmatrix} 1 & 2 & 3 \\\\ 4 & 5 & 6 \\end{bmatrix}\n\\]\n\\[\n= \\begin{bmatrix} 2 & 4 & 6 \\\\ 8 & 10 & 12 \\end{bmatrix}\n\\]\n\nYou add the corresponding elements of the matrices."
-  },
-  {
-    "objectID": "2024/weeks/week02/slides.html#section-4",
-    "href": "2024/weeks/week02/slides.html#section-4",
-    "title": "Week 02 Basics of Neural Networks",
-    "section": "",
-    "text": "Dot product\n\\[\n\\begin{bmatrix} 1 & 2 & 3 \\end{bmatrix} \\cdot \\begin{bmatrix} 1 \\\\ 2 \\\\ 3 \\end{bmatrix}\n\\]\n\\[\n= 1 \\times 1 + 2 \\times 2 + 3 \\times 3 = 14\n\\]\n\nThe number of columns in the first matrix should be equal to the number of rows in the second matrix.\nThe resulting matrix will have the same number of rows as the first matrix and the same number of columns as the second matrix.\nYou multiply the corresponding elements of the matrices and sum them up."
-  },
-  {
-    "objectID": "2024/weeks/week02/slides.html#section-5",
-    "href": "2024/weeks/week02/slides.html#section-5",
-    "title": "Week 02 Basics of Neural Networks",
-    "section": "",
-    "text": "Learning\n\nNeural networks learn by looking at many examples.\nThey adjust their internal settings to improve their accuracy.\nThis process is called training.\n\nComponents of a neural network\n\nNeurons: Basic building blocks of a neural network.\nLayers: Neurons are organized into layers.\nWeights and biases: Parameters that the network learns during training.\n\nAdvantages of neural networks\n\nCan learn complex patterns.\nCan generalize to new data.\nCan be used for a wide range of tasks (like image recognition, speech recognition, and natural language processing)."
-  },
-  {
-    "objectID": "2024/weeks/week02/slides.html#section-6",
-    "href": "2024/weeks/week02/slides.html#section-6",
-    "title": "Week 02 Basics of Neural Networks",
-    "section": "",
-    "text": "Perceptron\n\n\n\n\n\ngraph LR\n    subgraph Inputs\n        x1((x1))\n        x2((x2))\n        x3((x3))\n    end\n\n    sum((Σ))\n    act[Activation]\n    out((Output))\n    b[Bias]\n\n    x1 --&gt;|w1| sum\n    x2 --&gt;|w2| sum\n    x3 --&gt;|w3| sum\n    b --&gt; sum\n    sum --&gt; act\n    act --&gt; out\n\n    style Inputs fill:#87CEFA,stroke:#333,stroke-width:2px, fill-opacity: 0.5\n    style x1 fill:#87CEFA,stroke:#333,stroke-width:2px\n    style x2 fill:#87CEFA,stroke:#333,stroke-width:2px\n    style x3 fill:#87CEFA,stroke:#333,stroke-width:2px\n    style sum fill:#FFA07A,stroke:#333,stroke-width:2px\n    style act fill:#98FB98,stroke:#333,stroke-width:2px\n    style b fill:#FFFF00,stroke:#333,stroke-width:2px\n\n\n\n\n\n\n\nInput Nodes (x1, x2, x3): Each input is a number.\nWeights (w1, w2, w3): Each weight is a number that determines the importance of the corresponding input.\nBias (b): A constant value that shifts the output of the perceptron.\nSum Node (Σ): Calculates the weighted sum of the inputs and the bias.\nActivation Function: Introduces non-linearity to the output of the perceptron.\nOutput Node: The final output of the perceptron."
+    "section": "Perceptron",
+    "text": "Perceptron"
   },
   {
     "objectID": "2024/weeks/week02/slides.html#activation-functions",
@@ -56,15 +42,15 @@
     "text": "Activation functions\n\nActivation functions are used to introduce non-linearity to the output of a neuron.\n\nSigmoid function\n\\[\nf(x) = \\frac{1}{1 + e^{-x}}\n\\]\nExample: \\(f(0) = 0.5\\)\n- f(x): This represents the output of the sigmoid function for a given input x.\n- e: This is the euler's number (approximately 2.71828).\n- x: This is the input to the sigmoid function.\n- 1: This is added to the denominator to avoid division by zero.\n\nThe sigmoid function takes any real number as input and outputs a value between 0 and 1.\nIt is used in the output layer of a binary classification problem."
   },
   {
-    "objectID": "2024/weeks/week02/slides.html#section-7",
-    "href": "2024/weeks/week02/slides.html#section-7",
+    "objectID": "2024/weeks/week02/slides.html#section-3",
+    "href": "2024/weeks/week02/slides.html#section-3",
     "title": "Week 02 Basics of Neural Networks",
     "section": "",
     "text": "ReLU function\n\\[\nf(x) = \\max(0, x)\n\\]\nExample: \\(f(2) = 2\\)\nwhere:\n- f(x): This represents the output of the ReLU function for a given input x.\n- x: This is the input to the ReLU function.\n- max: This function returns the maximum of the two values.\n- 0: This is the threshold value.\n\nThe Rectified Linear Unit (ReLU) function is that outputs the input directly if it is positive, otherwise, it outputs zero.\nThe output of the ReLU function is between 0 and infinity.\nIt is a popular activation function used in deep learning models."
   },
   {
-    "objectID": "2024/weeks/week02/slides.html#section-8",
-    "href": "2024/weeks/week02/slides.html#section-8",
+    "objectID": "2024/weeks/week02/slides.html#section-4",
+    "href": "2024/weeks/week02/slides.html#section-4",
     "title": "Week 02 Basics of Neural Networks",
     "section": "",
     "text": "Feedforward Neural Network\n\n\n\n\n\nflowchart LR\n    %% Input Layer\n    I1((I1)):::inputStyle\n    I2((I2)):::inputStyle\n    I3((I3)):::inputStyle\n    B1((Bias)):::biasStyle\n    %% Hidden Layer\n    H1((H1)):::hiddenStyle\n    H2((H2)):::hiddenStyle\n    H3((H3)):::hiddenStyle\n    B2((Bias)):::biasStyle\n    %% Output Layer\n    O1((O1)):::outputStyle\n    O2((O2)):::outputStyle\n\n    %% Connections\n    I1 --&gt;|w11| H1\n    I1 --&gt;|w12| H2\n    I1 --&gt;|w13| H3\n    I2 --&gt;|w21| H1\n    I2 --&gt;|w22| H2\n    I2 --&gt;|w23| H3\n    I3 --&gt;|w31| H1\n    I3 --&gt;|w32| H2\n    I3 --&gt;|w33| H3\n    B1 --&gt;|b1| H1\n    B1 --&gt;|b2| H2\n    B1 --&gt;|b3| H3\n    H1 --&gt;|v11| O1\n    H1 --&gt;|v12| O2\n    H2 --&gt;|v21| O1\n    H2 --&gt;|v22| O2\n    H3 --&gt;|v31| O1\n    H3 --&gt;|v32| O2\n    B2 --&gt;|b4| O1\n    B2 --&gt;|b5| O2\n\n    %% Styles\n    classDef inputStyle fill:#3498db,stroke:#333,stroke-width:2px;\n    classDef hiddenStyle fill:#e74c3c,stroke:#333,stroke-width:2px;\n    classDef outputStyle fill:#2ecc71,stroke:#333,stroke-width:2px;\n    classDef biasStyle fill:#f39c12,stroke:#333,stroke-width:2px;\n\n    %% Layer Labels\n    I2 -.- InputLabel[Input Layer]\n    H2 -.- HiddenLabel[Hidden Layer]\n    O1 -.- OutputLabel[Output Layer]\n\n    style InputLabel fill:none,stroke:none\n    style HiddenLabel fill:none,stroke:none\n    style OutputLabel fill:none,stroke:none"
@@ -77,116 +63,32 @@
     "text": "Feedforward Neural Network\n\nFeedforward neural network with three layers: input, hidden, and output.\nThe input layer has three nodes (I1, I2, I3).\nThe hidden layer has three nodes (H1, H2, H3).\nThe output layer has two nodes (O1, O2).\nEach connection between the nodes has a weight (w) and a bias (b).\nThe weights and biases are learned during the training process."
   },
   {
-    "objectID": "2024/weeks/week02/slides.html#section-9",
-    "href": "2024/weeks/week02/slides.html#section-9",
+    "objectID": "2024/weeks/week02/slides.html#section-5",
+    "href": "2024/weeks/week02/slides.html#section-5",
     "title": "Week 02 Basics of Neural Networks",
     "section": "",
     "text": "Loss function\n\nDuring forward propagation, the neural network makes predictions based on input data.\nThe loss function compares these predictions to the true values and calculates a loss score.\nThe loss score is a measure of how well the network is performing.\nThe goal of training is to minimize the loss function.\nFor regression problems, use MSE or MAE.\nFor classification problems, use cross-entropy loss.\nFor multi-class classification problems, use categorical cross-entropy loss.\n\n\n\n\n\nLLMs in Lingustic Research WiSe 2024/25"
   },
   {
-    "objectID": "2024/weeks/week02/page.html",
-    "href": "2024/weeks/week02/page.html",
-    "title": "🗓️ Week 02 - Basics of Neural Networks",
+    "objectID": "2024/homework/homework01.html",
+    "href": "2024/homework/homework01.html",
+    "title": "Homework 1: Using Google Colab",
     "section": "",
-    "text": "Either click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides."
-  },
-  {
-    "objectID": "2024/weeks/week02/page.html#lecture-slides",
-    "href": "2024/weeks/week02/page.html#lecture-slides",
-    "title": "🗓️ Week 02 - Basics of Neural Networks",
-    "section": "",
-    "text": "Either click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides."
-  },
-  {
-    "objectID": "2024/weeks/week02/page.html#homework",
-    "href": "2024/weeks/week02/page.html#homework",
-    "title": "🗓️ Week 02 - Basics of Neural Networks",
-    "section": "✍️ Homework",
-    "text": "✍️ Homework"
-  },
-  {
-    "objectID": "2024/weeks/week02/page.html#recommended-reading",
-    "href": "2024/weeks/week02/page.html#recommended-reading",
-    "title": "🗓️ Week 02 - Basics of Neural Networks",
-    "section": "📚 Recommended Reading",
-    "text": "📚 Recommended Reading"
-  },
-  {
-    "objectID": "2024/weeks/week01/page.html",
-    "href": "2024/weeks/week01/page.html",
-    "title": "🗓️ Week 01 - Admin, Architectures: Statistical and Probabilistic Language Models",
-    "section": "",
-    "text": "In this first week, we will cover what you can expect to learn from this course and the course logistics: all you need to know about the structure of the lectures, classes, assessments, and how we will interact throughout this course.",
+    "text": "The instructions below assume that you have a Google account or are willing to make one. If you do not want to make a Google account,  contact Anna for instructions to run notebooks without Colab.",
     "crumbs": [
-      "🗓️ Class material",
-      "Week 01 - Intro"
+      "🧩 Homework",
+      "Hw 01 - Colab"
     ]
   },
   {
-    "objectID": "2024/weeks/week01/page.html#lecture-slides",
-    "href": "2024/weeks/week01/page.html#lecture-slides",
-    "title": "🗓️ Week 01 - Admin, Architectures: Statistical and Probabilistic Language Models",
-    "section": "👨‍🏫 Lecture Slides",
-    "text": "👨‍🏫 Lecture Slides\nEither click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides.",
+    "objectID": "2024/homework/homework01.html#google-colab",
+    "href": "2024/homework/homework01.html#google-colab",
+    "title": "Homework 1: Using Google Colab",
+    "section": "Google Colab",
+    "text": "Google Colab\n\nGo to the notebooks folder. Click on the three dots for the hw1.ipynb file, select “Open with” and then “Open in Colab”.\nRun both cells in the notebook by clicking on the play icon on the left of the cell or clicking into the cell and pressing CTRL + ENTER on Windows or CMD + ENTER on Mac.",
     "crumbs": [
-      "🗓️ Class material",
-      "Week 01 - Intro"
-    ]
-  },
-  {
-    "objectID": "2024/weeks/week01/page.html#homework",
-    "href": "2024/weeks/week01/page.html#homework",
-    "title": "🗓️ Week 01 - Admin, Architectures: Statistical and Probabilistic Language Models",
-    "section": "✍️ Homework",
-    "text": "✍️ Homework\nWeek 01 - Homework",
-    "crumbs": [
-      "🗓️ Class material",
-      "Week 01 - Intro"
-    ]
-  },
-  {
-    "objectID": "2024/weeks/week01/page.html#recommended-reading",
-    "href": "2024/weeks/week01/page.html#recommended-reading",
-    "title": "🗓️ Week 01 - Admin, Architectures: Statistical and Probabilistic Language Models",
-    "section": "📚 Recommended Reading",
-    "text": "📚 Recommended Reading\n\nSpeech and Language Processing, Chapter 3: N-gram language models PDF. Authors: Dan Jurafsky and James H. Martin.",
-    "crumbs": [
-      "🗓️ Class material",
-      "Week 01 - Intro"
-    ]
-  },
-  {
-    "objectID": "2024/homework.html",
-    "href": "2024/homework.html",
-    "title": "Homework Overview",
-    "section": "",
-    "text": "Here is an overview of all Homework up to date:\nHw 1: here\nTBD"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "LLMs in Linguistic Research",
-    "section": "",
-    "text": "InstructorTeaching Staff\n\n\n Akhilesh Kakolu Ramarao  📧 kakolura at hhu dot de\n\n\n Anna Stein  📧 anna.stein at hhu dot de\n\n\n\n\nSyllabus\nView it online here.\n\n\n📍 Location\nWednesday, 2:30pm-4pm\nBuilding 23.21 Floor 2, Room 22\n\n\n🎯 Learning Objectives\nFocus: Understanding LLMs and their usage in various linguistics tasks\nHow: Hands-on learning and paper discussions\n\nGaining an intuition of how LLMs work\nGetting to know the field of LLM research and development\nFamiliarizing yourself with different LLM architectures\nLearning how to use them for different linguistics tasks (e.g., text analysis, language generation, and language understanding)\nPracting using tools like Huggingface for LLM inference and fine-tuning",
-    "crumbs": [
-      "🏠 Home"
-    ]
-  },
-  {
-    "objectID": "2024/assignments.html",
-    "href": "2024/assignments.html",
-    "title": "Assignment Overview",
-    "section": "",
-    "text": "Here is an overview of all assignments up to date:\nAssignment 1: TBD\nAssignment 2: TBD\nAssignment 3: TBD\nAssignment 4: TBD\nAssignment 5: TBD"
-  },
-  {
-    "objectID": "2024/syllabus.html",
-    "href": "2024/syllabus.html",
-    "title": "Syllabus",
-    "section": "",
-    "text": "Last changed: 09.10.24\n\n\n\n\n\n\n\n\n\nDate\nGeneral Topic\nHomework\nAssignments\n\n\n\n\n09.10\nAdmin, Architectures: Statistical and Probabilistic Language Models\nFamiliarization with Google Colab\n\n\n\n16.10\nArchitectures: Perceptrons and Neural Networks\n\n\n\n\n23.10\nArchitectures: Recurrent Neural Networks\n\nAssignment 1\n\n\n30.10\nTransformer: General architecture\n\n\n\n\n06.11\nTransformer: The Attention mechanism\n\n\n\n\n13.11\nTransformer: Transformer models: Decoder/Encode only models\n\nAssignment 2\n\n\n20.11\nUsing pre-trained models\n\n\n\n\n27.11\nStudy week\n\n\n\n\n04.12\nTransfer learning: fine-tuning\n\n\n\n\n11.12\nAdapting models for specific tasks\n\nAssignment 3\n\n\n18.12\nAdapting models for specific tasks\n\n\n\n\n08.01\nAdapting models for specific tasks\n\nAssignment 4\n\n\n15.01\nProbing LLMs\n\n\n\n\n22.01\nProbing LLMs\n\nAssignment 5\n\n\n29.01\nTBD",
-    "crumbs": [
-      "📓 Syllabus"
+      "🧩 Homework",
+      "Hw 01 - Colab"
     ]
   },
   {
@@ -267,25 +169,116 @@
     "text": "Thank you!\n\n\n\n\nLLMs in Lingustic Research WiSe 2024/25"
   },
   {
-    "objectID": "2024/homework/homework01.html",
-    "href": "2024/homework/homework01.html",
-    "title": "Homework 1: Using Google Colab",
+    "objectID": "2024/syllabus.html",
+    "href": "2024/syllabus.html",
+    "title": "Syllabus",
     "section": "",
-    "text": "The instructions below assume that you have a Google account or are willing to make one. If you do not want to make a Google account,  contact Anna for instructions to run notebooks without Colab.",
+    "text": "Last changed: 09.10.24\n\n\n\n\n\n\n\n\n\nDate\nGeneral Topic\nHomework\nAssignments\n\n\n\n\n09.10\nAdmin, Architectures: Statistical and Probabilistic Language Models\nFamiliarization with Google Colab\n\n\n\n16.10\nArchitectures: Perceptrons and Neural Networks\n\n\n\n\n23.10\nArchitectures: Recurrent Neural Networks\n\nAssignment 1\n\n\n30.10\nTransformer: General architecture\n\n\n\n\n06.11\nTransformer: The Attention mechanism\n\n\n\n\n13.11\nTransformer: Transformer models: Decoder/Encode only models\n\nAssignment 2\n\n\n20.11\nUsing pre-trained models\n\n\n\n\n27.11\nStudy week\n\n\n\n\n04.12\nTransfer learning: fine-tuning\n\n\n\n\n11.12\nAdapting models for specific tasks\n\nAssignment 3\n\n\n18.12\nAdapting models for specific tasks\n\n\n\n\n08.01\nAdapting models for specific tasks\n\nAssignment 4\n\n\n15.01\nProbing LLMs\n\n\n\n\n22.01\nProbing LLMs\n\nAssignment 5\n\n\n29.01\nTBD",
     "crumbs": [
-      "🧩 Homework",
-      "Hw 01 - Colab"
+      "📓 Syllabus"
     ]
   },
   {
-    "objectID": "2024/homework/homework01.html#google-colab",
-    "href": "2024/homework/homework01.html#google-colab",
-    "title": "Homework 1: Using Google Colab",
-    "section": "Google Colab",
-    "text": "Google Colab\n\nGo to the notebooks folder. Click on the three dots for the hw1.ipynb file, select “Open with” and then “Open in Colab”.\nRun both cells in the notebook by clicking on the play icon on the left of the cell or clicking into the cell and pressing CTRL + ENTER on Windows or CMD + ENTER on Mac.",
+    "objectID": "2024/assignments.html",
+    "href": "2024/assignments.html",
+    "title": "Assignment Overview",
+    "section": "",
+    "text": "Here is an overview of all assignments up to date:\nAssignment 1: TBD\nAssignment 2: TBD\nAssignment 3: TBD\nAssignment 4: TBD\nAssignment 5: TBD"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "LLMs in Linguistic Research",
+    "section": "",
+    "text": "InstructorTeaching Staff\n\n\n Akhilesh Kakolu Ramarao  📧 kakolura at hhu dot de\n\n\n Anna Stein  📧 anna.stein at hhu dot de\n\n\n\n\nSyllabus\nView it online here.\n\n\n📍 Location\nWednesday, 2:30pm-4pm\nBuilding 23.21 Floor 2, Room 22\n\n\n🎯 Learning Objectives\nFocus: Understanding LLMs and their usage in various linguistics tasks\nHow: Hands-on learning and paper discussions\n\nGaining an intuition of how LLMs work\nGetting to know the field of LLM research and development\nFamiliarizing yourself with different LLM architectures\nLearning how to use them for different linguistics tasks (e.g., text analysis, language generation, and language understanding)\nPracting using tools like Huggingface for LLM inference and fine-tuning",
     "crumbs": [
-      "🧩 Homework",
-      "Hw 01 - Colab"
+      "🏠 Home"
     ]
+  },
+  {
+    "objectID": "2024/homework.html",
+    "href": "2024/homework.html",
+    "title": "Homework Overview",
+    "section": "",
+    "text": "Here is an overview of all Homework up to date:\nHw 1: Google Colab: here\nHw 2: Neural Networks: here"
+  },
+  {
+    "objectID": "2024/weeks/week01/page.html",
+    "href": "2024/weeks/week01/page.html",
+    "title": "🗓️ Week 01 - Admin, Architectures: Statistical and Probabilistic Language Models",
+    "section": "",
+    "text": "In this first week, we will cover what you can expect to learn from this course and the course logistics: all you need to know about the structure of the lectures, classes, assessments, and how we will interact throughout this course.",
+    "crumbs": [
+      "🗓️ Class material",
+      "Week 01 - Intro"
+    ]
+  },
+  {
+    "objectID": "2024/weeks/week01/page.html#lecture-slides",
+    "href": "2024/weeks/week01/page.html#lecture-slides",
+    "title": "🗓️ Week 01 - Admin, Architectures: Statistical and Probabilistic Language Models",
+    "section": "👨‍🏫 Lecture Slides",
+    "text": "👨‍🏫 Lecture Slides\nEither click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides.",
+    "crumbs": [
+      "🗓️ Class material",
+      "Week 01 - Intro"
+    ]
+  },
+  {
+    "objectID": "2024/weeks/week01/page.html#homework",
+    "href": "2024/weeks/week01/page.html#homework",
+    "title": "🗓️ Week 01 - Admin, Architectures: Statistical and Probabilistic Language Models",
+    "section": "✍️ Homework",
+    "text": "✍️ Homework\nWeek 01 - Homework",
+    "crumbs": [
+      "🗓️ Class material",
+      "Week 01 - Intro"
+    ]
+  },
+  {
+    "objectID": "2024/weeks/week01/page.html#recommended-reading",
+    "href": "2024/weeks/week01/page.html#recommended-reading",
+    "title": "🗓️ Week 01 - Admin, Architectures: Statistical and Probabilistic Language Models",
+    "section": "📚 Recommended Reading",
+    "text": "📚 Recommended Reading\n\nSpeech and Language Processing, Chapter 3: N-gram language models PDF. Authors: Dan Jurafsky and James H. Martin.",
+    "crumbs": [
+      "🗓️ Class material",
+      "Week 01 - Intro"
+    ]
+  },
+  {
+    "objectID": "2024/weeks/week02/page.html",
+    "href": "2024/weeks/week02/page.html",
+    "title": "🗓️ Week 02 - Basics of Neural Networks",
+    "section": "",
+    "text": "Either click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides."
+  },
+  {
+    "objectID": "2024/weeks/week02/page.html#lecture-slides",
+    "href": "2024/weeks/week02/page.html#lecture-slides",
+    "title": "🗓️ Week 02 - Basics of Neural Networks",
+    "section": "",
+    "text": "Either click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides."
+  },
+  {
+    "objectID": "2024/weeks/week02/page.html#homework",
+    "href": "2024/weeks/week02/page.html#homework",
+    "title": "🗓️ Week 02 - Basics of Neural Networks",
+    "section": "✍️ Homework",
+    "text": "✍️ Homework"
+  },
+  {
+    "objectID": "2024/weeks/week02/page.html#recommended-reading",
+    "href": "2024/weeks/week02/page.html#recommended-reading",
+    "title": "🗓️ Week 02 - Basics of Neural Networks",
+    "section": "📚 Recommended Reading",
+    "text": "📚 Recommended Reading"
+  },
+  {
+    "objectID": "2024/homework/homework02.html",
+    "href": "2024/homework/homework02.html",
+    "title": "Homework 02: Neural Network",
+    "section": "",
+    "text": "Concepts to understand: backpropagation\nThe goal is to be able to define these in your own words\n\nWatch this video on youtube."
   }
 ]
