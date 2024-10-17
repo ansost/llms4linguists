@@ -14,5 +14,9 @@ Use your keypad to navigate the slides.
 
 ## ✍️ Homework
 
+- Please go through the slides and the recommended reading material.
 
 ## 📚 Recommended Reading
+
+- Wikipedia articles on Matrix multiplication, matrix addition, element-wise multiplication, and dot product.
+- What is a neural network? [[Video](https://www.youtube.com/watch?v=aircAruvnKk)]
