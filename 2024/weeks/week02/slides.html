@@ -361,7 +361,6 @@ Akhilesh Kakolu Ramarao
 <ul>
 <li><a href="#/mathematical-concepts" id="/toc-mathematical-concepts">Mathematical concepts</a></li>
 <li><a href="#/machine-learning" id="/toc-machine-learning">Machine learning</a></li>
-<li><a href="#/neural-networks" id="/toc-neural-networks">Neural Networks</a></li>
 </ul>
 </nav>
 </section>
@@ -380,7 +379,7 @@ x = 1
 <p><span class="math display">\[
 v = \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}
 \]</span></p>
-<p><strong>Matrix</strong>: 2D array of numbers</p>
+<p><strong>Matrix</strong>: 2D list of numbers</p>
 <p><span class="math display">\[
 M = \begin{bmatrix} 1 &amp; 2 &amp; 3 \\ 4 &amp; 5 &amp; 6 \end{bmatrix}
 \]</span></p>
@@ -394,10 +393,12 @@ M = \begin{bmatrix} 1 &amp; 2 &amp; 3 \\ 4 &amp; 5 &amp; 6 \end{bmatrix}
 <p><span class="math display">\[
 = \begin{bmatrix} 22 &amp; 28 \\ 49 &amp; 64 \end{bmatrix}
 \]</span></p>
+<p>Explanation:</p>
 <ul>
 <li>The first matrix has 2 rows and 3 columns, and the second matrix has 3 rows and 2 columns.</li>
 <li>The number of columns in the first matrix should be equal to the number of rows in the second matrix.</li>
 <li>The resulting matrix will have the same number of rows as the first matrix and the same number of columns as the second matrix.</li>
+<li>You multiply the rows of the first matrix with the columns of the second matrix.</li>
 </ul>
 </section>
 <section id="section-2" class="slide level2 smaller">
@@ -426,6 +427,8 @@ M = \begin{bmatrix} 1 &amp; 2 &amp; 3 \\ 4 &amp; 5 &amp; 6 \end{bmatrix}
 \]</span></p>
 <ul>
 <li>You add the corresponding elements of the matrices.</li>
+<li>The matrices should have the same dimensions.</li>
+<li>The resulting matrix will have the same dimensions as the input matrices.</li>
 </ul>
 </section>
 <section id="section-4" class="slide level2 smaller">
@@ -440,9 +443,10 @@ M = \begin{bmatrix} 1 &amp; 2 &amp; 3 \\ 4 &amp; 5 &amp; 6 \end{bmatrix}
 <ul>
 <li>The number of columns in the first matrix should be equal to the number of rows in the second matrix.</li>
 <li>The resulting matrix will have the same number of rows as the first matrix and the same number of columns as the second matrix.</li>
-<li>You multiply the corresponding elements of the matrices and sum them up. –&gt;</li>
+<li>You multiply the corresponding elements of the matrices and sum them up.</li>
 </ul>
 </section></section>
+<section>
 <section id="machine-learning" class="title-slide slide level1">
 <h1>Machine learning</h1>
 <ul>
@@ -454,12 +458,28 @@ M = \begin{bmatrix} 1 &amp; 2 &amp; 3 \\ 4 &amp; 5 &amp; 6 \end{bmatrix}
 </ul></li>
 <li>Today: Neural Networks</li>
 </ul>
-<!-- ->who remembers what a statistical/probabilistic language model is? What is their "learning algorithm"?-->
 </section>
-
-<section>
-<section id="neural-networks" class="title-slide slide level1 smaller">
-<h1>Neural Networks</h1>
+<section id="section-5" class="slide level2 smaller">
+<h2></h2>
+<p>Let us say that you are given a set of inputs and outputs. You need to find how the inputs are related to the outputs.</p>
+<p><strong>Inputs</strong>: <span class="math inline">\(0,1,2,3,4\)</span></p>
+<p><strong>Outputs</strong>: <span class="math inline">\(0,2,4,6,8\)</span></p>
+<ul>
+<li>You can see that the output is twice the input.</li>
+<li>This is a simple example of a relationship between inputs and outputs.</li>
+<li>You can use this relationship to predict the output for new inputs.</li>
+</ul>
+<p>Consider a more complex relationship between inputs and outputs.</p>
+<p><strong>Inputs</strong>: <span class="math inline">\(0,1,2,3,4\)</span></p>
+<p><strong>Outputs</strong>: <span class="math inline">\(0,1,1,2,3\)</span></p>
+<ul>
+<li>Can you find the relationship between the inputs and outputs?</li>
+<li>This is where machine learning comes into play.</li>
+<li>Machine learning algorithms can learn the relationship between inputs and outputs from the data.</li>
+</ul>
+</section>
+<section id="neural-networks" class="slide level2 smaller">
+<h2>Neural networks</h2>
 <p>Neural networks are a class of machine learning models inspired by the human brain.</p>
 <p><br></p>
 <p><strong>Learning Alorithm</strong></p>
@@ -479,20 +499,21 @@ M = \begin{bmatrix} 1 &amp; 2 &amp; 3 \\ 4 &amp; 5 &amp; 6 \end{bmatrix}
 <h2>Architecture</h2>
 <p><br> <img src="nn.png"> <br> The input can be a vector, and the output some classification, like a corresponding animal.</p>
 </section>
-<section id="section-5" class="slide level2">
+<section id="section-6" class="slide level2">
 <h2></h2>
 <p><br> <img src="nn_layers.png"> Every Neural Network has <strong>Layers</strong>. They are responsible for a specific action, like addition, and pass information to eachother. <br></p>
 </section>
-<section id="section-6" class="slide level2">
+<section id="section-7" class="slide level2">
 <h2></h2>
 <p><br> <img src="nn_neurons.png"> Layers consist of <strong>neurons</strong> which each modify the input in some way. <br></p>
 </section>
-<section id="section-7" class="slide level2">
+<section id="section-8" class="slide level2">
 <h2></h2>
-<p><br> <img src="nn_perceptron.png"> The simplest Neural network only has one layer with one neuron. This single neuron is called a <strong>perceptron</strong>. <br></p>
+<p><br> <img src="nn_perceptron.png"> The simplest Neural network only has one layer with one neuron. This is called a <strong>perceptron</strong>.</p>
+<p><br></p>
 </section>
-<section id="perceptron" class="slide level2 smaller">
-<h2>Perceptron</h2>
+<section id="architecture-perceptron" class="slide level2 smaller">
+<h2>Architecture: Perceptron</h2>
 <div class="cell" data-reveal="true" data-layout-align="center">
 <div class="cell-output-display">
 <div>
@@ -536,7 +557,7 @@ M = \begin{bmatrix} 1 &amp; 2 &amp; 3 \\ 4 &amp; 5 &amp; 6 \end{bmatrix}
 <li>Bias (b): A constant value that shifts the output of the perceptron.</li>
 </ul>
 </section>
-<section id="section-8" class="slide level2 smaller">
+<section id="section-9" class="slide level2 smaller">
 <h2></h2>
 <ul>
 <li>Sum Node (Σ): Calculates the weighted sum of the inputs and the bias.</li>
@@ -556,137 +577,29 @@ M = \begin{bmatrix} 1 &amp; 2 &amp; 3 \\ 4 &amp; 5 &amp; 6 \end{bmatrix}
 <li>Activation functions introduce non-linearity to the output of the perceptron.</li>
 </ul>
 </section>
-<section id="activation-functions" class="slide level2 smaller">
-<h2>Activation functions</h2>
-<ul>
-<li>Activation functions are used to introduce non-linearity to the output of a neuron.</li>
-</ul>
-<p><strong>Sigmoid function</strong></p>
-<p><span class="math display">\[
-f(x) = \frac{1}{1 + e^{-x}}
-\]</span></p>
-<p>Example: <span class="math inline">\(f(0) = 0.5\)</span></p>
-<pre><code>- f(x): This represents the output of the sigmoid function for a given input x.
-- e: This is the euler's number (approximately 2.71828).
-- x: This is the input to the sigmoid function.
-- 1: This is added to the denominator to avoid division by zero.</code></pre>
-<ul>
-<li>The sigmoid function takes any real number as input and outputs a value between 0 and 1.</li>
-<li>It is used in the output layer of a binary classification problem.</li>
-</ul>
-</section>
-<section id="section-9" class="slide level2 smaller">
-<h2></h2>
-<p><strong>ReLU function</strong></p>
-<p><span class="math display">\[
-f(x) = \max(0, x)
-\]</span></p>
-<p>Example: <span class="math inline">\(f(2) = 2\)</span></p>
-<p>where:</p>
-<pre><code>- f(x): This represents the output of the ReLU function for a given input x.
-- x: This is the input to the ReLU function.
-- max: This function returns the maximum of the two values.
-- 0: This is the threshold value.</code></pre>
-<ul>
-<li>The Rectified Linear Unit (ReLU) function is that outputs the input directly if it is positive, otherwise, it outputs zero.</li>
-<li>The output of the ReLU function is between 0 and infinity.</li>
-<li>It is a popular activation function used in deep learning models.</li>
-</ul>
-</section>
-<section id="section-10" class="slide level2 smaller">
-<h2></h2>
-<p><strong>Feedforward Neural Network</strong></p>
-<div class="cell" data-reveal="true" data-fig-width="5" data-fig-height="3" data-layout-align="center">
-<div class="cell-output-display">
-<div>
-<p></p><figure class=""><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart LR
-    %% Input Layer
-    I1((I1)):::inputStyle
-    I2((I2)):::inputStyle
-    I3((I3)):::inputStyle
-    B1((Bias)):::biasStyle
-    %% Hidden Layer
-    H1((H1)):::hiddenStyle
-    H2((H2)):::hiddenStyle
-    H3((H3)):::hiddenStyle
-    B2((Bias)):::biasStyle
-    %% Output Layer
-    O1((O1)):::outputStyle
-    O2((O2)):::outputStyle
-
-    %% Connections
-    I1 --&gt;|w11| H1
-    I1 --&gt;|w12| H2
-    I1 --&gt;|w13| H3
-    I2 --&gt;|w21| H1
-    I2 --&gt;|w22| H2
-    I2 --&gt;|w23| H3
-    I3 --&gt;|w31| H1
-    I3 --&gt;|w32| H2
-    I3 --&gt;|w33| H3
-    B1 --&gt;|b1| H1
-    B1 --&gt;|b2| H2
-    B1 --&gt;|b3| H3
-    H1 --&gt;|v11| O1
-    H1 --&gt;|v12| O2
-    H2 --&gt;|v21| O1
-    H2 --&gt;|v22| O2
-    H3 --&gt;|v31| O1
-    H3 --&gt;|v32| O2
-    B2 --&gt;|b4| O1
-    B2 --&gt;|b5| O2
-
-    %% Styles
-    classDef inputStyle fill:#3498db,stroke:#333,stroke-width:2px;
-    classDef hiddenStyle fill:#e74c3c,stroke:#333,stroke-width:2px;
-    classDef outputStyle fill:#2ecc71,stroke:#333,stroke-width:2px;
-    classDef biasStyle fill:#f39c12,stroke:#333,stroke-width:2px;
-
-    %% Layer Labels
-    I2 -.- InputLabel[Input Layer]
-    H2 -.- HiddenLabel[Hidden Layer]
-    O1 -.- OutputLabel[Output Layer]
-
-    style InputLabel fill:none,stroke:none
-    style HiddenLabel fill:none,stroke:none
-    style OutputLabel fill:none,stroke:none
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
-</section>
-<section id="feedforward-neural-network" class="slide level2 smaller">
-<h2>Feedforward Neural Network</h2>
-<ul>
-<li>Feedforward neural network with three layers: input, hidden, and output.</li>
-<li>The input layer has three nodes (I1, I2, I3).</li>
-<li>The hidden layer has three nodes (H1, H2, H3).</li>
-<li>The output layer has two nodes (O1, O2).</li>
-<li>Each connection between the nodes has a weight (w) and a bias (b).</li>
-<li>The weights and biases are learned during the training process.</li>
-</ul>
-</section>
-<section id="section-11" class="slide level2 smaller">
-<h2></h2>
-<p><strong>Loss function</strong></p>
-<ul>
-<li>During forward pass, the neural network makes predictions based on input data.</li>
-<li>The loss function compares these predictions to the true values and calculates a loss score.</li>
-<li>The loss score is a measure of how well the network is performing.</li>
-<li>The goal of training is to minimize the loss function.</li>
-</ul>
+<section id="how-does-it-work" class="slide level2 smaller">
+<h2>How does it work?</h2>
+<ol type="1">
+<li>Each input (x1, x2, x3) is multiplied by its corresponding weight (w1, w2, w3).</li>
+<li>These weighted inputs are added up with the bias (b). This is the weighted sum.</li>
+</ol>
+<p>(<span class="math inline">\(w_1 \times x_1 + w_2 \times x_2 + w_3 \times x_3 + b\)</span>)</p>
+<ol start="3" type="1">
+<li><p>The sum is passed through an activation function.</p></li>
+<li><p>The output of the activation function becomes the output of the perceptron.</p></li>
+<li><p>The perceptron learns the weights and bias.</p></li>
+<li><p>It compares its output to the desired output and makes corrections.</p></li>
+<li><p>This process is repeated many times with all the inputs.</p></li>
+</ol>
 </section>
 <section id="additional-resources" class="slide level2 smaller">
 <h2>Additional resources</h2>
 <ul>
-<li>What is a neural network? <a href="https://www.youtube.com/watch?v=aircAruvnKk">Video</a></li>
-<li>Gradient descent, how neural networks learn <a href="https://www.youtube.com/watch?v=IHZwWFHWa-w">Video</a></li>
-<li>Backpropagation, how neural networks learn <a href="https://www.youtube.com/watch?v=Ilg3gGewQ5U">Video</a></li>
+<li>What is a neural network? [<a href="https://www.youtube.com/watch?v=aircAruvnKk">Video</a>]</li>
 </ul>
+</section>
+<section id="thank-you" class="slide level2 smaller">
+<h2>Thank you!</h2>
 
 <div class="quarto-auto-generated-content">
 <p><img src="../../../figures/icons/course_logo.png" class="slide-logo"></p>
