@@ -1,7 +1,7 @@
 ---
 title: "🗓️ Week 02 - Basics of Neural Networks"
 ---
-
+In this second week, we will cover a few basic math concepts used in neural networks, try to get an intuition of what machine learning models are and finally explain the architecture a perceptron.
 
 ## 👨‍🏫 Lecture Slides
 
