@@ -41,7 +41,7 @@ $$
 v = \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}
 $$
 
-**Matrix**: 2D array of numbers
+**Matrix**: 2D list of numbers
 
 $$
 M = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \end{bmatrix}
@@ -59,9 +59,13 @@ $$
 = \begin{bmatrix} 22 & 28 \\ 49 & 64 \end{bmatrix}
 $$
 
+Explanation:
+
 - The first matrix has 2 rows and 3 columns, and the second matrix has 3 rows and 2 columns.
 - The number of columns in the first matrix should be equal to the number of rows in the second matrix.
 - The resulting matrix will have the same number of rows as the first matrix and the same number of columns as the second matrix.
+- You multiply the rows of the first matrix with the columns of the second matrix.
+
 
 ## {.smaller}
 
@@ -92,6 +96,8 @@ $$
 $$
 
 - You add the corresponding elements of the matrices.
+- The matrices should have the same dimensions.
+- The resulting matrix will have the same dimensions as the input matrices.
 
 ## {.smaller}
 
@@ -107,18 +113,39 @@ $$
 
 - The number of columns in the first matrix should be equal to the number of rows in the second matrix.
 - The resulting matrix will have the same number of rows as the first matrix and the same number of columns as the second matrix.
-- You multiply the corresponding elements of the matrices and sum them up. -->
+- You multiply the corresponding elements of the matrices and sum them up.
 
 # Machine learning
+
 - Using **learning algorithms** to learn from existing data and predict for new data.
 - We have seen two types of Machine Learning models:
   - **Statistical language models**
   - **Probabilistic language models**
 - Today: Neural Networks
 
-<!-- ->who remembers what a statistical/probabilistic language model is? What is their "learning algorithm"?-->
+## {.smaller}
 
-# Neural Networks {.smaller}
+Let us say that you are given a set of inputs and outputs. You need to find how the inputs are related to the outputs.
+
+**Inputs**: $0,1,2,3,4$
+
+**Outputs**: $0,2,4,6,8$
+
+- You can see that the output is twice the input.
+- This is a simple example of a relationship between inputs and outputs.
+- You can use this relationship to predict the output for new inputs.
+
+Consider a more complex relationship between inputs and outputs.
+
+**Inputs**: $0,1,2,3,4$
+
+**Outputs**: $0,1,1,2,3$
+
+- Can you find the relationship between the inputs and outputs?
+- This is where machine learning comes into play.
+- Machine learning algorithms can learn the relationship between inputs and outputs from the data.
+
+## Neural networks {.smaller}
 
 Neural networks are a class of machine learning models inspired by the human brain.
 
@@ -135,6 +162,8 @@ Neural networks are a class of machine learning models inspired by the human bra
 - Can learn complex patterns.
 - Can generalize to new data.
 - Can be used for a wide range of tasks (speech recognition, and natural language processing).
+
+
 
 ## Architecture
 <br>
@@ -160,10 +189,11 @@ Layers consist of **neurons** which each modify the input in some way.
 
 <br>
 <img src="nn_perceptron.png"></img>
-The simplest Neural network only has one layer with one neuron. This single neuron is called a **perceptron**.
+The simplest Neural network only has one layer with one neuron. This is called a **perceptron**.
+
 <br>
 
-## Perceptron {.smaller}
+## Architecture: Perceptron {.smaller}
 
 
 ```{mermaid}
@@ -218,129 +248,25 @@ $$
 - Without non-linearity, the perceptron would be limited to learning linear patterns.
 - Activation functions introduce non-linearity to the output of the perceptron.
 
-## Activation functions {.smaller}
+## How does it work? {.smaller}
 
-- Activation functions are used to introduce non-linearity to the output of a neuron.
+1. Each input (x1, x2, x3) is multiplied by its corresponding weight (w1, w2, w3).
+2. These weighted inputs are added up with the bias (b). This is the weighted sum.
 
-**Sigmoid function**
+($w_1 \times x_1 + w_2 \times x_2 + w_3 \times x_3 + b$)
 
-$$
-f(x) = \frac{1}{1 + e^{-x}}
-$$
+3. The sum is passed through an activation function.
 
-Example: $f(0) = 0.5$
+4. The output of the activation function becomes the output of the perceptron.
 
-	- f(x): This represents the output of the sigmoid function for a given input x.
-	- e: This is the euler's number (approximately 2.71828).
-	- x: This is the input to the sigmoid function.
-	- 1: This is added to the denominator to avoid division by zero.
+5. The perceptron learns the weights and bias.
 
-- The sigmoid function takes any real number as input and outputs a value between 0 and 1.
-- It is used in the output layer of a binary classification problem.
+6. It compares its output to the desired output and makes corrections.
 
-## {.smaller}
-
-**ReLU function**
-
-$$
-f(x) = \max(0, x)
-$$
-
-Example: $f(2) = 2$
-
-where:
-
-	- f(x): This represents the output of the ReLU function for a given input x.
-	- x: This is the input to the ReLU function.
-	- max: This function returns the maximum of the two values.
-	- 0: This is the threshold value.
-
-- The Rectified Linear Unit (ReLU) function is that outputs the input directly if it is positive, otherwise, it outputs zero.
-- The output of the ReLU function is between 0 and infinity.
-- It is a popular activation function used in deep learning models.
-
-## {.smaller}
-
-**Feedforward Neural Network**
-
-```{mermaid}
-%%| fig-width: 5
-%%| fig-height: 3
-%%| fig-align: center
-flowchart LR
-    %% Input Layer
-    I1((I1)):::inputStyle
-    I2((I2)):::inputStyle
-    I3((I3)):::inputStyle
-    B1((Bias)):::biasStyle
-    %% Hidden Layer
-    H1((H1)):::hiddenStyle
-    H2((H2)):::hiddenStyle
-    H3((H3)):::hiddenStyle
-    B2((Bias)):::biasStyle
-    %% Output Layer
-    O1((O1)):::outputStyle
-    O2((O2)):::outputStyle
-
-    %% Connections
-    I1 -->|w11| H1
-    I1 -->|w12| H2
-    I1 -->|w13| H3
-    I2 -->|w21| H1
-    I2 -->|w22| H2
-    I2 -->|w23| H3
-    I3 -->|w31| H1
-    I3 -->|w32| H2
-    I3 -->|w33| H3
-    B1 -->|b1| H1
-    B1 -->|b2| H2
-    B1 -->|b3| H3
-    H1 -->|v11| O1
-    H1 -->|v12| O2
-    H2 -->|v21| O1
-    H2 -->|v22| O2
-    H3 -->|v31| O1
-    H3 -->|v32| O2
-    B2 -->|b4| O1
-    B2 -->|b5| O2
-
-    %% Styles
-    classDef inputStyle fill:#3498db,stroke:#333,stroke-width:2px;
-    classDef hiddenStyle fill:#e74c3c,stroke:#333,stroke-width:2px;
-    classDef outputStyle fill:#2ecc71,stroke:#333,stroke-width:2px;
-    classDef biasStyle fill:#f39c12,stroke:#333,stroke-width:2px;
-
-    %% Layer Labels
-    I2 -.- InputLabel[Input Layer]
-    H2 -.- HiddenLabel[Hidden Layer]
-    O1 -.- OutputLabel[Output Layer]
-
-    style InputLabel fill:none,stroke:none
-    style HiddenLabel fill:none,stroke:none
-    style OutputLabel fill:none,stroke:none
-```
-
-## Feedforward Neural Network {.smaller}
-
-- Feedforward neural network with three layers: input, hidden, and output.
-- The input layer has three nodes (I1, I2, I3).
-- The hidden layer has three nodes (H1, H2, H3).
-- The output layer has two nodes (O1, O2).
-- Each connection between the nodes has a weight (w) and a bias (b).
-- The weights and biases are learned during the training process.
-
-## {.smaller}
-
-**Loss function**
-
-- During forward pass, the neural network makes predictions based on input data.
-- The loss function compares these predictions to the true values and calculates a loss score.
-- The loss score is a measure of how well the network is performing.
-- The goal of training is to minimize the loss function.
-
+7. This process is repeated many times with all the inputs.
 
 ## Additional resources {.smaller}
 
-- What is a neural network? [Video](https://www.youtube.com/watch?v=aircAruvnKk)
-- Gradient descent, how neural networks learn [Video](https://www.youtube.com/watch?v=IHZwWFHWa-w)
-- Backpropagation, how neural networks learn [Video](https://www.youtube.com/watch?v=Ilg3gGewQ5U)
+- What is a neural network? [[Video](https://www.youtube.com/watch?v=aircAruvnKk)]
+
+## Thank you! {.smaller}
