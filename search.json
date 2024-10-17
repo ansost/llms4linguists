@@ -315,7 +315,7 @@
     "href": "2024/weeks/week02/page.html#homework",
     "title": "🗓️ Week 02 - Basics of Neural Networks",
     "section": "✍️ Homework",
-    "text": "✍️ Homework",
+    "text": "✍️ Homework\n\nPlease go through the slides and the recommended reading material.",
     "crumbs": [
       "🗓️ Class material",
       "Week 02 - NN basics"
@@ -326,7 +326,7 @@
     "href": "2024/weeks/week02/page.html#recommended-reading",
     "title": "🗓️ Week 02 - Basics of Neural Networks",
     "section": "📚 Recommended Reading",
-    "text": "📚 Recommended Reading",
+    "text": "📚 Recommended Reading\n\nWikipedia articles on Matrix multiplication, matrix addition, element-wise multiplication, and dot product.\nWhat is a neural network? [Video]",
     "crumbs": [
       "🗓️ Class material",
       "Week 02 - NN basics"
