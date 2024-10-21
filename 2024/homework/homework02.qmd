@@ -2,12 +2,14 @@
 title: "Homework 02: Neural Network" 
 format: html
 ---
+1) Please go through the Wikipedia articles on:
 
-Concepts to understand: backpropagation
+   - [ ] Matrix multiplication
 
-The goal is to be able to define these in your own words 
+   - [ ] Matrix addition
 
-1) Watch [this video](https://www.youtube.com/watch?v=aircAruvnKk&list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi) on youtube.
+   - [ ] Element-wise multiplication
 
-[](https://www.3blue1brown.com/lessons/neural-networks) 
+   - [ ] Dot product
 
+2) And watch this video: What is a neural network? [[Video](https://www.youtube.com/watch?v=aircAruvnKk)]

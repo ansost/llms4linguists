@@ -61,9 +61,8 @@ website:
         contents:
           - href: 2024/homework/homework01.qmd
             text: "Hw 01 - Colab"
-            # - contents:
-            #   - href: 2024/homework/homework01.qmd
-            #   - text: Homework
+          - href: 2024/homework/homework02.qmd
+            text: "Hw 02 - NN basics  "
 
   navbar:
     background: primary
