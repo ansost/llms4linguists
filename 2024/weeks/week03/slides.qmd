@@ -1,0 +1,184 @@
+---
+subtitle: "LLMs in Lingustic Research WiSe 2024/25"
+title: "<font style='font-size:1em;'>Week 02<br/> Basics of Neural Networks (Part 2)</font>"
+author: Akhilesh Kakolu Ramarao
+institute: '[HHU](#)'
+date: 23 October 2024
+date-meta: 16 October 2024
+date-format: "DD MMM YYYY"
+toc: true
+toc-depth: 1
+toc-title: "What we will cover today:"
+center-title-slide: false
+from: markdown+emoji
+filters:
+  - diagram
+format:
+  revealjs:
+    fig-responsive: true
+    theme: simple
+    slide-number: true
+    mouse-wheel: false
+    preview-links: auto
+    logo: /figures/icons/course_logo.png
+    css: /css/styles_slides.css
+    footer: 'LLMs in Lingustic Research WiSe 2024/25'
+---
+## Activation functions {.smaller}
+
+- Activation functions are used to introduce non-linearity to the output of a neuron.
+
+**Sigmoid function**
+$$
+f(x) = \frac{1}{1 + e^{-x}}
+$$
+
+Example: $f(0) = 0.5$
+	- f(x): This represents the output of the sigmoid function for a given input x.
+	- e: This is the euler's number (approximately 2.71828).
+	- x: This is the input to the sigmoid function.
+	- 1: This is added to the denominator to avoid division by zero.
+
+- The sigmoid function takes any real number as input and outputs a value between 0 and 1.
+- It is used in the output layer of a binary classification problem.
+
+## {.smaller}
+
+**ReLU function**
+
+$$
+f(x) = \max(0, x)
+$$
+
+Example: $f(2) = 2$
+
+where:
+	- f(x): This represents the output of the ReLU function for a given input x.
+	- x: This is the input to the ReLU function.
+	- max: This function returns the maximum of the two values.
+	- 0: This is the threshold value.
+
+- The Rectified Linear Unit (ReLU) function is that outputs the input directly if it is positive, otherwise, it outputs zero.
+- The output of the ReLU function is between 0 and infinity.
+- It is a popular activation function used in deep learning models.
+
+## Loss functions {.smaller}
+
+- During forward pass, the neural network makes predictions based on input data.
+- The loss function compares these predictions to the true values and calculates a loss score.
+- The loss score is a measure of how well the network is performing.
+- The goal of training is to minimize the loss function.
+- For regression problems, use MSE or MAE.
+- For classification problems, use cross-entropy loss.
+- For multi-class classification problems, use categorical cross-entropy loss.
+
+## Gradient descent {.smaller}
+
+- **Gradient descent** is a optimization algorithm used in machine learning to minimize the loss function of a model.
+
+## {.smaller}
+
+<img src="gradient_descent.png"></img>
+
+- X-axis (Weight): Represents the value of the model parameter being optimized.
+- Y-axis (Loss): Represents the value of the loss function being minimized.
+- The goal is to find the value of the model parameter that minimizes the loss function.
+
+## {.smaller}
+
+<img src="gradient_descent_1.png"></img>
+
+- The process starts at an initial weight with a corresponding loss, marked as "Initial weight + loss" on the graph
+- **Gradient**: The algorithm calculates the gradient (slope) at the current position. This gradient indicates the direction of steepest ascent.
+
+## {.smaller}
+
+<img src="gradient_descent_2.png"></img>
+
+- The model then takes a step in the opposite direction of the gradient, as we want to minimize the loss.
+- This is why it's called gradient descent - we descend along the gradient.
+- The "New weight + loss" point on the graph shows an intermediate step in this process, where the loss has decreased compared to the initial position.
+
+
+## {.smaller}
+
+<img src="gradient_descent_3.png"></img>
+
+- As the algorithm progresses, it should ideally approach the bottom of the curve, labeled as "Theoretical minima" in the image.
+- The algorithm may not always reach the exact theoretical minima due to factors like step size (learning rate) and the complexity of the loss landscape.
+- But, it typically converges to a point close enough to be practically useful for model optimization.
+
+## Learning rate {.smaller}
+
+- The **learning rate** is a hyperparameter that controls how much the model parameters are adjusted during training.
+- It is a critical parameter that can affect the convergence of the optimization algorithm.
+- A high learning rate can cause the model to overshoot the minima, leading to instability and divergence.
+- A low learning rate can slow down the training process and may get stuck in local minima.
+
+## Neural Network {.smaller}
+
+- A neural network is a collection of interconnected nodes (neurons) that process input data to produce output predictions.
+- The nodes are organized into layers, with each layer performing specific computations.
+- The input layer receives the input data, the hidden layers process the data, and the output layer produces the final predictions.
+- The connections between nodes are represented by weights, which are adjusted during training to optimize the model.
+
+
+##  {.smaller}
+
+
+```{mermaid}
+%%| fig-width: 3
+%%| fig-height: 2
+%%| fig-align: center
+flowchart LR
+    %% Input Layer
+    I1((I1)):::inputStyle
+    I2((I2)):::inputStyle
+    I3((I3)):::inputStyle
+    B1((Bias)):::biasStyle
+    %% Hidden Layer
+    H1((H1)):::hiddenStyle
+    H2((H2)):::hiddenStyle
+    H3((H3)):::hiddenStyle
+    B2((Bias)):::biasStyle
+    %% Output Layer
+    O1((O1)):::outputStyle
+    O2((O2)):::outputStyle
+    %% Connections
+    I1 -->|w11| H1
+    I1 -->|w12| H2
+    I1 -->|w13| H3
+    I2 -->|w21| H1
+    I2 -->|w22| H2
+    I2 -->|w23| H3
+    I3 -->|w31| H1
+    I3 -->|w32| H2
+    I3 -->|w33| H3
+    B1 -->|b1| H1
+    B1 -->|b2| H2
+    B1 -->|b3| H3
+    H1 -->|v11| O1
+    H1 -->|v12| O2
+    H2 -->|v21| O1
+    H2 -->|v22| O2
+    H3 -->|v31| O1
+    H3 -->|v32| O2
+    B2 -->|b4| O1
+    B2 -->|b5| O2
+    %% Styles
+    classDef inputStyle fill:#3498db,stroke:#333,stroke-width:2px;
+    classDef hiddenStyle fill:#e74c3c,stroke:#333,stroke-width:2px;
+    classDef outputStyle fill:#2ecc71,stroke:#333,stroke-width:2px;
+    classDef biasStyle fill:#f39c12,stroke:#333,stroke-width:2px;
+    %% Layer Labels
+    I2 -.- InputLabel[Input Layer]
+    H2 -.- HiddenLabel[Hidden Layer]
+    O1 -.- OutputLabel[Output Layer]
+    style InputLabel fill:none,stroke:none
+    style HiddenLabel fill:none,stroke:none
+    style OutputLabel fill:none,stroke:none
+```
+
+## {.smaller}
+
+## Thank you! {.smaller}

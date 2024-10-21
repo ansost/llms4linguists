@@ -7,6 +7,7 @@ project:
     - "2024/*.qmd"
     - "2024/weeks/week01/*.qmd"
     - "2024/weeks/week02/*.qmd"
+    - "2024/weeks/week03/*.qmd"
     - "2024/homework/*.qmd"
 
 website:
