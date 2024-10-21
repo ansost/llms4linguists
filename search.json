@@ -337,6 +337,10 @@
     "href": "2024/homework/homework02.html",
     "title": "Homework 02: Neural Network",
     "section": "",
-    "text": "Concepts to understand: backpropagation\nThe goal is to be able to define these in your own words\n\nWatch this video on youtube."
+    "text": "Please go through the Wikipedia articles on:\n\nMatrix multiplication\nMatrix addition\nElement-wise multiplication\nDot product\n\nAnd watch this video: What is a neural network? [Video]",
+    "crumbs": [
+      "🧩 Homework",
+      "Hw 02 - NN basics  "
+    ]
   }
 ]
