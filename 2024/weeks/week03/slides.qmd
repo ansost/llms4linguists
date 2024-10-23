@@ -1,6 +1,6 @@
 ---
 subtitle: "LLMs in Lingustic Research WiSe 2024/25"
-title: "<font style='font-size:1em;'>Week 02<br/> Basics of Neural Networks (Part 2)</font>"
+title: "<font style='font-size:1em;'>Week 03<br/> Basics of Neural Networks (Part 2)</font>"
 author: Akhilesh Kakolu Ramarao
 institute: '[HHU](#)'
 date: 23 October 2024
