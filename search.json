@@ -1,31 +1,10 @@
 [
   {
-    "objectID": "2024/weeks/week03/slides.html#activation-functions",
-    "href": "2024/weeks/week03/slides.html#activation-functions",
-    "title": "Week 02 Basics of Neural Networks (Part 2)",
-    "section": "Activation functions",
-    "text": "Activation functions\n\nActivation functions are used to introduce non-linearity to the output of a neuron.\n\nSigmoid function \\[\nf(x) = \\frac{1}{1 + e^{-x}}\n\\]\nExample: \\(f(0) = 0.5\\) - f(x): This represents the output of the sigmoid function for a given input x. - e: This is the euler’s number (approximately 2.71828). - x: This is the input to the sigmoid function. - 1: This is added to the denominator to avoid division by zero.\n\nThe sigmoid function takes any real number as input and outputs a value between 0 and 1.\nIt is used in the output layer of a binary classification problem."
-  },
-  {
     "objectID": "2024/weeks/week03/slides.html#section",
     "href": "2024/weeks/week03/slides.html#section",
     "title": "Week 02 Basics of Neural Networks (Part 2)",
     "section": "",
-    "text": "ReLU function\n\\[\nf(x) = \\max(0, x)\n\\]\nExample: \\(f(2) = 2\\)\nwhere: - f(x): This represents the output of the ReLU function for a given input x. - x: This is the input to the ReLU function. - max: This function returns the maximum of the two values. - 0: This is the threshold value.\n\nThe Rectified Linear Unit (ReLU) function is that outputs the input directly if it is positive, otherwise, it outputs zero.\nThe output of the ReLU function is between 0 and infinity.\nIt is a popular activation function used in deep learning models."
-  },
-  {
-    "objectID": "2024/weeks/week03/slides.html#loss-functions",
-    "href": "2024/weeks/week03/slides.html#loss-functions",
-    "title": "Week 02 Basics of Neural Networks (Part 2)",
-    "section": "Loss functions",
-    "text": "Loss functions\n\nDuring forward pass, the neural network makes predictions based on input data.\nThe loss function compares these predictions to the true values and calculates a loss score.\nThe loss score is a measure of how well the network is performing.\nThe goal of training is to minimize the loss function.\nFor regression problems, use MSE or MAE.\nFor classification problems, use cross-entropy loss.\nFor multi-class classification problems, use categorical cross-entropy loss."
-  },
-  {
-    "objectID": "2024/weeks/week03/slides.html#gradient-descent",
-    "href": "2024/weeks/week03/slides.html#gradient-descent",
-    "title": "Week 02 Basics of Neural Networks (Part 2)",
-    "section": "Gradient descent",
-    "text": "Gradient descent\n\nGradient descent is a optimization algorithm used in machine learning to minimize the loss function of a model."
+    "text": "ReLU function\n\\[\nf(x) = \\max(0, x)\n\\]\nExample: \\(f(2) = 2\\)\nwhere:\n- f(x): This represents the output of the ReLU function for a given input x.\n- x: This is the input to the ReLU function.\n- max: This function returns the maximum of the two values.\n- 0: This is the threshold value.\n\nThe Rectified Linear Unit (ReLU) function is that outputs the input directly if it is positive, otherwise, it outputs zero.\nThe output of the ReLU function is between 0 and infinity.\nIt is a popular activation function used in deep learning models."
   },
   {
     "objectID": "2024/weeks/week03/slides.html#section-1",
@@ -56,25 +35,25 @@
     "text": "As the algorithm progresses, it should ideally approach the bottom of the curve, labeled as “Theoretical minima” in the image.\nThe algorithm may not always reach the exact theoretical minima due to factors like step size (learning rate) and the complexity of the loss landscape.\nBut, it typically converges to a point close enough to be practically useful for model optimization."
   },
   {
-    "objectID": "2024/weeks/week03/slides.html#learning-rate",
-    "href": "2024/weeks/week03/slides.html#learning-rate",
-    "title": "Week 02 Basics of Neural Networks (Part 2)",
-    "section": "Learning rate",
-    "text": "Learning rate\n\nThe learning rate is a hyperparameter that controls how much the model parameters are adjusted during training.\nIt is a critical parameter that can affect the convergence of the optimization algorithm.\nA high learning rate can cause the model to overshoot the minima, leading to instability and divergence.\nA low learning rate can slow down the training process and may get stuck in local minima."
-  },
-  {
-    "objectID": "2024/weeks/week03/slides.html#neural-network",
-    "href": "2024/weeks/week03/slides.html#neural-network",
-    "title": "Week 02 Basics of Neural Networks (Part 2)",
-    "section": "Neural Network",
-    "text": "Neural Network\n\nA neural network is a collection of interconnected nodes (neurons) that process input data to produce output predictions.\nThe nodes are organized into layers, with each layer performing specific computations.\nThe input layer receives the input data, the hidden layers process the data, and the output layer produces the final predictions.\nThe connections between nodes are represented by weights, which are adjusted during training to optimize the model."
-  },
-  {
     "objectID": "2024/weeks/week03/slides.html#section-5",
     "href": "2024/weeks/week03/slides.html#section-5",
     "title": "Week 02 Basics of Neural Networks (Part 2)",
     "section": "",
     "text": "flowchart LR\n    %% Input Layer\n    I1((I1)):::inputStyle\n    I2((I2)):::inputStyle\n    I3((I3)):::inputStyle\n    B1((Bias)):::biasStyle\n    %% Hidden Layer\n    H1((H1)):::hiddenStyle\n    H2((H2)):::hiddenStyle\n    H3((H3)):::hiddenStyle\n    B2((Bias)):::biasStyle\n    %% Output Layer\n    O1((O1)):::outputStyle\n    O2((O2)):::outputStyle\n    %% Connections\n    I1 --&gt;|w11| H1\n    I1 --&gt;|w12| H2\n    I1 --&gt;|w13| H3\n    I2 --&gt;|w21| H1\n    I2 --&gt;|w22| H2\n    I2 --&gt;|w23| H3\n    I3 --&gt;|w31| H1\n    I3 --&gt;|w32| H2\n    I3 --&gt;|w33| H3\n    B1 --&gt;|b1| H1\n    B1 --&gt;|b2| H2\n    B1 --&gt;|b3| H3\n    H1 --&gt;|v11| O1\n    H1 --&gt;|v12| O2\n    H2 --&gt;|v21| O1\n    H2 --&gt;|v22| O2\n    H3 --&gt;|v31| O1\n    H3 --&gt;|v32| O2\n    B2 --&gt;|b4| O1\n    B2 --&gt;|b5| O2\n    %% Styles\n    classDef inputStyle fill:#3498db,stroke:#333,stroke-width:2px;\n    classDef hiddenStyle fill:#e74c3c,stroke:#333,stroke-width:2px;\n    classDef outputStyle fill:#2ecc71,stroke:#333,stroke-width:2px;\n    classDef biasStyle fill:#f39c12,stroke:#333,stroke-width:2px;\n    %% Layer Labels\n    I2 -.- InputLabel[Input Layer]\n    H2 -.- HiddenLabel[Hidden Layer]\n    O1 -.- OutputLabel[Output Layer]\n    style InputLabel fill:none,stroke:none\n    style HiddenLabel fill:none,stroke:none\n    style OutputLabel fill:none,stroke:none"
+  },
+  {
+    "objectID": "2024/weeks/week03/slides.html#section-6",
+    "href": "2024/weeks/week03/slides.html#section-6",
+    "title": "Week 02 Basics of Neural Networks (Part 2)",
+    "section": "",
+    "text": "The input layer consists of three nodes (I1, I2, I3) representing the input features.\nThe hidden layer consists of three nodes (H1, H2, H3) that process the input data.\nThe output layer consists of two nodes (O1, O2) that produce the final predictions.\nThe connections between nodes are represented by weights (w11, w12, …, v32) and biases (b1, b2, …, b5).\nThe weights and biases are adjusted during training to optimize the model.\nThe model makes predictions by passing the input data through the network and computing the output."
+  },
+  {
+    "objectID": "2024/weeks/week03/slides.html#training-development-and-test-datasets",
+    "href": "2024/weeks/week03/slides.html#training-development-and-test-datasets",
+    "title": "Week 02 Basics of Neural Networks (Part 2)",
+    "section": "Training, development and test datasets",
+    "text": "Training, development and test datasets\n\nThe training dataset is used to optimize the model parameters (weights and biases) using gradient descent.\nThe development dataset is used to tune the hyperparameters of the model, such as the learning rate and the number of hidden units.\nThe test dataset is used to evaluate the performance of the model on unseen data.\nIn order to avoid overfitting, it is important to have separate datasets for training, development, and testing.\nThe training dataset is typically the largest, followed by the development and test datasets.\nThe development and test datasets should be representative of the data the model will encounter in the real world.\nThe datasets should be randomly sampled to avoid bias and ensure that the model generalizes well."
   },
   {
     "objectID": "2024/weeks/week03/slides.html#thank-you",
@@ -99,28 +78,44 @@
     "href": "2024/weeks/week03/page.html",
     "title": "🗓️ Week 01 - Admin, Architectures: Statistical and Probabilistic Language Models",
     "section": "",
-    "text": "In this first week, we will cover what you can expect to learn from this course and the course logistics: all you need to know about the structure of the lectures, classes, assessments, and how we will interact throughout this course."
+    "text": "Either click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides.",
+    "crumbs": [
+      "🗓️ Class material",
+      "Week 03 - NN basics II"
+    ]
   },
   {
     "objectID": "2024/weeks/week03/page.html#lecture-slides",
     "href": "2024/weeks/week03/page.html#lecture-slides",
     "title": "🗓️ Week 01 - Admin, Architectures: Statistical and Probabilistic Language Models",
-    "section": "👨‍🏫 Lecture Slides",
-    "text": "👨‍🏫 Lecture Slides\nEither click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides."
+    "section": "",
+    "text": "Either click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides.",
+    "crumbs": [
+      "🗓️ Class material",
+      "Week 03 - NN basics II"
+    ]
   },
   {
     "objectID": "2024/weeks/week03/page.html#homework",
     "href": "2024/weeks/week03/page.html#homework",
     "title": "🗓️ Week 01 - Admin, Architectures: Statistical and Probabilistic Language Models",
     "section": "✍️ Homework",
-    "text": "✍️ Homework\nWeek 01 - Homework"
+    "text": "✍️ Homework",
+    "crumbs": [
+      "🗓️ Class material",
+      "Week 03 - NN basics II"
+    ]
   },
   {
     "objectID": "2024/weeks/week03/page.html#recommended-reading",
     "href": "2024/weeks/week03/page.html#recommended-reading",
     "title": "🗓️ Week 01 - Admin, Architectures: Statistical and Probabilistic Language Models",
     "section": "📚 Recommended Reading",
-    "text": "📚 Recommended Reading\n\nSpeech and Language Processing, Chapter 3: N-gram language models PDF. Authors: Dan Jurafsky and James H. Martin."
+    "text": "📚 Recommended Reading",
+    "crumbs": [
+      "🗓️ Class material",
+      "Week 03 - NN basics II"
+    ]
   },
   {
     "objectID": "2024/weeks/week01/slides.html#whoami-akhilesh",
