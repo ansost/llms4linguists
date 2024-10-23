@@ -1,13 +1,13 @@
 ---
 title: "Syllabus"
 ---
-*Last changed: 09.10.24*
+*Last changed: 23.10.24*
 
 | Date | General Topic | Homework | Assignments |
 | --- | --- | --- | --- |
 | 09.10 | **Admin**, **Architectures**: Statistical and Probabilistic Language Models | Familiarization with Google Colab |     |
 | 16.10 | **Architectures**: Perceptrons and Neural Networks |     |     |
-| 23.10 | **Architectures**: Recurrent Neural Networks |     | Assignment 1 |
+| 23.10 | **Architectures**: Perceptrons and Neural Networks (part 2) |     | Assignment 1 |
 | 30.10 | **Transformer**: General architecture |     |     |
 | 06.11 | **Transformer**: The Attention mechanism |     |     |
 | 13.11 | **Transformer**: Transformer models: Decoder/Encode only models |     | Assignment 2 |
