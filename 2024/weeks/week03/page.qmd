@@ -1,5 +1,5 @@
 ---
-title: "🗓️ Week 01 - Admin, Architectures: Statistical and Probabilistic Language Models"
+title: "🗓️ Week 03 - Basics of Neural Networks (part 2)"
 ---
 
 
