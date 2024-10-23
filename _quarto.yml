@@ -56,7 +56,11 @@ website:
            contents:
              - href: 2024/weeks/week02/page.qmd
                text: 👨‍🏫 Lecture Material
-
+         - href: 2024/weeks/week03/page.qmd
+           text: Week 03 - NN basics II
+           contents:
+             - href: 2024/weeks/week03/page.qmd
+               text: 👨‍🏫 Lecture Material
 
       - section: "🧩 Homework"
         contents:

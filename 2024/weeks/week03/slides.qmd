@@ -24,7 +24,9 @@ format:
     css: /css/styles_slides.css
     footer: 'LLMs in Lingustic Research WiSe 2024/25'
 ---
-## Activation functions {.smaller}
+
+
+# Activation functions {.smaller}
 
 - Activation functions are used to introduce non-linearity to the output of a neuron.
 
@@ -34,6 +36,9 @@ f(x) = \frac{1}{1 + e^{-x}}
 $$
 
 Example: $f(0) = 0.5$
+
+where:
+
 	- f(x): This represents the output of the sigmoid function for a given input x.
 	- e: This is the euler's number (approximately 2.71828).
 	- x: This is the input to the sigmoid function.
@@ -53,6 +58,7 @@ $$
 Example: $f(2) = 2$
 
 where:
+
 	- f(x): This represents the output of the ReLU function for a given input x.
 	- x: This is the input to the ReLU function.
 	- max: This function returns the maximum of the two values.
@@ -62,19 +68,24 @@ where:
 - The output of the ReLU function is between 0 and infinity.
 - It is a popular activation function used in deep learning models.
 
-## Loss functions {.smaller}
+# Loss functions {.smaller}
 
 - During forward pass, the neural network makes predictions based on input data.
 - The loss function compares these predictions to the true values and calculates a loss score.
 - The loss score is a measure of how well the network is performing.
 - The goal of training is to minimize the loss function.
-- For regression problems, use MSE or MAE.
-- For classification problems, use cross-entropy loss.
-- For multi-class classification problems, use categorical cross-entropy loss.
+- You can use different loss functions for different set of tasks:
+	- For regression problems, use MSE or MAE.
+	- For classification problems, use cross-entropy loss.
+	- For multi-class classification problems, use categorical cross-entropy loss.
 
-## Gradient descent {.smaller}
+# Gradient descent {.smaller}
 
 - **Gradient descent** is a optimization algorithm used in machine learning to minimize the loss function of a model.
+- The algorithm works by iteratively adjusting the model parameters (weights and biases) to reduce the loss.
+- The key idea behind gradient descent is to move in the direction of the negative gradient of the loss function.
+- A negative gradient indicates the direction of steepest descent, i.e., the direction in which the loss decreases the fastest.
+- By following the gradient, the algorithm can find the optimal values of the model parameters that minimize the loss function.
 
 ## {.smaller}
 
@@ -108,14 +119,15 @@ where:
 - The algorithm may not always reach the exact theoretical minima due to factors like step size (learning rate) and the complexity of the loss landscape.
 - But, it typically converges to a point close enough to be practically useful for model optimization.
 
-## Learning rate {.smaller}
+# Learning rate {.smaller}
 
 - The **learning rate** is a hyperparameter that controls how much the model parameters are adjusted during training.
-- It is a critical parameter that can affect the convergence of the optimization algorithm.
+- A hyperparameter is a parameter whose value is set before the learning process begins.
+- Learning rate is a critical parameter that can affect the convergence of the optimization algorithm.
 - A high learning rate can cause the model to overshoot the minima, leading to instability and divergence.
 - A low learning rate can slow down the training process and may get stuck in local minima.
 
-## Neural Network {.smaller}
+# Single-layer Neural Network {.smaller}
 
 - A neural network is a collection of interconnected nodes (neurons) that process input data to produce output predictions.
 - The nodes are organized into layers, with each layer performing specific computations.
@@ -180,5 +192,22 @@ flowchart LR
 ```
 
 ## {.smaller}
+
+- The input layer consists of three nodes (I1, I2, I3) representing the input features.
+- The hidden layer consists of three nodes (H1, H2, H3) that process the input data.
+- The output layer consists of two nodes (O1, O2) that produce the final predictions.
+- The connections between nodes are represented by weights (w11, w12, ..., v32) and biases (b1, b2, ..., b5).
+- The weights and biases are adjusted during training to optimize the model.
+- The model makes predictions by passing the input data through the network and computing the output.
+
+## Training, development and test datasets {.smaller}
+
+- The training dataset is used to optimize the model parameters (weights and biases) using gradient descent.
+- The development dataset is used to tune the hyperparameters of the model, such as the learning rate and the number of hidden units.
+- The test dataset is used to evaluate the performance of the model on unseen data.
+- In order to avoid overfitting, it is important to have separate datasets for training, development, and testing.
+- The training dataset is typically the largest, followed by the development and test datasets.
+- The development and test datasets should be representative of the data the model will encounter in the real world.
+- The datasets should be randomly sampled to avoid bias and ensure that the model generalizes well.
 
 ## Thank you! {.smaller}
