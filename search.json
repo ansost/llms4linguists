@@ -63,58 +63,161 @@
     "text": "Thank you!\n\n\n\n\nLLMs in Lingustic Research WiSe 2024/25"
   },
   {
-    "objectID": "2024/homework/homework02.html",
-    "href": "2024/homework/homework02.html",
-    "title": "Homework 02: Neural Network",
+    "objectID": "2024/assignments/assignment01.html",
+    "href": "2024/assignments/assignment01.html",
+    "title": "Assignment 1: Perceptron Analysis",
     "section": "",
-    "text": "Please go through the Wikipedia articles on:\n\nMatrix multiplication\nMatrix addition\nElement-wise multiplication\nDot product\n\nAnd watch this video: What is a neural network? [Video]",
+    "text": "Consider a perceptron that predicts if you’ll pass a quiz based on:\n\nHours studied (0-5)\nHours slept (0-8)\n\nPart1: Make predictions for:\n\nDifferent study patterns:\n\n\nStudied 4 hours, slept 7 hours\nStudied 1 hour, slept 8 hours\nStudied 5 hours, slept 4 hours\nStudied 3 hours, slept 3 hours\nStudied 4 hours, slept 4 hours\n\n\nWeight changes:\n\n\nStudy hours more important\nSleep hours more important\nBoth equally important\n\nDraw simple diagrams showing:\n\nHow you think the perceptron would classify each case\nWhy some combinations might work better than others\n\nPart 2: Predict what happens when:\n\nThe perceptron starts with:\n\n\nThinking only study hours matter\nThinking only sleep matters\nThinking nothing matters (zero weights)\n\n\nThe perceptron learns from:\n\n\nOne student’s data\nFive students data\nTwenty students data\n\nExplain in simple terms:\n\nHow you think it would change its decisions\nWhy more data might help\nWhat problems it might face\n\nNOTE:\n\nNo calculations needed\nKeep explanations simple\nYou will be graded on:\n\nclarity of explanation\nuse of diagrams to support your explanation\n\n\nSubmission Guidelines\n\nFormat: PDF document, 12-point Times New Roman, 1.5 line spacing\nLength: 600-1500 words (excluding diagrams)\nSubmit by email to: Anna (anste145 at hhu dot de)",
+    "crumbs": [
+      "✍️ Assignments   ",
+      "📝 Assignment 01"
+    ]
+  },
+  {
+    "objectID": "2024/homework/homework01.html",
+    "href": "2024/homework/homework01.html",
+    "title": "Homework 1: Using Google Colab",
+    "section": "",
+    "text": "The instructions below assume that you have a Google account or are willing to make one. If you do not want to make a Google account,  contact Anna for instructions to run notebooks without Colab.",
     "crumbs": [
       "🧩 Homework",
-      "Hw 02 - NN basics  "
+      "Hw 01 - Colab"
     ]
   },
   {
-    "objectID": "2024/weeks/week03/page.html",
-    "href": "2024/weeks/week03/page.html",
-    "title": "🗓️ Week 03 - Basics of Neural Networks (part 2)",
+    "objectID": "2024/homework/homework01.html#google-colab",
+    "href": "2024/homework/homework01.html#google-colab",
+    "title": "Homework 1: Using Google Colab",
+    "section": "Google Colab",
+    "text": "Google Colab\n\nGo to the notebooks folder. Click on the three dots for the hw1.ipynb file, select “Open with” and then “Open in Colab”.\nRun both cells in the notebook by clicking on the play icon on the left of the cell or clicking into the cell and pressing CTRL + ENTER on Windows or CMD + ENTER on Mac.",
+    "crumbs": [
+      "🧩 Homework",
+      "Hw 01 - Colab"
+    ]
+  },
+  {
+    "objectID": "2024/weeks/week02/page.html",
+    "href": "2024/weeks/week02/page.html",
+    "title": "🗓️ Week 02 - Basics of Neural Networks",
     "section": "",
-    "text": "Either click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides.",
+    "text": "In this second week, we will cover a few basic math concepts used in neural networks, try to get an intuition of what machine learning models are and finally explain the architecture a perceptron.",
     "crumbs": [
       "🗓️ Class material",
-      "Week 03 - NN basics II"
+      "Week 02 - NN basics"
     ]
   },
   {
-    "objectID": "2024/weeks/week03/page.html#lecture-slides",
-    "href": "2024/weeks/week03/page.html#lecture-slides",
-    "title": "🗓️ Week 03 - Basics of Neural Networks (part 2)",
-    "section": "",
-    "text": "Either click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides.",
+    "objectID": "2024/weeks/week02/page.html#lecture-slides",
+    "href": "2024/weeks/week02/page.html#lecture-slides",
+    "title": "🗓️ Week 02 - Basics of Neural Networks",
+    "section": "👨‍🏫 Lecture Slides",
+    "text": "👨‍🏫 Lecture Slides\nEither click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides.",
     "crumbs": [
       "🗓️ Class material",
-      "Week 03 - NN basics II"
+      "Week 02 - NN basics"
     ]
   },
   {
-    "objectID": "2024/weeks/week03/page.html#homework",
-    "href": "2024/weeks/week03/page.html#homework",
-    "title": "🗓️ Week 03 - Basics of Neural Networks (part 2)",
+    "objectID": "2024/weeks/week02/page.html#homework",
+    "href": "2024/weeks/week02/page.html#homework",
+    "title": "🗓️ Week 02 - Basics of Neural Networks",
     "section": "✍️ Homework",
-    "text": "✍️ Homework",
+    "text": "✍️ Homework\n\nPlease go through the slides and the recommended reading material.",
     "crumbs": [
       "🗓️ Class material",
-      "Week 03 - NN basics II"
+      "Week 02 - NN basics"
     ]
   },
   {
-    "objectID": "2024/weeks/week03/page.html#recommended-reading",
-    "href": "2024/weeks/week03/page.html#recommended-reading",
-    "title": "🗓️ Week 03 - Basics of Neural Networks (part 2)",
+    "objectID": "2024/weeks/week02/page.html#recommended-reading",
+    "href": "2024/weeks/week02/page.html#recommended-reading",
+    "title": "🗓️ Week 02 - Basics of Neural Networks",
     "section": "📚 Recommended Reading",
-    "text": "📚 Recommended Reading",
+    "text": "📚 Recommended Reading\n\nWikipedia articles on Matrix multiplication, matrix addition, element-wise multiplication, and dot product.\nWhat is a neural network? [Video]",
     "crumbs": [
       "🗓️ Class material",
-      "Week 03 - NN basics II"
+      "Week 02 - NN basics"
+    ]
+  },
+  {
+    "objectID": "2024/weeks/week01/page.html",
+    "href": "2024/weeks/week01/page.html",
+    "title": "🗓️ Week 01 - Admin, Architectures: Statistical and Probabilistic Language Models",
+    "section": "",
+    "text": "In this first week, we will cover what you can expect to learn from this course and the course logistics: all you need to know about the structure of the lectures, classes, assessments, and how we will interact throughout this course.",
+    "crumbs": [
+      "🗓️ Class material",
+      "Week 01 - Intro"
+    ]
+  },
+  {
+    "objectID": "2024/weeks/week01/page.html#lecture-slides",
+    "href": "2024/weeks/week01/page.html#lecture-slides",
+    "title": "🗓️ Week 01 - Admin, Architectures: Statistical and Probabilistic Language Models",
+    "section": "👨‍🏫 Lecture Slides",
+    "text": "👨‍🏫 Lecture Slides\nEither click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides.",
+    "crumbs": [
+      "🗓️ Class material",
+      "Week 01 - Intro"
+    ]
+  },
+  {
+    "objectID": "2024/weeks/week01/page.html#homework",
+    "href": "2024/weeks/week01/page.html#homework",
+    "title": "🗓️ Week 01 - Admin, Architectures: Statistical and Probabilistic Language Models",
+    "section": "✍️ Homework",
+    "text": "✍️ Homework\nWeek 01 - Homework",
+    "crumbs": [
+      "🗓️ Class material",
+      "Week 01 - Intro"
+    ]
+  },
+  {
+    "objectID": "2024/weeks/week01/page.html#recommended-reading",
+    "href": "2024/weeks/week01/page.html#recommended-reading",
+    "title": "🗓️ Week 01 - Admin, Architectures: Statistical and Probabilistic Language Models",
+    "section": "📚 Recommended Reading",
+    "text": "📚 Recommended Reading\n\nSpeech and Language Processing, Chapter 3: N-gram language models PDF. Authors: Dan Jurafsky and James H. Martin.",
+    "crumbs": [
+      "🗓️ Class material",
+      "Week 01 - Intro"
+    ]
+  },
+  {
+    "objectID": "2024/homework.html",
+    "href": "2024/homework.html",
+    "title": "Homework Overview",
+    "section": "",
+    "text": "Here is an overview of all Homework up to date:\nHw 1: Google Colab: here\nHw 2: Neural Networks: here"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "LLMs in Linguistic Research",
+    "section": "",
+    "text": "InstructorTeaching Staff\n\n\n Akhilesh Kakolu Ramarao  📧 kakolura at hhu dot de\n\n\n Anna Stein  📧 anna.stein at hhu dot de\n\n\n\n\nSyllabus\nView it online here.\n\n\n📍 Location\nWednesday, 2:30pm-4pm\nBuilding 23.21 Floor 2, Room 22\n\n\n🎯 Learning Objectives\nFocus: Understanding LLMs and their usage in various linguistics tasks\nHow: Hands-on learning and paper discussions\n\nGaining an intuition of how LLMs work\nGetting to know the field of LLM research and development\nFamiliarizing yourself with different LLM architectures\nLearning how to use them for different linguistics tasks (e.g., text analysis, language generation, and language understanding)\nPracting using tools like Huggingface for LLM inference and fine-tuning",
+    "crumbs": [
+      "🏠 Home"
+    ]
+  },
+  {
+    "objectID": "2024/assignments.html",
+    "href": "2024/assignments.html",
+    "title": "Assignment Overview",
+    "section": "",
+    "text": "Here is an overview of all assignments up to date:\nAssignment 1: TBD\nAssignment 2: TBD\nAssignment 3: TBD\nAssignment 4: TBD\nAssignment 5: TBD",
+    "crumbs": [
+      "✍️ Assignments   "
+    ]
+  },
+  {
+    "objectID": "2024/syllabus.html",
+    "href": "2024/syllabus.html",
+    "title": "Syllabus",
+    "section": "",
+    "text": "Last changed: 23.10.24\n\n\n\n\n\n\n\n\n\nDate\nGeneral Topic\nHomework\nAssignments\n\n\n\n\n09.10\nAdmin, Architectures: Statistical and Probabilistic Language Models\nFamiliarization with Google Colab\n\n\n\n16.10\nArchitectures: Perceptrons and Neural Networks\n\n\n\n\n23.10\nArchitectures: Perceptrons and Neural Networks (part 2)\n\nAssignment 1\n\n\n30.10\nTransformer: General architecture\n\n\n\n\n06.11\nTransformer: The Attention mechanism\n\n\n\n\n13.11\nTransformer: Transformer models: Decoder/Encode only models\n\nAssignment 2\n\n\n20.11\nUsing pre-trained models\n\n\n\n\n27.11\nStudy week\n\n\n\n\n04.12\nTransfer learning: fine-tuning\n\n\n\n\n11.12\nAdapting models for specific tasks\n\nAssignment 3\n\n\n18.12\nAdapting models for specific tasks\n\n\n\n\n08.01\nAdapting models for specific tasks\n\nAssignment 4\n\n\n15.01\nProbing LLMs\n\n\n\n\n22.01\nProbing LLMs\n\nAssignment 5\n\n\n29.01\nTBD",
+    "crumbs": [
+      "📓 Syllabus"
     ]
   },
   {
@@ -195,147 +298,58 @@
     "text": "Thank you!\n\n\n\n\nLLMs in Lingustic Research WiSe 2024/25"
   },
   {
-    "objectID": "2024/syllabus.html",
-    "href": "2024/syllabus.html",
-    "title": "Syllabus",
+    "objectID": "2024/weeks/week03/page.html",
+    "href": "2024/weeks/week03/page.html",
+    "title": "🗓️ Week 03 - Basics of Neural Networks (part 2)",
     "section": "",
-    "text": "Last changed: 23.10.24\n\n\n\n\n\n\n\n\n\nDate\nGeneral Topic\nHomework\nAssignments\n\n\n\n\n09.10\nAdmin, Architectures: Statistical and Probabilistic Language Models\nFamiliarization with Google Colab\n\n\n\n16.10\nArchitectures: Perceptrons and Neural Networks\n\n\n\n\n23.10\nArchitectures: Perceptrons and Neural Networks (part 2)\n\nAssignment 1\n\n\n30.10\nTransformer: General architecture\n\n\n\n\n06.11\nTransformer: The Attention mechanism\n\n\n\n\n13.11\nTransformer: Transformer models: Decoder/Encode only models\n\nAssignment 2\n\n\n20.11\nUsing pre-trained models\n\n\n\n\n27.11\nStudy week\n\n\n\n\n04.12\nTransfer learning: fine-tuning\n\n\n\n\n11.12\nAdapting models for specific tasks\n\nAssignment 3\n\n\n18.12\nAdapting models for specific tasks\n\n\n\n\n08.01\nAdapting models for specific tasks\n\nAssignment 4\n\n\n15.01\nProbing LLMs\n\n\n\n\n22.01\nProbing LLMs\n\nAssignment 5\n\n\n29.01\nTBD",
-    "crumbs": [
-      "📓 Syllabus"
-    ]
-  },
-  {
-    "objectID": "2024/assignments.html",
-    "href": "2024/assignments.html",
-    "title": "Assignment Overview",
-    "section": "",
-    "text": "Here is an overview of all assignments up to date:\nAssignment 1: TBD\nAssignment 2: TBD\nAssignment 3: TBD\nAssignment 4: TBD\nAssignment 5: TBD"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "LLMs in Linguistic Research",
-    "section": "",
-    "text": "InstructorTeaching Staff\n\n\n Akhilesh Kakolu Ramarao  📧 kakolura at hhu dot de\n\n\n Anna Stein  📧 anna.stein at hhu dot de\n\n\n\n\nSyllabus\nView it online here.\n\n\n📍 Location\nWednesday, 2:30pm-4pm\nBuilding 23.21 Floor 2, Room 22\n\n\n🎯 Learning Objectives\nFocus: Understanding LLMs and their usage in various linguistics tasks\nHow: Hands-on learning and paper discussions\n\nGaining an intuition of how LLMs work\nGetting to know the field of LLM research and development\nFamiliarizing yourself with different LLM architectures\nLearning how to use them for different linguistics tasks (e.g., text analysis, language generation, and language understanding)\nPracting using tools like Huggingface for LLM inference and fine-tuning",
-    "crumbs": [
-      "🏠 Home"
-    ]
-  },
-  {
-    "objectID": "2024/homework.html",
-    "href": "2024/homework.html",
-    "title": "Homework Overview",
-    "section": "",
-    "text": "Here is an overview of all Homework up to date:\nHw 1: Google Colab: here\nHw 2: Neural Networks: here"
-  },
-  {
-    "objectID": "2024/weeks/week01/page.html",
-    "href": "2024/weeks/week01/page.html",
-    "title": "🗓️ Week 01 - Admin, Architectures: Statistical and Probabilistic Language Models",
-    "section": "",
-    "text": "In this first week, we will cover what you can expect to learn from this course and the course logistics: all you need to know about the structure of the lectures, classes, assessments, and how we will interact throughout this course.",
+    "text": "Either click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides.",
     "crumbs": [
       "🗓️ Class material",
-      "Week 01 - Intro"
+      "Week 03 - NN basics II"
     ]
   },
   {
-    "objectID": "2024/weeks/week01/page.html#lecture-slides",
-    "href": "2024/weeks/week01/page.html#lecture-slides",
-    "title": "🗓️ Week 01 - Admin, Architectures: Statistical and Probabilistic Language Models",
-    "section": "👨‍🏫 Lecture Slides",
-    "text": "👨‍🏫 Lecture Slides\nEither click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides.",
+    "objectID": "2024/weeks/week03/page.html#lecture-slides",
+    "href": "2024/weeks/week03/page.html#lecture-slides",
+    "title": "🗓️ Week 03 - Basics of Neural Networks (part 2)",
+    "section": "",
+    "text": "Either click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides.",
     "crumbs": [
       "🗓️ Class material",
-      "Week 01 - Intro"
+      "Week 03 - NN basics II"
     ]
   },
   {
-    "objectID": "2024/weeks/week01/page.html#homework",
-    "href": "2024/weeks/week01/page.html#homework",
-    "title": "🗓️ Week 01 - Admin, Architectures: Statistical and Probabilistic Language Models",
+    "objectID": "2024/weeks/week03/page.html#homework",
+    "href": "2024/weeks/week03/page.html#homework",
+    "title": "🗓️ Week 03 - Basics of Neural Networks (part 2)",
     "section": "✍️ Homework",
-    "text": "✍️ Homework\nWeek 01 - Homework",
+    "text": "✍️ Homework",
     "crumbs": [
       "🗓️ Class material",
-      "Week 01 - Intro"
+      "Week 03 - NN basics II"
     ]
   },
   {
-    "objectID": "2024/weeks/week01/page.html#recommended-reading",
-    "href": "2024/weeks/week01/page.html#recommended-reading",
-    "title": "🗓️ Week 01 - Admin, Architectures: Statistical and Probabilistic Language Models",
+    "objectID": "2024/weeks/week03/page.html#recommended-reading",
+    "href": "2024/weeks/week03/page.html#recommended-reading",
+    "title": "🗓️ Week 03 - Basics of Neural Networks (part 2)",
     "section": "📚 Recommended Reading",
-    "text": "📚 Recommended Reading\n\nSpeech and Language Processing, Chapter 3: N-gram language models PDF. Authors: Dan Jurafsky and James H. Martin.",
+    "text": "📚 Recommended Reading",
     "crumbs": [
       "🗓️ Class material",
-      "Week 01 - Intro"
+      "Week 03 - NN basics II"
     ]
   },
   {
-    "objectID": "2024/weeks/week02/page.html",
-    "href": "2024/weeks/week02/page.html",
-    "title": "🗓️ Week 02 - Basics of Neural Networks",
+    "objectID": "2024/homework/homework02.html",
+    "href": "2024/homework/homework02.html",
+    "title": "Homework 02: Neural Network",
     "section": "",
-    "text": "In this second week, we will cover a few basic math concepts used in neural networks, try to get an intuition of what machine learning models are and finally explain the architecture a perceptron.",
-    "crumbs": [
-      "🗓️ Class material",
-      "Week 02 - NN basics"
-    ]
-  },
-  {
-    "objectID": "2024/weeks/week02/page.html#lecture-slides",
-    "href": "2024/weeks/week02/page.html#lecture-slides",
-    "title": "🗓️ Week 02 - Basics of Neural Networks",
-    "section": "👨‍🏫 Lecture Slides",
-    "text": "👨‍🏫 Lecture Slides\nEither click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides.",
-    "crumbs": [
-      "🗓️ Class material",
-      "Week 02 - NN basics"
-    ]
-  },
-  {
-    "objectID": "2024/weeks/week02/page.html#homework",
-    "href": "2024/weeks/week02/page.html#homework",
-    "title": "🗓️ Week 02 - Basics of Neural Networks",
-    "section": "✍️ Homework",
-    "text": "✍️ Homework\n\nPlease go through the slides and the recommended reading material.",
-    "crumbs": [
-      "🗓️ Class material",
-      "Week 02 - NN basics"
-    ]
-  },
-  {
-    "objectID": "2024/weeks/week02/page.html#recommended-reading",
-    "href": "2024/weeks/week02/page.html#recommended-reading",
-    "title": "🗓️ Week 02 - Basics of Neural Networks",
-    "section": "📚 Recommended Reading",
-    "text": "📚 Recommended Reading\n\nWikipedia articles on Matrix multiplication, matrix addition, element-wise multiplication, and dot product.\nWhat is a neural network? [Video]",
-    "crumbs": [
-      "🗓️ Class material",
-      "Week 02 - NN basics"
-    ]
-  },
-  {
-    "objectID": "2024/homework/homework01.html",
-    "href": "2024/homework/homework01.html",
-    "title": "Homework 1: Using Google Colab",
-    "section": "",
-    "text": "The instructions below assume that you have a Google account or are willing to make one. If you do not want to make a Google account,  contact Anna for instructions to run notebooks without Colab.",
+    "text": "Please go through the Wikipedia articles on:\n\nMatrix multiplication\nMatrix addition\nElement-wise multiplication\nDot product\n\nAnd watch this video: What is a neural network? [Video]",
     "crumbs": [
       "🧩 Homework",
-      "Hw 01 - Colab"
-    ]
-  },
-  {
-    "objectID": "2024/homework/homework01.html#google-colab",
-    "href": "2024/homework/homework01.html#google-colab",
-    "title": "Homework 1: Using Google Colab",
-    "section": "Google Colab",
-    "text": "Google Colab\n\nGo to the notebooks folder. Click on the three dots for the hw1.ipynb file, select “Open with” and then “Open in Colab”.\nRun both cells in the notebook by clicking on the play icon on the left of the cell or clicking into the cell and pressing CTRL + ENTER on Windows or CMD + ENTER on Mac.",
-    "crumbs": [
-      "🧩 Homework",
-      "Hw 01 - Colab"
+      "Hw 02 - NN basics  "
     ]
   },
   {
