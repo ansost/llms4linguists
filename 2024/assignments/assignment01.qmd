@@ -1,1 +1,60 @@
-Assignments will be available here.
+---
+title: "Assignment 1: Perceptron Analysis"
+---
+Consider a perceptron that predicts if you'll pass a quiz based on:
+
+- Hours studied (0-5)
+- Hours slept (0-8)
+
+Part1: Make predictions for:
+
+1. Different study patterns:
+
+- Studied 4 hours, slept 7 hours
+- Studied 1 hour, slept 8 hours
+- Studied 5 hours, slept 4 hours
+- Studied 3 hours, slept 3 hours
+- Studied 4 hours, slept 4 hours
+
+2. Weight changes:
+- Study hours more important
+- Sleep hours more important
+- Both equally important
+
+Draw simple diagrams showing:
+
+- How you think the perceptron would classify each case
+- Why some combinations might work better than others
+
+Part 2: Predict what happens when:
+
+1. The perceptron starts with:
+
+- Thinking only study hours matter
+- Thinking only sleep matters
+- Thinking nothing matters (zero weights)
+
+2. The perceptron learns from:
+- One student's data
+- Five students data
+- Twenty students data
+
+Explain in simple terms:
+
+- How you think it would change its decisions
+- Why more data might help
+- What problems it might face
+
+**NOTE:**
+
+- No calculations needed
+- Keep explanations simple
+- You will be graded on:
+	- clarity of explanation
+	- use of diagrams to support your explanation
+
+**Submission Guidelines**
+
+- Format: PDF document, 12-point Times New Roman, 1.5 line spacing
+- Length: 600-1500 words (excluding diagrams)
+- Submit by email to: [Anna](mailto:anste145@hhu.de)

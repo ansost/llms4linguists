@@ -9,6 +9,7 @@ project:
     - "2024/weeks/week02/*.qmd"
     - "2024/weeks/week03/*.qmd"
     - "2024/homework/*.qmd"
+    - "2024/assignments/*.qmd"
 
 website:
   title: "LLMs in Lingustic Research 2024/25"
@@ -31,11 +32,11 @@ website:
         text: "📓 Syllabus"
       # - href: 2024/communication.qmd
       #   text: "📟 Communication"
-      # - href: 2024/assignments.qmd
-      #   text: "✍️ Assignments   "
-      #   contents:
-      #     - href: 2024/assignments/assignments01.qmd
-      #       text: "📝 Assignment 01"
+      - href: 2024/assignments.qmd
+        text: "✍️ Assignments   "
+        contents:
+         - href: 2024/assignments/assignment01.qmd
+           text: "📝 Assignment 01"
       #     - href: 2024/assignments/assignment02.qmd
       #       text: "📝 Assignment 02"
       #     - href: 2024/assignments/group_project.qmd
