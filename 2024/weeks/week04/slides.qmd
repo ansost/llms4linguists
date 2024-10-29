@@ -26,9 +26,11 @@ format:
 ---
 # Transformers {.smaller}
 
-- Transformers are a type of deep learning model that has been widely used in natural language processing tasks.
+- A transformer is a type of deep learning model that has been widely used in natural language processing tasks.
 - The transformer architecture was introduced in the paper [Attention is All You Need](https://arxiv.org/pdf/1706.03762) by Vaswani et al. (2017).
-- The transformer architecture has been widely adopted in many NLP tasks such as machine translation, text summarization, and question answering.
+- Unlike older models, Transformers can process entire sentences simultaneously rather than word by word. This makes them faster and more accurate.
+- They form the foundation of many powerful language models such as GPT-3, BERT, and T5.
+- They have been used in a wide range of applications such as machine translation, text summarization, and question answering.
 
 ## Transformer architecture {.smaller}
 

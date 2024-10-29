@@ -10,7 +10,7 @@ project:
     - "2024/weeks/week03/*.qmd"
     - "2024/homework/*.qmd"
     - "2024/assignments/*.qmd"
-
+    - "2024/weeks/week04/*.qmd"
 website:
   title: "LLMs in Lingustic Research 2024/25"
   page-navigation: true
