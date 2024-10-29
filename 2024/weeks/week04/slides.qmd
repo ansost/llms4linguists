@@ -1,0 +1,401 @@
+---
+subtitle: "LLMs in Lingustic Research WiSe 2024/25"
+title: "<font style='font-size:1em;'>Week 04<br/> Intro to Transformers</font>"
+author: Akhilesh Kakolu Ramarao
+institute: '[HHU](#)'
+date: 30 October 2024
+date-meta: 30 October 2024
+date-format: "DD MMM YYYY"
+toc: true
+toc-depth: 1
+toc-title: "What we will cover today:"
+center-title-slide: false
+from: markdown+emoji
+filters:
+  - diagram
+format:
+  revealjs:
+    fig-responsive: true
+    theme: simple
+    slide-number: true
+    mouse-wheel: false
+    preview-links: auto
+    logo: /figures/icons/course_logo.png
+    css: /css/styles_slides.css
+    footer: 'LLMs in Lingustic Research WiSe 2024/25'
+---
+# Transformers {.smaller}
+
+- Transformers are a type of deep learning model that has been widely used in natural language processing tasks.
+- The transformer architecture was introduced in the paper [Attention is All You Need](https://arxiv.org/pdf/1706.03762) by Vaswani et al. (2017).
+- The transformer architecture has been widely adopted in many NLP tasks such as machine translation, text summarization, and question answering.
+
+## Transformer architecture {.smaller}
+
+![Image from "Attention is all you need"](transformer.png){align="center"}
+
+
+## {.smaller}
+
+- In a transformer-based encoder-decoder architecture, the transformer consists of a encoder block and a decoder block
+- The encoder block consists of a stack of N=6 identical layers
+- The decoder block consists of a stack of N=6 identical layers
+- Input sequence is passed through the encoder block to generate a sequence of hidden states which are then passed through the decoder block to generate the output sequence
+- For example, input sequence is a sentence in English and output sequence is a sentence in German. "I am a student" -> "Ich bin ein Student"
+
+## Encoders {.smaller}
+
+**Embedding**
+
+- Each word in the input and output sequences is represented as a 256-dimensional vector called an embedding.
+- The embedding layer maps each word to its corresponding embedding vector.
+- Before training begins, each word is assigned a random embedding vector.
+- These are small random values obtained from a normal distribution.
+- The model tries to capture the patterns and dependencies between words by continuously updating this embedding during training.
+
+## {.smaller}
+
+**Positional Encoding**
+
+- Positional encoding is added to the input embeddings to give the model information about the position of each word in the sequence.
+- The positional encoding in the current transformer is implemented using sine function of different frequencies.
+- The positional encoding vectors have the same dimensions as the embedding vectors and are added element-wise to create the input representation for each character.
+- This allows the model to differentiate between words based on their position in the sequence.
+
+## {.smaller}
+
+- Before diving into multi-head attention, it is important to understand self-attention mechanism, which forms the foundation of multi-head attention.
+- In the transformer currently implemented, the self-attention mechanism is applied for each character in the sequence.
+
+## Self-Attention {.smaller}
+
+- Self-attention is a mechanism that helps the model weigh the importance of different words in the input sequence when generating each output word.
+- It is a mechanism that allows the model to focus on different parts of the input sequence when generating each output word.
+- The self-attention mechanism is applied to each word in the input sequence.
+
+## Self-Attention {.smaller}
+
+The self-attention mechanism has the following steps:
+
+1. **Linear Transformation**:
+	- A linear transformation is applied to the input representation (obtained from the Embedding and Positional encoding) to get query vector (Q), key vector (K) and value vector (V) for each word.
+	- **Query vectors** are responsible for expressing what the model is currently looking for in the input sequence.
+	- **Key vectors** have representations which provide information of inter-character dependencies and connections between characters.
+	- **Value vectors** contain additional information of each character in the input sequence.
+
+## {.smaller}
+
+Given an input sequence,
+$$
+\begin{align*}
+\text{X} & = [x_1, x_2, x_3, \ldots, x_n] \\
+\end{align*}
+$$
+
+The linear transformations are expressed as:
+
+$$
+\begin{align*}
+\text{Q} & = \text{X} \cdot \text{W}^Q \\
+\text{K} & = \text{X} \cdot \text{W}^K \\
+\text{V} & = \text{X} \cdot \text{W}^V \\
+\end{align*}
+$$
+
+where, $\text{W}^Q$, $\text{W}^K$ and $\text{W}^V$ are the weight matrices for the query, key and value vectors respectively. Q, K and V are the query, key and value matrices respectively.
+
+- The same linear transformation is applied to all words in the input sequence.
+- Through the linear tranformation, the input word embeddings are mapped to three different contexts: Query, Key and Value.
+
+## Self-attention {.smaller}
+
+2. **Scaled Dot-Product Attention**:
+	After the linear transformation, the model computes  attention scores by calculating the dot products of each element in the query vector and the key vector, scaling them and applying a softmax function to get the attention weights.
+
+(a) **Dot-product**
+
+Given the set of query vectors,
+
+$$
+\begin{align*}
+\text{Q} & = [q_1, q_2, q_3, \ldots, q_n] \\
+\end{align*}
+$$
+
+Given the set of key vectors,
+
+$$
+\begin{align*}
+\text{K} & = [k_1, k_2, k_3, \ldots, k_n] \\
+\end{align*}
+$$
+
+## {.smaller}
+
+The attention score matrix $\text{A}$ is a matrix where each entry $A_{ij}$ is the dot product of the i-th query and and j-th key.
+
+$$
+\begin{align*}
+A_{ij} & = q_i \cdot k_j \\
+\end{align*}
+$$
+
+(b) **Scaling**
+
+- The dot-products from above, can potentially become very large.
+- Large values affect the training by causing issues in softmax (as these large values might exceed the representable range of numerical precision of the computer, which leads to incorrect outputs).
+- So, the dot-products are scaled by the square root of the dimension of the key vectors ($d_{k}$).
+
+$$
+\begin{align*}
+A_{ij} & = \frac{q_i \cdot k_j}{\sqrt{d_{k}}} \\
+\end{align*}
+$$
+
+## {.smaller}
+
+(c) **Softmax**
+
+- The scaled dot-products are passed through a softmax function to get the attention weights.
+
+$$
+\begin{align*}
+\alpha_{ij} & = \text{softmax}\left(\frac{q_i \cdot k_j}{\sqrt{d_{k}}}\right) \\
+\end{align*}
+$$
+
+where,
+
+   - $\alpha_{ij}$ is the attention weight for the i-th query and j-th key.
+   - The softmax function is applied to each row of the attention score matrix $\text{A}$.
+
+
+## {.smaller}
+
+(d) **Weighted Sum**
+
+- The weighted sum is the sum of the element-wise product of the attention weights and the corresponding value vector.
+- The weighted sum is the output of the self-attention mechanism.
+
+$$
+\begin{align*}
+\text{O} = \sum_{j=1}^{n} \alpha_{ij} \cdot v_j
+\end{align*}
+$$
+
+where,
+
+- $\text{O}$ is the output of the self-attention mechanism.
+- $\alpha_{ij}$ is the attention weight for the i-th query and j-th key.
+- $v_j$ is the value vector for the j-th key.
+
+## Multi-headed attention {.smaller}
+
+- The self-attention mechanism is applied multiple times in parallel to the input sequence.
+- "Head" refers to an individual component in the multi-head self-attention mechanism that independently learns different self-attention patterns.
+- This allows the model to focus on multiple parts of the input sequence in parallel and thereby allowing the model to capture the entire context.
+- This also makes the model more computationally efficient as it enables parallel processing across different heads.
+
+The outputs from all the attention heads are mapped to a linear layer:
+
+$$
+\begin{align*}
+\text{O} & = \text{Concat}(\text{head}_1, \text{head}_2, \ldots, \text{head}_h) \cdot \text{W}^O \\
+\end{align*}
+$$
+
+where, $\text{W}^O$ is the weight matrix for the output of the multi-head attention mechanism.
+
+- The outputs are then passed to a feed-forward neural network.
+
+## {.smaller}
+
+**Position-wise feed-forward neural network**
+
+- A fully connected feed-forward neural network sub-layer is a point-wise function, which means that it processes each word vector independently.
+- The feed-forward neural network consists of two linear transformations with a ReLU activation function in between.
+- This sub-layer introduces additional non-linearity and allows the model to learn complex relationships between the input and output.
+
+$$
+\begin{align*}
+FF(x) = f(x \cdot K^T) \cdot V
+\end{align*}
+$$
+
+where,
+
+- $K$ and $V$ are the weight matrices for the feed-forward neural network.
+- $f$ is the ReLU activation function.
+- $x$ is the input to the feed-forward neural network.
+
+##  {.smaller}
+
+**Layer normalization**
+
+- Layer normalization is applied to the output of the feed-forward neural network.
+- Layer normalization is a technique that normalizes the output of each layer in the transformer.
+- It helps in stabilizing the training process and speeds up convergence.
+- This layer normalization is applied independently to each hidden unit across the sequence length.
+
+$$
+\begin{align*}
+LayerNorm(x) = \frac{x - \mu}{\sigma}
+\end{align*}
+$$
+
+where,
+
+- $\mu$ is the mean of the input vector $x$.
+- $\sigma$ is the standard deviation of the input vector $x$.
+
+## {.smaller}
+
+**Residual connection**
+
+- During the process of training deep networks, it has been observed that the learning can stagnate or become more difficult for longer input sequences.
+- This makes it difficult for the model to capture long range dependencies and is known as the vanishing gradient problem.
+- To address this issue, the transformer uses residual connections.
+- They are used around the multi-head attention and feed-forward neural network sub-layers.
+
+$$
+\begin{align*}
+\text{Output} = \text{Input} + \text{Sublayer}(\text{Input})
+\end{align*}
+$$
+
+where,
+
+- $\text{Input}$ is the input to the sub-layer.
+- $\text{Sublayer}$ is the sub-layer that consists of multi-head attention or feed-forward neural network.
+
+## Decoder {.smaller}
+
+- The decoder consists of inputs from both the output sequence (the sequence to be generated) and the output from the last encoder in the encoder stack.
+- The decoder block consists of a stack of N=6 identical layers.
+- The decoder block is similar to the encoder block, but with an additional multi-head attention mechanism that allows the decoder to focus on different parts of the input sequence when generating each output word.
+- Each decoder block consists of a multi-head self-attention layer, an encoder-decoder attention layer and the point-wise feed-forward network layer
+
+## {.smaller}
+
+**Masked multi-head self-attention layer**
+
+- The masked self-attention mechanism allows the model to only attend to words that have been generated so far and prevents it from attending future characters that have not been predicted yet.
+- This is achieved by applying a mask to the attention weights.
+- A mask matrix $M$ is created of the same size as the attention scores
+- This mask matrix is added element-wise to the attention scores before applying the softmax function.
+
+$$
+\begin{align*}
+MaskedScores_{ij} = A_{ij} + M_{ij}
+\end{align*}
+$$
+
+where,
+
+- $MaskedScores_{ij}$ is the masked attention score for the i-th query and j-th key.
+- $A_{ij}$ is the attention score for the i-th query and j-th key.
+- $M_{ij}$ is the mask matrix.
+
+## {.smaller}
+
+- The $MaskedScores_{ij}$ are passed through softmax function to get the attention weights.
+- This softmax function will assign nearly zero weights to the positions with $-inf$ values and thereby masking them out.
+- As a final step, weighted sum is calculated to get the output of the masked self-attention mechanism.
+- This output is then passed to the encoder-decoder attention layer.
+- During inference, the model generates each character one at a time and the masking is applied to prevent attending to future positions.
+- In other words, each predicted word is conditioned only on the previously generated words and is referred to as autoregressive generation.
+
+## Encoder-decoder attention layer {.smaller}
+
+- The Encoder-decoder attention layer allows the decoder to combine the encoded sequence of the encoder with the output generated from the multi-head self-attention layer.
+- At each time step $t$ in the decoder, the following computations are performed:
+Compute the query vector $Q_t$ using the current decoder input embedding $X_t$:
+
+$$
+Q_t = X_t \cdot W^Q
+$$
+
+where,
+
+- $W^Q$ is the weight matrix for the query vector.
+- $X_t$ is the input to the decoder at time step $t$.
+- $Q_t$ is the query vector for the t-th time step.
+
+## {.smaller}
+
+- Next, the keys $K$ and values $V$ from the encoder output sequence $H$ are computed using:
+
+$$
+\begin{align*}
+\text{K} & = H \cdot W^K \\
+\text{V} & = H \cdot W^V \\
+\end{align*}
+$$
+
+where,
+
+- $W^K$ and $W^V$ are the weight matrices for the keys and values.
+- $H$ is the output of the encoder.
+- $X_t$ is the input to the decoder at time step $t$.
+
+## {.smaller}
+
+- The attention score is calculated by taking the dot product of the query vector $Q_t$ and the key vector $K$ in the encoder output sequence $H$.
+- The attention score is then scaled and passed through a softmax function to get the attention weights.
+- The weighted sum is calculated to get the output of the encoder-decoder attention layer.
+- Lastly, a context vector $Context_t$ is computed to capture the relevant information from the input sequence that the decoder should focus on when generating the output token at time step $t$.
+
+## {.smaller}
+
+This is computed by  taking the weighted sum of the value vectors $V$ using the attention weights:
+
+$$
+\begin{align*}
+Context_t = \sum_{j=1}^{n} \alpha_{tj} \cdot v_j
+\end{align*}
+$$
+
+where,
+
+- $\alpha_{tj}$ is the attention weight for the t-th query and j-th key.
+- $v_j$ is the value vector for the j-th key.
+
+- This context vector is concatenated with the decoder input embeddings $X_t$ and passed through a linear layer to get the output of the encoder-decoder attention layer.
+- This output is then passed to the point-wise feed-forward neural network layer.
+
+## {.smaller}
+
+**Point-wise feed-forward neural network layer**
+
+- The feed-forward neural network within the decoder operates in the same manner to that within the encoder.
+- However, there is a key difference in the input to the feed-forward network in the decoder.
+- The input to the point-wise feed-forward network comes from the encoder-decoder layer.
+
+**Layer normalization**
+
+- Each sub-layer (masked multi-head self-attention, encoder-decoder attention, and position-wise feed-forward network) is followed by a layer normalization operation and connected with a residual connection
+- The layer normalization stabilizes training and enables the model to learn more effectively.
+
+## {.smaller}
+
+**Residual connection**
+
+- The residual connection is applied around each sub-layer in the decoder.
+- They are applied around the masked multi-head self-attention layer, encoder-decoder attention layer and point-wise feed-forward neural network layer.
+
+**Linear or Output layer**
+
+- The linear or the output layer determines the likelihood of each character being the next character in the output sequence.
+- The input to this layer is the output from the layer normalization.
+- The purpose of the linear layer is to map the output from the layer normalization to a vector of raw scores (logits) corresponding to each character being the next character in the output sequence.
+- This done by applying a linear transformation, which involves multiplying the output from the layer normalization layer by a weight matrix and adding a bias vector.
+
+## {.smaller}
+
+**Softmax**
+
+- The output of the linear layer is passed through a softmax function to get the probability distribution over the output vocabulary.
+- During the training phase, the predicted probabilities are used to compute the cross-entropy loss function, which measures the dissimilarity between the predicted distribution and the true distribution.
+- During the inference phase, the word with the highest probability at each position is chosen as the predicted output.
+
+## Thank you! {.smaller}
