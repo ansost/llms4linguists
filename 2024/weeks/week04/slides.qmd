@@ -89,7 +89,9 @@ format:
 ## Positional Encoding {.smaller}
 
 - Positional encoding is added to the input embeddings to give the model information about the position of each word in the sequence.
-- The positional encoding in the current transformer is implemented using sine function of different frequencies.
+- Unlike humans who naturally read from left to right, the transformer needs a special way to understand that "word 1 comes before word 2."
+- The positional encoding in the original transformer is implemented using sine function of different frequencies.
+- Using sine waves makes it easier for the transformer to understand both nearby and far-apart relationships between words. (It's similar to how music uses different frequencies to create unique sounds.)
 - The positional encoding vectors have the same dimensions as the embedding vectors and are added element-wise to create the input representation for each character.
 - This allows the model to differentiate between words based on their position in the sequence.
 
