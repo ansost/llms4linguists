@@ -80,7 +80,7 @@ format:
 
 ## Embedding {.smaller}
 
-- Each word in the input and output sequences is represented as a 256-dimensional vector called an embedding.
+- Each word in the input and output sequences is represented as a 512-dimensional vector called an embedding.
 - The embedding layer maps each word to its corresponding embedding vector.
 - Before training begins, each word is assigned a random embedding vector.
 - These are small random values obtained from a normal distribution.
