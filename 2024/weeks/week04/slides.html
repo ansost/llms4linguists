@@ -356,9 +356,78 @@ Akhilesh Kakolu Ramarao
 <nav role="doc-toc"> 
 <h2 id="toc-title">What we will cover today:</h2>
 <ul>
-<li><a href="#/transformers" id="/toc-transformers">Transformers</a></li>
+<li><a href="#/converting-words-to-vectors" id="/toc-converting-words-to-vectors">Converting words to vectors</a></li>
+
+
+<li><a href="#/transformers" id="/toc-transformers">Transformers</a>
+<ul>
+<li><a href="#/transformer-architecture" id="/toc-transformer-architecture">Transformer architecture</a></li>
+
+<li><a href="#/embedding" id="/toc-embedding">Embedding</a></li>
+<li><a href="#/positional-encoding" id="/toc-positional-encoding">Positional Encoding</a></li>
+
+<li><a href="#/self-attention" id="/toc-self-attention">Self-Attention</a></li>
+
+
+
+
+
+
+<li><a href="#/multi-headed-attention" id="/toc-multi-headed-attention">Multi-headed attention</a></li>
+<li><a href="#/position-wise-feed-forward-neural-network" id="/toc-position-wise-feed-forward-neural-network">Position-wise feed-forward neural network</a></li>
+<li><a href="#/layer-normalization" id="/toc-layer-normalization">Layer normalization</a></li>
+
+<li><a href="#/decoder" id="/toc-decoder">Decoder</a></li>
+
+
+<li><a href="#/encoder-decoder-attention-layer" id="/toc-encoder-decoder-attention-layer">Encoder-decoder attention layer</a></li>
+
+
+
+
+
+
+</ul></li>
 </ul>
 </nav>
+</section>
+<section id="converting-words-to-vectors" class="slide level2 smaller">
+<h2>Converting words to vectors</h2>
+<ul>
+<li><p>Machines cannot understand words directly, they can only understand numbers.</p></li>
+<li><p>Words to vectors is a process of converting words into numerical vectors.</p></li>
+<li><p>Can you think of ways to convert words to vectors?</p></li>
+<li><p>How would you represent the sentence “I am a student” as a vector?</p></li>
+</ul>
+</section>
+<section id="section" class="slide level2 smaller">
+<h2></h2>
+<p><strong>One-hot encoding</strong></p>
+<ul>
+<li>One-hot encoding is the simplest way to convert words to vectors.</li>
+<li>Each word is represented as a vector of zeros with a 1 at the index corresponding to the word.</li>
+<li>For example, the sentence “I am a student” can be represented as a matrix of one-hot encoded vectors.</li>
+<li>“I” is represented as [1, 0, 0, 0], “am” is represented as [0, 1, 0, 0], and so on.</li>
+</ul>
+</section>
+<section id="section-1" class="slide level2 smaller">
+<h2></h2>
+<p><strong>Limitations of one-hot encoding</strong></p>
+<ul>
+<li>One-hot encoding has several limitations:
+<ul>
+<li>It does not capture the relationships between words.</li>
+<li>It does not consider the context in which the words appear.</li>
+<li>It does not account for the similarity between words.</li>
+</ul></li>
+</ul>
+<p><strong>Word embeddings</strong></p>
+<ul>
+<li>Word embeddings are dense vector representations of words that capture the relationships between words.</li>
+<li>Word embeddings are learned from large text corpora using neural networks.</li>
+<li>For example, the word “king” might be represented as [0.2, 0.3, 0.5], and the word “queen” might be represented as [0.1, 0.4, 0.6]. These vectors capture the relationship between the two words.</li>
+<li>These vectors are learned in such a way that similar words have similar embeddings.</li>
+</ul>
 </section>
 <section>
 <section id="transformers" class="title-slide slide level1 smaller">
@@ -375,7 +444,7 @@ Akhilesh Kakolu Ramarao
 <h2>Transformer architecture</h2>
 
 <img data-src="transformer.png" class="img-fluid r-stretch quarto-figure-center" data-align="center"><p class="caption">Image from “Attention is all you need”</p></section>
-<section id="section" class="slide level2 smaller">
+<section id="section-2" class="slide level2 smaller">
 <h2></h2>
 <ul>
 <li>In a transformer-based encoder-decoder architecture, the transformer consists of a encoder block and a decoder block</li>
@@ -385,9 +454,8 @@ Akhilesh Kakolu Ramarao
 <li>For example, input sequence is a sentence in English and output sequence is a sentence in German. “I am a student” -&gt; “Ich bin ein Student”</li>
 </ul>
 </section>
-<section id="encoders" class="slide level2 smaller">
-<h2>Encoders</h2>
-<p><strong>Embedding</strong></p>
+<section id="embedding" class="slide level2 smaller">
+<h2>Embedding</h2>
 <ul>
 <li>Each word in the input and output sequences is represented as a 256-dimensional vector called an embedding.</li>
 <li>The embedding layer maps each word to its corresponding embedding vector.</li>
@@ -396,9 +464,8 @@ Akhilesh Kakolu Ramarao
 <li>The model tries to capture the patterns and dependencies between words by continuously updating this embedding during training.</li>
 </ul>
 </section>
-<section id="section-1" class="slide level2 smaller">
-<h2></h2>
-<p><strong>Positional Encoding</strong></p>
+<section id="positional-encoding" class="slide level2 smaller">
+<h2>Positional Encoding</h2>
 <ul>
 <li>Positional encoding is added to the input embeddings to give the model information about the position of each word in the sequence.</li>
 <li>The positional encoding in the current transformer is implemented using sine function of different frequencies.</li>
@@ -406,7 +473,7 @@ Akhilesh Kakolu Ramarao
 <li>This allows the model to differentiate between words based on their position in the sequence.</li>
 </ul>
 </section>
-<section id="section-2" class="slide level2 smaller">
+<section id="section-3" class="slide level2 smaller">
 <h2></h2>
 <ul>
 <li>Before diving into multi-head attention, it is important to understand self-attention mechanism, which forms the foundation of multi-head attention.</li>
@@ -421,8 +488,8 @@ Akhilesh Kakolu Ramarao
 <li>The self-attention mechanism is applied to each word in the input sequence.</li>
 </ul>
 </section>
-<section id="self-attention-1" class="slide level2 smaller">
-<h2>Self-Attention</h2>
+<section id="section-4" class="slide level2 smaller">
+<h2></h2>
 <p>The self-attention mechanism has the following steps:</p>
 <ol type="1">
 <li><strong>Linear Transformation</strong>:
@@ -434,7 +501,7 @@ Akhilesh Kakolu Ramarao
 </ul></li>
 </ol>
 </section>
-<section id="section-3" class="slide level2 smaller">
+<section id="section-5" class="slide level2 smaller">
 <h2></h2>
 <p>Given an input sequence, <span class="math display">\[
 \begin{align*}
@@ -455,8 +522,8 @@ Akhilesh Kakolu Ramarao
 <li>Through the linear tranformation, the input word embeddings are mapped to three different contexts: Query, Key and Value.</li>
 </ul>
 </section>
-<section id="self-attention-2" class="slide level2 smaller">
-<h2>Self-attention</h2>
+<section id="section-6" class="slide level2 smaller">
+<h2></h2>
 <ol start="2" type="1">
 <li><strong>Scaled Dot-Product Attention</strong>: After the linear transformation, the model computes attention scores by calculating the dot products of each element in the query vector and the key vector, scaling them and applying a softmax function to get the attention weights.</li>
 </ol>
@@ -476,7 +543,7 @@ Akhilesh Kakolu Ramarao
 \end{align*}
 \]</span></p>
 </section>
-<section id="section-4" class="slide level2 smaller">
+<section id="section-7" class="slide level2 smaller">
 <h2></h2>
 <p>The attention score matrix <span class="math inline">\(\text{A}\)</span> is a matrix where each entry <span class="math inline">\(A_{ij}\)</span> is the dot product of the i-th query and and j-th key.</p>
 <p><span class="math display">\[
@@ -498,7 +565,7 @@ A_{ij} &amp; = \frac{q_i \cdot k_j}{\sqrt{d_{k}}} \\
 \end{align*}
 \]</span></p>
 </section>
-<section id="section-5" class="slide level2 smaller">
+<section id="section-8" class="slide level2 smaller">
 <h2></h2>
 <ol start="3" type="a">
 <li><strong>Softmax</strong></li>
@@ -517,7 +584,7 @@ A_{ij} &amp; = \frac{q_i \cdot k_j}{\sqrt{d_{k}}} \\
 <li>The softmax function is applied to each row of the attention score matrix <span class="math inline">\(\text{A}\)</span>.</li>
 </ul>
 </section>
-<section id="section-6" class="slide level2 smaller">
+<section id="section-9" class="slide level2 smaller">
 <h2></h2>
 <ol start="4" type="a">
 <li><strong>Weighted Sum</strong></li>
@@ -557,9 +624,8 @@ A_{ij} &amp; = \frac{q_i \cdot k_j}{\sqrt{d_{k}}} \\
 <li>The outputs are then passed to a feed-forward neural network.</li>
 </ul>
 </section>
-<section id="section-7" class="slide level2 smaller">
-<h2></h2>
-<p><strong>Position-wise feed-forward neural network</strong></p>
+<section id="position-wise-feed-forward-neural-network" class="slide level2 smaller">
+<h2>Position-wise feed-forward neural network</h2>
 <ul>
 <li>A fully connected feed-forward neural network sub-layer is a point-wise function, which means that it processes each word vector independently.</li>
 <li>The feed-forward neural network consists of two linear transformations with a ReLU activation function in between.</li>
@@ -577,9 +643,8 @@ FF(x) = f(x \cdot K^T) \cdot V
 <li><span class="math inline">\(x\)</span> is the input to the feed-forward neural network.</li>
 </ul>
 </section>
-<section id="section-8" class="slide level2 smaller">
-<h2></h2>
-<p><strong>Layer normalization</strong></p>
+<section id="layer-normalization" class="slide level2 smaller">
+<h2>Layer normalization</h2>
 <ul>
 <li>Layer normalization is applied to the output of the feed-forward neural network.</li>
 <li>Layer normalization is a technique that normalizes the output of each layer in the transformer.</li>
@@ -597,7 +662,7 @@ LayerNorm(x) = \frac{x - \mu}{\sigma}
 <li><span class="math inline">\(\sigma\)</span> is the standard deviation of the input vector <span class="math inline">\(x\)</span>.</li>
 </ul>
 </section>
-<section id="section-9" class="slide level2 smaller">
+<section id="section-10" class="slide level2 smaller">
 <h2></h2>
 <p><strong>Residual connection</strong></p>
 <ul>
@@ -626,7 +691,7 @@ LayerNorm(x) = \frac{x - \mu}{\sigma}
 <li>Each decoder block consists of a multi-head self-attention layer, an encoder-decoder attention layer and the point-wise feed-forward network layer</li>
 </ul>
 </section>
-<section id="section-10" class="slide level2 smaller">
+<section id="section-11" class="slide level2 smaller">
 <h2></h2>
 <p><strong>Masked multi-head self-attention layer</strong></p>
 <ul>
@@ -647,7 +712,7 @@ MaskedScores_{ij} = A_{ij} + M_{ij}
 <li><span class="math inline">\(M_{ij}\)</span> is the mask matrix.</li>
 </ul>
 </section>
-<section id="section-11" class="slide level2 smaller">
+<section id="section-12" class="slide level2 smaller">
 <h2></h2>
 <ul>
 <li>The <span class="math inline">\(MaskedScores_{ij}\)</span> are passed through softmax function to get the attention weights.</li>
@@ -674,7 +739,7 @@ Q_t = X_t \cdot W^Q
 <li><span class="math inline">\(Q_t\)</span> is the query vector for the t-th time step.</li>
 </ul>
 </section>
-<section id="section-12" class="slide level2 smaller">
+<section id="section-13" class="slide level2 smaller">
 <h2></h2>
 <ul>
 <li>Next, the keys <span class="math inline">\(K\)</span> and values <span class="math inline">\(V\)</span> from the encoder output sequence <span class="math inline">\(H\)</span> are computed using:</li>
@@ -692,7 +757,7 @@ Q_t = X_t \cdot W^Q
 <li><span class="math inline">\(X_t\)</span> is the input to the decoder at time step <span class="math inline">\(t\)</span>.</li>
 </ul>
 </section>
-<section id="section-13" class="slide level2 smaller">
+<section id="section-14" class="slide level2 smaller">
 <h2></h2>
 <ul>
 <li>The attention score is calculated by taking the dot product of the query vector <span class="math inline">\(Q_t\)</span> and the key vector <span class="math inline">\(K\)</span> in the encoder output sequence <span class="math inline">\(H\)</span>.</li>
@@ -701,7 +766,7 @@ Q_t = X_t \cdot W^Q
 <li>Lastly, a context vector <span class="math inline">\(Context_t\)</span> is computed to capture the relevant information from the input sequence that the decoder should focus on when generating the output token at time step <span class="math inline">\(t\)</span>.</li>
 </ul>
 </section>
-<section id="section-14" class="slide level2 smaller">
+<section id="section-15" class="slide level2 smaller">
 <h2></h2>
 <p>This is computed by taking the weighted sum of the value vectors <span class="math inline">\(V\)</span> using the attention weights:</p>
 <p><span class="math display">\[
@@ -717,7 +782,7 @@ Context_t = \sum_{j=1}^{n} \alpha_{tj} \cdot v_j
 <li><p>This output is then passed to the point-wise feed-forward neural network layer.</p></li>
 </ul>
 </section>
-<section id="section-15" class="slide level2 smaller">
+<section id="section-16" class="slide level2 smaller">
 <h2></h2>
 <p><strong>Point-wise feed-forward neural network layer</strong></p>
 <ul>
@@ -731,7 +796,7 @@ Context_t = \sum_{j=1}^{n} \alpha_{tj} \cdot v_j
 <li>The layer normalization stabilizes training and enables the model to learn more effectively.</li>
 </ul>
 </section>
-<section id="section-16" class="slide level2 smaller">
+<section id="section-17" class="slide level2 smaller">
 <h2></h2>
 <p><strong>Residual connection</strong></p>
 <ul>
@@ -746,7 +811,7 @@ Context_t = \sum_{j=1}^{n} \alpha_{tj} \cdot v_j
 <li>This done by applying a linear transformation, which involves multiplying the output from the layer normalization layer by a weight matrix and adding a bias vector.</li>
 </ul>
 </section>
-<section id="section-17" class="slide level2 smaller">
+<section id="section-18" class="slide level2 smaller">
 <h2></h2>
 <p><strong>Softmax</strong></p>
 <ul>
@@ -754,9 +819,6 @@ Context_t = \sum_{j=1}^{n} \alpha_{tj} \cdot v_j
 <li>During the training phase, the predicted probabilities are used to compute the cross-entropy loss function, which measures the dissimilarity between the predicted distribution and the true distribution.</li>
 <li>During the inference phase, the word with the highest probability at each position is chosen as the predicted output.</li>
 </ul>
-</section>
-<section id="thank-you" class="slide level2 smaller">
-<h2>Thank you!</h2>
 
 <div class="quarto-auto-generated-content">
 <p><img src="../../../figures/icons/course_logo.png" class="slide-logo"></p>
