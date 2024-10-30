@@ -7,7 +7,7 @@ date: 30 October 2024
 date-meta: 30 October 2024
 date-format: "DD MMM YYYY"
 toc: true
-toc-depth: 1
+toc-depth: 2
 toc-title: "What we will cover today:"
 center-title-slide: false
 from: markdown+emoji
@@ -24,6 +24,40 @@ format:
     css: /css/styles_slides.css
     footer: 'LLMs in Lingustic Research WiSe 2024/25'
 ---
+
+## Converting words to vectors {.smaller}
+
+- Machines cannot understand words directly, they can only understand numbers.
+- Words to vectors is a process of converting words into numerical vectors.
+
+- Can you think of ways to convert words to vectors?
+- How would you represent the sentence "I am a student" as a vector?
+
+## {.smaller}
+
+**One-hot encoding**
+
+- One-hot encoding is the simplest way to convert words to vectors.
+- Each word is represented as a vector of zeros with a 1 at the index corresponding to the word.
+- For example, the sentence "I am a student" can be represented as a matrix of one-hot encoded vectors.
+- "I" is represented as [1, 0, 0, 0], "am" is represented as [0, 1, 0, 0], and so on.
+
+## {.smaller}
+
+**Limitations of one-hot encoding**
+
+- One-hot encoding has several limitations:
+	- It does not capture the relationships between words.
+	- It does not consider the context in which the words appear.
+	- It does not account for the similarity between words.
+
+**Word embeddings**
+
+- Word embeddings are dense vector representations of words that capture the relationships between words.
+- Word embeddings are learned from large text corpora using neural networks.
+- For example, the word "king" might be represented as [0.2, 0.3, 0.5], and the word "queen" might be represented as [0.1, 0.4, 0.6]. These vectors capture the relationship between the two words.
+- These vectors are learned in such a way that similar words have similar embeddings.
+
 # Transformers {.smaller}
 
 - A transformer is a type of deep learning model that has been widely used in natural language processing tasks.
@@ -36,7 +70,6 @@ format:
 
 ![Image from "Attention is all you need"](transformer.png){align="center"}
 
-
 ## {.smaller}
 
 - In a transformer-based encoder-decoder architecture, the transformer consists of a encoder block and a decoder block
@@ -45,9 +78,7 @@ format:
 - Input sequence is passed through the encoder block to generate a sequence of hidden states which are then passed through the decoder block to generate the output sequence
 - For example, input sequence is a sentence in English and output sequence is a sentence in German. "I am a student" -> "Ich bin ein Student"
 
-## Encoders {.smaller}
-
-**Embedding**
+## Embedding {.smaller}
 
 - Each word in the input and output sequences is represented as a 256-dimensional vector called an embedding.
 - The embedding layer maps each word to its corresponding embedding vector.
@@ -55,9 +86,7 @@ format:
 - These are small random values obtained from a normal distribution.
 - The model tries to capture the patterns and dependencies between words by continuously updating this embedding during training.
 
-## {.smaller}
-
-**Positional Encoding**
+## Positional Encoding {.smaller}
 
 - Positional encoding is added to the input embeddings to give the model information about the position of each word in the sequence.
 - The positional encoding in the current transformer is implemented using sine function of different frequencies.
@@ -75,7 +104,7 @@ format:
 - It is a mechanism that allows the model to focus on different parts of the input sequence when generating each output word.
 - The self-attention mechanism is applied to each word in the input sequence.
 
-## Self-Attention {.smaller}
+## {.smaller}
 
 The self-attention mechanism has the following steps:
 
@@ -109,7 +138,7 @@ where, $\text{W}^Q$, $\text{W}^K$ and $\text{W}^V$ are the weight matrices for t
 - The same linear transformation is applied to all words in the input sequence.
 - Through the linear tranformation, the input word embeddings are mapped to three different contexts: Query, Key and Value.
 
-## Self-attention {.smaller}
+##  {.smaller}
 
 2. **Scaled Dot-Product Attention**:
 	After the linear transformation, the model computes  attention scores by calculating the dot products of each element in the query vector and the key vector, scaling them and applying a softmax function to get the attention weights.
@@ -210,9 +239,7 @@ where, $\text{W}^O$ is the weight matrix for the output of the multi-head attent
 
 - The outputs are then passed to a feed-forward neural network.
 
-## {.smaller}
-
-**Position-wise feed-forward neural network**
+## Position-wise feed-forward neural network {.smaller}
 
 - A fully connected feed-forward neural network sub-layer is a point-wise function, which means that it processes each word vector independently.
 - The feed-forward neural network consists of two linear transformations with a ReLU activation function in between.
@@ -230,9 +257,7 @@ where,
 - $f$ is the ReLU activation function.
 - $x$ is the input to the feed-forward neural network.
 
-##  {.smaller}
-
-**Layer normalization**
+## Layer normalization {.smaller}
 
 - Layer normalization is applied to the output of the feed-forward neural network.
 - Layer normalization is a technique that normalizes the output of each layer in the transformer.
@@ -399,5 +424,3 @@ where,
 - The output of the linear layer is passed through a softmax function to get the probability distribution over the output vocabulary.
 - During the training phase, the predicted probabilities are used to compute the cross-entropy loss function, which measures the dissimilarity between the predicted distribution and the true distribution.
 - During the inference phase, the word with the highest probability at each position is chosen as the predicted output.
-
-## Thank you! {.smaller}

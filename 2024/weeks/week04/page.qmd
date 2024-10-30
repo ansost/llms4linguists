@@ -1,5 +1,5 @@
 ---
-title: "🗓️ Week 03 - Basics of Neural Networks (part 2)"
+title: "🗓️ Week 04 - Intro to tranformers"
 ---
 
 
