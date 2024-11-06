@@ -92,13 +92,13 @@ format:
 - Unlike humans who naturally read from left to right, the transformer needs a special way to understand that "word 1 comes before word 2."
 - The positional encoding in the original transformer is implemented using sine function of different frequencies.
 - Using sine waves makes it easier for the transformer to understand both nearby and far-apart relationships between words. (It's similar to how music uses different frequencies to create unique sounds.)
-- The positional encoding vectors have the same dimensions as the embedding vectors and are added element-wise to create the input representation for each character.
+- The positional encoding vectors have the same dimensions as the embedding vectors and are added element-wise to create the input representation for each word.
 - This allows the model to differentiate between words based on their position in the sequence.
 
 ## {.smaller}
 
 - Before diving into multi-head attention, it is important to understand self-attention mechanism, which forms the foundation of multi-head attention.
-- In the transformer currently implemented, the self-attention mechanism is applied for each character in the sequence.
+- In the transformer currently implemented, the self-attention mechanism is applied for each word in the sequence.
 
 ## Self-Attention {.smaller}
 
@@ -113,8 +113,8 @@ The self-attention mechanism has the following steps:
 1. **Linear Transformation**:
 	- A linear transformation is applied to the input representation (obtained from the Embedding and Positional encoding) to get query vector (Q), key vector (K) and value vector (V) for each word.
 	- **Query vectors** are responsible for expressing what the model is currently looking for in the input sequence.
-	- **Key vectors** have representations which provide information of inter-character dependencies and connections between characters.
-	- **Value vectors** contain additional information of each character in the input sequence.
+	- **Key vectors** have representations which provide information of inter-word dependencies and connections between words.
+	- **Value vectors** contain additional information of each word in the input sequence.
 
 ## {.smaller}
 
