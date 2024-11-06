@@ -11,6 +11,8 @@ project:
     - "2024/homework/*.qmd"
     - "2024/assignments/*.qmd"
     - "2024/weeks/week04/*.qmd"
+    - "2024/weeks/week05/*.qmd"
+
 website:
   title: "LLMs in Lingustic Research 2024/25"
   page-navigation: true
@@ -67,6 +69,12 @@ website:
            contents:
              - href: 2024/weeks/week04/page.qmd
                text: 👨‍🏫 Lecture Material
+         - href: 2024/weeks/week05/page.qmd
+           text: Week 05 - Transformers (part 2)
+           contents:
+             - href: 2024/weeks/week05/page.qmd
+               text: 👨‍🏫 Lecture Material
+
 
 
       - section: "🧩 Homework"
@@ -75,6 +83,8 @@ website:
             text: "Hw 01 - Colab"
           - href: 2024/homework/homework02.qmd
             text: "Hw 02 - NN basics  "
+          - href: 2024/homework/homework03.qmd
+            text: "Hw 03 - Intro to transformers"
 
   navbar:
     background: primary
