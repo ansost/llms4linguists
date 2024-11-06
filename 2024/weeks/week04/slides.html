@@ -564,12 +564,13 @@ A_{ij} &amp; = \frac{q_i \cdot k_j}{\sqrt{d_{k}}} \\
 </ul>
 <p><span class="math display">\[
 \begin{align*}
-\alpha_{ij} &amp; = \text{softmax}\left(\frac{q_i \cdot k_j}{\sqrt{d_{k}}}\right) \\
+\alpha_{ij} &amp; = \frac{\exp(A_{ij})}{\sum_{j=1}^{n} \exp(A_{ij})}
 \end{align*}
 \]</span></p>
-<p>where,</p>
+<p>explained as: where,</p>
 <ul>
 <li><span class="math inline">\(\alpha_{ij}\)</span> is the attention weight for the i-th query and j-th key.</li>
+<li><span class="math inline">\(\exp\)</span> is the exponential function (e=2.71828).</li>
 <li>The softmax function is applied to each row of the attention score matrix <span class="math inline">\(\text{A}\)</span>.</li>
 </ul>
 </section>

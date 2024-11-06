@@ -158,7 +158,7 @@
     "href": "2024/weeks/week04/slides.html#section-8",
     "title": "Week 04 Intro to Transformers",
     "section": "",
-    "text": "Softmax\n\n\nThe scaled dot-products are passed through a softmax function to get the attention weights.\n\n\\[\n\\begin{align*}\n\\alpha_{ij} & = \\text{softmax}\\left(\\frac{q_i \\cdot k_j}{\\sqrt{d_{k}}}\\right) \\\\\n\\end{align*}\n\\]\nwhere,\n\n\\(\\alpha_{ij}\\) is the attention weight for the i-th query and j-th key.\nThe softmax function is applied to each row of the attention score matrix \\(\\text{A}\\)."
+    "text": "Softmax\n\n\nThe scaled dot-products are passed through a softmax function to get the attention weights.\n\n\\[\n\\begin{align*}\n\\alpha_{ij} & = \\frac{\\exp(A_{ij})}{\\sum_{j=1}^{n} \\exp(A_{ij})}\n\\end{align*}\n\\]\nexplained as: where,\n\n\\(\\alpha_{ij}\\) is the attention weight for the i-th query and j-th key.\n\\(\\exp\\) is the exponential function (e=2.71828).\nThe softmax function is applied to each row of the attention score matrix \\(\\text{A}\\)."
   },
   {
     "objectID": "2024/weeks/week04/slides.html#section-9",
