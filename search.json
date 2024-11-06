@@ -553,7 +553,7 @@
     "href": "2024/homework/homework03.html",
     "title": "Homework 3: Intro to transformers",
     "section": "",
-    "text": "Reading\n\nRead the first 5 pages of Attention is All You Need paper.\nRead about Self-attention mechanism here: https://jalammar.github.io/illustrated-transformer/\nWatch these videos:\n\nhttps://www.youtube.com/watch?v=wjZofJX0v4M\nhttps://www.youtube.com/watch?v=eMlx5fFNoYc",
+    "text": "Reading\n\nRead the first 8 pages of Attention is All You Need paper.\nRead about Self-attention mechanism here: https://jalammar.github.io/illustrated-transformer/\nWatch these videos:\n\nHow large language models work, a visual intro to transformers\nAttention in transformers, visually explained\nIllustrated Guide to Transformers Neural Network: A step by step explanation",
     "crumbs": [
       "🧩 Homework",
       "Hw 03 - Intro to transformers"
