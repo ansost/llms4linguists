@@ -109,14 +109,14 @@
     "href": "2024/weeks/week04/slides.html#positional-encoding",
     "title": "Week 04 Intro to Transformers",
     "section": "Positional Encoding",
-    "text": "Positional Encoding\n\nPositional encoding is added to the input embeddings to give the model information about the position of each word in the sequence.\nUnlike humans who naturally read from left to right, the transformer needs a special way to understand that “word 1 comes before word 2.”\nThe positional encoding in the original transformer is implemented using sine function of different frequencies.\nUsing sine waves makes it easier for the transformer to understand both nearby and far-apart relationships between words. (It’s similar to how music uses different frequencies to create unique sounds.)\nThe positional encoding vectors have the same dimensions as the embedding vectors and are added element-wise to create the input representation for each character.\nThis allows the model to differentiate between words based on their position in the sequence."
+    "text": "Positional Encoding\n\nPositional encoding is added to the input embeddings to give the model information about the position of each word in the sequence.\nUnlike humans who naturally read from left to right, the transformer needs a special way to understand that “word 1 comes before word 2.”\nThe positional encoding in the original transformer is implemented using sine function of different frequencies.\nUsing sine waves makes it easier for the transformer to understand both nearby and far-apart relationships between words. (It’s similar to how music uses different frequencies to create unique sounds.)\nThe positional encoding vectors have the same dimensions as the embedding vectors and are added element-wise to create the input representation for each word.\nThis allows the model to differentiate between words based on their position in the sequence."
   },
   {
     "objectID": "2024/weeks/week04/slides.html#section-3",
     "href": "2024/weeks/week04/slides.html#section-3",
     "title": "Week 04 Intro to Transformers",
     "section": "",
-    "text": "Before diving into multi-head attention, it is important to understand self-attention mechanism, which forms the foundation of multi-head attention.\nIn the transformer currently implemented, the self-attention mechanism is applied for each character in the sequence."
+    "text": "Before diving into multi-head attention, it is important to understand self-attention mechanism, which forms the foundation of multi-head attention.\nIn the transformer currently implemented, the self-attention mechanism is applied for each word in the sequence."
   },
   {
     "objectID": "2024/weeks/week04/slides.html#self-attention",
@@ -130,7 +130,7 @@
     "href": "2024/weeks/week04/slides.html#section-4",
     "title": "Week 04 Intro to Transformers",
     "section": "",
-    "text": "The self-attention mechanism has the following steps:\n\nLinear Transformation:\n\nA linear transformation is applied to the input representation (obtained from the Embedding and Positional encoding) to get query vector (Q), key vector (K) and value vector (V) for each word.\nQuery vectors are responsible for expressing what the model is currently looking for in the input sequence.\nKey vectors have representations which provide information of inter-character dependencies and connections between characters.\nValue vectors contain additional information of each character in the input sequence."
+    "text": "The self-attention mechanism has the following steps:\n\nLinear Transformation:\n\nA linear transformation is applied to the input representation (obtained from the Embedding and Positional encoding) to get query vector (Q), key vector (K) and value vector (V) for each word.\nQuery vectors are responsible for expressing what the model is currently looking for in the input sequence.\nKey vectors have representations which provide information of inter-word dependencies and connections between words.\nValue vectors contain additional information of each word in the input sequence."
   },
   {
     "objectID": "2024/weeks/week04/slides.html#section-5",

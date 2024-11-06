@@ -458,7 +458,7 @@ Akhilesh Kakolu Ramarao
 <li>Unlike humans who naturally read from left to right, the transformer needs a special way to understand that “word 1 comes before word 2.”</li>
 <li>The positional encoding in the original transformer is implemented using sine function of different frequencies.</li>
 <li>Using sine waves makes it easier for the transformer to understand both nearby and far-apart relationships between words. (It’s similar to how music uses different frequencies to create unique sounds.)</li>
-<li>The positional encoding vectors have the same dimensions as the embedding vectors and are added element-wise to create the input representation for each character.</li>
+<li>The positional encoding vectors have the same dimensions as the embedding vectors and are added element-wise to create the input representation for each word.</li>
 <li>This allows the model to differentiate between words based on their position in the sequence.</li>
 </ul>
 </section>
@@ -466,7 +466,7 @@ Akhilesh Kakolu Ramarao
 <h2></h2>
 <ul>
 <li>Before diving into multi-head attention, it is important to understand self-attention mechanism, which forms the foundation of multi-head attention.</li>
-<li>In the transformer currently implemented, the self-attention mechanism is applied for each character in the sequence.</li>
+<li>In the transformer currently implemented, the self-attention mechanism is applied for each word in the sequence.</li>
 </ul>
 </section>
 <section id="self-attention" class="slide level2 smaller">
@@ -485,8 +485,8 @@ Akhilesh Kakolu Ramarao
 <ul>
 <li>A linear transformation is applied to the input representation (obtained from the Embedding and Positional encoding) to get query vector (Q), key vector (K) and value vector (V) for each word.</li>
 <li><strong>Query vectors</strong> are responsible for expressing what the model is currently looking for in the input sequence.</li>
-<li><strong>Key vectors</strong> have representations which provide information of inter-character dependencies and connections between characters.</li>
-<li><strong>Value vectors</strong> contain additional information of each character in the input sequence.</li>
+<li><strong>Key vectors</strong> have representations which provide information of inter-word dependencies and connections between words.</li>
+<li><strong>Value vectors</strong> contain additional information of each word in the input sequence.</li>
 </ul></li>
 </ol>
 </section>
