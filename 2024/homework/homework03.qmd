@@ -1,0 +1,11 @@
+---
+title: "Homework 3: Intro to transformers"
+format: html
+---
+
+- [ ] **Reading**
+	- [ ] Read the first 5 pages of [Attention is All You Need](https://arxiv.org/abs/1706.03762) paper.
+	- [ ] Read about Self-attention mechanism here: [https://jalammar.github.io/illustrated-transformer/](https://jalammar.github.io/illustrated-transformer/)
+	- [ ] Watch these videos:
+		- [ ] [https://www.youtube.com/watch?v=wjZofJX0v4M](https://www.youtube.com/watch?v=wjZofJX0v4M)
+		- [ ] [https://www.youtube.com/watch?v=eMlx5fFNoYc](https://www.youtube.com/watch?v=eMlx5fFNoYc)
