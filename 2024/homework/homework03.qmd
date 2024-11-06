@@ -4,8 +4,9 @@ format: html
 ---
 
 - [ ] **Reading**
-	- [ ] Read the first 5 pages of [Attention is All You Need](https://arxiv.org/abs/1706.03762) paper.
+	- [ ] Read the first 8 pages of [Attention is All You Need](https://arxiv.org/abs/1706.03762) paper.
 	- [ ] Read about Self-attention mechanism here: [https://jalammar.github.io/illustrated-transformer/](https://jalammar.github.io/illustrated-transformer/)
 	- [ ] Watch these videos:
-		- [ ] [https://www.youtube.com/watch?v=wjZofJX0v4M](https://www.youtube.com/watch?v=wjZofJX0v4M)
-		- [ ] [https://www.youtube.com/watch?v=eMlx5fFNoYc](https://www.youtube.com/watch?v=eMlx5fFNoYc)
+		- [ ] [How large language models work, a visual intro to transformers](https://www.youtube.com/watch?v=wjZofJX0v4M)
+		- [ ] [Attention in transformers, visually explained](https://www.youtube.com/watch?v=eMlx5fFNoYc)
+		- [ ] [Illustrated Guide to Transformers Neural Network: A step by step explanation](https://www.youtube.com/watch?v=4Bdc55j80l8)
