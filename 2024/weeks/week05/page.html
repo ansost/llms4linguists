@@ -8,7 +8,7 @@
 
 <meta name="author" content="Ramarao">
 
-<title>LLMs in Linguistic Research – LLMs in Lingustic Research 2024/25</title>
+<title>🗓️ Week 05 - Intro to tranformers (part 2) – LLMs in Lingustic Research 2024/25</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,24 +24,25 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./2024/syllabus.html" rel="next">
-<link href="./figures/icons/course_logo.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../2024/homework/homework01.html" rel="next">
+<link href="../../../2024/weeks/week04/page.html" rel="prev">
+<link href="../../../figures/icons/course_logo.png" rel="icon" type="image/png">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,13 +71,13 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="css/custom_style.css">
-<link rel="stylesheet" href="css/syllabus.css">
-<meta property="og:title" content="LLMs in Linguistic Research – LLMs in Lingustic Research 2024/25">
-<meta property="og:description" content="Academic Year: 2024/25">
+<link rel="stylesheet" href="../../../css/custom_style.css">
+<link rel="stylesheet" href="../../../css/syllabus.css">
+<meta property="og:title" content="🗓️ Week 05 - Intro to tranformers (part 2) – LLMs in Lingustic Research 2024/25">
+<meta property="og:description" content="">
 <meta property="og:site_name" content="LLMs in Lingustic Research 2024/25">
-<meta name="twitter:title" content="LLMs in Linguistic Research – LLMs in Lingustic Research 2024/25">
-<meta name="twitter:description" content="Academic Year: 2024/25">
+<meta name="twitter:title" content="🗓️ Week 05 - Intro to tranformers (part 2) – LLMs in Lingustic Research 2024/25">
+<meta name="twitter:description" content="">
 <meta name="twitter:creator" content="@<twitter-handle>">
 <meta name="twitter:site" content="\@<twitter-handle>">
 <meta name="twitter:card" content="summary">
@@ -89,7 +90,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">LLMs in Lingustic Research 2024/25</span>
     </a>
   </div>
@@ -108,7 +109,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">🏠 Home</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../2024/weeks/week01/page.html">🗓️ Class material</a></li><li class="breadcrumb-item"><a href="../../../2024/weeks/week05/page.html">Week 05 - Transformers (part 2)</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -122,19 +123,19 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">🏠 Home</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./2024/syllabus.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../2024/syllabus.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">📓 Syllabus</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./2024/assignments.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../2024/assignments.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">✍️ Assignments   </span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -143,7 +144,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./2024/assignments/assignment01.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../2024/assignments/assignment01.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">📝 Assignment 01</span></a>
   </div>
 </li>
@@ -160,7 +161,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./2024/weeks/week01/page.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../2024/weeks/week01/page.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 01 - Intro</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -169,7 +170,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./2024/weeks/week01/page.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../2024/weeks/week01/page.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">👨‍🏫 Lecture Material</span></a>
   </div>
 </li>
@@ -177,7 +178,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./2024/weeks/week02/page.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../2024/weeks/week02/page.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 02 - NN basics</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -186,7 +187,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./2024/weeks/week02/page.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../2024/weeks/week02/page.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">👨‍🏫 Lecture Material</span></a>
   </div>
 </li>
@@ -194,7 +195,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./2024/weeks/week03/page.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../2024/weeks/week03/page.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 03 - NN basics II</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -203,7 +204,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./2024/weeks/week03/page.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../2024/weeks/week03/page.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">👨‍🏫 Lecture Material</span></a>
   </div>
 </li>
@@ -211,7 +212,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./2024/weeks/week04/page.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../2024/weeks/week04/page.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 04 - Transformers (part 1)</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -220,7 +221,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./2024/weeks/week04/page.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../2024/weeks/week04/page.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">👨‍🏫 Lecture Material</span></a>
   </div>
 </li>
@@ -228,16 +229,16 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./2024/weeks/week05/page.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../2024/weeks/week05/page.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Week 05 - Transformers (part 2)</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./2024/weeks/week05/page.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../2024/weeks/week05/page.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">👨‍🏫 Lecture Material</span></a>
   </div>
 </li>
@@ -256,19 +257,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./2024/homework/homework01.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../2024/homework/homework01.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Hw 01 - Colab</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./2024/homework/homework02.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../2024/homework/homework02.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Hw 02 - NN basics</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./2024/homework/homework03.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../2024/homework/homework03.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Hw 03 - Intro to transformers</span></a>
   </div>
 </li>
@@ -284,19 +285,17 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#syllabus" id="toc-syllabus" class="nav-link active" data-scroll-target="#syllabus">Syllabus</a></li>
-  <li><a href="#location" id="toc-location" class="nav-link" data-scroll-target="#location">📍 Location</a></li>
-  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">🎯 Learning Objectives</a></li>
+  <li><a href="#lecture-slides" id="toc-lecture-slides" class="nav-link active" data-scroll-target="#lecture-slides">👨‍🏫 Lecture Slides</a></li>
+  <li><a href="#homework" id="toc-homework" class="nav-link" data-scroll-target="#homework">✍️ Homework</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../2024/weeks/week01/page.html">🗓️ Class material</a></li><li class="breadcrumb-item"><a href="../../../2024/weeks/week05/page.html">Week 05 - Transformers (part 2)</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">LLMs in Linguistic Research</h1>
-<p class="subtitle lead">Academic Year: 2024/25</p>
+<h1 class="title">🗓️ Week 05 - Intro to tranformers (part 2)</h1>
 </div>
 
 
@@ -319,55 +318,16 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<!-- ::: {.callout-important collapse=false}
-## 📢 Important
-
-(12/03/2024)
-
-- The **syllabus** is now available! View it online [here](2024/syllabus.qmd).
-
-::: -->
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Instructor</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Teaching Staff</a></li></ul>
-<div class="tab-content">
-<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<p><img src="./figures/people/small_akhilesh.jpg" class="img-fluid quarto-figure quarto-figure-left" style="object-fit: cover;width:5em;height:5em;border-radius: 50%;" alt="Photo of the lecturer Akhilesh"> <strong>Akhilesh Kakolu Ramarao</strong> <br> 📧 <script type="text/javascript">
-<!--
-h='&#104;&#104;&#x75;&#46;&#100;&#x65;';a='&#64;';n='&#x6b;&#x61;&#x6b;&#x6f;&#108;&#x75;&#114;&#x61;';e=n+a+h;
-document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail">'+e+'<\/'+'a'+'>');
-// -->
-</script><noscript>kakolura at hhu dot de</noscript></p>
+<section id="lecture-slides" class="level2">
+<h2 class="anchored" data-anchor-id="lecture-slides">👨‍🏫 Lecture Slides</h2>
+<p>Either click on the slide area below or click <a href="../../../2024/weeks/week05/slides.html">here</a> to view it in fullscreen. Use your keypad to navigate the slides.</p>
+<div class="container" style="position: relative;overflow: hidden;width: 100%;min-height:600px;">
+<iframe src="slides.html" style="position=absolute;top: 0;left: 0;bottom: 0;right: 0;width: 100%;min-height:600px;">
+</iframe>
 </div>
-<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<p><img src="./figures/people/anna.jpg" class="img-fluid quarto-figure quarto-figure-left" style="object-fit: cover;width:5em;height:5em;border-radius: 50%;" alt="Photo of the TA Anna Stein"> <strong>Anna Stein</strong> <br> 📧 <script type="text/javascript">
-<!--
-h='&#104;&#104;&#x75;&#46;&#100;&#x65;';a='&#64;';n='&#x61;&#110;&#110;&#x61;&#46;&#x73;&#116;&#x65;&#x69;&#110;';e=n+a+h;
-document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail">'+e+'<\/'+'a'+'>');
-// -->
-</script><noscript>anna.stein at hhu dot de</noscript></p>
-</div>
-</div>
-</div>
-<section id="syllabus" class="level1">
-<h1>Syllabus</h1>
-<p>View it online <a href="./2024/syllabus.html">here</a>.</p>
 </section>
-<section id="location" class="level1">
-<h1>📍 Location</h1>
-<p>Wednesday, 2:30pm-4pm</p>
-<p>Building 23.21 Floor 2, Room 22</p>
-</section>
-<section id="learning-objectives" class="level1">
-<h1>🎯 Learning Objectives</h1>
-<p><strong>Focus:</strong> Understanding LLMs and their usage in various linguistics tasks</p>
-<p><strong>How:</strong> Hands-on learning and paper discussions</p>
-<ul>
-<li>Gaining an intuition of how LLMs work</li>
-<li>Getting to know the field of LLM research and development</li>
-<li>Familiarizing yourself with different LLM architectures</li>
-<li>Learning how to use them for different linguistics tasks (e.g., text analysis, language generation, and language understanding)</li>
-<li>Practing using tools like Huggingface for LLM inference and fine-tuning</li>
-</ul>
+<section id="homework" class="level2">
+<h2 class="anchored" data-anchor-id="homework">✍️ Homework</h2>
 
 
 </section>
@@ -802,10 +762,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="../../../2024/weeks/week04/page.html" class="pagination-link" aria-label="Week 04 - Transformers (part 1)">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Week 04 - Transformers (part 1)</span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./2024/syllabus.html" class="pagination-link" aria-label="📓 Syllabus">
-        <span class="nav-page-text">📓 Syllabus</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../../2024/homework/homework01.html" class="pagination-link" aria-label="Hw 01 - Colab">
+        <span class="nav-page-text">Hw 01 - Colab</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

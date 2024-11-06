@@ -63,6 +63,90 @@
     "text": "Thank you!\n\n\n\n\nLLMs in Lingustic Research WiSe 2024/25"
   },
   {
+    "objectID": "2024/weeks/week05/slides.html#layer-normalization",
+    "href": "2024/weeks/week05/slides.html#layer-normalization",
+    "title": "Week 05 Intro to Transformers (part 2)",
+    "section": "Layer normalization",
+    "text": "Layer normalization\n\nLayer normalization is applied to the output of the feed-forward neural network.\nLayer normalization is a technique that normalizes the output of each layer in the transformer.\nNormalization is a technique used to scale the input features to a range that is more suitable for the model to learn.\nIt helps in stabilizing the training process and speeds up convergence.\n\n\\[\n\\begin{align*}\nLayerNorm(x) = \\frac{x - \\mu}{\\sigma}\n\\end{align*}\n\\]\nwhere,\n\n\\(\\mu\\) is the mean of the input vector \\(x\\).\n\\(\\sigma\\) is the standard deviation of the input vector \\(x\\)."
+  },
+  {
+    "objectID": "2024/weeks/week05/slides.html#section",
+    "href": "2024/weeks/week05/slides.html#section",
+    "title": "Week 05 Intro to Transformers (part 2)",
+    "section": "",
+    "text": "Residual connection\n\nDuring the process of training deep networks, it has been observed that the learning can stagnate or become more difficult for longer input sequences.\nThis makes it difficult for the model to capture long range dependencies.\nTo address this issue, the transformer uses residual connections.\nThey are used around the multi-head attention and feed-forward neural network sub-layers.\n\n\\[\n\\begin{align*}\n\\text{Output} = \\text{Input} + \\text{Sublayer}(\\text{Input})\n\\end{align*}\n\\]\nwhere,\n\n\\(\\text{Input}\\) is the input to the sub-layer.\n\\(\\text{Sublayer}\\) is the sub-layer that consists of multi-head attention or feed-forward neural network."
+  },
+  {
+    "objectID": "2024/weeks/week05/slides.html#position-wise-feed-forward-neural-network",
+    "href": "2024/weeks/week05/slides.html#position-wise-feed-forward-neural-network",
+    "title": "Week 05 Intro to Transformers (part 2)",
+    "section": "Position-wise feed-forward neural network",
+    "text": "Position-wise feed-forward neural network\n\nA fully connected feed-forward neural network sub-layer is a point-wise function, which means that it processes each word vector independently.\nThe feed-forward neural network consists of two linear transformations with a ReLU activation function in between.\nThis sub-layer introduces additional non-linearity and allows the model to learn complex relationships between the input and output.\n\n\\[\n\\begin{align*}\nFF(x) = f(x \\cdot K^T) \\cdot V\n\\end{align*}\n\\]\nwhere,\n\n\\(K\\) and \\(V\\) are the weight matrices for the feed-forward neural network.\n\\(f\\) is the ReLU activation function.\n\\(x\\) is the input to the feed-forward neural network."
+  },
+  {
+    "objectID": "2024/weeks/week05/slides.html#section-1",
+    "href": "2024/weeks/week05/slides.html#section-1",
+    "title": "Week 05 Intro to Transformers (part 2)",
+    "section": "",
+    "text": "Masked multi-head self-attention layer\n\nThe masked self-attention mechanism allows the model to only attend to words that have been generated so far and prevents it from attending future words that have not been predicted yet.\nThis is achieved by applying a mask to the attention weights.\nA mask matrix \\(M\\) is created of the same size as the attention scores\nThis mask matrix is added element-wise to the attention scores.\n\n\\[\n\\begin{align*}\nMaskedScores_{ij} = A_{ij} + M_{ij}\n\\end{align*}\n\\]\nwhere,\n\n\\(MaskedScores_{ij}\\) is the masked attention score for the i-th query and j-th key.\n\\(A_{ij}\\) is the attention score for the i-th query and j-th key.\n\\(M_{ij}\\) is the mask matrix."
+  },
+  {
+    "objectID": "2024/weeks/week05/slides.html#section-2",
+    "href": "2024/weeks/week05/slides.html#section-2",
+    "title": "Week 05 Intro to Transformers (part 2)",
+    "section": "",
+    "text": "The \\(MaskedScores_{ij}\\) are passed through softmax function to get the attention weights.\nThis softmax function will assign nearly zero weights to the positions with \\(-inf\\) values and thereby masking them out.\nAs a final step, weighted sum is calculated to get the output of the masked self-attention mechanism.\nThis output is then passed to the encoder-decoder attention layer.\nDuring inference, the model generates each word one at a time and the masking is applied to prevent attending to future positions.\nIn other words, each predicted word is conditioned only on the previously generated words and is referred to as autoregressive generation."
+  },
+  {
+    "objectID": "2024/weeks/week05/slides.html#encoder-decoder-attention-layer",
+    "href": "2024/weeks/week05/slides.html#encoder-decoder-attention-layer",
+    "title": "Week 05 Intro to Transformers (part 2)",
+    "section": "Encoder-decoder attention layer",
+    "text": "Encoder-decoder attention layer\n\nThe Encoder-decoder attention layer allows the decoder to combine the encoded sequence of the encoder with the output generated from the multi-head self-attention layer.\nAt each time step \\(t\\) in the decoder, the following computations are performed: Compute the query vector \\(Q_t\\) using the current decoder input embedding \\(X_t\\):\n\n\\[\nQ_t = X_t \\cdot W^Q\n\\]\nwhere,\n\n\\(W^Q\\) is the weight matrix for the query vector.\n\\(X_t\\) is the input to the decoder at time step \\(t\\).\n\\(Q_t\\) is the query vector for the t-th time step."
+  },
+  {
+    "objectID": "2024/weeks/week05/slides.html#section-3",
+    "href": "2024/weeks/week05/slides.html#section-3",
+    "title": "Week 05 Intro to Transformers (part 2)",
+    "section": "",
+    "text": "Next, the keys \\(K\\) and values \\(V\\) from the encoder output sequence \\(H\\) are computed using:\n\n\\[\n\\begin{align*}\n\\text{K} & = H \\cdot W^K \\\\\n\\text{V} & = H \\cdot W^V \\\\\n\\end{align*}\n\\]\nwhere,\n\n\\(W^K\\) and \\(W^V\\) are the weight matrices for the keys and values.\n\\(H\\) is the output of the encoder.\n\\(X_t\\) is the input to the decoder at time step \\(t\\)."
+  },
+  {
+    "objectID": "2024/weeks/week05/slides.html#section-4",
+    "href": "2024/weeks/week05/slides.html#section-4",
+    "title": "Week 05 Intro to Transformers (part 2)",
+    "section": "",
+    "text": "The attention score is calculated by taking the dot product of the query vector \\(Q_t\\) and the key vector \\(K\\) in the encoder output sequence \\(H\\).\nThe attention score is then scaled and passed through a softmax function to get the attention weights.\nThe weighted sum is calculated to get the output of the encoder-decoder attention layer.\nLastly, a context vector \\(Context_t\\) is computed to capture the relevant information from the input sequence that the decoder should focus on when generating the output token at time step \\(t\\)."
+  },
+  {
+    "objectID": "2024/weeks/week05/slides.html#section-5",
+    "href": "2024/weeks/week05/slides.html#section-5",
+    "title": "Week 05 Intro to Transformers (part 2)",
+    "section": "",
+    "text": "This is computed by taking the weighted sum of the value vectors \\(V\\) using the attention weights:\n\\[\n\\begin{align*}\nContext_t = \\sum_{j=1}^{n} \\alpha_{tj} \\cdot v_j\n\\end{align*}\n\\]\nwhere,\n\n\\(\\alpha_{tj}\\) is the attention weight for the t-th query and j-th key.\n\\(v_j\\) is the value vector for the j-th key.\nThis context vector is concatenated with the decoder input embeddings \\(X_t\\) and passed through a linear layer to get the output of the encoder-decoder attention layer.\nThis output is then passed to the point-wise feed-forward neural network layer."
+  },
+  {
+    "objectID": "2024/weeks/week05/slides.html#section-6",
+    "href": "2024/weeks/week05/slides.html#section-6",
+    "title": "Week 05 Intro to Transformers (part 2)",
+    "section": "",
+    "text": "Point-wise feed-forward neural network layer\n\nThe feed-forward neural network within the decoder operates in the same manner to that within the encoder.\nHowever, there is a key difference in the input to the feed-forward network in the decoder.\nThe input to the point-wise feed-forward network comes from the encoder-decoder layer.\n\nLayer normalization\n\nEach sub-layer (masked multi-head self-attention, encoder-decoder attention, and position-wise feed-forward network) is followed by a layer normalization operation and connected with a residual connection\nThe layer normalization stabilizes training and enables the model to learn more effectively."
+  },
+  {
+    "objectID": "2024/weeks/week05/slides.html#section-7",
+    "href": "2024/weeks/week05/slides.html#section-7",
+    "title": "Week 05 Intro to Transformers (part 2)",
+    "section": "",
+    "text": "Residual connection\n\nThe residual connection is applied around each sub-layer in the decoder.\nThey are applied around the masked multi-head self-attention layer, encoder-decoder attention layer and point-wise feed-forward neural network layer.\n\nLinear or Output layer\n\nThe linear or the output layer determines the likelihood of each word being the next word in the output sequence.\nThe input to this layer is the output from the layer normalization.\nThe purpose of the linear layer is to map the output from the layer normalization to a vector of raw scores (logits) corresponding to each word being the next word in the output sequence.\nThis done by applying a linear transformation, which involves multiplying the output from the layer normalization layer by a weight matrix and adding a bias vector."
+  },
+  {
+    "objectID": "2024/weeks/week05/slides.html#section-8",
+    "href": "2024/weeks/week05/slides.html#section-8",
+    "title": "Week 05 Intro to Transformers (part 2)",
+    "section": "",
+    "text": "Softmax\n\nThe output of the linear layer is passed through a softmax function to get the probability distribution over the output vocabulary.\nDuring the training phase, the predicted probabilities are used to compute the cross-entropy loss function, which measures the dissimilarity between the predicted distribution and the true distribution.\nDuring the inference phase, the word with the highest probability at each position is chosen as the predicted output.\n\n\n\n\n\nLLMs in Lingustic Research WiSe 2024/25"
+  },
+  {
     "objectID": "2024/weeks/week04/slides.html#converting-words-to-vectors",
     "href": "2024/weeks/week04/slides.html#converting-words-to-vectors",
     "title": "Week 04 Intro to Transformers",
@@ -469,7 +553,11 @@
     "href": "2024/homework/homework03.html",
     "title": "Homework 3: Intro to transformers",
     "section": "",
-    "text": "Reading\n\nRead the first 5 pages of Attention is All You Need paper.\nRead about Self-attention mechanism here: https://jalammar.github.io/illustrated-transformer/\nWatch these videos:\n\nhttps://www.youtube.com/watch?v=wjZofJX0v4M\nhttps://www.youtube.com/watch?v=eMlx5fFNoYc"
+    "text": "Reading\n\nRead the first 5 pages of Attention is All You Need paper.\nRead about Self-attention mechanism here: https://jalammar.github.io/illustrated-transformer/\nWatch these videos:\n\nhttps://www.youtube.com/watch?v=wjZofJX0v4M\nhttps://www.youtube.com/watch?v=eMlx5fFNoYc",
+    "crumbs": [
+      "🧩 Homework",
+      "Hw 03 - Intro to transformers"
+    ]
   },
   {
     "objectID": "2024/weeks/week04/page.html",
@@ -502,6 +590,39 @@
     "crumbs": [
       "🗓️ Class material",
       "Week 04 - Transformers (part 1)"
+    ]
+  },
+  {
+    "objectID": "2024/weeks/week05/page.html",
+    "href": "2024/weeks/week05/page.html",
+    "title": "🗓️ Week 05 - Intro to tranformers (part 2)",
+    "section": "",
+    "text": "Either click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides.",
+    "crumbs": [
+      "🗓️ Class material",
+      "Week 05 - Transformers (part 2)"
+    ]
+  },
+  {
+    "objectID": "2024/weeks/week05/page.html#lecture-slides",
+    "href": "2024/weeks/week05/page.html#lecture-slides",
+    "title": "🗓️ Week 05 - Intro to tranformers (part 2)",
+    "section": "",
+    "text": "Either click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides.",
+    "crumbs": [
+      "🗓️ Class material",
+      "Week 05 - Transformers (part 2)"
+    ]
+  },
+  {
+    "objectID": "2024/weeks/week05/page.html#homework",
+    "href": "2024/weeks/week05/page.html#homework",
+    "title": "🗓️ Week 05 - Intro to tranformers (part 2)",
+    "section": "✍️ Homework",
+    "text": "✍️ Homework",
+    "crumbs": [
+      "🗓️ Class material",
+      "Week 05 - Transformers (part 2)"
     ]
   },
   {
