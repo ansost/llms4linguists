@@ -193,13 +193,15 @@ $$
 
 $$
 \begin{align*}
-\alpha_{ij} & = \text{softmax}\left(\frac{q_i \cdot k_j}{\sqrt{d_{k}}}\right) \\
+\alpha_{ij} & = \frac{\exp(A_{ij})}{\sum_{j=1}^{n} \exp(A_{ij})}
 \end{align*}
 $$
 
+explained as:
 where,
 
    - $\alpha_{ij}$ is the attention weight for the i-th query and j-th key.
+   - $\exp$ is the exponential function (e=2.71828).
    - The softmax function is applied to each row of the attention score matrix $\text{A}$.
 
 
