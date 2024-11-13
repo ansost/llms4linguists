@@ -1,0 +1,14 @@
+---
+title: "🗓️ Week 06 - Hands-on with Transformers"
+---
+
+
+## 👨‍🏫 Lecture
+
+Click <a href="data_preprocessing.ipynb" download>here</a> to download the data preprocessing notebook.
+
+Click <a href="self_attention.ipynb" download>here</a> to download the self-attention notebook.
+
+Open these two notebooks in [google colab](https://colab.research.google.com/).
+
+## ✍️ Homework
