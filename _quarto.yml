@@ -12,6 +12,7 @@ project:
     - "2024/assignments/*.qmd"
     - "2024/weeks/week04/*.qmd"
     - "2024/weeks/week05/*.qmd"
+    - "2024/weeks/week06/*.qmd"
 
 website:
   title: "LLMs in Lingustic Research 2024/25"
@@ -74,8 +75,11 @@ website:
            contents:
              - href: 2024/weeks/week05/page.qmd
                text: 👨‍🏫 Lecture Material
-
-
+         - href: 2024/weeks/week06/page.qmd
+           text: Week 06 - Hands-on with Transformers (part 1)
+           contents:
+             - href: 2024/weeks/week06/page.qmd
+               text: 👨‍🏫 Lecture Material
 
       - section: "🧩 Homework"
         contents:
