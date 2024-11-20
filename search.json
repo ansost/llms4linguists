@@ -63,404 +63,121 @@
     "text": "Thank you!\n\n\n\n\nLLMs in Lingustic Research WiSe 2024/25"
   },
   {
-    "objectID": "2024/weeks/week06/page.html",
-    "href": "2024/weeks/week06/page.html",
-    "title": "🗓️ Week 06 - Hands-on with Transformers",
+    "objectID": "2024/weeks/week07/page.html",
+    "href": "2024/weeks/week07/page.html",
+    "title": "🗓️ Week 06 - Implementing a GPT-2 model",
     "section": "",
-    "text": "Click here to download the data preprocessing notebook.\nClick here to download the self-attention notebook.\nOpen these two notebooks in google colab.",
+    "text": "Click here to download the implementation of GPT-2 model.\nOpen the notebook in google colab.",
     "crumbs": [
       "🗓️ Class material",
-      "Week 06 - Hands-on with Transformers (part 1)"
+      "Week 06 - GPT-2 implementation"
     ]
   },
   {
-    "objectID": "2024/weeks/week06/page.html#lecture",
-    "href": "2024/weeks/week06/page.html#lecture",
-    "title": "🗓️ Week 06 - Hands-on with Transformers",
+    "objectID": "2024/weeks/week07/page.html#lecture",
+    "href": "2024/weeks/week07/page.html#lecture",
+    "title": "🗓️ Week 06 - Implementing a GPT-2 model",
     "section": "",
-    "text": "Click here to download the data preprocessing notebook.\nClick here to download the self-attention notebook.\nOpen these two notebooks in google colab.",
+    "text": "Click here to download the implementation of GPT-2 model.\nOpen the notebook in google colab.",
     "crumbs": [
       "🗓️ Class material",
-      "Week 06 - Hands-on with Transformers (part 1)"
+      "Week 06 - GPT-2 implementation"
     ]
   },
   {
-    "objectID": "2024/weeks/week06/page.html#homework",
-    "href": "2024/weeks/week06/page.html#homework",
-    "title": "🗓️ Week 06 - Hands-on with Transformers",
+    "objectID": "2024/weeks/week07/page.html#homework",
+    "href": "2024/weeks/week07/page.html#homework",
+    "title": "🗓️ Week 06 - Implementing a GPT-2 model",
     "section": "✍️ Homework",
     "text": "✍️ Homework",
     "crumbs": [
       "🗓️ Class material",
-      "Week 06 - Hands-on with Transformers (part 1)"
+      "Week 06 - GPT-2 implementation"
     ]
   },
   {
-    "objectID": "2024/weeks/week05/page.html",
-    "href": "2024/weeks/week05/page.html",
-    "title": "🗓️ Week 05 - Intro to tranformers (part 2)",
+    "objectID": "2024/weeks/week05/slides.html#layer-normalization",
+    "href": "2024/weeks/week05/slides.html#layer-normalization",
+    "title": "Week 05 Intro to Transformers (part 2)",
+    "section": "Layer normalization",
+    "text": "Layer normalization\n\nLayer normalization is applied to the output of the feed-forward neural network.\nLayer normalization is a technique that normalizes the output of each layer in the transformer.\nNormalization is a technique used to scale the input features to a range that is more suitable for the model to learn.\nIt helps in stabilizing the training process and speeds up convergence.\n\n\\[\n\\begin{align*}\nLayerNorm(x) = \\frac{x - \\mu}{\\sigma}\n\\end{align*}\n\\]\nwhere,\n\n\\(\\mu\\) is the mean of the input vector \\(x\\).\n\\(\\sigma\\) is the standard deviation of the input vector \\(x\\)."
+  },
+  {
+    "objectID": "2024/weeks/week05/slides.html#section",
+    "href": "2024/weeks/week05/slides.html#section",
+    "title": "Week 05 Intro to Transformers (part 2)",
     "section": "",
-    "text": "Either click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides.",
-    "crumbs": [
-      "🗓️ Class material",
-      "Week 05 - Transformers (part 2)"
-    ]
+    "text": "Residual connection\n\nDuring the process of training deep networks, it has been observed that the learning can stagnate or become more difficult for longer input sequences.\nThis makes it difficult for the model to capture long range dependencies.\nTo address this issue, the transformer uses residual connections.\nThey are used around the multi-head attention and feed-forward neural network sub-layers.\n\n\\[\n\\begin{align*}\n\\text{Output} = \\text{Input} + \\text{Sublayer}(\\text{Input})\n\\end{align*}\n\\]\nwhere,\n\n\\(\\text{Input}\\) is the input to the sub-layer.\n\\(\\text{Sublayer}\\) is the sub-layer that consists of multi-head attention or feed-forward neural network."
   },
   {
-    "objectID": "2024/weeks/week05/page.html#lecture-slides",
-    "href": "2024/weeks/week05/page.html#lecture-slides",
-    "title": "🗓️ Week 05 - Intro to tranformers (part 2)",
+    "objectID": "2024/weeks/week05/slides.html#position-wise-feed-forward-neural-network",
+    "href": "2024/weeks/week05/slides.html#position-wise-feed-forward-neural-network",
+    "title": "Week 05 Intro to Transformers (part 2)",
+    "section": "Position-wise feed-forward neural network",
+    "text": "Position-wise feed-forward neural network\n\nA fully connected feed-forward neural network sub-layer is a point-wise function, which means that it processes each word vector independently.\nThe feed-forward neural network consists of two linear transformations with a ReLU activation function in between.\nThis sub-layer introduces additional non-linearity and allows the model to learn complex relationships between the input and output.\n\n\\[\n\\begin{align*}\nFF(x) = f(x \\cdot K^T) \\cdot V\n\\end{align*}\n\\]\nwhere,\n\n\\(K\\) and \\(V\\) are the weight matrices for the feed-forward neural network.\n\\(f\\) is the ReLU activation function.\n\\(x\\) is the input to the feed-forward neural network."
+  },
+  {
+    "objectID": "2024/weeks/week05/slides.html#section-1",
+    "href": "2024/weeks/week05/slides.html#section-1",
+    "title": "Week 05 Intro to Transformers (part 2)",
     "section": "",
-    "text": "Either click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides.",
-    "crumbs": [
-      "🗓️ Class material",
-      "Week 05 - Transformers (part 2)"
-    ]
+    "text": "Masked multi-head self-attention layer\n\nThe masked self-attention mechanism allows the model to only attend to words that have been generated so far and prevents it from attending future words that have not been predicted yet.\nThis is achieved by applying a mask to the attention weights.\nA mask matrix \\(M\\) is created of the same size as the attention scores\nThis mask matrix is added element-wise to the attention scores.\n\n\\[\n\\begin{align*}\nMaskedScores_{ij} = A_{ij} + M_{ij}\n\\end{align*}\n\\]\nwhere,\n\n\\(MaskedScores_{ij}\\) is the masked attention score for the i-th query and j-th key.\n\\(A_{ij}\\) is the attention score for the i-th query and j-th key.\n\\(M_{ij}\\) is the mask matrix."
   },
   {
-    "objectID": "2024/weeks/week05/page.html#homework",
-    "href": "2024/weeks/week05/page.html#homework",
-    "title": "🗓️ Week 05 - Intro to tranformers (part 2)",
-    "section": "✍️ Homework",
-    "text": "✍️ Homework\n\nReading\n\nRead the first 8 pages of Attention is All You Need paper.\nRead about Self-attention mechanism here: https://jalammar.github.io/illustrated-transformer/\nWatch these videos:\n\nHow large language models work, a visual intro to transformers\nAttention in transformers, visually explained\nIllustrated Guide to Transformers Neural Network: A step by step explanation",
-    "crumbs": [
-      "🗓️ Class material",
-      "Week 05 - Transformers (part 2)"
-    ]
-  },
-  {
-    "objectID": "2024/weeks/week04/page.html",
-    "href": "2024/weeks/week04/page.html",
-    "title": "🗓️ Week 04 - Intro to tranformers",
+    "objectID": "2024/weeks/week05/slides.html#section-2",
+    "href": "2024/weeks/week05/slides.html#section-2",
+    "title": "Week 05 Intro to Transformers (part 2)",
     "section": "",
-    "text": "Either click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides.",
-    "crumbs": [
-      "🗓️ Class material",
-      "Week 04 - Transformers (part 1)"
-    ]
+    "text": "The \\(MaskedScores_{ij}\\) are passed through softmax function to get the attention weights.\nThis softmax function will assign nearly zero weights to the positions with \\(-inf\\) values and thereby masking them out.\nAs a final step, weighted sum is calculated to get the output of the masked self-attention mechanism.\nThis output is then passed to the encoder-decoder attention layer.\nDuring inference, the model generates each word one at a time and the masking is applied to prevent attending to future positions.\nIn other words, each predicted word is conditioned only on the previously generated words and is referred to as autoregressive generation."
   },
   {
-    "objectID": "2024/weeks/week04/page.html#lecture-slides",
-    "href": "2024/weeks/week04/page.html#lecture-slides",
-    "title": "🗓️ Week 04 - Intro to tranformers",
+    "objectID": "2024/weeks/week05/slides.html#encoder-decoder-attention-layer",
+    "href": "2024/weeks/week05/slides.html#encoder-decoder-attention-layer",
+    "title": "Week 05 Intro to Transformers (part 2)",
+    "section": "Encoder-decoder attention layer",
+    "text": "Encoder-decoder attention layer\n\nThe Encoder-decoder attention layer allows the decoder to combine the encoded sequence of the encoder with the output generated from the multi-head self-attention layer.\nAt each time step \\(t\\) in the decoder, the following computations are performed: Compute the query vector \\(Q_t\\) using the current decoder input embedding \\(X_t\\):\n\n\\[\nQ_t = X_t \\cdot W^Q\n\\]\nwhere,\n\n\\(W^Q\\) is the weight matrix for the query vector.\n\\(X_t\\) is the input to the decoder at time step \\(t\\).\n\\(Q_t\\) is the query vector for the t-th time step."
+  },
+  {
+    "objectID": "2024/weeks/week05/slides.html#section-3",
+    "href": "2024/weeks/week05/slides.html#section-3",
+    "title": "Week 05 Intro to Transformers (part 2)",
     "section": "",
-    "text": "Either click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides.",
-    "crumbs": [
-      "🗓️ Class material",
-      "Week 04 - Transformers (part 1)"
-    ]
+    "text": "Next, the keys \\(K\\) and values \\(V\\) from the encoder output sequence \\(H\\) are computed using:\n\n\\[\n\\begin{align*}\n\\text{K} & = H \\cdot W^K \\\\\n\\text{V} & = H \\cdot W^V \\\\\n\\end{align*}\n\\]\nwhere,\n\n\\(W^K\\) and \\(W^V\\) are the weight matrices for the keys and values.\n\\(H\\) is the output of the encoder.\n\\(X_t\\) is the input to the decoder at time step \\(t\\)."
   },
   {
-    "objectID": "2024/weeks/week04/page.html#homework",
-    "href": "2024/weeks/week04/page.html#homework",
-    "title": "🗓️ Week 04 - Intro to tranformers",
-    "section": "✍️ Homework",
-    "text": "✍️ Homework\n\nReading\n\nRead the first 5 pages of Attention is All You Need paper.\nRead about Self-attention mechanism here: https://jalammar.github.io/illustrated-transformer/\nWatch these videos:\n\nhttps://www.youtube.com/watch?v=wjZofJX0v4M\nhttps://www.youtube.com/watch?v=eMlx5fFNoYc",
-    "crumbs": [
-      "🗓️ Class material",
-      "Week 04 - Transformers (part 1)"
-    ]
-  },
-  {
-    "objectID": "2024/homework/homework03.html",
-    "href": "2024/homework/homework03.html",
-    "title": "Homework 3: Intro to transformers",
+    "objectID": "2024/weeks/week05/slides.html#section-4",
+    "href": "2024/weeks/week05/slides.html#section-4",
+    "title": "Week 05 Intro to Transformers (part 2)",
     "section": "",
-    "text": "Reading\n\nRead the first 8 pages of Attention is All You Need paper.\nRead about Self-attention mechanism here: https://jalammar.github.io/illustrated-transformer/\nWatch these videos:\n\nHow large language models work, a visual intro to transformers\nAttention in transformers, visually explained\nIllustrated Guide to Transformers Neural Network: A step by step explanation",
-    "crumbs": [
-      "🧩 Homework",
-      "Hw 03 - Intro to transformers"
-    ]
+    "text": "The attention score is calculated by taking the dot product of the query vector \\(Q_t\\) and the key vector \\(K\\) in the encoder output sequence \\(H\\).\nThe attention score is then scaled and passed through a softmax function to get the attention weights.\nThe weighted sum is calculated to get the output of the encoder-decoder attention layer.\nLastly, a context vector \\(Context_t\\) is computed to capture the relevant information from the input sequence that the decoder should focus on when generating the output token at time step \\(t\\)."
   },
   {
-    "objectID": "2024/homework/homework01.html",
-    "href": "2024/homework/homework01.html",
-    "title": "Homework 1: Using Google Colab",
+    "objectID": "2024/weeks/week05/slides.html#section-5",
+    "href": "2024/weeks/week05/slides.html#section-5",
+    "title": "Week 05 Intro to Transformers (part 2)",
     "section": "",
-    "text": "The instructions below assume that you have a Google account or are willing to make one. If you do not want to make a Google account,  contact Anna for instructions to run notebooks without Colab.",
-    "crumbs": [
-      "🧩 Homework",
-      "Hw 01 - Colab"
-    ]
+    "text": "This is computed by taking the weighted sum of the value vectors \\(V\\) using the attention weights:\n\\[\n\\begin{align*}\nContext_t = \\sum_{j=1}^{n} \\alpha_{tj} \\cdot v_j\n\\end{align*}\n\\]\nwhere,\n\n\\(\\alpha_{tj}\\) is the attention weight for the t-th query and j-th key.\n\\(v_j\\) is the value vector for the j-th key.\nThis context vector is concatenated with the decoder input embeddings \\(X_t\\) and passed through a linear layer to get the output of the encoder-decoder attention layer.\nThis output is then passed to the point-wise feed-forward neural network layer."
   },
   {
-    "objectID": "2024/homework/homework01.html#google-colab",
-    "href": "2024/homework/homework01.html#google-colab",
-    "title": "Homework 1: Using Google Colab",
-    "section": "Google Colab",
-    "text": "Google Colab\n\nGo to the notebooks folder. Click on the three dots for the hw1.ipynb file, select “Open with” and then “Open in Colab”.\nRun both cells in the notebook by clicking on the play icon on the left of the cell or clicking into the cell and pressing CTRL + ENTER on Windows or CMD + ENTER on Mac.",
-    "crumbs": [
-      "🧩 Homework",
-      "Hw 01 - Colab"
-    ]
-  },
-  {
-    "objectID": "2024/weeks/week02/page.html",
-    "href": "2024/weeks/week02/page.html",
-    "title": "🗓️ Week 02 - Basics of Neural Networks",
+    "objectID": "2024/weeks/week05/slides.html#section-6",
+    "href": "2024/weeks/week05/slides.html#section-6",
+    "title": "Week 05 Intro to Transformers (part 2)",
     "section": "",
-    "text": "In this second week, we will cover a few basic math concepts used in neural networks, try to get an intuition of what machine learning models are and finally explain the architecture a perceptron.",
-    "crumbs": [
-      "🗓️ Class material",
-      "Week 02 - NN basics"
-    ]
+    "text": "Point-wise feed-forward neural network layer\n\nThe feed-forward neural network within the decoder operates in the same manner to that within the encoder.\nHowever, there is a key difference in the input to the feed-forward network in the decoder.\nThe input to the point-wise feed-forward network comes from the encoder-decoder layer.\n\nLayer normalization\n\nEach sub-layer (masked multi-head self-attention, encoder-decoder attention, and position-wise feed-forward network) is followed by a layer normalization operation and connected with a residual connection\nThe layer normalization stabilizes training and enables the model to learn more effectively."
   },
   {
-    "objectID": "2024/weeks/week02/page.html#lecture-slides",
-    "href": "2024/weeks/week02/page.html#lecture-slides",
-    "title": "🗓️ Week 02 - Basics of Neural Networks",
-    "section": "👨‍🏫 Lecture Slides",
-    "text": "👨‍🏫 Lecture Slides\nEither click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides.",
-    "crumbs": [
-      "🗓️ Class material",
-      "Week 02 - NN basics"
-    ]
-  },
-  {
-    "objectID": "2024/weeks/week02/page.html#homework",
-    "href": "2024/weeks/week02/page.html#homework",
-    "title": "🗓️ Week 02 - Basics of Neural Networks",
-    "section": "✍️ Homework",
-    "text": "✍️ Homework\n\nPlease go through the slides and the recommended reading material.",
-    "crumbs": [
-      "🗓️ Class material",
-      "Week 02 - NN basics"
-    ]
-  },
-  {
-    "objectID": "2024/weeks/week02/page.html#recommended-reading",
-    "href": "2024/weeks/week02/page.html#recommended-reading",
-    "title": "🗓️ Week 02 - Basics of Neural Networks",
-    "section": "📚 Recommended Reading",
-    "text": "📚 Recommended Reading\n\nWikipedia articles on Matrix multiplication, matrix addition, element-wise multiplication, and dot product.\nWhat is a neural network? [Video]",
-    "crumbs": [
-      "🗓️ Class material",
-      "Week 02 - NN basics"
-    ]
-  },
-  {
-    "objectID": "2024/weeks/week01/page.html",
-    "href": "2024/weeks/week01/page.html",
-    "title": "🗓️ Week 01 - Admin, Architectures: Statistical and Probabilistic Language Models",
+    "objectID": "2024/weeks/week05/slides.html#section-7",
+    "href": "2024/weeks/week05/slides.html#section-7",
+    "title": "Week 05 Intro to Transformers (part 2)",
     "section": "",
-    "text": "In this first week, we will cover what you can expect to learn from this course and the course logistics: all you need to know about the structure of the lectures, classes, assessments, and how we will interact throughout this course.",
-    "crumbs": [
-      "🗓️ Class material",
-      "Week 01 - Intro"
-    ]
+    "text": "Residual connection\n\nThe residual connection is applied around each sub-layer in the decoder.\nThey are applied around the masked multi-head self-attention layer, encoder-decoder attention layer and point-wise feed-forward neural network layer.\n\nLinear or Output layer\n\nThe linear or the output layer determines the likelihood of each word being the next word in the output sequence.\nThe input to this layer is the output from the layer normalization.\nThe purpose of the linear layer is to map the output from the layer normalization to a vector of raw scores (logits) corresponding to each word being the next word in the output sequence.\nThis done by applying a linear transformation, which involves multiplying the output from the layer normalization layer by a weight matrix and adding a bias vector."
   },
   {
-    "objectID": "2024/weeks/week01/page.html#lecture-slides",
-    "href": "2024/weeks/week01/page.html#lecture-slides",
-    "title": "🗓️ Week 01 - Admin, Architectures: Statistical and Probabilistic Language Models",
-    "section": "👨‍🏫 Lecture Slides",
-    "text": "👨‍🏫 Lecture Slides\nEither click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides.",
-    "crumbs": [
-      "🗓️ Class material",
-      "Week 01 - Intro"
-    ]
-  },
-  {
-    "objectID": "2024/weeks/week01/page.html#homework",
-    "href": "2024/weeks/week01/page.html#homework",
-    "title": "🗓️ Week 01 - Admin, Architectures: Statistical and Probabilistic Language Models",
-    "section": "✍️ Homework",
-    "text": "✍️ Homework\nWeek 01 - Homework",
-    "crumbs": [
-      "🗓️ Class material",
-      "Week 01 - Intro"
-    ]
-  },
-  {
-    "objectID": "2024/weeks/week01/page.html#recommended-reading",
-    "href": "2024/weeks/week01/page.html#recommended-reading",
-    "title": "🗓️ Week 01 - Admin, Architectures: Statistical and Probabilistic Language Models",
-    "section": "📚 Recommended Reading",
-    "text": "📚 Recommended Reading\n\nSpeech and Language Processing, Chapter 3: N-gram language models PDF. Authors: Dan Jurafsky and James H. Martin.",
-    "crumbs": [
-      "🗓️ Class material",
-      "Week 01 - Intro"
-    ]
-  },
-  {
-    "objectID": "2024/homework.html",
-    "href": "2024/homework.html",
-    "title": "Homework Overview",
+    "objectID": "2024/weeks/week05/slides.html#section-8",
+    "href": "2024/weeks/week05/slides.html#section-8",
+    "title": "Week 05 Intro to Transformers (part 2)",
     "section": "",
-    "text": "Here is an overview of all Homework up to date:\nHw 1: Google Colab: here\nHw 2: Neural Networks: here"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "LLMs in Linguistic Research",
-    "section": "",
-    "text": "InstructorTeaching Staff\n\n\n Akhilesh Kakolu Ramarao  📧 kakolura at hhu dot de\n\n\n Anna Stein  📧 anna.stein at hhu dot de\n\n\n\n\nSyllabus\nView it online here.\n\n\n📍 Location\nWednesday, 2:30pm-4pm\nBuilding 23.21 Floor 2, Room 22\n\n\n🎯 Learning Objectives\nFocus: Understanding LLMs and their usage in various linguistics tasks\nHow: Hands-on learning and paper discussions\n\nGaining an intuition of how LLMs work\nGetting to know the field of LLM research and development\nFamiliarizing yourself with different LLM architectures\nLearning how to use them for different linguistics tasks (e.g., text analysis, language generation, and language understanding)\nPracting using tools like Huggingface for LLM inference and fine-tuning",
-    "crumbs": [
-      "🏠 Home"
-    ]
-  },
-  {
-    "objectID": "2024/assignments.html",
-    "href": "2024/assignments.html",
-    "title": "Assignment Overview",
-    "section": "",
-    "text": "Here is an overview of all assignments up to date:\nAssignment 1: TBD\nAssignment 2: TBD\nAssignment 3: TBD\nAssignment 4: TBD\nAssignment 5: TBD",
-    "crumbs": [
-      "✍️ Assignments   "
-    ]
-  },
-  {
-    "objectID": "2024/syllabus.html",
-    "href": "2024/syllabus.html",
-    "title": "Syllabus",
-    "section": "",
-    "text": "Last changed: 23.10.24\n\n\n\n\n\n\n\n\n\nDate\nGeneral Topic\nHomework\nAssignments\n\n\n\n\n09.10\nAdmin, Architectures: Statistical and Probabilistic Language Models\nFamiliarization with Google Colab\n\n\n\n16.10\nArchitectures: Perceptrons and Neural Networks\n\n\n\n\n23.10\nArchitectures: Perceptrons and Neural Networks (part 2)\n\nAssignment 1\n\n\n30.10\nTransformer: General architecture\n\n\n\n\n06.11\nTransformer: The Attention mechanism\n\n\n\n\n13.11\nTransformer: Transformer models: Decoder/Encode only models\n\nAssignment 2\n\n\n20.11\nUsing pre-trained models\n\n\n\n\n27.11\nStudy week\n\n\n\n\n04.12\nTransfer learning: fine-tuning\n\n\n\n\n11.12\nAdapting models for specific tasks\n\nAssignment 3\n\n\n18.12\nAdapting models for specific tasks\n\n\n\n\n08.01\nAdapting models for specific tasks\n\nAssignment 4\n\n\n15.01\nProbing LLMs\n\n\n\n\n22.01\nProbing LLMs\n\nAssignment 5\n\n\n29.01\nTBD",
-    "crumbs": [
-      "📓 Syllabus"
-    ]
-  },
-  {
-    "objectID": "2024/weeks/week01/slides.html#whoami-akhilesh",
-    "href": "2024/weeks/week01/slides.html#whoami-akhilesh",
-    "title": "Week 01 Introduction",
-    "section": "WhoamI: Akhilesh",
-    "text": "WhoamI: Akhilesh\n\n\n\n\n\nAkhilesh Kakolu Ramarao (he/him) PhD researcher at the English Language and Linguistics department\n\n\n\n\nResearching Computational Morphology supervised by Prof. Dr. Kevin Tang and Dr. Dinah Baer-Henney\nStarted at HHU in 2021\nIndustry Background: NLP Researcher, Software Engineer, Building multilingual chatbots, voice assistants\nInvolved in several language revitalization efforts for indigenous communities in Arunachal Pradesh, India, with a focus on Idu Mishmi and K’man Mishmi languages\nMore: https://akkikek.xyz/about.html\nPart of the Slamlab: https://slam.phil.hhu.de/"
-  },
-  {
-    "objectID": "2024/weeks/week01/slides.html#whoami-anna",
-    "href": "2024/weeks/week01/slides.html#whoami-anna",
-    "title": "Week 01 Introduction",
-    "section": "WhoamI: Anna",
-    "text": "WhoamI: Anna\n\n\n\n\n\nAnna Sophia Stein (she/her)  MSc Linguistics student Focus on Computational Linguistics 📧 anna.stein@hhu.de \n\n\n\n\nMain interests: anything Natural Language Processing, open source, …\nPart of research at the Anglistics, Linguistics and Computer Science department\nCurrently writing my MA thesis on making LLMs better at pragmatics\n\nPart of the Slamlab: https://slam.phil.hhu.de/"
-  },
-  {
-    "objectID": "2024/weeks/week01/slides.html#contact",
-    "href": "2024/weeks/week01/slides.html#contact",
-    "title": "Week 01 Introduction",
-    "section": "Contact",
-    "text": "Contact\n\n📧: kakolura@hhu.de\n🏢🕰️: By appointment\n🌐👥: https://slam.phil.hhu.de\n🐦: SLaMLab_HHU\n🐙🐱: https://github.com/hhuslamlab/"
-  },
-  {
-    "objectID": "2024/weeks/week01/slides.html#syllabus-overview",
-    "href": "2024/weeks/week01/slides.html#syllabus-overview",
-    "title": "Week 01 Introduction",
-    "section": "Syllabus Overview",
-    "text": "Syllabus Overview\n\n\n\n\n\n\n\n\n\nDate\nGeneral Topic\nHomework\nAssignments\n\n\n\n\n09.10\nAdmin, Architectures: Statistical and Probabilistic Language Models\nFamiliarization with Google Colab\n\n\n\n16.10\nArchitectures: Perceptrons and Neural Networks\n\n\n\n\n23.10\nArchitectures: Recurrent Neural Networks\n\nAssignment 1"
-  },
-  {
-    "objectID": "2024/weeks/week01/slides.html#syllabus-overview-1",
-    "href": "2024/weeks/week01/slides.html#syllabus-overview-1",
-    "title": "Week 01 Introduction",
-    "section": "Syllabus Overview",
-    "text": "Syllabus Overview\n\n\n\n\n\n\n\n\n\nDate\nGeneral Topic\nHomework\nAssignments\n\n\n\n\n30.10\nTransformer: General architecture\n\n\n\n\n06.11\nTransformer: The Attention mechanism\n\n\n\n\n13.11\nTransformer: Transformer models: Decoder/Encode only models\n\nAssignment 2\n\n\n20.11\nUsing pre-trained models"
-  },
-  {
-    "objectID": "2024/weeks/week01/slides.html#syllabus-overview-2",
-    "href": "2024/weeks/week01/slides.html#syllabus-overview-2",
-    "title": "Week 01 Introduction",
-    "section": "Syllabus Overview",
-    "text": "Syllabus Overview\n\n\n\n\n\n\n\n\n\nDate\nGeneral Topic\nHomework\nAssignments\n\n\n\n\n27.11\nStudy week\n\n\n\n\n04.12\nTransfer learning: fine-tuning\n\n\n\n\n11.12\nAdapting models for specific tasks\n\nAssignment 3\n\n\n18.12\nAdapting models for specific tasks\n\n\n\n\n08.01\nAdapting models for specific tasks\n\nAssignment 4\n\n\n15.01\nProbing LLMs\n\n\n\n\n22.01\nProbing LLMs\n\nAssignment 5\n\n\n29.01\nTBD"
-  },
-  {
-    "objectID": "2024/weeks/week01/slides.html#statistical-language-models",
-    "href": "2024/weeks/week01/slides.html#statistical-language-models",
-    "title": "Week 01 Introduction",
-    "section": "Statistical Language Models",
-    "text": "Statistical Language Models\n\nThese models use statistical patterns in the data to make predictions about the likelihood of specific sequences of words\nN-gram models are the most common type of statistical language model that predicts the probability of a word given the previous n-1 words\nThey are simple and computationally efficient but have limitations in capturing long-range dependencies\nThey are widely used in speech recognition, machine translation, and other NLP tasks\nThey are used as a baseline for more complex language models"
-  },
-  {
-    "objectID": "2024/weeks/week01/slides.html#probabilistic-language-models",
-    "href": "2024/weeks/week01/slides.html#probabilistic-language-models",
-    "title": "Week 01 Introduction",
-    "section": "Probabilistic Language Models",
-    "text": "Probabilistic Language Models\n\nThese models assign a probability to sequences of words based on the training data\nThey are based on the principles of probability theory and use probabilistic methods to model the language\nThey can capture complex patterns in the data and are more flexible than statistical models\nThey are used in a wide range of NLP tasks, such as machine translation, text generation, and speech recognition"
-  },
-  {
-    "objectID": "2024/weeks/week01/slides.html#neural-language-models",
-    "href": "2024/weeks/week01/slides.html#neural-language-models",
-    "title": "Week 01 Introduction",
-    "section": "Neural Language Models",
-    "text": "Neural Language Models\n\nThese models use neural networks to predict the likelihood of a sequence of words\nThey are trained on a large corpus of text data and can learn complex patterns and dependencies\nThey are more powerful than traditional statistical and probabilistic models\nThey are used in a wide range of NLP tasks, such as, machine translation, text generation, and sentiment analysis"
-  },
-  {
-    "objectID": "2024/weeks/week01/slides.html#large-language-models",
-    "href": "2024/weeks/week01/slides.html#large-language-models",
-    "title": "Week 01 Introduction",
-    "section": "Large Language Models",
-    "text": "Large Language Models\n\nThey are advanced language models that handle billions of training data parameters and generate text output\nThey are trained on large-scale datasets and can generate human-like text\nThey are used in a wide range of NLP tasks, such as machine translation, text generation, and question answering\nThey are the focus of the course"
-  },
-  {
-    "objectID": "2024/weeks/week01/slides.html#thank-you",
-    "href": "2024/weeks/week01/slides.html#thank-you",
-    "title": "Week 01 Introduction",
-    "section": "Thank you!",
-    "text": "Thank you!\n\n\n\n\nLLMs in Lingustic Research WiSe 2024/25"
-  },
-  {
-    "objectID": "2024/weeks/week03/page.html",
-    "href": "2024/weeks/week03/page.html",
-    "title": "🗓️ Week 03 - Basics of Neural Networks (part 2)",
-    "section": "",
-    "text": "Either click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides.",
-    "crumbs": [
-      "🗓️ Class material",
-      "Week 03 - NN basics II"
-    ]
-  },
-  {
-    "objectID": "2024/weeks/week03/page.html#lecture-slides",
-    "href": "2024/weeks/week03/page.html#lecture-slides",
-    "title": "🗓️ Week 03 - Basics of Neural Networks (part 2)",
-    "section": "",
-    "text": "Either click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides.",
-    "crumbs": [
-      "🗓️ Class material",
-      "Week 03 - NN basics II"
-    ]
-  },
-  {
-    "objectID": "2024/weeks/week03/page.html#homework",
-    "href": "2024/weeks/week03/page.html#homework",
-    "title": "🗓️ Week 03 - Basics of Neural Networks (part 2)",
-    "section": "✍️ Homework",
-    "text": "✍️ Homework",
-    "crumbs": [
-      "🗓️ Class material",
-      "Week 03 - NN basics II"
-    ]
-  },
-  {
-    "objectID": "2024/weeks/week03/page.html#recommended-reading",
-    "href": "2024/weeks/week03/page.html#recommended-reading",
-    "title": "🗓️ Week 03 - Basics of Neural Networks (part 2)",
-    "section": "📚 Recommended Reading",
-    "text": "📚 Recommended Reading",
-    "crumbs": [
-      "🗓️ Class material",
-      "Week 03 - NN basics II"
-    ]
-  },
-  {
-    "objectID": "2024/homework/homework02.html",
-    "href": "2024/homework/homework02.html",
-    "title": "Homework 02: Neural Network",
-    "section": "",
-    "text": "Please go through the Wikipedia articles on:\n\nMatrix multiplication\nMatrix addition\nElement-wise multiplication\nDot product\n\nAnd watch this video: What is a neural network? [Video]",
-    "crumbs": [
-      "🧩 Homework",
-      "Hw 02 - NN basics  "
-    ]
-  },
-  {
-    "objectID": "2024/assignments/assignment01.html",
-    "href": "2024/assignments/assignment01.html",
-    "title": "Assignment 1: Perceptron Analysis",
-    "section": "",
-    "text": "Consider a perceptron that predicts if you’ll pass a quiz based on:\n\nHours studied (0-5)\nHours slept (0-8)\n\nPart1: Make predictions for:\n\nDifferent study patterns:\n\n\nStudied 4 hours, slept 7 hours\nStudied 1 hour, slept 8 hours\nStudied 5 hours, slept 4 hours\nStudied 3 hours, slept 3 hours\nStudied 4 hours, slept 4 hours\n\n\nWeight changes:\n\n\nStudy hours more important\nSleep hours more important\nBoth equally important\n\nDraw simple diagrams showing:\n\nHow you think the perceptron would classify each case\nWhy some combinations might work better than others\n\nPart 2: Predict what happens when:\n\nThe perceptron starts with:\n\n\nThinking only study hours matter\nThinking only sleep matters\nThinking nothing matters (zero weights)\n\n\nThe perceptron learns from:\n\n\nOne student’s data\nFive students data\nTwenty students data\n\nExplain in simple terms:\n\nHow you think it would change its decisions\nWhy more data might help\nWhat problems it might face\n\nNOTE:\n\nNo calculations needed\nKeep explanations simple\nYou will be graded on:\n\nclarity of explanation\nuse of diagrams to support your explanation\n\n\nSubmission Guidelines\n\nFormat: PDF document, 12-point Times New Roman, 1.5 line spacing\nLength: 600-1500 words (excluding diagrams)\nSubmit by email to: Anna (anste145 at hhu dot de)\nDeadline: 6th November 2024, 23:59 CET",
-    "crumbs": [
-      "✍️ Assignments   ",
-      "📝 Assignment 01"
-    ]
+    "text": "Softmax\n\nThe output of the linear layer is passed through a softmax function to get the probability distribution over the output vocabulary.\nDuring the training phase, the predicted probabilities are used to compute the cross-entropy loss function, which measures the dissimilarity between the predicted distribution and the true distribution.\nDuring the inference phase, the word with the highest probability at each position is chosen as the predicted output.\n\n\n\n\n\nLLMs in Lingustic Research WiSe 2024/25"
   },
   {
     "objectID": "2024/weeks/week04/slides.html#converting-words-to-vectors",
@@ -575,88 +292,404 @@
     "text": "Multi-headed attention\n\nThe self-attention mechanism is applied multiple times in parallel to the input sequence.\n“Head” refers to an individual component in the multi-head self-attention mechanism that independently learns different self-attention patterns.\nThis allows the model to focus on multiple parts of the input sequence in parallel and thereby allowing the model to capture the entire context.\nThis also makes the model more computationally efficient as it enables parallel processing across different heads.\n\nThe outputs from all the attention heads are mapped to a linear layer:\n\\[\n\\begin{align*}\n\\text{O} & = \\text{Concat}(\\text{head}_1, \\text{head}_2, \\ldots, \\text{head}_h) \\cdot \\text{W}^O \\\\\n\\end{align*}\n\\]\nwhere, \\(\\text{W}^O\\) is the weight matrix for the output of the multi-head attention mechanism.\n\nThe outputs are then passed to a feed-forward neural network.\n\n\n\n\n\nLLMs in Lingustic Research WiSe 2024/25"
   },
   {
-    "objectID": "2024/weeks/week05/slides.html#layer-normalization",
-    "href": "2024/weeks/week05/slides.html#layer-normalization",
-    "title": "Week 05 Intro to Transformers (part 2)",
-    "section": "Layer normalization",
-    "text": "Layer normalization\n\nLayer normalization is applied to the output of the feed-forward neural network.\nLayer normalization is a technique that normalizes the output of each layer in the transformer.\nNormalization is a technique used to scale the input features to a range that is more suitable for the model to learn.\nIt helps in stabilizing the training process and speeds up convergence.\n\n\\[\n\\begin{align*}\nLayerNorm(x) = \\frac{x - \\mu}{\\sigma}\n\\end{align*}\n\\]\nwhere,\n\n\\(\\mu\\) is the mean of the input vector \\(x\\).\n\\(\\sigma\\) is the standard deviation of the input vector \\(x\\)."
-  },
-  {
-    "objectID": "2024/weeks/week05/slides.html#section",
-    "href": "2024/weeks/week05/slides.html#section",
-    "title": "Week 05 Intro to Transformers (part 2)",
+    "objectID": "2024/assignments/assignment01.html",
+    "href": "2024/assignments/assignment01.html",
+    "title": "Assignment 1: Perceptron Analysis",
     "section": "",
-    "text": "Residual connection\n\nDuring the process of training deep networks, it has been observed that the learning can stagnate or become more difficult for longer input sequences.\nThis makes it difficult for the model to capture long range dependencies.\nTo address this issue, the transformer uses residual connections.\nThey are used around the multi-head attention and feed-forward neural network sub-layers.\n\n\\[\n\\begin{align*}\n\\text{Output} = \\text{Input} + \\text{Sublayer}(\\text{Input})\n\\end{align*}\n\\]\nwhere,\n\n\\(\\text{Input}\\) is the input to the sub-layer.\n\\(\\text{Sublayer}\\) is the sub-layer that consists of multi-head attention or feed-forward neural network."
+    "text": "Consider a perceptron that predicts if you’ll pass a quiz based on:\n\nHours studied (0-5)\nHours slept (0-8)\n\nPart1: Make predictions for:\n\nDifferent study patterns:\n\n\nStudied 4 hours, slept 7 hours\nStudied 1 hour, slept 8 hours\nStudied 5 hours, slept 4 hours\nStudied 3 hours, slept 3 hours\nStudied 4 hours, slept 4 hours\n\n\nWeight changes:\n\n\nStudy hours more important\nSleep hours more important\nBoth equally important\n\nDraw simple diagrams showing:\n\nHow you think the perceptron would classify each case\nWhy some combinations might work better than others\n\nPart 2: Predict what happens when:\n\nThe perceptron starts with:\n\n\nThinking only study hours matter\nThinking only sleep matters\nThinking nothing matters (zero weights)\n\n\nThe perceptron learns from:\n\n\nOne student’s data\nFive students data\nTwenty students data\n\nExplain in simple terms:\n\nHow you think it would change its decisions\nWhy more data might help\nWhat problems it might face\n\nNOTE:\n\nNo calculations needed\nKeep explanations simple\nYou will be graded on:\n\nclarity of explanation\nuse of diagrams to support your explanation\n\n\nSubmission Guidelines\n\nFormat: PDF document, 12-point Times New Roman, 1.5 line spacing\nLength: 600-1500 words (excluding diagrams)\nSubmit by email to: Anna (anste145 at hhu dot de)\nDeadline: 6th November 2024, 23:59 CET",
+    "crumbs": [
+      "✍️ Assignments   ",
+      "📝 Assignment 01"
+    ]
   },
   {
-    "objectID": "2024/weeks/week05/slides.html#position-wise-feed-forward-neural-network",
-    "href": "2024/weeks/week05/slides.html#position-wise-feed-forward-neural-network",
-    "title": "Week 05 Intro to Transformers (part 2)",
-    "section": "Position-wise feed-forward neural network",
-    "text": "Position-wise feed-forward neural network\n\nA fully connected feed-forward neural network sub-layer is a point-wise function, which means that it processes each word vector independently.\nThe feed-forward neural network consists of two linear transformations with a ReLU activation function in between.\nThis sub-layer introduces additional non-linearity and allows the model to learn complex relationships between the input and output.\n\n\\[\n\\begin{align*}\nFF(x) = f(x \\cdot K^T) \\cdot V\n\\end{align*}\n\\]\nwhere,\n\n\\(K\\) and \\(V\\) are the weight matrices for the feed-forward neural network.\n\\(f\\) is the ReLU activation function.\n\\(x\\) is the input to the feed-forward neural network."
-  },
-  {
-    "objectID": "2024/weeks/week05/slides.html#section-1",
-    "href": "2024/weeks/week05/slides.html#section-1",
-    "title": "Week 05 Intro to Transformers (part 2)",
+    "objectID": "2024/homework/homework02.html",
+    "href": "2024/homework/homework02.html",
+    "title": "Homework 02: Neural Network",
     "section": "",
-    "text": "Masked multi-head self-attention layer\n\nThe masked self-attention mechanism allows the model to only attend to words that have been generated so far and prevents it from attending future words that have not been predicted yet.\nThis is achieved by applying a mask to the attention weights.\nA mask matrix \\(M\\) is created of the same size as the attention scores\nThis mask matrix is added element-wise to the attention scores.\n\n\\[\n\\begin{align*}\nMaskedScores_{ij} = A_{ij} + M_{ij}\n\\end{align*}\n\\]\nwhere,\n\n\\(MaskedScores_{ij}\\) is the masked attention score for the i-th query and j-th key.\n\\(A_{ij}\\) is the attention score for the i-th query and j-th key.\n\\(M_{ij}\\) is the mask matrix."
+    "text": "Please go through the Wikipedia articles on:\n\nMatrix multiplication\nMatrix addition\nElement-wise multiplication\nDot product\n\nAnd watch this video: What is a neural network? [Video]",
+    "crumbs": [
+      "🧩 Homework",
+      "Hw 02 - NN basics  "
+    ]
   },
   {
-    "objectID": "2024/weeks/week05/slides.html#section-2",
-    "href": "2024/weeks/week05/slides.html#section-2",
-    "title": "Week 05 Intro to Transformers (part 2)",
+    "objectID": "2024/weeks/week03/page.html",
+    "href": "2024/weeks/week03/page.html",
+    "title": "🗓️ Week 03 - Basics of Neural Networks (part 2)",
     "section": "",
-    "text": "The \\(MaskedScores_{ij}\\) are passed through softmax function to get the attention weights.\nThis softmax function will assign nearly zero weights to the positions with \\(-inf\\) values and thereby masking them out.\nAs a final step, weighted sum is calculated to get the output of the masked self-attention mechanism.\nThis output is then passed to the encoder-decoder attention layer.\nDuring inference, the model generates each word one at a time and the masking is applied to prevent attending to future positions.\nIn other words, each predicted word is conditioned only on the previously generated words and is referred to as autoregressive generation."
+    "text": "Either click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides.",
+    "crumbs": [
+      "🗓️ Class material",
+      "Week 03 - NN basics II"
+    ]
   },
   {
-    "objectID": "2024/weeks/week05/slides.html#encoder-decoder-attention-layer",
-    "href": "2024/weeks/week05/slides.html#encoder-decoder-attention-layer",
-    "title": "Week 05 Intro to Transformers (part 2)",
-    "section": "Encoder-decoder attention layer",
-    "text": "Encoder-decoder attention layer\n\nThe Encoder-decoder attention layer allows the decoder to combine the encoded sequence of the encoder with the output generated from the multi-head self-attention layer.\nAt each time step \\(t\\) in the decoder, the following computations are performed: Compute the query vector \\(Q_t\\) using the current decoder input embedding \\(X_t\\):\n\n\\[\nQ_t = X_t \\cdot W^Q\n\\]\nwhere,\n\n\\(W^Q\\) is the weight matrix for the query vector.\n\\(X_t\\) is the input to the decoder at time step \\(t\\).\n\\(Q_t\\) is the query vector for the t-th time step."
-  },
-  {
-    "objectID": "2024/weeks/week05/slides.html#section-3",
-    "href": "2024/weeks/week05/slides.html#section-3",
-    "title": "Week 05 Intro to Transformers (part 2)",
+    "objectID": "2024/weeks/week03/page.html#lecture-slides",
+    "href": "2024/weeks/week03/page.html#lecture-slides",
+    "title": "🗓️ Week 03 - Basics of Neural Networks (part 2)",
     "section": "",
-    "text": "Next, the keys \\(K\\) and values \\(V\\) from the encoder output sequence \\(H\\) are computed using:\n\n\\[\n\\begin{align*}\n\\text{K} & = H \\cdot W^K \\\\\n\\text{V} & = H \\cdot W^V \\\\\n\\end{align*}\n\\]\nwhere,\n\n\\(W^K\\) and \\(W^V\\) are the weight matrices for the keys and values.\n\\(H\\) is the output of the encoder.\n\\(X_t\\) is the input to the decoder at time step \\(t\\)."
+    "text": "Either click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides.",
+    "crumbs": [
+      "🗓️ Class material",
+      "Week 03 - NN basics II"
+    ]
   },
   {
-    "objectID": "2024/weeks/week05/slides.html#section-4",
-    "href": "2024/weeks/week05/slides.html#section-4",
-    "title": "Week 05 Intro to Transformers (part 2)",
-    "section": "",
-    "text": "The attention score is calculated by taking the dot product of the query vector \\(Q_t\\) and the key vector \\(K\\) in the encoder output sequence \\(H\\).\nThe attention score is then scaled and passed through a softmax function to get the attention weights.\nThe weighted sum is calculated to get the output of the encoder-decoder attention layer.\nLastly, a context vector \\(Context_t\\) is computed to capture the relevant information from the input sequence that the decoder should focus on when generating the output token at time step \\(t\\)."
+    "objectID": "2024/weeks/week03/page.html#homework",
+    "href": "2024/weeks/week03/page.html#homework",
+    "title": "🗓️ Week 03 - Basics of Neural Networks (part 2)",
+    "section": "✍️ Homework",
+    "text": "✍️ Homework",
+    "crumbs": [
+      "🗓️ Class material",
+      "Week 03 - NN basics II"
+    ]
   },
   {
-    "objectID": "2024/weeks/week05/slides.html#section-5",
-    "href": "2024/weeks/week05/slides.html#section-5",
-    "title": "Week 05 Intro to Transformers (part 2)",
-    "section": "",
-    "text": "This is computed by taking the weighted sum of the value vectors \\(V\\) using the attention weights:\n\\[\n\\begin{align*}\nContext_t = \\sum_{j=1}^{n} \\alpha_{tj} \\cdot v_j\n\\end{align*}\n\\]\nwhere,\n\n\\(\\alpha_{tj}\\) is the attention weight for the t-th query and j-th key.\n\\(v_j\\) is the value vector for the j-th key.\nThis context vector is concatenated with the decoder input embeddings \\(X_t\\) and passed through a linear layer to get the output of the encoder-decoder attention layer.\nThis output is then passed to the point-wise feed-forward neural network layer."
+    "objectID": "2024/weeks/week03/page.html#recommended-reading",
+    "href": "2024/weeks/week03/page.html#recommended-reading",
+    "title": "🗓️ Week 03 - Basics of Neural Networks (part 2)",
+    "section": "📚 Recommended Reading",
+    "text": "📚 Recommended Reading",
+    "crumbs": [
+      "🗓️ Class material",
+      "Week 03 - NN basics II"
+    ]
   },
   {
-    "objectID": "2024/weeks/week05/slides.html#section-6",
-    "href": "2024/weeks/week05/slides.html#section-6",
-    "title": "Week 05 Intro to Transformers (part 2)",
-    "section": "",
-    "text": "Point-wise feed-forward neural network layer\n\nThe feed-forward neural network within the decoder operates in the same manner to that within the encoder.\nHowever, there is a key difference in the input to the feed-forward network in the decoder.\nThe input to the point-wise feed-forward network comes from the encoder-decoder layer.\n\nLayer normalization\n\nEach sub-layer (masked multi-head self-attention, encoder-decoder attention, and position-wise feed-forward network) is followed by a layer normalization operation and connected with a residual connection\nThe layer normalization stabilizes training and enables the model to learn more effectively."
+    "objectID": "2024/weeks/week01/slides.html#whoami-akhilesh",
+    "href": "2024/weeks/week01/slides.html#whoami-akhilesh",
+    "title": "Week 01 Introduction",
+    "section": "WhoamI: Akhilesh",
+    "text": "WhoamI: Akhilesh\n\n\n\n\n\nAkhilesh Kakolu Ramarao (he/him) PhD researcher at the English Language and Linguistics department\n\n\n\n\nResearching Computational Morphology supervised by Prof. Dr. Kevin Tang and Dr. Dinah Baer-Henney\nStarted at HHU in 2021\nIndustry Background: NLP Researcher, Software Engineer, Building multilingual chatbots, voice assistants\nInvolved in several language revitalization efforts for indigenous communities in Arunachal Pradesh, India, with a focus on Idu Mishmi and K’man Mishmi languages\nMore: https://akkikek.xyz/about.html\nPart of the Slamlab: https://slam.phil.hhu.de/"
   },
   {
-    "objectID": "2024/weeks/week05/slides.html#section-7",
-    "href": "2024/weeks/week05/slides.html#section-7",
-    "title": "Week 05 Intro to Transformers (part 2)",
-    "section": "",
-    "text": "Residual connection\n\nThe residual connection is applied around each sub-layer in the decoder.\nThey are applied around the masked multi-head self-attention layer, encoder-decoder attention layer and point-wise feed-forward neural network layer.\n\nLinear or Output layer\n\nThe linear or the output layer determines the likelihood of each word being the next word in the output sequence.\nThe input to this layer is the output from the layer normalization.\nThe purpose of the linear layer is to map the output from the layer normalization to a vector of raw scores (logits) corresponding to each word being the next word in the output sequence.\nThis done by applying a linear transformation, which involves multiplying the output from the layer normalization layer by a weight matrix and adding a bias vector."
+    "objectID": "2024/weeks/week01/slides.html#whoami-anna",
+    "href": "2024/weeks/week01/slides.html#whoami-anna",
+    "title": "Week 01 Introduction",
+    "section": "WhoamI: Anna",
+    "text": "WhoamI: Anna\n\n\n\n\n\nAnna Sophia Stein (she/her)  MSc Linguistics student Focus on Computational Linguistics 📧 anna.stein@hhu.de \n\n\n\n\nMain interests: anything Natural Language Processing, open source, …\nPart of research at the Anglistics, Linguistics and Computer Science department\nCurrently writing my MA thesis on making LLMs better at pragmatics\n\nPart of the Slamlab: https://slam.phil.hhu.de/"
   },
   {
-    "objectID": "2024/weeks/week05/slides.html#section-8",
-    "href": "2024/weeks/week05/slides.html#section-8",
-    "title": "Week 05 Intro to Transformers (part 2)",
+    "objectID": "2024/weeks/week01/slides.html#contact",
+    "href": "2024/weeks/week01/slides.html#contact",
+    "title": "Week 01 Introduction",
+    "section": "Contact",
+    "text": "Contact\n\n📧: kakolura@hhu.de\n🏢🕰️: By appointment\n🌐👥: https://slam.phil.hhu.de\n🐦: SLaMLab_HHU\n🐙🐱: https://github.com/hhuslamlab/"
+  },
+  {
+    "objectID": "2024/weeks/week01/slides.html#syllabus-overview",
+    "href": "2024/weeks/week01/slides.html#syllabus-overview",
+    "title": "Week 01 Introduction",
+    "section": "Syllabus Overview",
+    "text": "Syllabus Overview\n\n\n\n\n\n\n\n\n\nDate\nGeneral Topic\nHomework\nAssignments\n\n\n\n\n09.10\nAdmin, Architectures: Statistical and Probabilistic Language Models\nFamiliarization with Google Colab\n\n\n\n16.10\nArchitectures: Perceptrons and Neural Networks\n\n\n\n\n23.10\nArchitectures: Recurrent Neural Networks\n\nAssignment 1"
+  },
+  {
+    "objectID": "2024/weeks/week01/slides.html#syllabus-overview-1",
+    "href": "2024/weeks/week01/slides.html#syllabus-overview-1",
+    "title": "Week 01 Introduction",
+    "section": "Syllabus Overview",
+    "text": "Syllabus Overview\n\n\n\n\n\n\n\n\n\nDate\nGeneral Topic\nHomework\nAssignments\n\n\n\n\n30.10\nTransformer: General architecture\n\n\n\n\n06.11\nTransformer: The Attention mechanism\n\n\n\n\n13.11\nTransformer: Transformer models: Decoder/Encode only models\n\nAssignment 2\n\n\n20.11\nUsing pre-trained models"
+  },
+  {
+    "objectID": "2024/weeks/week01/slides.html#syllabus-overview-2",
+    "href": "2024/weeks/week01/slides.html#syllabus-overview-2",
+    "title": "Week 01 Introduction",
+    "section": "Syllabus Overview",
+    "text": "Syllabus Overview\n\n\n\n\n\n\n\n\n\nDate\nGeneral Topic\nHomework\nAssignments\n\n\n\n\n27.11\nStudy week\n\n\n\n\n04.12\nTransfer learning: fine-tuning\n\n\n\n\n11.12\nAdapting models for specific tasks\n\nAssignment 3\n\n\n18.12\nAdapting models for specific tasks\n\n\n\n\n08.01\nAdapting models for specific tasks\n\nAssignment 4\n\n\n15.01\nProbing LLMs\n\n\n\n\n22.01\nProbing LLMs\n\nAssignment 5\n\n\n29.01\nTBD"
+  },
+  {
+    "objectID": "2024/weeks/week01/slides.html#statistical-language-models",
+    "href": "2024/weeks/week01/slides.html#statistical-language-models",
+    "title": "Week 01 Introduction",
+    "section": "Statistical Language Models",
+    "text": "Statistical Language Models\n\nThese models use statistical patterns in the data to make predictions about the likelihood of specific sequences of words\nN-gram models are the most common type of statistical language model that predicts the probability of a word given the previous n-1 words\nThey are simple and computationally efficient but have limitations in capturing long-range dependencies\nThey are widely used in speech recognition, machine translation, and other NLP tasks\nThey are used as a baseline for more complex language models"
+  },
+  {
+    "objectID": "2024/weeks/week01/slides.html#probabilistic-language-models",
+    "href": "2024/weeks/week01/slides.html#probabilistic-language-models",
+    "title": "Week 01 Introduction",
+    "section": "Probabilistic Language Models",
+    "text": "Probabilistic Language Models\n\nThese models assign a probability to sequences of words based on the training data\nThey are based on the principles of probability theory and use probabilistic methods to model the language\nThey can capture complex patterns in the data and are more flexible than statistical models\nThey are used in a wide range of NLP tasks, such as machine translation, text generation, and speech recognition"
+  },
+  {
+    "objectID": "2024/weeks/week01/slides.html#neural-language-models",
+    "href": "2024/weeks/week01/slides.html#neural-language-models",
+    "title": "Week 01 Introduction",
+    "section": "Neural Language Models",
+    "text": "Neural Language Models\n\nThese models use neural networks to predict the likelihood of a sequence of words\nThey are trained on a large corpus of text data and can learn complex patterns and dependencies\nThey are more powerful than traditional statistical and probabilistic models\nThey are used in a wide range of NLP tasks, such as, machine translation, text generation, and sentiment analysis"
+  },
+  {
+    "objectID": "2024/weeks/week01/slides.html#large-language-models",
+    "href": "2024/weeks/week01/slides.html#large-language-models",
+    "title": "Week 01 Introduction",
+    "section": "Large Language Models",
+    "text": "Large Language Models\n\nThey are advanced language models that handle billions of training data parameters and generate text output\nThey are trained on large-scale datasets and can generate human-like text\nThey are used in a wide range of NLP tasks, such as machine translation, text generation, and question answering\nThey are the focus of the course"
+  },
+  {
+    "objectID": "2024/weeks/week01/slides.html#thank-you",
+    "href": "2024/weeks/week01/slides.html#thank-you",
+    "title": "Week 01 Introduction",
+    "section": "Thank you!",
+    "text": "Thank you!\n\n\n\n\nLLMs in Lingustic Research WiSe 2024/25"
+  },
+  {
+    "objectID": "2024/syllabus.html",
+    "href": "2024/syllabus.html",
+    "title": "Syllabus",
     "section": "",
-    "text": "Softmax\n\nThe output of the linear layer is passed through a softmax function to get the probability distribution over the output vocabulary.\nDuring the training phase, the predicted probabilities are used to compute the cross-entropy loss function, which measures the dissimilarity between the predicted distribution and the true distribution.\nDuring the inference phase, the word with the highest probability at each position is chosen as the predicted output.\n\n\n\n\n\nLLMs in Lingustic Research WiSe 2024/25"
+    "text": "Last changed: 23.10.24\n\n\n\n\n\n\n\n\n\nDate\nGeneral Topic\nHomework\nAssignments\n\n\n\n\n09.10\nAdmin, Architectures: Statistical and Probabilistic Language Models\nFamiliarization with Google Colab\n\n\n\n16.10\nArchitectures: Perceptrons and Neural Networks\n\n\n\n\n23.10\nArchitectures: Perceptrons and Neural Networks (part 2)\n\nAssignment 1\n\n\n30.10\nTransformer: General architecture\n\n\n\n\n06.11\nTransformer: The Attention mechanism\n\n\n\n\n13.11\nTransformer: Transformer models: Decoder/Encode only models\n\nAssignment 2\n\n\n20.11\nUsing pre-trained models\n\n\n\n\n27.11\nStudy week\n\n\n\n\n04.12\nTransfer learning: fine-tuning\n\n\n\n\n11.12\nAdapting models for specific tasks\n\nAssignment 3\n\n\n18.12\nAdapting models for specific tasks\n\n\n\n\n08.01\nAdapting models for specific tasks\n\nAssignment 4\n\n\n15.01\nProbing LLMs\n\n\n\n\n22.01\nProbing LLMs\n\nAssignment 5\n\n\n29.01\nTBD",
+    "crumbs": [
+      "📓 Syllabus"
+    ]
+  },
+  {
+    "objectID": "2024/assignments.html",
+    "href": "2024/assignments.html",
+    "title": "Assignment Overview",
+    "section": "",
+    "text": "Here is an overview of all assignments up to date:\nAssignment 1: TBD\nAssignment 2: TBD\nAssignment 3: TBD\nAssignment 4: TBD\nAssignment 5: TBD",
+    "crumbs": [
+      "✍️ Assignments   "
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "LLMs in Linguistic Research",
+    "section": "",
+    "text": "InstructorTeaching Staff\n\n\n Akhilesh Kakolu Ramarao  📧 kakolura at hhu dot de\n\n\n Anna Stein  📧 anna.stein at hhu dot de\n\n\n\n\nSyllabus\nView it online here.\n\n\n📍 Location\nWednesday, 2:30pm-4pm\nBuilding 23.21 Floor 2, Room 22\n\n\n🎯 Learning Objectives\nFocus: Understanding LLMs and their usage in various linguistics tasks\nHow: Hands-on learning and paper discussions\n\nGaining an intuition of how LLMs work\nGetting to know the field of LLM research and development\nFamiliarizing yourself with different LLM architectures\nLearning how to use them for different linguistics tasks (e.g., text analysis, language generation, and language understanding)\nPracting using tools like Huggingface for LLM inference and fine-tuning",
+    "crumbs": [
+      "🏠 Home"
+    ]
+  },
+  {
+    "objectID": "2024/homework.html",
+    "href": "2024/homework.html",
+    "title": "Homework Overview",
+    "section": "",
+    "text": "Here is an overview of all Homework up to date:\nHw 1: Google Colab: here\nHw 2: Neural Networks: here"
+  },
+  {
+    "objectID": "2024/weeks/week01/page.html",
+    "href": "2024/weeks/week01/page.html",
+    "title": "🗓️ Week 01 - Admin, Architectures: Statistical and Probabilistic Language Models",
+    "section": "",
+    "text": "In this first week, we will cover what you can expect to learn from this course and the course logistics: all you need to know about the structure of the lectures, classes, assessments, and how we will interact throughout this course.",
+    "crumbs": [
+      "🗓️ Class material",
+      "Week 01 - Intro"
+    ]
+  },
+  {
+    "objectID": "2024/weeks/week01/page.html#lecture-slides",
+    "href": "2024/weeks/week01/page.html#lecture-slides",
+    "title": "🗓️ Week 01 - Admin, Architectures: Statistical and Probabilistic Language Models",
+    "section": "👨‍🏫 Lecture Slides",
+    "text": "👨‍🏫 Lecture Slides\nEither click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides.",
+    "crumbs": [
+      "🗓️ Class material",
+      "Week 01 - Intro"
+    ]
+  },
+  {
+    "objectID": "2024/weeks/week01/page.html#homework",
+    "href": "2024/weeks/week01/page.html#homework",
+    "title": "🗓️ Week 01 - Admin, Architectures: Statistical and Probabilistic Language Models",
+    "section": "✍️ Homework",
+    "text": "✍️ Homework\nWeek 01 - Homework",
+    "crumbs": [
+      "🗓️ Class material",
+      "Week 01 - Intro"
+    ]
+  },
+  {
+    "objectID": "2024/weeks/week01/page.html#recommended-reading",
+    "href": "2024/weeks/week01/page.html#recommended-reading",
+    "title": "🗓️ Week 01 - Admin, Architectures: Statistical and Probabilistic Language Models",
+    "section": "📚 Recommended Reading",
+    "text": "📚 Recommended Reading\n\nSpeech and Language Processing, Chapter 3: N-gram language models PDF. Authors: Dan Jurafsky and James H. Martin.",
+    "crumbs": [
+      "🗓️ Class material",
+      "Week 01 - Intro"
+    ]
+  },
+  {
+    "objectID": "2024/weeks/week02/page.html",
+    "href": "2024/weeks/week02/page.html",
+    "title": "🗓️ Week 02 - Basics of Neural Networks",
+    "section": "",
+    "text": "In this second week, we will cover a few basic math concepts used in neural networks, try to get an intuition of what machine learning models are and finally explain the architecture a perceptron.",
+    "crumbs": [
+      "🗓️ Class material",
+      "Week 02 - NN basics"
+    ]
+  },
+  {
+    "objectID": "2024/weeks/week02/page.html#lecture-slides",
+    "href": "2024/weeks/week02/page.html#lecture-slides",
+    "title": "🗓️ Week 02 - Basics of Neural Networks",
+    "section": "👨‍🏫 Lecture Slides",
+    "text": "👨‍🏫 Lecture Slides\nEither click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides.",
+    "crumbs": [
+      "🗓️ Class material",
+      "Week 02 - NN basics"
+    ]
+  },
+  {
+    "objectID": "2024/weeks/week02/page.html#homework",
+    "href": "2024/weeks/week02/page.html#homework",
+    "title": "🗓️ Week 02 - Basics of Neural Networks",
+    "section": "✍️ Homework",
+    "text": "✍️ Homework\n\nPlease go through the slides and the recommended reading material.",
+    "crumbs": [
+      "🗓️ Class material",
+      "Week 02 - NN basics"
+    ]
+  },
+  {
+    "objectID": "2024/weeks/week02/page.html#recommended-reading",
+    "href": "2024/weeks/week02/page.html#recommended-reading",
+    "title": "🗓️ Week 02 - Basics of Neural Networks",
+    "section": "📚 Recommended Reading",
+    "text": "📚 Recommended Reading\n\nWikipedia articles on Matrix multiplication, matrix addition, element-wise multiplication, and dot product.\nWhat is a neural network? [Video]",
+    "crumbs": [
+      "🗓️ Class material",
+      "Week 02 - NN basics"
+    ]
+  },
+  {
+    "objectID": "2024/homework/homework01.html",
+    "href": "2024/homework/homework01.html",
+    "title": "Homework 1: Using Google Colab",
+    "section": "",
+    "text": "The instructions below assume that you have a Google account or are willing to make one. If you do not want to make a Google account,  contact Anna for instructions to run notebooks without Colab.",
+    "crumbs": [
+      "🧩 Homework",
+      "Hw 01 - Colab"
+    ]
+  },
+  {
+    "objectID": "2024/homework/homework01.html#google-colab",
+    "href": "2024/homework/homework01.html#google-colab",
+    "title": "Homework 1: Using Google Colab",
+    "section": "Google Colab",
+    "text": "Google Colab\n\nGo to the notebooks folder. Click on the three dots for the hw1.ipynb file, select “Open with” and then “Open in Colab”.\nRun both cells in the notebook by clicking on the play icon on the left of the cell or clicking into the cell and pressing CTRL + ENTER on Windows or CMD + ENTER on Mac.",
+    "crumbs": [
+      "🧩 Homework",
+      "Hw 01 - Colab"
+    ]
+  },
+  {
+    "objectID": "2024/homework/homework03.html",
+    "href": "2024/homework/homework03.html",
+    "title": "Homework 3: Intro to transformers",
+    "section": "",
+    "text": "Reading\n\nRead the first 8 pages of Attention is All You Need paper.\nRead about Self-attention mechanism here: https://jalammar.github.io/illustrated-transformer/\nWatch these videos:\n\nHow large language models work, a visual intro to transformers\nAttention in transformers, visually explained\nIllustrated Guide to Transformers Neural Network: A step by step explanation",
+    "crumbs": [
+      "🧩 Homework",
+      "Hw 03 - Intro to transformers"
+    ]
+  },
+  {
+    "objectID": "2024/weeks/week04/page.html",
+    "href": "2024/weeks/week04/page.html",
+    "title": "🗓️ Week 04 - Intro to tranformers",
+    "section": "",
+    "text": "Either click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides.",
+    "crumbs": [
+      "🗓️ Class material",
+      "Week 04 - Transformers (part 1)"
+    ]
+  },
+  {
+    "objectID": "2024/weeks/week04/page.html#lecture-slides",
+    "href": "2024/weeks/week04/page.html#lecture-slides",
+    "title": "🗓️ Week 04 - Intro to tranformers",
+    "section": "",
+    "text": "Either click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides.",
+    "crumbs": [
+      "🗓️ Class material",
+      "Week 04 - Transformers (part 1)"
+    ]
+  },
+  {
+    "objectID": "2024/weeks/week04/page.html#homework",
+    "href": "2024/weeks/week04/page.html#homework",
+    "title": "🗓️ Week 04 - Intro to tranformers",
+    "section": "✍️ Homework",
+    "text": "✍️ Homework\n\nReading\n\nRead the first 5 pages of Attention is All You Need paper.\nRead about Self-attention mechanism here: https://jalammar.github.io/illustrated-transformer/\nWatch these videos:\n\nhttps://www.youtube.com/watch?v=wjZofJX0v4M\nhttps://www.youtube.com/watch?v=eMlx5fFNoYc",
+    "crumbs": [
+      "🗓️ Class material",
+      "Week 04 - Transformers (part 1)"
+    ]
+  },
+  {
+    "objectID": "2024/weeks/week05/page.html",
+    "href": "2024/weeks/week05/page.html",
+    "title": "🗓️ Week 05 - Intro to tranformers (part 2)",
+    "section": "",
+    "text": "Either click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides.",
+    "crumbs": [
+      "🗓️ Class material",
+      "Week 05 - Transformers (part 2)"
+    ]
+  },
+  {
+    "objectID": "2024/weeks/week05/page.html#lecture-slides",
+    "href": "2024/weeks/week05/page.html#lecture-slides",
+    "title": "🗓️ Week 05 - Intro to tranformers (part 2)",
+    "section": "",
+    "text": "Either click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides.",
+    "crumbs": [
+      "🗓️ Class material",
+      "Week 05 - Transformers (part 2)"
+    ]
+  },
+  {
+    "objectID": "2024/weeks/week05/page.html#homework",
+    "href": "2024/weeks/week05/page.html#homework",
+    "title": "🗓️ Week 05 - Intro to tranformers (part 2)",
+    "section": "✍️ Homework",
+    "text": "✍️ Homework\n\nReading\n\nRead the first 8 pages of Attention is All You Need paper.\nRead about Self-attention mechanism here: https://jalammar.github.io/illustrated-transformer/\nWatch these videos:\n\nHow large language models work, a visual intro to transformers\nAttention in transformers, visually explained\nIllustrated Guide to Transformers Neural Network: A step by step explanation",
+    "crumbs": [
+      "🗓️ Class material",
+      "Week 05 - Transformers (part 2)"
+    ]
+  },
+  {
+    "objectID": "2024/weeks/week06/page.html",
+    "href": "2024/weeks/week06/page.html",
+    "title": "🗓️ Week 06 - Hands-on with Transformers",
+    "section": "",
+    "text": "Click here to download the data preprocessing notebook.\nClick here to download the self-attention notebook.\nOpen these two notebooks in google colab.",
+    "crumbs": [
+      "🗓️ Class material",
+      "Week 06 - Hands-on with Transformers (part 1)"
+    ]
+  },
+  {
+    "objectID": "2024/weeks/week06/page.html#lecture",
+    "href": "2024/weeks/week06/page.html#lecture",
+    "title": "🗓️ Week 06 - Hands-on with Transformers",
+    "section": "",
+    "text": "Click here to download the data preprocessing notebook.\nClick here to download the self-attention notebook.\nOpen these two notebooks in google colab.",
+    "crumbs": [
+      "🗓️ Class material",
+      "Week 06 - Hands-on with Transformers (part 1)"
+    ]
+  },
+  {
+    "objectID": "2024/weeks/week06/page.html#homework",
+    "href": "2024/weeks/week06/page.html#homework",
+    "title": "🗓️ Week 06 - Hands-on with Transformers",
+    "section": "✍️ Homework",
+    "text": "✍️ Homework",
+    "crumbs": [
+      "🗓️ Class material",
+      "Week 06 - Hands-on with Transformers (part 1)"
+    ]
   },
   {
     "objectID": "2024/weeks/week02/slides.html#section",
