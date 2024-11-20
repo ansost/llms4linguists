@@ -82,7 +82,7 @@ website:
              - href: 2024/weeks/week06/page.qmd
                text: 👨‍🏫 Lecture Material
          - href: 2024/weeks/week07/page.qmd
-           text: Week 06 - GPT-2 implementation
+           text: Week 07 - GPT-2 implementation
            contents:
              - href: 2024/weeks/week07/page.qmd
                text: 👨‍🏫 Lecture Material
