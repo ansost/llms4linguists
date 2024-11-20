@@ -1,0 +1,12 @@
+---
+title: "🗓️ Week 06 - Implementing a GPT-2 model"
+---
+
+
+## 👨‍🏫 Lecture
+
+Click <a href="gpt2.ipynb" download>here</a> to download the implementation of GPT-2 model.
+
+Open the notebook in [google colab](https://colab.research.google.com/).
+
+## ✍️ Homework
