@@ -1,5 +1,5 @@
 ---
-title: "🗓️ Week 06 - Implementing a GPT-2 model"
+title: "🗓️ Week 07 - Implementing a GPT-2 model"
 ---
 
 
