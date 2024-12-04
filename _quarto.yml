@@ -15,6 +15,7 @@ project:
     - "2024/weeks/week06/*.qmd"
     - "2024/weeks/week07/*.qmd"
     - "2024/weeks/week08/*.qmd"
+    - "2024/weeks/week09/*.qmd"
 
 website:
   title: "LLMs in Lingustic Research 2024/25"
@@ -91,6 +92,11 @@ website:
            text: Week 08 - finetuning text classification
            contents:
              - href: 2024/weeks/week08/page.qmd
+               text: 👨‍🏫 Lecture Material
+         - href: 2024/weeks/week09/page.qmd
+           text: Week 09 - finetuning machine translation
+           contents:
+             - href: 2024/weeks/week09/page.qmd
                text: 👨‍🏫 Lecture Material
 
       - section: "🧩 Homework"
