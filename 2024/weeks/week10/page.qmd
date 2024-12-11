@@ -1,0 +1,14 @@
+---
+title: "🗓️ Week 10 - Morphological inflection task using T5"
+---
+
+
+## 👨‍🏫 Lecture
+
+Click <a href="morphological_inflection_for_english.ipynb" download>here</a> to download the notebook.
+
+To know more about Morphological inflection, check <a href="intro_to_morphology.pdf" download>this file</a>.
+
+Open the notebook in [google colab](https://colab.research.google.com/).
+
+## ✍️ Homework

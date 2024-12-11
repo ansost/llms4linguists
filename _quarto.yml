@@ -16,6 +16,7 @@ project:
     - "2024/weeks/week07/*.qmd"
     - "2024/weeks/week08/*.qmd"
     - "2024/weeks/week09/*.qmd"
+    - "2024/weeks/week10/*.qmd"
 
 website:
   title: "LLMs in Lingustic Research 2024/25"
@@ -98,6 +99,12 @@ website:
            contents:
              - href: 2024/weeks/week09/page.qmd
                text: 👨‍🏫 Lecture Material
+         - href: 2024/weeks/week10/page.qmd
+           text: Week 09 - morphological inflection using T5
+           contents:
+             - href: 2024/weeks/week10/page.qmd
+               text: 👨‍🏫 Lecture Material
+
 
       - section: "🧩 Homework"
         contents:
