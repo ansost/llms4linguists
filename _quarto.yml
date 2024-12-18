@@ -1,5 +1,4 @@
-
-roject:
+project:
   type: "website"
   title: "LLMs in Lingustic Research 2024/25"
   output-dir: _output
@@ -18,6 +17,7 @@ roject:
     - "2024/weeks/week08/*.qmd"
     - "2024/weeks/week09/*.qmd"
     - "2024/weeks/week10/*.qmd"
+    - "2024/weeks/week11/*.qmd"
 
 website:
   title: "LLMs in Lingustic Research 2024/25"
@@ -101,14 +101,14 @@ website:
              - href: 2024/weeks/week09/page.qmd
                text: 👨‍🏫 Lecture Material
          - href: 2024/weeks/week10/page.qmd
-           text: Week 09 - morphological inflection using T5
+           text: Week 10 - morphological inflection using T5
            contents:
              - href: 2024/weeks/week10/page.qmd
                text: 👨‍🏫 Lecture Material
          - href: 2024/weeks/week11/page.qmd
-           text: Week 09 - morphological inflection with T5 using CHILDES
+           text: Week 11 - morphological inflection with T5 using CHILDES
            contents:
-             - href: 2024/weeks/week11/page.qmd
+             - href: 2024/weeks/week10/page.qmd
                text: 👨‍🏫 Lecture Material
 
 
