@@ -2,6 +2,6 @@
 title: "Assignment 2: Morphological inflection task using the T5 model"
 ---
 
-Here's the google colab notebook link for the assignment: (https://colab.research.google.com/drive/1XdFUfr8CNEyw0lGzMmlBNnlN2J57n4Z8?usp=sharing)
+Here's the google colab notebook link for the assignment: [https://colab.research.google.com/drive/1XdFUfr8CNEyw0lGzMmlBNnlN2J57n4Z8?usp=sharing](https://colab.research.google.com/drive/1XdFUfr8CNEyw0lGzMmlBNnlN2J57n4Z8?usp=sharing)
 
 The notebook contains the instructions for the assignment.
