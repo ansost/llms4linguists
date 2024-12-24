@@ -45,8 +45,8 @@ website:
         contents:
          - href: 2024/assignments/assignment01.qmd
            text: "📝 Assignment 01"
-      #     - href: 2024/assignments/assignment02.qmd
-      #       text: "📝 Assignment 02"
+         - href: 2024/assignments/assignment02.qmd
+           text: "📝 Assignment 02"
       #     - href: 2024/assignments/group_project.qmd
       #       text: "👥 Group Project"
       #     - href: 2024/assignments/assignment02.qmd
