@@ -8,7 +8,7 @@
 
 <meta name="author" content="Ramarao">
 
-<title>🗓️ Week 05 - Intro to tranformers (part 2) – LLMs in Lingustic Research 2024/25</title>
+<title>Assignment 2: Morphological inflection task using the T5 model – LLMs in Lingustic Research 2024/25</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,25 +24,25 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../../">
-<link href="../../../2024/weeks/week06/page.html" rel="next">
-<link href="../../../2024/weeks/week04/page.html" rel="prev">
-<link href="../../../figures/icons/course_logo.png" rel="icon" type="image/png">
-<script src="../../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-de2e9ecf4735cbf9e11951aba1911b57.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../2024/weeks/week01/page.html" rel="next">
+<link href="../../2024/assignments/assignment01.html" rel="prev">
+<link href="../../figures/icons/course_logo.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-de2e9ecf4735cbf9e11951aba1911b57.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -71,12 +71,12 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="../../../css/custom_style.css">
-<link rel="stylesheet" href="../../../css/syllabus.css">
-<meta property="og:title" content="🗓️ Week 05 - Intro to tranformers (part 2) – LLMs in Lingustic Research 2024/25">
+<link rel="stylesheet" href="../../css/custom_style.css">
+<link rel="stylesheet" href="../../css/syllabus.css">
+<meta property="og:title" content="Assignment 2: Morphological inflection task using the T5 model – LLMs in Lingustic Research 2024/25">
 <meta property="og:description" content="">
 <meta property="og:site_name" content="LLMs in Lingustic Research 2024/25">
-<meta name="twitter:title" content="🗓️ Week 05 - Intro to tranformers (part 2) – LLMs in Lingustic Research 2024/25">
+<meta name="twitter:title" content="Assignment 2: Morphological inflection task using the T5 model – LLMs in Lingustic Research 2024/25">
 <meta name="twitter:description" content="">
 <meta name="twitter:creator" content="@<twitter-handle>">
 <meta name="twitter:site" content="\@<twitter-handle>">
@@ -90,7 +90,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">LLMs in Lingustic Research 2024/25</span>
     </a>
   </div>
@@ -109,7 +109,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../2024/weeks/week01/page.html">🗓️ Class material</a></li><li class="breadcrumb-item"><a href="../../../2024/weeks/week05/page.html">Week 05 - Transformers (part 2)</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../2024/assignments.html">✍️ Assignments</a></li><li class="breadcrumb-item"><a href="../../2024/assignments/assignment02.html">📝 Assignment 02</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -123,19 +123,19 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">🏠 Home</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../2024/syllabus.html" class="sidebar-item-text sidebar-link">
+  <a href="../../2024/syllabus.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">📓 Syllabus</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../2024/assignments.html" class="sidebar-item-text sidebar-link">
+            <a href="../../2024/assignments.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">✍️ Assignments   </span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -144,13 +144,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../2024/assignments/assignment01.html" class="sidebar-item-text sidebar-link">
+  <a href="../../2024/assignments/assignment01.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">📝 Assignment 01</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../2024/assignments/assignment02.html" class="sidebar-item-text sidebar-link">
+  <a href="../../2024/assignments/assignment02.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">📝 Assignment 02</span></a>
   </div>
 </li>
@@ -167,7 +167,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../2024/weeks/week01/page.html" class="sidebar-item-text sidebar-link">
+            <a href="../../2024/weeks/week01/page.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 01 - Intro</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -176,7 +176,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../2024/weeks/week01/page.html" class="sidebar-item-text sidebar-link">
+  <a href="../../2024/weeks/week01/page.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">👨‍🏫 Lecture Material</span></a>
   </div>
 </li>
@@ -184,7 +184,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../2024/weeks/week02/page.html" class="sidebar-item-text sidebar-link">
+            <a href="../../2024/weeks/week02/page.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 02 - NN basics</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -193,7 +193,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../2024/weeks/week02/page.html" class="sidebar-item-text sidebar-link">
+  <a href="../../2024/weeks/week02/page.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">👨‍🏫 Lecture Material</span></a>
   </div>
 </li>
@@ -201,7 +201,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../2024/weeks/week03/page.html" class="sidebar-item-text sidebar-link">
+            <a href="../../2024/weeks/week03/page.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 03 - NN basics II</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -210,7 +210,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../2024/weeks/week03/page.html" class="sidebar-item-text sidebar-link">
+  <a href="../../2024/weeks/week03/page.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">👨‍🏫 Lecture Material</span></a>
   </div>
 </li>
@@ -218,7 +218,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../2024/weeks/week04/page.html" class="sidebar-item-text sidebar-link">
+            <a href="../../2024/weeks/week04/page.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 04 - Transformers (part 1)</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -227,7 +227,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../2024/weeks/week04/page.html" class="sidebar-item-text sidebar-link">
+  <a href="../../2024/weeks/week04/page.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">👨‍🏫 Lecture Material</span></a>
   </div>
 </li>
@@ -235,16 +235,16 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../2024/weeks/week05/page.html" class="sidebar-item-text sidebar-link active">
+            <a href="../../2024/weeks/week05/page.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 05 - Transformers (part 2)</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../2024/weeks/week05/page.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../2024/weeks/week05/page.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">👨‍🏫 Lecture Material</span></a>
   </div>
 </li>
@@ -252,7 +252,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../2024/weeks/week06/page.html" class="sidebar-item-text sidebar-link">
+            <a href="../../2024/weeks/week06/page.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 06 - Hands-on with Transformers (part 1)</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -261,7 +261,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../2024/weeks/week06/page.html" class="sidebar-item-text sidebar-link">
+  <a href="../../2024/weeks/week06/page.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">👨‍🏫 Lecture Material</span></a>
   </div>
 </li>
@@ -269,7 +269,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../2024/weeks/week07/page.html" class="sidebar-item-text sidebar-link">
+            <a href="../../2024/weeks/week07/page.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 07 - GPT-2 implementation</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -278,7 +278,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../2024/weeks/week07/page.html" class="sidebar-item-text sidebar-link">
+  <a href="../../2024/weeks/week07/page.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">👨‍🏫 Lecture Material</span></a>
   </div>
 </li>
@@ -286,7 +286,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../2024/weeks/week08/page.html" class="sidebar-item-text sidebar-link">
+            <a href="../../2024/weeks/week08/page.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 08 - finetuning text classification</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -295,7 +295,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../2024/weeks/week08/page.html" class="sidebar-item-text sidebar-link">
+  <a href="../../2024/weeks/week08/page.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">👨‍🏫 Lecture Material</span></a>
   </div>
 </li>
@@ -303,7 +303,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../2024/weeks/week09/page.html" class="sidebar-item-text sidebar-link">
+            <a href="../../2024/weeks/week09/page.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 09 - finetuning machine translation</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -312,7 +312,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../2024/weeks/week09/page.html" class="sidebar-item-text sidebar-link">
+  <a href="../../2024/weeks/week09/page.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">👨‍🏫 Lecture Material</span></a>
   </div>
 </li>
@@ -320,7 +320,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../2024/weeks/week10/page.html" class="sidebar-item-text sidebar-link">
+            <a href="../../2024/weeks/week10/page.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 10 - morphological inflection using T5</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -329,7 +329,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../2024/weeks/week10/page.html" class="sidebar-item-text sidebar-link">
+  <a href="../../2024/weeks/week10/page.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">👨‍🏫 Lecture Material</span></a>
   </div>
 </li>
@@ -337,7 +337,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../2024/weeks/week11/page.html" class="sidebar-item-text sidebar-link">
+            <a href="../../2024/weeks/week11/page.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 11 - morphological inflection with T5 using CHILDES</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -346,7 +346,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../2024/weeks/week10/page.html" class="sidebar-item-text sidebar-link">
+  <a href="../../2024/weeks/week10/page.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">👨‍🏫 Lecture Material</span></a>
   </div>
 </li>
@@ -365,19 +365,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../2024/homework/homework01.html" class="sidebar-item-text sidebar-link">
+  <a href="../../2024/homework/homework01.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Hw 01 - Colab</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../2024/homework/homework02.html" class="sidebar-item-text sidebar-link">
+  <a href="../../2024/homework/homework02.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Hw 02 - NN basics</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../2024/homework/homework03.html" class="sidebar-item-text sidebar-link">
+  <a href="../../2024/homework/homework03.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Hw 03 - Intro to transformers</span></a>
   </div>
 </li>
@@ -388,22 +388,15 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#lecture-slides" id="toc-lecture-slides" class="nav-link active" data-scroll-target="#lecture-slides">👨‍🏫 Lecture Slides</a></li>
-  <li><a href="#homework" id="toc-homework" class="nav-link" data-scroll-target="#homework">✍️ Homework</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../2024/weeks/week01/page.html">🗓️ Class material</a></li><li class="breadcrumb-item"><a href="../../../2024/weeks/week05/page.html">Week 05 - Transformers (part 2)</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../2024/assignments.html">✍️ Assignments</a></li><li class="breadcrumb-item"><a href="../../2024/assignments/assignment02.html">📝 Assignment 02</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">🗓️ Week 05 - Intro to tranformers (part 2)</h1>
+<h1 class="title">Assignment 2: Morphological inflection task using the T5 model</h1>
 </div>
 
 
@@ -426,32 +419,10 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="lecture-slides" class="level2">
-<h2 class="anchored" data-anchor-id="lecture-slides">👨‍🏫 Lecture Slides</h2>
-<p>Either click on the slide area below or click <a href="../../../2024/weeks/week05/slides.html">here</a> to view it in fullscreen. Use your keypad to navigate the slides.</p>
-<div class="container" style="position: relative;overflow: hidden;width: 100%;min-height:600px;">
-<iframe src="slides.html" style="position=absolute;top: 0;left: 0;bottom: 0;right: 0;width: 100%;min-height:600px;">
-</iframe>
-</div>
-</section>
-<section id="homework" class="level2">
-<h2 class="anchored" data-anchor-id="homework">✍️ Homework</h2>
-<ul class="task-list">
-<li><label><input type="checkbox"><strong>Reading</strong></label>
-<ul class="task-list">
-<li><label><input type="checkbox">Read the first 8 pages of <a href="https://arxiv.org/abs/1706.03762">Attention is All You Need</a> paper.</label></li>
-<li><label><input type="checkbox">Read about Self-attention mechanism here: <a href="https://jalammar.github.io/illustrated-transformer/">https://jalammar.github.io/illustrated-transformer/</a></label></li>
-<li><label><input type="checkbox">Watch these videos:</label>
-<ul class="task-list">
-<li><label><input type="checkbox"><a href="https://www.youtube.com/watch?v=wjZofJX0v4M">How large language models work, a visual intro to transformers</a></label></li>
-<li><label><input type="checkbox"><a href="https://www.youtube.com/watch?v=eMlx5fFNoYc">Attention in transformers, visually explained</a></label></li>
-<li><label><input type="checkbox"><a href="https://www.youtube.com/watch?v=4Bdc55j80l8">Illustrated Guide to Transformers Neural Network: A step by step explanation</a></label></li>
-</ul></li>
-</ul></li>
-</ul>
+<p>Here’s the google colab notebook link for the assignment: (https://colab.research.google.com/drive/1XdFUfr8CNEyw0lGzMmlBNnlN2J57n4Z8?usp=sharing)</p>
+<p>The notebook contains the instructions for the assignment.</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -880,13 +851,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../../2024/weeks/week04/page.html" class="pagination-link" aria-label="Week 04 - Transformers (part 1)">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Week 04 - Transformers (part 1)</span>
+      <a href="../../2024/assignments/assignment01.html" class="pagination-link" aria-label="📝 Assignment 01">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">📝 Assignment 01</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../../2024/weeks/week06/page.html" class="pagination-link" aria-label="Week 06 - Hands-on with Transformers (part 1)">
-        <span class="nav-page-text">Week 06 - Hands-on with Transformers (part 1)</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../2024/weeks/week01/page.html" class="pagination-link" aria-label="Week 01 - Intro">
+        <span class="nav-page-text">Week 01 - Intro</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

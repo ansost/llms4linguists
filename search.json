@@ -295,87 +295,292 @@
     "text": "Multi-headed attention\n\nThe self-attention mechanism is applied multiple times in parallel to the input sequence.\n“Head” refers to an individual component in the multi-head self-attention mechanism that independently learns different self-attention patterns.\nThis allows the model to focus on multiple parts of the input sequence in parallel and thereby allowing the model to capture the entire context.\nThis also makes the model more computationally efficient as it enables parallel processing across different heads.\n\nThe outputs from all the attention heads are mapped to a linear layer:\n\\[\n\\begin{align*}\n\\text{O} & = \\text{Concat}(\\text{head}_1, \\text{head}_2, \\ldots, \\text{head}_h) \\cdot \\text{W}^O \\\\\n\\end{align*}\n\\]\nwhere, \\(\\text{W}^O\\) is the weight matrix for the output of the multi-head attention mechanism.\n\nThe outputs are then passed to a feed-forward neural network."
   },
   {
-    "objectID": "2024/assignments/assignment01.html",
-    "href": "2024/assignments/assignment01.html",
-    "title": "Assignment 1: Perceptron Analysis",
+    "objectID": "2024/assignments/assignment02.html",
+    "href": "2024/assignments/assignment02.html",
+    "title": "Assignment 2: Morphological inflection task using the T5 model",
     "section": "",
-    "text": "Consider a perceptron that predicts if you’ll pass a quiz based on:\n\nHours studied (0-5)\nHours slept (0-8)\n\nPart1: Make predictions for:\n\nDifferent study patterns:\n\n\nStudied 4 hours, slept 7 hours\nStudied 1 hour, slept 8 hours\nStudied 5 hours, slept 4 hours\nStudied 3 hours, slept 3 hours\nStudied 4 hours, slept 4 hours\n\n\nWeight changes:\n\n\nStudy hours more important\nSleep hours more important\nBoth equally important\n\nDraw simple diagrams showing:\n\nHow you think the perceptron would classify each case\nWhy some combinations might work better than others\n\nPart 2: Predict what happens when:\n\nThe perceptron starts with:\n\n\nThinking only study hours matter\nThinking only sleep matters\nThinking nothing matters (zero weights)\n\n\nThe perceptron learns from:\n\n\nOne student’s data\nFive students data\nTwenty students data\n\nExplain in simple terms:\n\nHow you think it would change its decisions\nWhy more data might help\nWhat problems it might face\n\nNOTE:\n\nNo calculations needed\nKeep explanations simple\nYou will be graded on:\n\nclarity of explanation\nuse of diagrams to support your explanation\n\n\nSubmission Guidelines\n\nFormat: PDF document, 12-point Times New Roman, 1.5 line spacing\nLength: 600-1500 words (excluding diagrams)\nSubmit by email to: Anna (anste145 at hhu dot de)\nDeadline: 6th November 2024, 23:59 CET",
+    "text": "Here’s the google colab notebook link for the assignment: (https://colab.research.google.com/drive/1XdFUfr8CNEyw0lGzMmlBNnlN2J57n4Z8?usp=sharing)\nThe notebook contains the instructions for the assignment.",
     "crumbs": [
       "✍️ Assignments   ",
-      "📝 Assignment 01"
+      "📝 Assignment 02"
     ]
   },
   {
-    "objectID": "2024/homework/homework02.html",
-    "href": "2024/homework/homework02.html",
-    "title": "Homework 02: Neural Network",
+    "objectID": "2024/homework/homework03.html",
+    "href": "2024/homework/homework03.html",
+    "title": "Homework 3: Intro to transformers",
     "section": "",
-    "text": "Please go through the Wikipedia articles on:\n\nMatrix multiplication\nMatrix addition\nElement-wise multiplication\nDot product\n\nAnd watch this video: What is a neural network? [Video]",
+    "text": "Reading\n\nRead the first 8 pages of Attention is All You Need paper.\nRead about Self-attention mechanism here: https://jalammar.github.io/illustrated-transformer/\nWatch these videos:\n\nHow large language models work, a visual intro to transformers\nAttention in transformers, visually explained\nIllustrated Guide to Transformers Neural Network: A step by step explanation",
     "crumbs": [
       "🧩 Homework",
-      "Hw 02 - NN basics  "
+      "Hw 03 - Intro to transformers"
     ]
   },
   {
-    "objectID": "2024/weeks/week03/slides.html#section",
-    "href": "2024/weeks/week03/slides.html#section",
-    "title": "Week 03 Basics of Neural Networks (Part 2)",
+    "objectID": "2024/homework/homework01.html",
+    "href": "2024/homework/homework01.html",
+    "title": "Homework 1: Using Google Colab",
     "section": "",
-    "text": "ReLU function\n\\[\nf(x) = \\max(0, x)\n\\]\nExample: \\(f(2) = 2\\)\nwhere:\n- f(x): This represents the output of the ReLU function for a given input x.\n- x: This is the input to the ReLU function.\n- max: This function returns the maximum of the two values.\n- 0: This is the threshold value.\n\nThe Rectified Linear Unit (ReLU) function is that outputs the input directly if it is positive, otherwise, it outputs zero.\nThe output of the ReLU function is between 0 and infinity.\nIt is a popular activation function used in deep learning models."
+    "text": "The instructions below assume that you have a Google account or are willing to make one. If you do not want to make a Google account,  contact Anna for instructions to run notebooks without Colab.",
+    "crumbs": [
+      "🧩 Homework",
+      "Hw 01 - Colab"
+    ]
   },
   {
-    "objectID": "2024/weeks/week03/slides.html#section-1",
-    "href": "2024/weeks/week03/slides.html#section-1",
-    "title": "Week 03 Basics of Neural Networks (Part 2)",
+    "objectID": "2024/homework/homework01.html#google-colab",
+    "href": "2024/homework/homework01.html#google-colab",
+    "title": "Homework 1: Using Google Colab",
+    "section": "Google Colab",
+    "text": "Google Colab\n\nGo to the notebooks folder. Click on the three dots for the hw1.ipynb file, select “Open with” and then “Open in Colab”.\nRun both cells in the notebook by clicking on the play icon on the left of the cell or clicking into the cell and pressing CTRL + ENTER on Windows or CMD + ENTER on Mac.",
+    "crumbs": [
+      "🧩 Homework",
+      "Hw 01 - Colab"
+    ]
+  },
+  {
+    "objectID": "2024/weeks/week03/page.html",
+    "href": "2024/weeks/week03/page.html",
+    "title": "🗓️ Week 03 - Basics of Neural Networks (part 2)",
     "section": "",
-    "text": "X-axis (Weight): Represents the value of the model parameter being optimized.\nY-axis (Loss): Represents the value of the loss function being minimized.\nThe goal is to find the value of the model parameter that minimizes the loss function."
+    "text": "Either click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides.",
+    "crumbs": [
+      "🗓️ Class material",
+      "Week 03 - NN basics II"
+    ]
   },
   {
-    "objectID": "2024/weeks/week03/slides.html#section-2",
-    "href": "2024/weeks/week03/slides.html#section-2",
-    "title": "Week 03 Basics of Neural Networks (Part 2)",
+    "objectID": "2024/weeks/week03/page.html#lecture-slides",
+    "href": "2024/weeks/week03/page.html#lecture-slides",
+    "title": "🗓️ Week 03 - Basics of Neural Networks (part 2)",
     "section": "",
-    "text": "The process starts at an initial weight with a corresponding loss, marked as “Initial weight + loss” on the graph\nGradient: The algorithm calculates the gradient (slope) at the current position. This gradient indicates the direction of steepest ascent."
+    "text": "Either click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides.",
+    "crumbs": [
+      "🗓️ Class material",
+      "Week 03 - NN basics II"
+    ]
   },
   {
-    "objectID": "2024/weeks/week03/slides.html#section-3",
-    "href": "2024/weeks/week03/slides.html#section-3",
-    "title": "Week 03 Basics of Neural Networks (Part 2)",
+    "objectID": "2024/weeks/week03/page.html#homework",
+    "href": "2024/weeks/week03/page.html#homework",
+    "title": "🗓️ Week 03 - Basics of Neural Networks (part 2)",
+    "section": "✍️ Homework",
+    "text": "✍️ Homework",
+    "crumbs": [
+      "🗓️ Class material",
+      "Week 03 - NN basics II"
+    ]
+  },
+  {
+    "objectID": "2024/weeks/week03/page.html#recommended-reading",
+    "href": "2024/weeks/week03/page.html#recommended-reading",
+    "title": "🗓️ Week 03 - Basics of Neural Networks (part 2)",
+    "section": "📚 Recommended Reading",
+    "text": "📚 Recommended Reading",
+    "crumbs": [
+      "🗓️ Class material",
+      "Week 03 - NN basics II"
+    ]
+  },
+  {
+    "objectID": "2024/weeks/week02/page.html",
+    "href": "2024/weeks/week02/page.html",
+    "title": "🗓️ Week 02 - Basics of Neural Networks",
     "section": "",
-    "text": "The model then takes a step in the opposite direction of the gradient, as we want to minimize the loss.\nThis is why it’s called gradient descent - we descend along the gradient.\nThe “New weight + loss” point on the graph shows an intermediate step in this process, where the loss has decreased compared to the initial position."
+    "text": "In this second week, we will cover a few basic math concepts used in neural networks, try to get an intuition of what machine learning models are and finally explain the architecture a perceptron.",
+    "crumbs": [
+      "🗓️ Class material",
+      "Week 02 - NN basics"
+    ]
   },
   {
-    "objectID": "2024/weeks/week03/slides.html#section-4",
-    "href": "2024/weeks/week03/slides.html#section-4",
-    "title": "Week 03 Basics of Neural Networks (Part 2)",
+    "objectID": "2024/weeks/week02/page.html#lecture-slides",
+    "href": "2024/weeks/week02/page.html#lecture-slides",
+    "title": "🗓️ Week 02 - Basics of Neural Networks",
+    "section": "👨‍🏫 Lecture Slides",
+    "text": "👨‍🏫 Lecture Slides\nEither click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides.",
+    "crumbs": [
+      "🗓️ Class material",
+      "Week 02 - NN basics"
+    ]
+  },
+  {
+    "objectID": "2024/weeks/week02/page.html#homework",
+    "href": "2024/weeks/week02/page.html#homework",
+    "title": "🗓️ Week 02 - Basics of Neural Networks",
+    "section": "✍️ Homework",
+    "text": "✍️ Homework\n\nPlease go through the slides and the recommended reading material.",
+    "crumbs": [
+      "🗓️ Class material",
+      "Week 02 - NN basics"
+    ]
+  },
+  {
+    "objectID": "2024/weeks/week02/page.html#recommended-reading",
+    "href": "2024/weeks/week02/page.html#recommended-reading",
+    "title": "🗓️ Week 02 - Basics of Neural Networks",
+    "section": "📚 Recommended Reading",
+    "text": "📚 Recommended Reading\n\nWikipedia articles on Matrix multiplication, matrix addition, element-wise multiplication, and dot product.\nWhat is a neural network? [Video]",
+    "crumbs": [
+      "🗓️ Class material",
+      "Week 02 - NN basics"
+    ]
+  },
+  {
+    "objectID": "2024/weeks/week01/page.html",
+    "href": "2024/weeks/week01/page.html",
+    "title": "🗓️ Week 01 - Admin, Architectures: Statistical and Probabilistic Language Models",
     "section": "",
-    "text": "As the algorithm progresses, it should ideally approach the bottom of the curve, labeled as “Theoretical minima” in the image.\nThe algorithm may not always reach the exact theoretical minima due to factors like step size (learning rate) and the complexity of the loss landscape.\nBut, it typically converges to a point close enough to be practically useful for model optimization."
+    "text": "In this first week, we will cover what you can expect to learn from this course and the course logistics: all you need to know about the structure of the lectures, classes, assessments, and how we will interact throughout this course.",
+    "crumbs": [
+      "🗓️ Class material",
+      "Week 01 - Intro"
+    ]
   },
   {
-    "objectID": "2024/weeks/week03/slides.html#section-5",
-    "href": "2024/weeks/week03/slides.html#section-5",
-    "title": "Week 03 Basics of Neural Networks (Part 2)",
+    "objectID": "2024/weeks/week01/page.html#lecture-slides",
+    "href": "2024/weeks/week01/page.html#lecture-slides",
+    "title": "🗓️ Week 01 - Admin, Architectures: Statistical and Probabilistic Language Models",
+    "section": "👨‍🏫 Lecture Slides",
+    "text": "👨‍🏫 Lecture Slides\nEither click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides.",
+    "crumbs": [
+      "🗓️ Class material",
+      "Week 01 - Intro"
+    ]
+  },
+  {
+    "objectID": "2024/weeks/week01/page.html#homework",
+    "href": "2024/weeks/week01/page.html#homework",
+    "title": "🗓️ Week 01 - Admin, Architectures: Statistical and Probabilistic Language Models",
+    "section": "✍️ Homework",
+    "text": "✍️ Homework\nWeek 01 - Homework",
+    "crumbs": [
+      "🗓️ Class material",
+      "Week 01 - Intro"
+    ]
+  },
+  {
+    "objectID": "2024/weeks/week01/page.html#recommended-reading",
+    "href": "2024/weeks/week01/page.html#recommended-reading",
+    "title": "🗓️ Week 01 - Admin, Architectures: Statistical and Probabilistic Language Models",
+    "section": "📚 Recommended Reading",
+    "text": "📚 Recommended Reading\n\nSpeech and Language Processing, Chapter 3: N-gram language models PDF. Authors: Dan Jurafsky and James H. Martin.",
+    "crumbs": [
+      "🗓️ Class material",
+      "Week 01 - Intro"
+    ]
+  },
+  {
+    "objectID": "2024/homework.html",
+    "href": "2024/homework.html",
+    "title": "Homework Overview",
     "section": "",
-    "text": "flowchart LR\n    %% Input Layer\n    I1((I1)):::inputStyle\n    I2((I2)):::inputStyle\n    I3((I3)):::inputStyle\n    B1((Bias)):::biasStyle\n    %% Hidden Layer\n    H1((H1)):::hiddenStyle\n    H2((H2)):::hiddenStyle\n    H3((H3)):::hiddenStyle\n    B2((Bias)):::biasStyle\n    %% Output Layer\n    O1((O1)):::outputStyle\n    O2((O2)):::outputStyle\n    %% Connections\n    I1 --&gt;|w11| H1\n    I1 --&gt;|w12| H2\n    I1 --&gt;|w13| H3\n    I2 --&gt;|w21| H1\n    I2 --&gt;|w22| H2\n    I2 --&gt;|w23| H3\n    I3 --&gt;|w31| H1\n    I3 --&gt;|w32| H2\n    I3 --&gt;|w33| H3\n    B1 --&gt;|b1| H1\n    B1 --&gt;|b2| H2\n    B1 --&gt;|b3| H3\n    H1 --&gt;|v11| O1\n    H1 --&gt;|v12| O2\n    H2 --&gt;|v21| O1\n    H2 --&gt;|v22| O2\n    H3 --&gt;|v31| O1\n    H3 --&gt;|v32| O2\n    B2 --&gt;|b4| O1\n    B2 --&gt;|b5| O2\n    %% Styles\n    classDef inputStyle fill:#3498db,stroke:#333,stroke-width:2px;\n    classDef hiddenStyle fill:#e74c3c,stroke:#333,stroke-width:2px;\n    classDef outputStyle fill:#2ecc71,stroke:#333,stroke-width:2px;\n    classDef biasStyle fill:#f39c12,stroke:#333,stroke-width:2px;\n    %% Layer Labels\n    I2 -.- InputLabel[Input Layer]\n    H2 -.- HiddenLabel[Hidden Layer]\n    O1 -.- OutputLabel[Output Layer]\n    style InputLabel fill:none,stroke:none\n    style HiddenLabel fill:none,stroke:none\n    style OutputLabel fill:none,stroke:none"
+    "text": "Here is an overview of all Homework up to date:\nHw 1: Google Colab: here\nHw 2: Neural Networks: here"
   },
   {
-    "objectID": "2024/weeks/week03/slides.html#section-6",
-    "href": "2024/weeks/week03/slides.html#section-6",
-    "title": "Week 03 Basics of Neural Networks (Part 2)",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "LLMs in Linguistic Research",
     "section": "",
-    "text": "The input layer consists of three nodes (I1, I2, I3) representing the input features.\nThe hidden layer consists of three nodes (H1, H2, H3) that process the input data.\nThe output layer consists of two nodes (O1, O2) that produce the final predictions.\nThe connections between nodes are represented by weights (w11, w12, …, v32) and biases (b1, b2, …, b5).\nThe weights and biases are adjusted during training to optimize the model.\nThe model makes predictions by passing the input data through the network and computing the output."
+    "text": "InstructorTeaching Staff\n\n\n Akhilesh Kakolu Ramarao  📧 kakolura at hhu dot de\n\n\n Anna Stein  📧 anna.stein at hhu dot de\n\n\n\n\nSyllabus\nView it online here.\n\n\n📍 Location\nWednesday, 2:30pm-4pm\nBuilding 23.21 Floor 2, Room 22\n\n\n🎯 Learning Objectives\nFocus: Understanding LLMs and their usage in various linguistics tasks\nHow: Hands-on learning and paper discussions\n\nGaining an intuition of how LLMs work\nGetting to know the field of LLM research and development\nFamiliarizing yourself with different LLM architectures\nLearning how to use them for different linguistics tasks (e.g., text analysis, language generation, and language understanding)\nPracting using tools like Huggingface for LLM inference and fine-tuning",
+    "crumbs": [
+      "🏠 Home"
+    ]
   },
   {
-    "objectID": "2024/weeks/week03/slides.html#training-development-and-test-datasets",
-    "href": "2024/weeks/week03/slides.html#training-development-and-test-datasets",
-    "title": "Week 03 Basics of Neural Networks (Part 2)",
-    "section": "Training, development and test datasets",
-    "text": "Training, development and test datasets\n\nThe training dataset is used to optimize the model parameters (weights and biases) using gradient descent.\nThe development dataset is used to tune the hyperparameters of the model, such as the learning rate and the number of hidden units.\nThe test dataset is used to evaluate the performance of the model on unseen data.\nIn order to avoid overfitting, it is important to have separate datasets for training, development, and testing.\nThe training dataset is typically the largest, followed by the development and test datasets.\nThe development and test datasets should be representative of the data the model will encounter in the real world.\nThe datasets should be randomly sampled to avoid bias and ensure that the model generalizes well."
+    "objectID": "2024/assignments.html",
+    "href": "2024/assignments.html",
+    "title": "Assignment Overview",
+    "section": "",
+    "text": "Here is an overview of all assignments up to date:\nAssignment 1: TBD\nAssignment 2: TBD\nAssignment 3: TBD\nAssignment 4: TBD\nAssignment 5: TBD",
+    "crumbs": [
+      "✍️ Assignments   "
+    ]
   },
   {
-    "objectID": "2024/weeks/week03/slides.html#thank-you",
-    "href": "2024/weeks/week03/slides.html#thank-you",
-    "title": "Week 03 Basics of Neural Networks (Part 2)",
+    "objectID": "2024/syllabus.html",
+    "href": "2024/syllabus.html",
+    "title": "Syllabus",
+    "section": "",
+    "text": "Last changed: 23.10.24\n\n\n\n\n\n\n\n\n\nDate\nGeneral Topic\nHomework\nAssignments\n\n\n\n\n09.10\nAdmin, Architectures: Statistical and Probabilistic Language Models\nFamiliarization with Google Colab\n\n\n\n16.10\nArchitectures: Perceptrons and Neural Networks\n\n\n\n\n23.10\nArchitectures: Perceptrons and Neural Networks (part 2)\n\nAssignment 1\n\n\n30.10\nTransformer: General architecture\n\n\n\n\n06.11\nTransformer: The Attention mechanism\n\n\n\n\n13.11\nTransformer: Transformer models: Decoder/Encode only models\n\nAssignment 2\n\n\n20.11\nUsing pre-trained models\n\n\n\n\n27.11\nStudy week\n\n\n\n\n04.12\nTransfer learning: fine-tuning\n\n\n\n\n11.12\nAdapting models for specific tasks\n\nAssignment 3\n\n\n18.12\nAdapting models for specific tasks\n\n\n\n\n08.01\nAdapting models for specific tasks\n\nAssignment 4\n\n\n15.01\nProbing LLMs\n\n\n\n\n22.01\nProbing LLMs\n\nAssignment 5\n\n\n29.01\nTBD",
+    "crumbs": [
+      "📓 Syllabus"
+    ]
+  },
+  {
+    "objectID": "2024/weeks/week01/slides.html#whoami-akhilesh",
+    "href": "2024/weeks/week01/slides.html#whoami-akhilesh",
+    "title": "Week 01 Introduction",
+    "section": "WhoamI: Akhilesh",
+    "text": "WhoamI: Akhilesh\n\n\n\n\n\nAkhilesh Kakolu Ramarao (he/him) PhD researcher at the English Language and Linguistics department\n\n\n\n\nResearching Computational Morphology supervised by Prof. Dr. Kevin Tang and Dr. Dinah Baer-Henney\nStarted at HHU in 2021\nIndustry Background: NLP Researcher, Software Engineer, Building multilingual chatbots, voice assistants\nInvolved in several language revitalization efforts for indigenous communities in Arunachal Pradesh, India, with a focus on Idu Mishmi and K’man Mishmi languages\nMore: https://akkikek.xyz/about.html\nPart of the Slamlab: https://slam.phil.hhu.de/"
+  },
+  {
+    "objectID": "2024/weeks/week01/slides.html#whoami-anna",
+    "href": "2024/weeks/week01/slides.html#whoami-anna",
+    "title": "Week 01 Introduction",
+    "section": "WhoamI: Anna",
+    "text": "WhoamI: Anna\n\n\n\n\n\nAnna Sophia Stein (she/her)  MSc Linguistics student Focus on Computational Linguistics 📧 anna.stein@hhu.de \n\n\n\n\nMain interests: anything Natural Language Processing, open source, …\nPart of research at the Anglistics, Linguistics and Computer Science department\nCurrently writing my MA thesis on making LLMs better at pragmatics\n\nPart of the Slamlab: https://slam.phil.hhu.de/"
+  },
+  {
+    "objectID": "2024/weeks/week01/slides.html#contact",
+    "href": "2024/weeks/week01/slides.html#contact",
+    "title": "Week 01 Introduction",
+    "section": "Contact",
+    "text": "Contact\n\n📧: kakolura@hhu.de\n🏢🕰️: By appointment\n🌐👥: https://slam.phil.hhu.de\n🐦: SLaMLab_HHU\n🐙🐱: https://github.com/hhuslamlab/"
+  },
+  {
+    "objectID": "2024/weeks/week01/slides.html#syllabus-overview",
+    "href": "2024/weeks/week01/slides.html#syllabus-overview",
+    "title": "Week 01 Introduction",
+    "section": "Syllabus Overview",
+    "text": "Syllabus Overview\n\n\n\n\n\n\n\n\n\nDate\nGeneral Topic\nHomework\nAssignments\n\n\n\n\n09.10\nAdmin, Architectures: Statistical and Probabilistic Language Models\nFamiliarization with Google Colab\n\n\n\n16.10\nArchitectures: Perceptrons and Neural Networks\n\n\n\n\n23.10\nArchitectures: Recurrent Neural Networks\n\nAssignment 1"
+  },
+  {
+    "objectID": "2024/weeks/week01/slides.html#syllabus-overview-1",
+    "href": "2024/weeks/week01/slides.html#syllabus-overview-1",
+    "title": "Week 01 Introduction",
+    "section": "Syllabus Overview",
+    "text": "Syllabus Overview\n\n\n\n\n\n\n\n\n\nDate\nGeneral Topic\nHomework\nAssignments\n\n\n\n\n30.10\nTransformer: General architecture\n\n\n\n\n06.11\nTransformer: The Attention mechanism\n\n\n\n\n13.11\nTransformer: Transformer models: Decoder/Encode only models\n\nAssignment 2\n\n\n20.11\nUsing pre-trained models"
+  },
+  {
+    "objectID": "2024/weeks/week01/slides.html#syllabus-overview-2",
+    "href": "2024/weeks/week01/slides.html#syllabus-overview-2",
+    "title": "Week 01 Introduction",
+    "section": "Syllabus Overview",
+    "text": "Syllabus Overview\n\n\n\n\n\n\n\n\n\nDate\nGeneral Topic\nHomework\nAssignments\n\n\n\n\n27.11\nStudy week\n\n\n\n\n04.12\nTransfer learning: fine-tuning\n\n\n\n\n11.12\nAdapting models for specific tasks\n\nAssignment 3\n\n\n18.12\nAdapting models for specific tasks\n\n\n\n\n08.01\nAdapting models for specific tasks\n\nAssignment 4\n\n\n15.01\nProbing LLMs\n\n\n\n\n22.01\nProbing LLMs\n\nAssignment 5\n\n\n29.01\nTBD"
+  },
+  {
+    "objectID": "2024/weeks/week01/slides.html#statistical-language-models",
+    "href": "2024/weeks/week01/slides.html#statistical-language-models",
+    "title": "Week 01 Introduction",
+    "section": "Statistical Language Models",
+    "text": "Statistical Language Models\n\nThese models use statistical patterns in the data to make predictions about the likelihood of specific sequences of words\nN-gram models are the most common type of statistical language model that predicts the probability of a word given the previous n-1 words\nThey are simple and computationally efficient but have limitations in capturing long-range dependencies\nThey are widely used in speech recognition, machine translation, and other NLP tasks\nThey are used as a baseline for more complex language models"
+  },
+  {
+    "objectID": "2024/weeks/week01/slides.html#probabilistic-language-models",
+    "href": "2024/weeks/week01/slides.html#probabilistic-language-models",
+    "title": "Week 01 Introduction",
+    "section": "Probabilistic Language Models",
+    "text": "Probabilistic Language Models\n\nThese models assign a probability to sequences of words based on the training data\nThey are based on the principles of probability theory and use probabilistic methods to model the language\nThey can capture complex patterns in the data and are more flexible than statistical models\nThey are used in a wide range of NLP tasks, such as machine translation, text generation, and speech recognition"
+  },
+  {
+    "objectID": "2024/weeks/week01/slides.html#neural-language-models",
+    "href": "2024/weeks/week01/slides.html#neural-language-models",
+    "title": "Week 01 Introduction",
+    "section": "Neural Language Models",
+    "text": "Neural Language Models\n\nThese models use neural networks to predict the likelihood of a sequence of words\nThey are trained on a large corpus of text data and can learn complex patterns and dependencies\nThey are more powerful than traditional statistical and probabilistic models\nThey are used in a wide range of NLP tasks, such as, machine translation, text generation, and sentiment analysis"
+  },
+  {
+    "objectID": "2024/weeks/week01/slides.html#large-language-models",
+    "href": "2024/weeks/week01/slides.html#large-language-models",
+    "title": "Week 01 Introduction",
+    "section": "Large Language Models",
+    "text": "Large Language Models\n\nThey are advanced language models that handle billions of training data parameters and generate text output\nThey are trained on large-scale datasets and can generate human-like text\nThey are used in a wide range of NLP tasks, such as machine translation, text generation, and question answering\nThey are the focus of the course"
+  },
+  {
+    "objectID": "2024/weeks/week01/slides.html#thank-you",
+    "href": "2024/weeks/week01/slides.html#thank-you",
+    "title": "Week 01 Introduction",
     "section": "Thank you!",
     "text": "Thank you!"
   },
@@ -492,282 +697,88 @@
     "text": "Thank you!"
   },
   {
-    "objectID": "2024/weeks/week01/slides.html#whoami-akhilesh",
-    "href": "2024/weeks/week01/slides.html#whoami-akhilesh",
-    "title": "Week 01 Introduction",
-    "section": "WhoamI: Akhilesh",
-    "text": "WhoamI: Akhilesh\n\n\n\n\n\nAkhilesh Kakolu Ramarao (he/him) PhD researcher at the English Language and Linguistics department\n\n\n\n\nResearching Computational Morphology supervised by Prof. Dr. Kevin Tang and Dr. Dinah Baer-Henney\nStarted at HHU in 2021\nIndustry Background: NLP Researcher, Software Engineer, Building multilingual chatbots, voice assistants\nInvolved in several language revitalization efforts for indigenous communities in Arunachal Pradesh, India, with a focus on Idu Mishmi and K’man Mishmi languages\nMore: https://akkikek.xyz/about.html\nPart of the Slamlab: https://slam.phil.hhu.de/"
+    "objectID": "2024/weeks/week03/slides.html#section",
+    "href": "2024/weeks/week03/slides.html#section",
+    "title": "Week 03 Basics of Neural Networks (Part 2)",
+    "section": "",
+    "text": "ReLU function\n\\[\nf(x) = \\max(0, x)\n\\]\nExample: \\(f(2) = 2\\)\nwhere:\n- f(x): This represents the output of the ReLU function for a given input x.\n- x: This is the input to the ReLU function.\n- max: This function returns the maximum of the two values.\n- 0: This is the threshold value.\n\nThe Rectified Linear Unit (ReLU) function is that outputs the input directly if it is positive, otherwise, it outputs zero.\nThe output of the ReLU function is between 0 and infinity.\nIt is a popular activation function used in deep learning models."
   },
   {
-    "objectID": "2024/weeks/week01/slides.html#whoami-anna",
-    "href": "2024/weeks/week01/slides.html#whoami-anna",
-    "title": "Week 01 Introduction",
-    "section": "WhoamI: Anna",
-    "text": "WhoamI: Anna\n\n\n\n\n\nAnna Sophia Stein (she/her)  MSc Linguistics student Focus on Computational Linguistics 📧 anna.stein@hhu.de \n\n\n\n\nMain interests: anything Natural Language Processing, open source, …\nPart of research at the Anglistics, Linguistics and Computer Science department\nCurrently writing my MA thesis on making LLMs better at pragmatics\n\nPart of the Slamlab: https://slam.phil.hhu.de/"
+    "objectID": "2024/weeks/week03/slides.html#section-1",
+    "href": "2024/weeks/week03/slides.html#section-1",
+    "title": "Week 03 Basics of Neural Networks (Part 2)",
+    "section": "",
+    "text": "X-axis (Weight): Represents the value of the model parameter being optimized.\nY-axis (Loss): Represents the value of the loss function being minimized.\nThe goal is to find the value of the model parameter that minimizes the loss function."
   },
   {
-    "objectID": "2024/weeks/week01/slides.html#contact",
-    "href": "2024/weeks/week01/slides.html#contact",
-    "title": "Week 01 Introduction",
-    "section": "Contact",
-    "text": "Contact\n\n📧: kakolura@hhu.de\n🏢🕰️: By appointment\n🌐👥: https://slam.phil.hhu.de\n🐦: SLaMLab_HHU\n🐙🐱: https://github.com/hhuslamlab/"
+    "objectID": "2024/weeks/week03/slides.html#section-2",
+    "href": "2024/weeks/week03/slides.html#section-2",
+    "title": "Week 03 Basics of Neural Networks (Part 2)",
+    "section": "",
+    "text": "The process starts at an initial weight with a corresponding loss, marked as “Initial weight + loss” on the graph\nGradient: The algorithm calculates the gradient (slope) at the current position. This gradient indicates the direction of steepest ascent."
   },
   {
-    "objectID": "2024/weeks/week01/slides.html#syllabus-overview",
-    "href": "2024/weeks/week01/slides.html#syllabus-overview",
-    "title": "Week 01 Introduction",
-    "section": "Syllabus Overview",
-    "text": "Syllabus Overview\n\n\n\n\n\n\n\n\n\nDate\nGeneral Topic\nHomework\nAssignments\n\n\n\n\n09.10\nAdmin, Architectures: Statistical and Probabilistic Language Models\nFamiliarization with Google Colab\n\n\n\n16.10\nArchitectures: Perceptrons and Neural Networks\n\n\n\n\n23.10\nArchitectures: Recurrent Neural Networks\n\nAssignment 1"
+    "objectID": "2024/weeks/week03/slides.html#section-3",
+    "href": "2024/weeks/week03/slides.html#section-3",
+    "title": "Week 03 Basics of Neural Networks (Part 2)",
+    "section": "",
+    "text": "The model then takes a step in the opposite direction of the gradient, as we want to minimize the loss.\nThis is why it’s called gradient descent - we descend along the gradient.\nThe “New weight + loss” point on the graph shows an intermediate step in this process, where the loss has decreased compared to the initial position."
   },
   {
-    "objectID": "2024/weeks/week01/slides.html#syllabus-overview-1",
-    "href": "2024/weeks/week01/slides.html#syllabus-overview-1",
-    "title": "Week 01 Introduction",
-    "section": "Syllabus Overview",
-    "text": "Syllabus Overview\n\n\n\n\n\n\n\n\n\nDate\nGeneral Topic\nHomework\nAssignments\n\n\n\n\n30.10\nTransformer: General architecture\n\n\n\n\n06.11\nTransformer: The Attention mechanism\n\n\n\n\n13.11\nTransformer: Transformer models: Decoder/Encode only models\n\nAssignment 2\n\n\n20.11\nUsing pre-trained models"
+    "objectID": "2024/weeks/week03/slides.html#section-4",
+    "href": "2024/weeks/week03/slides.html#section-4",
+    "title": "Week 03 Basics of Neural Networks (Part 2)",
+    "section": "",
+    "text": "As the algorithm progresses, it should ideally approach the bottom of the curve, labeled as “Theoretical minima” in the image.\nThe algorithm may not always reach the exact theoretical minima due to factors like step size (learning rate) and the complexity of the loss landscape.\nBut, it typically converges to a point close enough to be practically useful for model optimization."
   },
   {
-    "objectID": "2024/weeks/week01/slides.html#syllabus-overview-2",
-    "href": "2024/weeks/week01/slides.html#syllabus-overview-2",
-    "title": "Week 01 Introduction",
-    "section": "Syllabus Overview",
-    "text": "Syllabus Overview\n\n\n\n\n\n\n\n\n\nDate\nGeneral Topic\nHomework\nAssignments\n\n\n\n\n27.11\nStudy week\n\n\n\n\n04.12\nTransfer learning: fine-tuning\n\n\n\n\n11.12\nAdapting models for specific tasks\n\nAssignment 3\n\n\n18.12\nAdapting models for specific tasks\n\n\n\n\n08.01\nAdapting models for specific tasks\n\nAssignment 4\n\n\n15.01\nProbing LLMs\n\n\n\n\n22.01\nProbing LLMs\n\nAssignment 5\n\n\n29.01\nTBD"
+    "objectID": "2024/weeks/week03/slides.html#section-5",
+    "href": "2024/weeks/week03/slides.html#section-5",
+    "title": "Week 03 Basics of Neural Networks (Part 2)",
+    "section": "",
+    "text": "flowchart LR\n    %% Input Layer\n    I1((I1)):::inputStyle\n    I2((I2)):::inputStyle\n    I3((I3)):::inputStyle\n    B1((Bias)):::biasStyle\n    %% Hidden Layer\n    H1((H1)):::hiddenStyle\n    H2((H2)):::hiddenStyle\n    H3((H3)):::hiddenStyle\n    B2((Bias)):::biasStyle\n    %% Output Layer\n    O1((O1)):::outputStyle\n    O2((O2)):::outputStyle\n    %% Connections\n    I1 --&gt;|w11| H1\n    I1 --&gt;|w12| H2\n    I1 --&gt;|w13| H3\n    I2 --&gt;|w21| H1\n    I2 --&gt;|w22| H2\n    I2 --&gt;|w23| H3\n    I3 --&gt;|w31| H1\n    I3 --&gt;|w32| H2\n    I3 --&gt;|w33| H3\n    B1 --&gt;|b1| H1\n    B1 --&gt;|b2| H2\n    B1 --&gt;|b3| H3\n    H1 --&gt;|v11| O1\n    H1 --&gt;|v12| O2\n    H2 --&gt;|v21| O1\n    H2 --&gt;|v22| O2\n    H3 --&gt;|v31| O1\n    H3 --&gt;|v32| O2\n    B2 --&gt;|b4| O1\n    B2 --&gt;|b5| O2\n    %% Styles\n    classDef inputStyle fill:#3498db,stroke:#333,stroke-width:2px;\n    classDef hiddenStyle fill:#e74c3c,stroke:#333,stroke-width:2px;\n    classDef outputStyle fill:#2ecc71,stroke:#333,stroke-width:2px;\n    classDef biasStyle fill:#f39c12,stroke:#333,stroke-width:2px;\n    %% Layer Labels\n    I2 -.- InputLabel[Input Layer]\n    H2 -.- HiddenLabel[Hidden Layer]\n    O1 -.- OutputLabel[Output Layer]\n    style InputLabel fill:none,stroke:none\n    style HiddenLabel fill:none,stroke:none\n    style OutputLabel fill:none,stroke:none"
   },
   {
-    "objectID": "2024/weeks/week01/slides.html#statistical-language-models",
-    "href": "2024/weeks/week01/slides.html#statistical-language-models",
-    "title": "Week 01 Introduction",
-    "section": "Statistical Language Models",
-    "text": "Statistical Language Models\n\nThese models use statistical patterns in the data to make predictions about the likelihood of specific sequences of words\nN-gram models are the most common type of statistical language model that predicts the probability of a word given the previous n-1 words\nThey are simple and computationally efficient but have limitations in capturing long-range dependencies\nThey are widely used in speech recognition, machine translation, and other NLP tasks\nThey are used as a baseline for more complex language models"
+    "objectID": "2024/weeks/week03/slides.html#section-6",
+    "href": "2024/weeks/week03/slides.html#section-6",
+    "title": "Week 03 Basics of Neural Networks (Part 2)",
+    "section": "",
+    "text": "The input layer consists of three nodes (I1, I2, I3) representing the input features.\nThe hidden layer consists of three nodes (H1, H2, H3) that process the input data.\nThe output layer consists of two nodes (O1, O2) that produce the final predictions.\nThe connections between nodes are represented by weights (w11, w12, …, v32) and biases (b1, b2, …, b5).\nThe weights and biases are adjusted during training to optimize the model.\nThe model makes predictions by passing the input data through the network and computing the output."
   },
   {
-    "objectID": "2024/weeks/week01/slides.html#probabilistic-language-models",
-    "href": "2024/weeks/week01/slides.html#probabilistic-language-models",
-    "title": "Week 01 Introduction",
-    "section": "Probabilistic Language Models",
-    "text": "Probabilistic Language Models\n\nThese models assign a probability to sequences of words based on the training data\nThey are based on the principles of probability theory and use probabilistic methods to model the language\nThey can capture complex patterns in the data and are more flexible than statistical models\nThey are used in a wide range of NLP tasks, such as machine translation, text generation, and speech recognition"
+    "objectID": "2024/weeks/week03/slides.html#training-development-and-test-datasets",
+    "href": "2024/weeks/week03/slides.html#training-development-and-test-datasets",
+    "title": "Week 03 Basics of Neural Networks (Part 2)",
+    "section": "Training, development and test datasets",
+    "text": "Training, development and test datasets\n\nThe training dataset is used to optimize the model parameters (weights and biases) using gradient descent.\nThe development dataset is used to tune the hyperparameters of the model, such as the learning rate and the number of hidden units.\nThe test dataset is used to evaluate the performance of the model on unseen data.\nIn order to avoid overfitting, it is important to have separate datasets for training, development, and testing.\nThe training dataset is typically the largest, followed by the development and test datasets.\nThe development and test datasets should be representative of the data the model will encounter in the real world.\nThe datasets should be randomly sampled to avoid bias and ensure that the model generalizes well."
   },
   {
-    "objectID": "2024/weeks/week01/slides.html#neural-language-models",
-    "href": "2024/weeks/week01/slides.html#neural-language-models",
-    "title": "Week 01 Introduction",
-    "section": "Neural Language Models",
-    "text": "Neural Language Models\n\nThese models use neural networks to predict the likelihood of a sequence of words\nThey are trained on a large corpus of text data and can learn complex patterns and dependencies\nThey are more powerful than traditional statistical and probabilistic models\nThey are used in a wide range of NLP tasks, such as, machine translation, text generation, and sentiment analysis"
-  },
-  {
-    "objectID": "2024/weeks/week01/slides.html#large-language-models",
-    "href": "2024/weeks/week01/slides.html#large-language-models",
-    "title": "Week 01 Introduction",
-    "section": "Large Language Models",
-    "text": "Large Language Models\n\nThey are advanced language models that handle billions of training data parameters and generate text output\nThey are trained on large-scale datasets and can generate human-like text\nThey are used in a wide range of NLP tasks, such as machine translation, text generation, and question answering\nThey are the focus of the course"
-  },
-  {
-    "objectID": "2024/weeks/week01/slides.html#thank-you",
-    "href": "2024/weeks/week01/slides.html#thank-you",
-    "title": "Week 01 Introduction",
+    "objectID": "2024/weeks/week03/slides.html#thank-you",
+    "href": "2024/weeks/week03/slides.html#thank-you",
+    "title": "Week 03 Basics of Neural Networks (Part 2)",
     "section": "Thank you!",
     "text": "Thank you!"
   },
   {
-    "objectID": "2024/syllabus.html",
-    "href": "2024/syllabus.html",
-    "title": "Syllabus",
+    "objectID": "2024/homework/homework02.html",
+    "href": "2024/homework/homework02.html",
+    "title": "Homework 02: Neural Network",
     "section": "",
-    "text": "Last changed: 23.10.24\n\n\n\n\n\n\n\n\n\nDate\nGeneral Topic\nHomework\nAssignments\n\n\n\n\n09.10\nAdmin, Architectures: Statistical and Probabilistic Language Models\nFamiliarization with Google Colab\n\n\n\n16.10\nArchitectures: Perceptrons and Neural Networks\n\n\n\n\n23.10\nArchitectures: Perceptrons and Neural Networks (part 2)\n\nAssignment 1\n\n\n30.10\nTransformer: General architecture\n\n\n\n\n06.11\nTransformer: The Attention mechanism\n\n\n\n\n13.11\nTransformer: Transformer models: Decoder/Encode only models\n\nAssignment 2\n\n\n20.11\nUsing pre-trained models\n\n\n\n\n27.11\nStudy week\n\n\n\n\n04.12\nTransfer learning: fine-tuning\n\n\n\n\n11.12\nAdapting models for specific tasks\n\nAssignment 3\n\n\n18.12\nAdapting models for specific tasks\n\n\n\n\n08.01\nAdapting models for specific tasks\n\nAssignment 4\n\n\n15.01\nProbing LLMs\n\n\n\n\n22.01\nProbing LLMs\n\nAssignment 5\n\n\n29.01\nTBD",
-    "crumbs": [
-      "📓 Syllabus"
-    ]
-  },
-  {
-    "objectID": "2024/assignments.html",
-    "href": "2024/assignments.html",
-    "title": "Assignment Overview",
-    "section": "",
-    "text": "Here is an overview of all assignments up to date:\nAssignment 1: TBD\nAssignment 2: TBD\nAssignment 3: TBD\nAssignment 4: TBD\nAssignment 5: TBD",
-    "crumbs": [
-      "✍️ Assignments   "
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "LLMs in Linguistic Research",
-    "section": "",
-    "text": "InstructorTeaching Staff\n\n\n Akhilesh Kakolu Ramarao  📧 kakolura at hhu dot de\n\n\n Anna Stein  📧 anna.stein at hhu dot de\n\n\n\n\nSyllabus\nView it online here.\n\n\n📍 Location\nWednesday, 2:30pm-4pm\nBuilding 23.21 Floor 2, Room 22\n\n\n🎯 Learning Objectives\nFocus: Understanding LLMs and their usage in various linguistics tasks\nHow: Hands-on learning and paper discussions\n\nGaining an intuition of how LLMs work\nGetting to know the field of LLM research and development\nFamiliarizing yourself with different LLM architectures\nLearning how to use them for different linguistics tasks (e.g., text analysis, language generation, and language understanding)\nPracting using tools like Huggingface for LLM inference and fine-tuning",
-    "crumbs": [
-      "🏠 Home"
-    ]
-  },
-  {
-    "objectID": "2024/homework.html",
-    "href": "2024/homework.html",
-    "title": "Homework Overview",
-    "section": "",
-    "text": "Here is an overview of all Homework up to date:\nHw 1: Google Colab: here\nHw 2: Neural Networks: here"
-  },
-  {
-    "objectID": "2024/weeks/week01/page.html",
-    "href": "2024/weeks/week01/page.html",
-    "title": "🗓️ Week 01 - Admin, Architectures: Statistical and Probabilistic Language Models",
-    "section": "",
-    "text": "In this first week, we will cover what you can expect to learn from this course and the course logistics: all you need to know about the structure of the lectures, classes, assessments, and how we will interact throughout this course.",
-    "crumbs": [
-      "🗓️ Class material",
-      "Week 01 - Intro"
-    ]
-  },
-  {
-    "objectID": "2024/weeks/week01/page.html#lecture-slides",
-    "href": "2024/weeks/week01/page.html#lecture-slides",
-    "title": "🗓️ Week 01 - Admin, Architectures: Statistical and Probabilistic Language Models",
-    "section": "👨‍🏫 Lecture Slides",
-    "text": "👨‍🏫 Lecture Slides\nEither click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides.",
-    "crumbs": [
-      "🗓️ Class material",
-      "Week 01 - Intro"
-    ]
-  },
-  {
-    "objectID": "2024/weeks/week01/page.html#homework",
-    "href": "2024/weeks/week01/page.html#homework",
-    "title": "🗓️ Week 01 - Admin, Architectures: Statistical and Probabilistic Language Models",
-    "section": "✍️ Homework",
-    "text": "✍️ Homework\nWeek 01 - Homework",
-    "crumbs": [
-      "🗓️ Class material",
-      "Week 01 - Intro"
-    ]
-  },
-  {
-    "objectID": "2024/weeks/week01/page.html#recommended-reading",
-    "href": "2024/weeks/week01/page.html#recommended-reading",
-    "title": "🗓️ Week 01 - Admin, Architectures: Statistical and Probabilistic Language Models",
-    "section": "📚 Recommended Reading",
-    "text": "📚 Recommended Reading\n\nSpeech and Language Processing, Chapter 3: N-gram language models PDF. Authors: Dan Jurafsky and James H. Martin.",
-    "crumbs": [
-      "🗓️ Class material",
-      "Week 01 - Intro"
-    ]
-  },
-  {
-    "objectID": "2024/weeks/week02/page.html",
-    "href": "2024/weeks/week02/page.html",
-    "title": "🗓️ Week 02 - Basics of Neural Networks",
-    "section": "",
-    "text": "In this second week, we will cover a few basic math concepts used in neural networks, try to get an intuition of what machine learning models are and finally explain the architecture a perceptron.",
-    "crumbs": [
-      "🗓️ Class material",
-      "Week 02 - NN basics"
-    ]
-  },
-  {
-    "objectID": "2024/weeks/week02/page.html#lecture-slides",
-    "href": "2024/weeks/week02/page.html#lecture-slides",
-    "title": "🗓️ Week 02 - Basics of Neural Networks",
-    "section": "👨‍🏫 Lecture Slides",
-    "text": "👨‍🏫 Lecture Slides\nEither click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides.",
-    "crumbs": [
-      "🗓️ Class material",
-      "Week 02 - NN basics"
-    ]
-  },
-  {
-    "objectID": "2024/weeks/week02/page.html#homework",
-    "href": "2024/weeks/week02/page.html#homework",
-    "title": "🗓️ Week 02 - Basics of Neural Networks",
-    "section": "✍️ Homework",
-    "text": "✍️ Homework\n\nPlease go through the slides and the recommended reading material.",
-    "crumbs": [
-      "🗓️ Class material",
-      "Week 02 - NN basics"
-    ]
-  },
-  {
-    "objectID": "2024/weeks/week02/page.html#recommended-reading",
-    "href": "2024/weeks/week02/page.html#recommended-reading",
-    "title": "🗓️ Week 02 - Basics of Neural Networks",
-    "section": "📚 Recommended Reading",
-    "text": "📚 Recommended Reading\n\nWikipedia articles on Matrix multiplication, matrix addition, element-wise multiplication, and dot product.\nWhat is a neural network? [Video]",
-    "crumbs": [
-      "🗓️ Class material",
-      "Week 02 - NN basics"
-    ]
-  },
-  {
-    "objectID": "2024/weeks/week03/page.html",
-    "href": "2024/weeks/week03/page.html",
-    "title": "🗓️ Week 03 - Basics of Neural Networks (part 2)",
-    "section": "",
-    "text": "Either click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides.",
-    "crumbs": [
-      "🗓️ Class material",
-      "Week 03 - NN basics II"
-    ]
-  },
-  {
-    "objectID": "2024/weeks/week03/page.html#lecture-slides",
-    "href": "2024/weeks/week03/page.html#lecture-slides",
-    "title": "🗓️ Week 03 - Basics of Neural Networks (part 2)",
-    "section": "",
-    "text": "Either click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides.",
-    "crumbs": [
-      "🗓️ Class material",
-      "Week 03 - NN basics II"
-    ]
-  },
-  {
-    "objectID": "2024/weeks/week03/page.html#homework",
-    "href": "2024/weeks/week03/page.html#homework",
-    "title": "🗓️ Week 03 - Basics of Neural Networks (part 2)",
-    "section": "✍️ Homework",
-    "text": "✍️ Homework",
-    "crumbs": [
-      "🗓️ Class material",
-      "Week 03 - NN basics II"
-    ]
-  },
-  {
-    "objectID": "2024/weeks/week03/page.html#recommended-reading",
-    "href": "2024/weeks/week03/page.html#recommended-reading",
-    "title": "🗓️ Week 03 - Basics of Neural Networks (part 2)",
-    "section": "📚 Recommended Reading",
-    "text": "📚 Recommended Reading",
-    "crumbs": [
-      "🗓️ Class material",
-      "Week 03 - NN basics II"
-    ]
-  },
-  {
-    "objectID": "2024/homework/homework01.html",
-    "href": "2024/homework/homework01.html",
-    "title": "Homework 1: Using Google Colab",
-    "section": "",
-    "text": "The instructions below assume that you have a Google account or are willing to make one. If you do not want to make a Google account,  contact Anna for instructions to run notebooks without Colab.",
+    "text": "Please go through the Wikipedia articles on:\n\nMatrix multiplication\nMatrix addition\nElement-wise multiplication\nDot product\n\nAnd watch this video: What is a neural network? [Video]",
     "crumbs": [
       "🧩 Homework",
-      "Hw 01 - Colab"
+      "Hw 02 - NN basics  "
     ]
   },
   {
-    "objectID": "2024/homework/homework01.html#google-colab",
-    "href": "2024/homework/homework01.html#google-colab",
-    "title": "Homework 1: Using Google Colab",
-    "section": "Google Colab",
-    "text": "Google Colab\n\nGo to the notebooks folder. Click on the three dots for the hw1.ipynb file, select “Open with” and then “Open in Colab”.\nRun both cells in the notebook by clicking on the play icon on the left of the cell or clicking into the cell and pressing CTRL + ENTER on Windows or CMD + ENTER on Mac.",
-    "crumbs": [
-      "🧩 Homework",
-      "Hw 01 - Colab"
-    ]
-  },
-  {
-    "objectID": "2024/homework/homework03.html",
-    "href": "2024/homework/homework03.html",
-    "title": "Homework 3: Intro to transformers",
+    "objectID": "2024/assignments/assignment01.html",
+    "href": "2024/assignments/assignment01.html",
+    "title": "Assignment 1: Perceptron Analysis",
     "section": "",
-    "text": "Reading\n\nRead the first 8 pages of Attention is All You Need paper.\nRead about Self-attention mechanism here: https://jalammar.github.io/illustrated-transformer/\nWatch these videos:\n\nHow large language models work, a visual intro to transformers\nAttention in transformers, visually explained\nIllustrated Guide to Transformers Neural Network: A step by step explanation",
+    "text": "Consider a perceptron that predicts if you’ll pass a quiz based on:\n\nHours studied (0-5)\nHours slept (0-8)\n\nPart1: Make predictions for:\n\nDifferent study patterns:\n\n\nStudied 4 hours, slept 7 hours\nStudied 1 hour, slept 8 hours\nStudied 5 hours, slept 4 hours\nStudied 3 hours, slept 3 hours\nStudied 4 hours, slept 4 hours\n\n\nWeight changes:\n\n\nStudy hours more important\nSleep hours more important\nBoth equally important\n\nDraw simple diagrams showing:\n\nHow you think the perceptron would classify each case\nWhy some combinations might work better than others\n\nPart 2: Predict what happens when:\n\nThe perceptron starts with:\n\n\nThinking only study hours matter\nThinking only sleep matters\nThinking nothing matters (zero weights)\n\n\nThe perceptron learns from:\n\n\nOne student’s data\nFive students data\nTwenty students data\n\nExplain in simple terms:\n\nHow you think it would change its decisions\nWhy more data might help\nWhat problems it might face\n\nNOTE:\n\nNo calculations needed\nKeep explanations simple\nYou will be graded on:\n\nclarity of explanation\nuse of diagrams to support your explanation\n\n\nSubmission Guidelines\n\nFormat: PDF document, 12-point Times New Roman, 1.5 line spacing\nLength: 600-1500 words (excluding diagrams)\nSubmit by email to: Anna (anste145 at hhu dot de)\nDeadline: 6th November 2024, 23:59 CET",
     "crumbs": [
-      "🧩 Homework",
-      "Hw 03 - Intro to transformers"
+      "✍️ Assignments   ",
+      "📝 Assignment 01"
     ]
   },
   {
