@@ -74,7 +74,7 @@ website:
            text: Week 04 - Transformers (part 1)
            contents:
              - href: 2024/weeks/week04/page.qmd
-               text: 👨‍🏫 Lecture Material
+u               text: 👨‍🏫 Lecture Material
          - href: 2024/weeks/week05/page.qmd
            text: Week 05 - Transformers (part 2)
            contents:
@@ -134,8 +134,8 @@ csl: references/chicago-author-date.csl
 
 format:
   html:
-    author: Akhilesh Kakolu Ramarao, Anna Sophia Stein
-    author-meta: Ramarao
+    author: Akhilesh Kakolu Ramarao
+    author-meta: Akhilesh Kakolu Ramarao
     date-format: "DD MMMM YYYY"
 
     email-obfuscation: javascript
