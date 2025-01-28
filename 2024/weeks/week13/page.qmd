@@ -1,12 +1,12 @@
 ---
-title: "🗓️ Week 11 - Morphological inflection task with T5 models using CHILDES datasets"
+title: "🗓️ Week 13 - Other finetuning methods"
 ---
 
+## 👨‍🏫 Lecture Slides
 
-## 👨‍🏫 Lecture
+Either click on the slide area below or click [here](slides.qmd) to view it in fullscreen.
+Use your keypad to navigate the slides.
 
-Click <a href="morphological_inflection_childes.ipynb" download>here</a> to download the notebook.
-
-Open the notebook in [google colab](https://colab.research.google.com/).
-
-## ✍️ Homework
+<div class="container" style="position: relative;overflow: hidden;width: 100%;min-height:600px;">
+<iframe src="slides.html" style="position=absolute;top: 0;left: 0;bottom: 0;right: 0;width: 100%;min-height:600px;"></iframe>
+</div>
