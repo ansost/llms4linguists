@@ -998,31 +998,20 @@
   {
     "objectID": "2024/weeks/week13/page.html",
     "href": "2024/weeks/week13/page.html",
-    "title": "🗓️ Week 11 - Morphological inflection task with T5 models using CHILDES datasets",
+    "title": "🗓️ Week 13 - Other finetuning methods",
     "section": "",
-    "text": "Click here to download the notebook.\nOpen the notebook in google colab.",
+    "text": "Either click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides.",
     "crumbs": [
       "🗓️ Class material",
       "Week 13 - Other finetuning methods"
     ]
   },
   {
-    "objectID": "2024/weeks/week13/page.html#lecture",
-    "href": "2024/weeks/week13/page.html#lecture",
-    "title": "🗓️ Week 11 - Morphological inflection task with T5 models using CHILDES datasets",
+    "objectID": "2024/weeks/week13/page.html#lecture-slides",
+    "href": "2024/weeks/week13/page.html#lecture-slides",
+    "title": "🗓️ Week 13 - Other finetuning methods",
     "section": "",
-    "text": "Click here to download the notebook.\nOpen the notebook in google colab.",
-    "crumbs": [
-      "🗓️ Class material",
-      "Week 13 - Other finetuning methods"
-    ]
-  },
-  {
-    "objectID": "2024/weeks/week13/page.html#homework",
-    "href": "2024/weeks/week13/page.html#homework",
-    "title": "🗓️ Week 11 - Morphological inflection task with T5 models using CHILDES datasets",
-    "section": "✍️ Homework",
-    "text": "✍️ Homework",
+    "text": "Either click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides.",
     "crumbs": [
       "🗓️ Class material",
       "Week 13 - Other finetuning methods"
