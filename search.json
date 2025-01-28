@@ -1,5 +1,54 @@
 [
   {
+    "objectID": "2024/weeks/week13/slides.html#prompt-tuning",
+    "href": "2024/weeks/week13/slides.html#prompt-tuning",
+    "title": "Week 03Other Finetuning methdos",
+    "section": "Prompt tuning",
+    "text": "Prompt tuning\n\nIn a prompt-based LLM, the output is highly dependent on the model weights and the prompt.\nThe idea of prompt tuning is to add a new set of weights between the prompt and the model and only tune those.\nIn the above paper, the T5 model weights were 11,000,000,000 parameters, and the added prompt weights were 20,400 parameters. Yet, similar performance was observed with prompt tuning w.r.t full model weight fine-tuning on a benchmark dataset."
+  },
+  {
+    "objectID": "2024/weeks/week13/slides.html#low-rank-adaptation-of-large-language-models-lora",
+    "href": "2024/weeks/week13/slides.html#low-rank-adaptation-of-large-language-models-lora",
+    "title": "Week 03Other Finetuning methdos",
+    "section": "Low-Rank Adaptation of Large Language Models (LORA)",
+    "text": "Low-Rank Adaptation of Large Language Models (LORA)\n\nLORA is a technique to reduce the number of parameters that need to be trained by reducing the dimensions using Single Value Decomposition (SVD).\nDimensionality reduction:\n\nReducing the dimensionality of data by projecting the data onto a lower-dimensional subspace. Mainly used for efficient processing and analysis (visualization purposes).\n\nPaper: https://arxiv.org/pdf/2106.09685\nThe pretrained model parameters are in a super high dimensional space. It is shown that finetuning fewer parameters in a compressed space can drastically affect the final output. This trick is used to creating a new set of LORA parameters that are much smaller than the others."
+  },
+  {
+    "objectID": "2024/weeks/week13/slides.html#section",
+    "href": "2024/weeks/week13/slides.html#section",
+    "title": "Week 03Other Finetuning methdos",
+    "section": "",
+    "text": "Let’s check the figure 1 from the above paper…\n\nwhere A and B are the LORA parameters. The dimension x is the original input dimension and r is the reduced dimension. During fine tuning only A and B are adjusted enabling the model to learn task specific features.\n\nThese LORA weights can be swapped in and out for different tasks and/or different LORA weights can be stored as different model implementations.\n\nFurther reading:\n\nhttps://huggingface.co/docs/peft/main/en/conceptual_guides/lora\nhttps://www.databricks.com/blog/efficient-fine-tuning-lora-guide-llms\nhttps://web.stanford.edu/class/cs168/l/l9.pdf"
+  },
+  {
+    "objectID": "2024/weeks/week13/slides.html#qlora",
+    "href": "2024/weeks/week13/slides.html#qlora",
+    "title": "Week 03Other Finetuning methdos",
+    "section": "QLoRa",
+    "text": "QLoRa\n\nTypically, the parameters of pre-trained models are stored in a 32-bit format, and QLoRa compresses them to 4-bit format. This reduces the memory footprint and enables finetuning using much less resources. Each parameter in the model is represented by 32 bits (float32). One float32 has 32 bits which is 4 bytes. So it requires 4 gigabytes for one billion parameter model trained on FP32.\nPost-Training Quantization (PTQ): quantization on LLM after it has been trained.\nQuantization-Aware Training (QAT): quantization on LLM during training.\nPaper: https://arxiv.org/pdf/2305.14314"
+  },
+  {
+    "objectID": "2024/weeks/week13/slides.html#distillation",
+    "href": "2024/weeks/week13/slides.html#distillation",
+    "title": "Week 03Other Finetuning methdos",
+    "section": "Distillation",
+    "text": "Distillation\n\nDistillation is the process of using the generated output or generation to finetune the model.\nKnowledge Distillation: Take a big model and make it teach a smaller model.\n\nPaper: https://arxiv.org/pdf/2306.08543\n\nContext distillation: Prompting the model with a prompt prefix (“analyze like a linguist” and then training on the model response.\n\nPaper: https://arxiv.org/pdf/2209.15189"
+  },
+  {
+    "objectID": "2024/weeks/week13/slides.html#prompt-engineering",
+    "href": "2024/weeks/week13/slides.html#prompt-engineering",
+    "title": "Week 03Other Finetuning methdos",
+    "section": "Prompt engineering",
+    "text": "Prompt engineering\n\nHere, the model is prompted to take up roles, such as act as an “expert” or “actor” or “be a linguist”. This cannot be categorized as finetuning because no weights are updated.\nAs this method doesn’t require any additional compute at train time, it is easy to iterate upon. But this method does not affect the LLM behaviour as strongly as fine-tuning.\nKnow more: https://huggingface.co/docs/peft/conceptual_guides/prompting"
+  },
+  {
+    "objectID": "2024/weeks/week13/slides.html#thank-you",
+    "href": "2024/weeks/week13/slides.html#thank-you",
+    "title": "Week 03Other Finetuning methdos",
+    "section": "Thank you!",
+    "text": "Thank you!"
+  },
+  {
     "objectID": "2024/weeks/week11/page.html",
     "href": "2024/weeks/week11/page.html",
     "title": "🗓️ Week 11 - Morphological inflection task with T5 models using CHILDES datasets",
@@ -944,6 +993,39 @@
     "crumbs": [
       "🗓️ Class material",
       "Week 10 - morphological inflection using T5"
+    ]
+  },
+  {
+    "objectID": "2024/weeks/week13/page.html",
+    "href": "2024/weeks/week13/page.html",
+    "title": "🗓️ Week 11 - Morphological inflection task with T5 models using CHILDES datasets",
+    "section": "",
+    "text": "Click here to download the notebook.\nOpen the notebook in google colab.",
+    "crumbs": [
+      "🗓️ Class material",
+      "Week 13 - Other finetuning methods"
+    ]
+  },
+  {
+    "objectID": "2024/weeks/week13/page.html#lecture",
+    "href": "2024/weeks/week13/page.html#lecture",
+    "title": "🗓️ Week 11 - Morphological inflection task with T5 models using CHILDES datasets",
+    "section": "",
+    "text": "Click here to download the notebook.\nOpen the notebook in google colab.",
+    "crumbs": [
+      "🗓️ Class material",
+      "Week 13 - Other finetuning methods"
+    ]
+  },
+  {
+    "objectID": "2024/weeks/week13/page.html#homework",
+    "href": "2024/weeks/week13/page.html#homework",
+    "title": "🗓️ Week 11 - Morphological inflection task with T5 models using CHILDES datasets",
+    "section": "✍️ Homework",
+    "text": "✍️ Homework",
+    "crumbs": [
+      "🗓️ Class material",
+      "Week 13 - Other finetuning methods"
     ]
   }
 ]

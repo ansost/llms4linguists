@@ -8,7 +8,7 @@
 
 <meta name="author" content="Akhilesh Kakolu Ramarao">
 
-<title>🗓️ Week 09 - Finetuning t5 model for machine translation – LLMs in Lingustic Research 2024/25</title>
+<title>🗓️ Week 11 - Morphological inflection task with T5 models using CHILDES datasets – LLMs in Lingustic Research 2024/25</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,8 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../../">
-<link href="../../../2024/weeks/week10/page.html" rel="next">
-<link href="../../../2024/weeks/week08/page.html" rel="prev">
+<link href="../../../2024/homework/homework01.html" rel="next">
+<link href="../../../2024/weeks/week11/page.html" rel="prev">
 <link href="../../../figures/icons/course_logo.png" rel="icon" type="image/png">
 <script src="../../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
@@ -73,10 +73,10 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../../../css/custom_style.css">
 <link rel="stylesheet" href="../../../css/syllabus.css">
-<meta property="og:title" content="🗓️ Week 09 - Finetuning t5 model for machine translation – LLMs in Lingustic Research 2024/25">
+<meta property="og:title" content="🗓️ Week 11 - Morphological inflection task with T5 models using CHILDES datasets – LLMs in Lingustic Research 2024/25">
 <meta property="og:description" content="">
 <meta property="og:site_name" content="LLMs in Lingustic Research 2024/25">
-<meta name="twitter:title" content="🗓️ Week 09 - Finetuning t5 model for machine translation – LLMs in Lingustic Research 2024/25">
+<meta name="twitter:title" content="🗓️ Week 11 - Morphological inflection task with T5 models using CHILDES datasets – LLMs in Lingustic Research 2024/25">
 <meta name="twitter:description" content="">
 <meta name="twitter:creator" content="@<twitter-handle>">
 <meta name="twitter:site" content="\@<twitter-handle>">
@@ -109,7 +109,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../2024/weeks/week01/page.html">🗓️ Class material</a></li><li class="breadcrumb-item"><a href="../../../2024/weeks/week09/page.html">Week 09 - finetuning machine translation</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../2024/weeks/week01/page.html">🗓️ Class material</a></li><li class="breadcrumb-item"><a href="../../../2024/weeks/week13/page.html">Week 13 - Other finetuning methods</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -303,16 +303,16 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../2024/weeks/week09/page.html" class="sidebar-item-text sidebar-link active">
+            <a href="../../../2024/weeks/week09/page.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 09 - finetuning machine translation</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../2024/weeks/week09/page.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../../2024/weeks/week09/page.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">👨‍🏫 Lecture Material</span></a>
   </div>
 </li>
@@ -354,16 +354,16 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../2024/weeks/week13/page.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../2024/weeks/week13/page.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Week 13 - Other finetuning methods</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../2024/weeks/week13/page.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../2024/weeks/week13/page.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">👨‍🏫 Lecture Material</span></a>
   </div>
 </li>
@@ -418,9 +418,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../2024/weeks/week01/page.html">🗓️ Class material</a></li><li class="breadcrumb-item"><a href="../../../2024/weeks/week09/page.html">Week 09 - finetuning machine translation</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../2024/weeks/week01/page.html">🗓️ Class material</a></li><li class="breadcrumb-item"><a href="../../../2024/weeks/week13/page.html">Week 13 - Other finetuning methods</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">🗓️ Week 09 - Finetuning t5 model for machine translation</h1>
+<h1 class="title">🗓️ Week 11 - Morphological inflection task with T5 models using CHILDES datasets</h1>
 </div>
 
 
@@ -445,7 +445,7 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="lecture" class="level2">
 <h2 class="anchored" data-anchor-id="lecture">👨‍🏫 Lecture</h2>
-<p>Click <a href="fine_tuning_machine_translation.ipynb" download="">here</a> to download thenotebook.</p>
+<p>Click <a href="morphological_inflection_childes.ipynb" download="">here</a> to download the notebook.</p>
 <p>Open the notebook in <a href="https://colab.research.google.com/">google colab</a>.</p>
 </section>
 <section id="homework" class="level2">
@@ -881,13 +881,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../../2024/weeks/week08/page.html" class="pagination-link" aria-label="Week 08 - finetuning text classification">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Week 08 - finetuning text classification</span>
+      <a href="../../../2024/weeks/week11/page.html" class="pagination-link" aria-label="Week 11 - morphological inflection with T5 using CHILDES">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Week 11 - morphological inflection with T5 using CHILDES</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../../2024/weeks/week10/page.html" class="pagination-link" aria-label="Week 10 - morphological inflection using T5">
-        <span class="nav-page-text">Week 10 - morphological inflection using T5</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../../2024/homework/homework01.html" class="pagination-link" aria-label="Hw 01 - Colab">
+        <span class="nav-page-text">Hw 01 - Colab</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

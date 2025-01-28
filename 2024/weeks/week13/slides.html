@@ -11,8 +11,8 @@
   <meta name="generator" content="quarto-1.6.40">
 
   <meta name="author" content="Akhilesh Kakolu Ramarao">
-  <meta name="dcterms.date" content="6 November 2024">
-  <title>LLMs in Lingustic Research 2024/25 – Week 05  Intro to Transformers (part 2)</title>
+  <meta name="dcterms.date" content="28 January 2025">
+  <title>LLMs in Lingustic Research 2024/25 – Week 03 Other Finetuning methdos</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -124,10 +124,10 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="Week 05 Intro to Transformers (part 2) – LLMs in Lingustic Research 2024/25">
+<meta property="og:title" content="Week 03Other Finetuning methdos – LLMs in Lingustic Research 2024/25">
 <meta property="og:description" content="LLMs in Lingustic Research WiSe 2024/25">
 <meta property="og:site_name" content="LLMs in Lingustic Research 2024/25">
-<meta name="twitter:title" content="Week 05 Intro to Transformers (part 2) – LLMs in Lingustic Research 2024/25">
+<meta name="twitter:title" content="Week 03Other Finetuning methdos – LLMs in Lingustic Research 2024/25">
 <meta name="twitter:description" content="LLMs in Lingustic Research WiSe 2024/25">
 <meta name="twitter:creator" content="@<twitter-handle>">
 <meta name="twitter:site" content="\@<twitter-handle>">
@@ -138,7 +138,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block">
-  <h1 class="title"><font style="font-size:1em;">Week 05<br> Intro to Transformers (part 2)</font></h1>
+  <h1 class="title"><font style="font-size:1em;">Week 03<br>Other Finetuning methdos</font></h1>
   <p class="subtitle">LLMs in Lingustic Research WiSe 2024/25</p>
 
 <div class="quarto-title-authors">
@@ -152,225 +152,93 @@ Akhilesh Kakolu Ramarao
     </div>
 </div>
 
-  <p class="date">06 Nov 2024</p>
+  <p class="date">28 Jan 2025</p>
 </section><section id="TOC">
 <nav role="doc-toc"> 
 <h2 id="toc-title">What we will cover today:</h2>
 <ul>
-<li><a href="#/layer-normalization" id="/toc-layer-normalization">Layer normalization</a></li>
-
-<li><a href="#/position-wise-feed-forward-neural-network" id="/toc-position-wise-feed-forward-neural-network">Position-wise feed-forward neural network</a></li>
-<li><a href="#/decoder" id="/toc-decoder">Decoder</a>
-<ul>
-
-
-<li><a href="#/encoder-decoder-attention-layer" id="/toc-encoder-decoder-attention-layer">Encoder-decoder attention layer</a></li>
-
-
-
-
-
-
-</ul></li>
+<li><a href="#/parameter-efficient-fine-tuning-peft" id="/toc-parameter-efficient-fine-tuning-peft">Parameter Efficient Fine Tuning (PEFT)</a></li>
 </ul>
 </nav>
 </section>
-<section id="layer-normalization" class="slide level2 smaller">
-<h2>Layer normalization</h2>
+<section>
+<section id="parameter-efficient-fine-tuning-peft" class="title-slide slide level1">
+<h1>Parameter Efficient Fine Tuning (PEFT)</h1>
 <ul>
-<li>Layer normalization is applied to the output of the feed-forward neural network.</li>
-<li>Layer normalization is a technique that normalizes the output of each layer in the transformer.</li>
-<li>Normalization is a technique used to scale the input features to a range that is more suitable for the model to learn.</li>
-<li>It helps in stabilizing the training process and speeds up convergence.</li>
+<li><p>A simple trick to not update all the weights but only a few trainable parameters during finetuning.</p></li>
+<li><p>Code: <a href="https://github.com/huggingface/peft">https://github.com/huggingface/peft</a></p></li>
+<li><p>Paper: <a href="https://arxiv.org/pdf/2104.08691">https://arxiv.org/pdf/2104.08691</a>, check Figure 1 for performance overview</p></li>
 </ul>
-<p><span class="math display">\[
-\begin{align*}
-LayerNorm(x) = \frac{x - \mu}{\sigma}
-\end{align*}
-\]</span></p>
-<p>where,</p>
+</section>
+<section id="prompt-tuning" class="slide level2 smaller">
+<h2>Prompt tuning</h2>
 <ul>
-<li><span class="math inline">\(\mu\)</span> is the mean of the input vector <span class="math inline">\(x\)</span>.</li>
-<li><span class="math inline">\(\sigma\)</span> is the standard deviation of the input vector <span class="math inline">\(x\)</span>.</li>
+<li><p>In a prompt-based LLM, the output is highly dependent on the model weights and the prompt.</p></li>
+<li><p>The idea of prompt tuning is to add a new set of weights between the prompt and the model and only tune those.</p></li>
+<li><p>In the above paper, the T5 model weights were 11,000,000,000 parameters, and the added prompt weights were 20,400 parameters. Yet, similar performance was observed with prompt tuning w.r.t full model weight fine-tuning on a benchmark dataset.</p></li>
+</ul>
+</section>
+<section id="low-rank-adaptation-of-large-language-models-lora" class="slide level2 smaller">
+<h2>Low-Rank Adaptation of Large Language Models (LORA)</h2>
+<ul>
+<li><p>LORA is a technique to reduce the number of parameters that need to be trained by reducing the dimensions using <a href="https://en.wikipedia.org/wiki/Singular_value_decomposition">Single Value Decomposition (SVD)</a>.</p></li>
+<li><p>Dimensionality reduction:</p>
+<ul>
+<li>Reducing the dimensionality of data by projecting the data onto a lower-dimensional subspace. Mainly used for efficient processing and analysis (visualization purposes).</li>
+</ul></li>
+<li><p>Paper: <a href="https://arxiv.org/pdf/2106.09685">https://arxiv.org/pdf/2106.09685</a></p></li>
+<li><p>The pretrained model parameters are in a super high dimensional space. It is shown that finetuning fewer parameters in a compressed space can drastically affect the final output. This trick is used to creating a new set of LORA parameters that are much smaller than the others.</p></li>
 </ul>
 </section>
 <section id="section" class="slide level2 smaller">
 <h2></h2>
-<p><strong>Residual connection</strong></p>
 <ul>
-<li>During the process of training deep networks, it has been observed that the learning can stagnate or become more difficult for longer input sequences.</li>
-<li>This makes it difficult for the model to capture long range dependencies.</li>
-<li>To address this issue, the transformer uses residual connections.</li>
-<li>They are used around the multi-head attention and feed-forward neural network sub-layers.</li>
+<li><p>Let’s check the figure 1 from the above paper…</p>
+<ul>
+<li>where A and B are the LORA parameters. The dimension x is the original input dimension and r is the reduced dimension. During fine tuning only A and B are adjusted enabling the model to learn task specific features.</li>
+</ul></li>
+<li><p>These LORA weights can be swapped in and out for different tasks and/or different LORA weights can be stored as different model implementations.</p></li>
 </ul>
-<p><span class="math display">\[
-\begin{align*}
-\text{Output} = \text{Input} + \text{Sublayer}(\text{Input})
-\end{align*}
-\]</span></p>
-<p>where,</p>
+<p>Further reading:</p>
 <ul>
-<li><span class="math inline">\(\text{Input}\)</span> is the input to the sub-layer.</li>
-<li><span class="math inline">\(\text{Sublayer}\)</span> is the sub-layer that consists of multi-head attention or feed-forward neural network.</li>
+<li><p><a href="https://huggingface.co/docs/peft/main/en/conceptual_guides/lora">https://huggingface.co/docs/peft/main/en/conceptual_guides/lora</a></p></li>
+<li><p><a href="https://www.databricks.com/blog/efficient-fine-tuning-lora-guide-llms">https://www.databricks.com/blog/efficient-fine-tuning-lora-guide-llms</a></p></li>
+<li><p><a href="https://web.stanford.edu/class/cs168/l/l9.pdf">https://web.stanford.edu/class/cs168/l/l9.pdf</a></p></li>
 </ul>
 </section>
-<section id="position-wise-feed-forward-neural-network" class="slide level2 smaller">
-<h2>Position-wise feed-forward neural network</h2>
+<section id="qlora" class="slide level2 smaller">
+<h2>QLoRa</h2>
 <ul>
-<li>A fully connected feed-forward neural network sub-layer is a point-wise function, which means that it processes each word vector independently.</li>
-<li>The feed-forward neural network consists of two linear transformations with a ReLU activation function in between.</li>
-<li>This sub-layer introduces additional non-linearity and allows the model to learn complex relationships between the input and output.</li>
-</ul>
-<p><span class="math display">\[
-\begin{align*}
-FF(x) = f(x \cdot K^T) \cdot V
-\end{align*}
-\]</span></p>
-<p>where,</p>
-<ul>
-<li><span class="math inline">\(K\)</span> and <span class="math inline">\(V\)</span> are the weight matrices for the feed-forward neural network.</li>
-<li><span class="math inline">\(f\)</span> is the ReLU activation function.</li>
-<li><span class="math inline">\(x\)</span> is the input to the feed-forward neural network.</li>
+<li><p>Typically, the parameters of pre-trained models are stored in a 32-bit format, and QLoRa compresses them to 4-bit format. This reduces the memory footprint and enables finetuning using much less resources. Each parameter in the model is represented by 32 bits (float32). One float32 has 32 bits which is 4 bytes. So it requires 4 gigabytes for one billion parameter model trained on FP32.</p></li>
+<li><p>Post-Training Quantization (PTQ): quantization on LLM after it has been trained.</p></li>
+<li><p>Quantization-Aware Training (QAT): quantization on LLM during training.</p></li>
+<li><p>Paper: <a href="https://arxiv.org/pdf/2305.14314">https://arxiv.org/pdf/2305.14314</a></p></li>
 </ul>
 </section>
-<section>
-<section id="decoder" class="title-slide slide level1 smaller">
-<h1>Decoder</h1>
+<section id="distillation" class="slide level2 smaller">
+<h2>Distillation</h2>
 <ul>
-<li>The decoder consists of inputs from both the output sequence (the sequence to be generated) and the output from the last encoder in the encoder stack.</li>
-<li>The decoder block consists of a stack of N=6 identical layers.</li>
-<li>The decoder block is similar to the encoder block, but with an additional multi-head attention mechanism that allows the decoder to focus on different parts of the input sequence when generating each output word.</li>
-<li>Each decoder block consists of a multi-head self-attention layer, an encoder-decoder attention layer and the point-wise feed-forward network layer</li>
+<li><p>Distillation is the process of using the generated output or generation to finetune the model.</p></li>
+<li><p>Knowledge Distillation: Take a big model and make it teach a smaller model.</p>
+<ul>
+<li>Paper: <a href="https://arxiv.org/pdf/2306.08543">https://arxiv.org/pdf/2306.08543</a></li>
+</ul></li>
+<li><p>Context distillation: Prompting the model with a prompt prefix (“analyze like a linguist” and then training on the model response.</p>
+<ul>
+<li>Paper: <a href="https://arxiv.org/pdf/2209.15189">https://arxiv.org/pdf/2209.15189</a></li>
+</ul></li>
 </ul>
 </section>
-<section id="section-1" class="slide level2 smaller">
-<h2></h2>
-<p><strong>Masked multi-head self-attention layer</strong></p>
+<section id="prompt-engineering" class="slide level2 smaller">
+<h2>Prompt engineering</h2>
 <ul>
-<li>The masked self-attention mechanism allows the model to only attend to words that have been generated so far and prevents it from attending future words that have not been predicted yet.</li>
-<li>This is achieved by applying a mask to the attention weights.</li>
-<li>A mask matrix <span class="math inline">\(M\)</span> is created of the same size as the attention scores</li>
-<li>This mask matrix is added element-wise to the attention scores.</li>
-</ul>
-<p><span class="math display">\[
-\begin{align*}
-MaskedScores_{ij} = A_{ij} + M_{ij}
-\end{align*}
-\]</span></p>
-<p>where,</p>
-<ul>
-<li><span class="math inline">\(MaskedScores_{ij}\)</span> is the masked attention score for the i-th query and j-th key.</li>
-<li><span class="math inline">\(A_{ij}\)</span> is the attention score for the i-th query and j-th key.</li>
-<li><span class="math inline">\(M_{ij}\)</span> is the mask matrix.</li>
+<li><p>Here, the model is prompted to take up roles, such as act as an “expert” or “actor” or “be a linguist”. This cannot be categorized as finetuning because no weights are updated.</p></li>
+<li><p>As this method doesn’t require any additional compute at train time, it is easy to iterate upon. But this method does not affect the LLM behaviour as strongly as fine-tuning.</p></li>
+<li><p>Know more: <a href="https://huggingface.co/docs/peft/conceptual_guides/prompting">https://huggingface.co/docs/peft/conceptual_guides/prompting</a></p></li>
 </ul>
 </section>
-<section id="section-2" class="slide level2 smaller">
-<h2></h2>
-<ul>
-<li>The <span class="math inline">\(MaskedScores_{ij}\)</span> are passed through softmax function to get the attention weights.</li>
-<li>This softmax function will assign nearly zero weights to the positions with <span class="math inline">\(-inf\)</span> values and thereby masking them out.</li>
-<li>As a final step, weighted sum is calculated to get the output of the masked self-attention mechanism.</li>
-<li>This output is then passed to the encoder-decoder attention layer.</li>
-<li>During inference, the model generates each word one at a time and the masking is applied to prevent attending to future positions.</li>
-<li>In other words, each predicted word is conditioned only on the previously generated words and is referred to as autoregressive generation.</li>
-</ul>
-</section>
-<section id="encoder-decoder-attention-layer" class="slide level2 smaller">
-<h2>Encoder-decoder attention layer</h2>
-<ul>
-<li>The Encoder-decoder attention layer allows the decoder to combine the encoded sequence of the encoder with the output generated from the multi-head self-attention layer.</li>
-<li>At each time step <span class="math inline">\(t\)</span> in the decoder, the following computations are performed: Compute the query vector <span class="math inline">\(Q_t\)</span> using the current decoder input embedding <span class="math inline">\(X_t\)</span>:</li>
-</ul>
-<p><span class="math display">\[
-Q_t = X_t \cdot W^Q
-\]</span></p>
-<p>where,</p>
-<ul>
-<li><span class="math inline">\(W^Q\)</span> is the weight matrix for the query vector.</li>
-<li><span class="math inline">\(X_t\)</span> is the input to the decoder at time step <span class="math inline">\(t\)</span>.</li>
-<li><span class="math inline">\(Q_t\)</span> is the query vector for the t-th time step.</li>
-</ul>
-</section>
-<section id="section-3" class="slide level2 smaller">
-<h2></h2>
-<ul>
-<li>Next, the keys <span class="math inline">\(K\)</span> and values <span class="math inline">\(V\)</span> from the encoder output sequence <span class="math inline">\(H\)</span> are computed using:</li>
-</ul>
-<p><span class="math display">\[
-\begin{align*}
-\text{K} &amp; = H \cdot W^K \\
-\text{V} &amp; = H \cdot W^V \\
-\end{align*}
-\]</span></p>
-<p>where,</p>
-<ul>
-<li><span class="math inline">\(W^K\)</span> and <span class="math inline">\(W^V\)</span> are the weight matrices for the keys and values.</li>
-<li><span class="math inline">\(H\)</span> is the output of the encoder.</li>
-<li><span class="math inline">\(X_t\)</span> is the input to the decoder at time step <span class="math inline">\(t\)</span>.</li>
-</ul>
-</section>
-<section id="section-4" class="slide level2 smaller">
-<h2></h2>
-<ul>
-<li>The attention score is calculated by taking the dot product of the query vector <span class="math inline">\(Q_t\)</span> and the key vector <span class="math inline">\(K\)</span> in the encoder output sequence <span class="math inline">\(H\)</span>.</li>
-<li>The attention score is then scaled and passed through a softmax function to get the attention weights.</li>
-<li>The weighted sum is calculated to get the output of the encoder-decoder attention layer.</li>
-<li>Lastly, a context vector <span class="math inline">\(Context_t\)</span> is computed to capture the relevant information from the input sequence that the decoder should focus on when generating the output token at time step <span class="math inline">\(t\)</span>.</li>
-</ul>
-</section>
-<section id="section-5" class="slide level2 smaller">
-<h2></h2>
-<p>This is computed by taking the weighted sum of the value vectors <span class="math inline">\(V\)</span> using the attention weights:</p>
-<p><span class="math display">\[
-\begin{align*}
-Context_t = \sum_{j=1}^{n} \alpha_{tj} \cdot v_j
-\end{align*}
-\]</span></p>
-<p>where,</p>
-<ul>
-<li><p><span class="math inline">\(\alpha_{tj}\)</span> is the attention weight for the t-th query and j-th key.</p></li>
-<li><p><span class="math inline">\(v_j\)</span> is the value vector for the j-th key.</p></li>
-<li><p>This context vector is concatenated with the decoder input embeddings <span class="math inline">\(X_t\)</span> and passed through a linear layer to get the output of the encoder-decoder attention layer.</p></li>
-<li><p>This output is then passed to the point-wise feed-forward neural network layer.</p></li>
-</ul>
-</section>
-<section id="section-6" class="slide level2 smaller">
-<h2></h2>
-<p><strong>Point-wise feed-forward neural network layer</strong></p>
-<ul>
-<li>The feed-forward neural network within the decoder operates in the same manner to that within the encoder.</li>
-<li>However, there is a key difference in the input to the feed-forward network in the decoder.</li>
-<li>The input to the point-wise feed-forward network comes from the encoder-decoder layer.</li>
-</ul>
-<p><strong>Layer normalization</strong></p>
-<ul>
-<li>Each sub-layer (masked multi-head self-attention, encoder-decoder attention, and position-wise feed-forward network) is followed by a layer normalization operation and connected with a residual connection</li>
-<li>The layer normalization stabilizes training and enables the model to learn more effectively.</li>
-</ul>
-</section>
-<section id="section-7" class="slide level2 smaller">
-<h2></h2>
-<p><strong>Residual connection</strong></p>
-<ul>
-<li>The residual connection is applied around each sub-layer in the decoder.</li>
-<li>They are applied around the masked multi-head self-attention layer, encoder-decoder attention layer and point-wise feed-forward neural network layer.</li>
-</ul>
-<p><strong>Linear or Output layer</strong></p>
-<ul>
-<li>The linear or the output layer determines the likelihood of each word being the next word in the output sequence.</li>
-<li>The input to this layer is the output from the layer normalization.</li>
-<li>The purpose of the linear layer is to map the output from the layer normalization to a vector of raw scores (logits) corresponding to each word being the next word in the output sequence.</li>
-<li>This done by applying a linear transformation, which involves multiplying the output from the layer normalization layer by a weight matrix and adding a bias vector.</li>
-</ul>
-</section>
-<section id="section-8" class="slide level2 smaller">
-<h2></h2>
-<p><strong>Softmax</strong></p>
-<ul>
-<li>The output of the linear layer is passed through a softmax function to get the probability distribution over the output vocabulary.</li>
-<li>During the training phase, the predicted probabilities are used to compute the cross-entropy loss function, which measures the dissimilarity between the predicted distribution and the true distribution.</li>
-<li>During the inference phase, the word with the highest probability at each position is chosen as the predicted output.</li>
-</ul>
+<section id="thank-you" class="slide level2 smaller">
+<h2>Thank you!</h2>
 
 
 </section></section>
