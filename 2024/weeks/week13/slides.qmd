@@ -1,0 +1,103 @@
+---
+subtitle: "LLMs in Lingustic Research WiSe 2024/25"
+title: "<font style='font-size:1em;'>Week 03<br/>Other Finetuning methdos</font>"
+author: Akhilesh Kakolu Ramarao
+institute: '[HHU](#)'
+date: 28 January 2025
+date-meta: 28 January 2025
+date-format: "DD MMM YYYY"
+toc: true
+toc-depth: 1
+toc-title: "What we will cover today:"
+center-title-slide: false
+from: markdown+emoji
+filters:
+  - diagram
+format:
+  revealjs:
+    fig-responsive: true
+    theme: simple
+    slide-number: true
+    mouse-wheel: false
+    preview-links: auto
+    logo: /figures/icons/course_logo.png
+    css: /css/styles_slides.css
+    footer: 'LLMs in Lingustic Research WiSe 2024/25'
+---
+
+# Parameter Efficient Fine Tuning (PEFT)
+
+- A simple trick to not update all the weights but only a few trainable parameters during finetuning.
+
+- Code: [https://github.com/huggingface/peft](https://github.com/huggingface/peft)
+
+- Paper: [https://arxiv.org/pdf/2104.08691](https://arxiv.org/pdf/2104.08691),
+check Figure 1 for performance overview
+
+## Prompt tuning {.smaller}
+
+- In a prompt-based LLM, the output is highly dependent on the model weights and the prompt.
+
+- The idea of prompt tuning is to add a new set of weights between the prompt and the model and only tune those.
+
+- In the above paper, the T5 model weights were 11,000,000,000 parameters, and the added prompt weights were 20,400 parameters. Yet, similar performance was observed with prompt tuning w.r.t full model weight fine-tuning on a benchmark dataset.
+
+## Low-Rank Adaptation of Large Language Models (LORA) {.smaller}
+
+- LORA is a technique to reduce the number of parameters that need to be trained by reducing the dimensions using [Single Value Decomposition (SVD)](https://en.wikipedia.org/wiki/Singular_value_decomposition).
+
+- Dimensionality reduction:
+
+	- Reducing the dimensionality of data by projecting the data onto a lower-dimensional subspace. Mainly used for efficient processing and analysis (visualization purposes).
+
+- Paper: [https://arxiv.org/pdf/2106.09685](https://arxiv.org/pdf/2106.09685)
+
+- The pretrained model parameters are in a super high dimensional space. It is shown that finetuning fewer parameters in a compressed space can drastically affect the final output. This trick is used to creating a new set of LORA parameters that are much smaller than the others.
+
+## {.smaller}
+
+- Let's check the figure 1 from the above paper...
+
+	- where A and B are the LORA parameters. The dimension x is the original input dimension and r is the reduced dimension. During fine tuning only A and B are adjusted enabling the model to learn task specific features.
+
+- These LORA weights can be swapped in and out for different tasks and/or different LORA weights can be stored as different model implementations.
+
+Further reading:
+
+- [https://huggingface.co/docs/peft/main/en/conceptual_guides/lora](https://huggingface.co/docs/peft/main/en/conceptual_guides/lora)
+
+- [https://www.databricks.com/blog/efficient-fine-tuning-lora-guide-llms](https://www.databricks.com/blog/efficient-fine-tuning-lora-guide-llms)
+
+- [https://web.stanford.edu/class/cs168/l/l9.pdf](https://web.stanford.edu/class/cs168/l/l9.pdf)
+
+## QLoRa {.smaller}
+
+- Typically, the parameters of pre-trained models are stored in a 32-bit format, and QLoRa compresses them to 4-bit format. This reduces the memory footprint and enables finetuning using much less resources. Each parameter in the model is represented by 32 bits (float32). One float32 has 32 bits which is 4 bytes. So it requires 4 gigabytes for one billion parameter model trained on FP32.
+
+- Post-Training Quantization (PTQ): quantization on LLM after it has been trained.
+
+- Quantization-Aware Training (QAT): quantization on LLM during training.
+
+- Paper: [https://arxiv.org/pdf/2305.14314](https://arxiv.org/pdf/2305.14314)
+
+## Distillation {.smaller}
+
+- Distillation is the process of using the generated output or generation to finetune the model.
+
+- Knowledge Distillation: Take a big model and make it teach a smaller model.
+
+	- Paper: [https://arxiv.org/pdf/2306.08543](https://arxiv.org/pdf/2306.08543)
+
+- Context distillation: Prompting the model with a prompt prefix ("analyze like a linguist" and then training on the model response.
+
+	- Paper: [https://arxiv.org/pdf/2209.15189](https://arxiv.org/pdf/2209.15189)
+
+## Prompt engineering {.smaller}
+
+- Here, the model is prompted to take up roles, such as act as an "expert" or "actor" or "be a linguist". This cannot be categorized as finetuning because no weights are updated.
+
+- As this method doesn't require any additional compute at train time, it is easy to iterate upon. But this method does not affect the LLM behaviour as strongly as fine-tuning.
+
+- Know more: [https://huggingface.co/docs/peft/conceptual_guides/prompting](https://huggingface.co/docs/peft/conceptual_guides/prompting)
+
+## Thank you! {.smaller}

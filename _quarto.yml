@@ -18,6 +18,7 @@ project:
     - "2024/weeks/week09/*.qmd"
     - "2024/weeks/week10/*.qmd"
     - "2024/weeks/week11/*.qmd"
+    - "2024/weeks/week13/*.qmd"
 
 website:
   title: "LLMs in Lingustic Research 2024/25"
@@ -74,7 +75,7 @@ website:
            text: Week 04 - Transformers (part 1)
            contents:
              - href: 2024/weeks/week04/page.qmd
-u               text: 👨‍🏫 Lecture Material
+               text: 👨‍🏫 Lecture Material
          - href: 2024/weeks/week05/page.qmd
            text: Week 05 - Transformers (part 2)
            contents:
@@ -110,6 +111,12 @@ u               text: 👨‍🏫 Lecture Material
            contents:
              - href: 2024/weeks/week10/page.qmd
                text: 👨‍🏫 Lecture Material
+         - href: 2024/weeks/week13/page.qmd
+           text: Week 13 - Other finetuning methods
+           contents:
+             - href: 2024/weeks/week13/page.qmd
+               text: 👨‍🏫 Lecture Material
+
 
 
 
