@@ -1,0 +1,12 @@
+---
+title: "🗓️ Week 14 - Probing LLMs"
+---
+
+
+## 👨‍🏫 Lecture
+
+Click <a href="probing.ipynb" download>here</a> to download the notebook.
+
+Open the notebook in [google colab](https://colab.research.google.com/).
+
+## ✍️ Homework

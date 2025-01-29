@@ -19,6 +19,7 @@ project:
     - "2024/weeks/week10/*.qmd"
     - "2024/weeks/week11/*.qmd"
     - "2024/weeks/week13/*.qmd"
+    - "2024/weeks/week14/*.qmd"
 
 website:
   title: "LLMs in Lingustic Research 2024/25"
@@ -116,6 +117,12 @@ website:
            contents:
              - href: 2024/weeks/week13/page.qmd
                text: 👨‍🏫 Lecture Material
+         - href: 2024/weeks/week14/page.qmd
+           text: Week 14 - Probing
+           contents:
+             - href: 2024/weeks/week14/page.qmd
+               text: 👨‍🏫 Lecture Material
+
 
 
 
